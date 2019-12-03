@@ -1,0 +1,128 @@
+<eml:eml xmlns:eml="eml://ecoinformatics.org/eml-2.1.1"
+         xmlns:dc="http://purl.org/dc/terms/"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="eml://ecoinformatics.org/eml-2.1.1 http://rs.gbif.org/schema/eml-gbif-profile/1.1/eml.xsd"
+         packageId="84176530-6d89-4f7e-bb6d-a31d13a1fe2f/v1.1" system="http://gbif.org" scope="system"
+         xml:lang="eng">
+
+<dataset>
+  <alternateIdentifier>84176530-6d89-4f7e-bb6d-a31d13a1fe2f</alternateIdentifier>
+  <alternateIdentifier>http://arbmis.arcosnetwork.org/ipt/resource?r=Echuya_ARCOS_2012</alternateIdentifier>
+  <title xml:lang="eng">Biodiversity Survey of Echuya forest, Year 2012</title>
+      <creator>
+    <individualName>
+        <givenName>Faustin</givenName>
+      <surName>Gashakamba</surName>
+    </individualName>
+    <organizationName>ARCOS Network</organizationName>
+    <positionName>Researcher</positionName>
+    <address>
+        <city>Kigali</city>
+        <country>RW</country>
+    </address>
+    <electronicMailAddress>fgashakamba@arcosnetwork.org</electronicMailAddress>
+      </creator>
+      <metadataProvider>
+    <individualName>
+        <givenName>Faustin</givenName>
+      <surName>Gashakamba</surName>
+    </individualName>
+    <organizationName>ARCOS Network</organizationName>
+    <positionName>Researcher</positionName>
+    <address>
+        <city>Kigali</city>
+        <country>RW</country>
+    </address>
+    <electronicMailAddress>fgashakamba@arcosnetwork.org</electronicMailAddress>
+      </metadataProvider>
+      <associatedParty>
+    <individualName>
+        <givenName>Faustin</givenName>
+      <surName>Gashakamba</surName>
+    </individualName>
+    <organizationName>ARCOS Network</organizationName>
+    <positionName>Researcher</positionName>
+    <address>
+        <city>Kigali</city>
+        <country>RW</country>
+    </address>
+    <electronicMailAddress>fgashakamba@arcosnetwork.org</electronicMailAddress>
+    <role>user</role>
+      </associatedParty>
+  <pubDate>
+      2018-04-24
+  </pubDate>
+  <language>eng</language>
+  <abstract>
+    <para>This data was generated during of the ARCOS&apos; ILAM (Integrated Landscape Assessment and Monitoring) studies conducted in Echuya landscape in 2012.
+The data covers mostly the occurrence of birds in the Echuya forest reserve and the surrounding area and some occurrence of mammals and reptiles.</para>
+  </abstract>
+      <keywordSet>
+            <keyword>Occurrence</keyword>
+        <keywordThesaurus>GBIF Dataset Type Vocabulary: http://rs.gbif.org/vocabulary/gbif/dataset_type.xml</keywordThesaurus>
+      </keywordSet>
+  <intellectualRights>
+    <para>To the extent possible under law, the publisher has waived all rights to these data and has dedicated them to the <ulink url="http://creativecommons.org/publicdomain/zero/1.0/legalcode"><citetitle>Public Domain (CC0 1.0)</citetitle></ulink>. Users may copy, modify, distribute and use the work, including for commercial purposes, without restriction.</para>
+  </intellectualRights>
+  <maintenance>
+    <description>
+      <para></para>
+    </description>
+    <maintenanceUpdateFrequency>unkown</maintenanceUpdateFrequency>
+  </maintenance>
+
+      <contact>
+    <individualName>
+        <givenName>Faustin</givenName>
+      <surName>Gashakamba</surName>
+    </individualName>
+    <organizationName>ARCOS Network</organizationName>
+    <positionName>Researcher</positionName>
+    <address>
+        <city>Kigali</city>
+        <country>RW</country>
+    </address>
+    <electronicMailAddress>fgashakamba@arcosnetwork.org</electronicMailAddress>
+      </contact>
+  <project id="ESLOC Project">
+    <title>Building Civil Society Leadership and Enhancing Ecosystem Services Resilience and Sustainable Benefits to Local Communities in the Albertine Rift region</title>
+      <personnel>
+        <individualName>
+            <givenName>Dr Sam</givenName>
+          <surName>Kanyamibwa</surName>
+        </individualName>
+        <role></role>
+      </personnel>
+      <personnel>
+        <individualName>
+            <givenName>Dr Aventino</givenName>
+          <surName>Kasangaki</surName>
+        </individualName>
+        <role></role>
+      </personnel>
+      <abstract>
+        <para>The ESLOC project was implemented by ARCOS with the goal to enhance sustainable community livelihoods, healthy ecosystem services and benefit sharing in the critical forest landscapes of the Albertine Rift as a result of effective support by NGOs and support to local decision-making mechanisms.
+One of its activities consisted of conducting extensive biodiversity surveys of key landscapes of the Albertine Rift region, an effort that saw the contribution of key institutions both in Uganda, Rwanda, and Burundi. For Echuya forest reserve, the surveys were conducted in year 2012 and involved the National Forestry Authority, Nature Uganda,the Kisoro district office, and URP (Uplifting the Rural Poor).</para>
+      </abstract>
+      <funding>
+        <para>The project was conducted with funding from the John D. and Catherine T. MacArthur Foundation.</para>
+      </funding>
+      <studyAreaDescription>
+        <descriptor name="generic"
+                    citableClassificationSystem="false">
+          <descriptorValue>Key landscapes of the Albertine Rift Region</descriptorValue>
+        </descriptor>
+      </studyAreaDescription>
+  </project>
+</dataset>
+  <additionalMetadata>
+    <metadata>
+      <gbif>
+          <dateStamp>2014-05-14T09:01:54.140+02:00</dateStamp>
+          <hierarchyLevel>dataset</hierarchyLevel>
+            <citation>Gashakamba F (2014): Biodiversity Survey of Echuya forest, Year 2012. v1.1. Albertine Rift Conservation Society (ARCOS). Dataset/Occurrence. http://arbmis.arcosnetwork.org/ipt/resource?r=Echuya_ARCOS_2012&amp;v=1.1</citation>
+          <dc:replaces>84176530-6d89-4f7e-bb6d-a31d13a1fe2f/v1.1.xml</dc:replaces>
+      </gbif>
+    </metadata>
+  </additionalMetadata>
+</eml:eml>

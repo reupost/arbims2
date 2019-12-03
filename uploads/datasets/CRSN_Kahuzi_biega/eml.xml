@@ -1,0 +1,175 @@
+<eml:eml xmlns:eml="eml://ecoinformatics.org/eml-2.1.1"
+         xmlns:dc="http://purl.org/dc/terms/"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="eml://ecoinformatics.org/eml-2.1.1 http://rs.gbif.org/schema/eml-gbif-profile/1.1/eml.xsd"
+         packageId="c9b2b2ff-6596-4162-aac2-9a39a45c4e8d/v1.2" system="http://gbif.org" scope="system"
+         xml:lang="fre">
+
+<dataset>
+  <alternateIdentifier>c9b2b2ff-6596-4162-aac2-9a39a45c4e8d</alternateIdentifier>
+  <alternateIdentifier>http://arbmis.arcosnetwork.org/ipt/resource?r=CRSN_Kahuzi_biega</alternateIdentifier>
+  <title xml:lang="fre">Digitized specimen conserved in CRSN herbarim from Kahuzi-Biega National Park</title>
+      <creator>
+    <individualName>
+        <givenName>Gentil</givenName>
+      <surName>IRAGI</surName>
+    </individualName>
+    <organizationName>CRSN</organizationName>
+    <positionName>Chef de departement de biologie</positionName>
+    <address>
+        <deliveryPoint>Lwiro</deliveryPoint>
+        <city>Bukavu</city>
+        <administrativeArea>South Kivu</administrativeArea>
+        <country>CD</country>
+    </address>
+    <phone>+243993834146</phone>
+    <electronicMailAddress>iragi.gentil@gmail.com</electronicMailAddress>
+      </creator>
+      <metadataProvider>
+    <individualName>
+        <givenName>Gentil</givenName>
+      <surName>IRAGI</surName>
+    </individualName>
+    <organizationName>CRSN</organizationName>
+    <positionName>Chef de departement de biologie</positionName>
+    <address>
+        <deliveryPoint>Lwiro</deliveryPoint>
+        <city>Bukavu</city>
+        <administrativeArea>South Kivu</administrativeArea>
+        <country>CD</country>
+    </address>
+    <phone>+243993834146</phone>
+    <electronicMailAddress>iragi.gentil@gmail.com</electronicMailAddress>
+      </metadataProvider>
+      <associatedParty>
+    <individualName>
+        <givenName>Gentil</givenName>
+      <surName>IRAGI</surName>
+    </individualName>
+    <organizationName>CRSN</organizationName>
+    <positionName>Chef de departement de biologie</positionName>
+    <address>
+        <deliveryPoint>Lwiro</deliveryPoint>
+        <city>Bukavu</city>
+        <administrativeArea>South Kivu</administrativeArea>
+        <country>CD</country>
+    </address>
+    <phone>+243993834146</phone>
+    <electronicMailAddress>iragi.gentil@gmail.com</electronicMailAddress>
+    <role>owner</role>
+      </associatedParty>
+      <associatedParty>
+    <individualName>
+        <givenName>Faustin</givenName>
+      <surName>Gashakamba</surName>
+    </individualName>
+    <organizationName>ARCOS</organizationName>
+    <positionName>ARBMIS Portal Administrator</positionName>
+    <address>
+        <deliveryPoint>Kigali</deliveryPoint>
+        <city>Kigali</city>
+        <administrativeArea>Kigali</administrativeArea>
+        <postalCode>1735</postalCode>
+        <country>RW</country>
+    </address>
+    <phone>+250783023303</phone>
+    <electronicMailAddress>fgashakamba@arcosnetwork.org</electronicMailAddress>
+    <onlineUrl>http://arcosnetwork.org</onlineUrl>
+    <role>publisher</role>
+      </associatedParty>
+  <pubDate>
+      2018-04-08
+  </pubDate>
+  <language>fre</language>
+  <abstract>
+    <para>Les plantes recoltées au Parc National de Kahuzi-Biega conservées dans l&apos;herbarium de Lwiro.</para>
+  </abstract>
+      <keywordSet>
+            <keyword>n/a</keyword>
+        <keywordThesaurus>GBIF Dataset Type Vocabulary: http://rs.gbif.org/vocabulary/gbif/dataset_type.xml</keywordThesaurus>
+      </keywordSet>
+  <intellectualRights>
+    <para>To the extent possible under law, the publisher has waived all rights to these data and has dedicated them to the <ulink url="http://creativecommons.org/publicdomain/zero/1.0/legalcode"><citetitle>Public Domain (CC0 1.0)</citetitle></ulink>. Users may copy, modify, distribute and use the work, including for commercial purposes, without restriction.</para>
+  </intellectualRights>
+  <coverage>
+      <geographicCoverage>
+          <geographicDescription>Le Park National de Kahuzi-biega se trouve au sud-kivu à l&apos;Est de la Republique Democratique du Congo.</geographicDescription>
+        <boundingCoordinates>
+          <westBoundingCoordinate>27.49</westBoundingCoordinate>
+          <eastBoundingCoordinate>28.69</eastBoundingCoordinate>
+          <northBoundingCoordinate>-1.57</northBoundingCoordinate>
+          <southBoundingCoordinate>-2.72</southBoundingCoordinate>
+        </boundingCoordinates>
+      </geographicCoverage>
+          <temporalCoverage>
+              <rangeOfDates>
+                  <beginDate>
+                    <calendarDate>1950</calendarDate>
+                  </beginDate>
+                <endDate>
+                  <calendarDate>2014</calendarDate>
+                </endDate>
+              </rangeOfDates>
+          </temporalCoverage>
+          <taxonomicCoverage>
+              <taxonomicClassification>
+                  <taxonRankName>kingdom</taxonRankName>
+                <taxonRankValue>plantae</taxonRankValue>
+                  <commonName>plantes</commonName>
+              </taxonomicClassification>
+          </taxonomicCoverage>
+  </coverage>
+  <maintenance>
+    <description>
+      <para></para>
+    </description>
+    <maintenanceUpdateFrequency>unkown</maintenanceUpdateFrequency>
+  </maintenance>
+
+      <contact>
+    <individualName>
+        <givenName>Gentil</givenName>
+      <surName>IRAGI</surName>
+    </individualName>
+    <organizationName>CRSN</organizationName>
+    <positionName>Chef de departement de biologie</positionName>
+    <address>
+        <deliveryPoint>Lwiro</deliveryPoint>
+        <city>Bukavu</city>
+        <administrativeArea>South Kivu</administrativeArea>
+        <country>CD</country>
+    </address>
+    <phone>+243993834146</phone>
+    <electronicMailAddress>iragi.gentil@gmail.com</electronicMailAddress>
+      </contact>
+  <project >
+    <title>Projet de digitalisation des plantes de l&apos;herbarium de Lwiro</title>
+      <personnel>
+        <individualName>
+            <givenName>Gentil</givenName>
+          <surName>IRAGI</surName>
+        </individualName>
+        <role>author</role>
+      </personnel>
+      <funding>
+        <para>ARCOS sous le projet financé par le JRS Biodiversity Foundation</para>
+      </funding>
+  </project>
+</dataset>
+  <additionalMetadata>
+    <metadata>
+      <gbif>
+          <dateStamp>2015-03-20T09:21:32.365+01:00</dateStamp>
+          <hierarchyLevel>dataset</hierarchyLevel>
+            <citation>IRAGI G (2015): Digitized specimen conserved in CRSN herbarim from Kahuzi-Biega National Park. v1.2. Herbarium du CRSN-Lwiro. Dataset/Occurrence. http://arbmis.arcosnetwork.org/ipt/resource?r=CRSN_Kahuzi_biega&amp;v=1.2</citation>
+              <collection>
+                  <parentCollectionIdentifier>CRSN LWIRO</parentCollectionIdentifier>
+                  <collectionIdentifier>LWI</collectionIdentifier>
+                <collectionName>L&apos;herbarium de Lwiro</collectionName>
+              </collection>
+                <specimenPreservationMethod>other</specimenPreservationMethod>
+          <dc:replaces>c9b2b2ff-6596-4162-aac2-9a39a45c4e8d/v1.2.xml</dc:replaces>
+      </gbif>
+    </metadata>
+  </additionalMetadata>
+</eml:eml>

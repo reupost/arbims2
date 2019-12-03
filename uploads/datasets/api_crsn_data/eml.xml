@@ -1,0 +1,137 @@
+<eml:eml xmlns:eml="eml://ecoinformatics.org/eml-2.1.1"
+         xmlns:dc="http://purl.org/dc/terms/"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="eml://ecoinformatics.org/eml-2.1.1 http://rs.gbif.org/schema/eml-gbif-profile/1.1/eml.xsd"
+         packageId="22252fe5-d06e-46d3-8f6d-dc1aa57de904/v1.1" system="http://gbif.org" scope="system"
+         xml:lang="fre">
+
+<dataset>
+  <alternateIdentifier>22252fe5-d06e-46d3-8f6d-dc1aa57de904</alternateIdentifier>
+  <alternateIdentifier>http://arbmis.arcosnetwork.org/ipt/resource?r=api_crsn_data</alternateIdentifier>
+  <title xml:lang="fre">Data generated from the digitization of CRSN herbarium with support from API project and JRS Biodiversity Foundation</title>
+      <creator>
+    <individualName>
+        <givenName>Ithe</givenName>
+      <surName>Mwanga Mwanga</surName>
+    </individualName>
+    <organizationName>Centre de Recherche en Sciences Naturelles de Lwiro</organizationName>
+    <positionName>Chercheur</positionName>
+    <address>
+        <deliveryPoint>Bukavu</deliveryPoint>
+        <city>Bukavu</city>
+        <administrativeArea>South Kivu</administrativeArea>
+    </address>
+    <phone>+243 85 33 51 783</phone>
+    <electronicMailAddress>mwangaithe@yahoo.fr</electronicMailAddress>
+      </creator>
+      <metadataProvider>
+    <individualName>
+        <givenName>Ithe</givenName>
+      <surName>Mwanga Mwanga</surName>
+    </individualName>
+    <organizationName>Centre de Recherche en Sciences Naturelles de Lwiro</organizationName>
+    <positionName>Chercheur</positionName>
+    <address>
+        <deliveryPoint>Bukavu</deliveryPoint>
+        <city>Bukavu</city>
+        <administrativeArea>South Kivu</administrativeArea>
+    </address>
+    <phone>+243 85 33 51 783</phone>
+    <electronicMailAddress>mwangaithe@yahoo.fr</electronicMailAddress>
+      </metadataProvider>
+      <associatedParty>
+    <individualName>
+        <givenName>Steven</givenName>
+      <surName>Dessein</surName>
+    </individualName>
+    <organizationName>Jardin Botanique Meise</organizationName>
+    <positionName>Chercheur</positionName>
+    <address>
+        <administrativeArea>Brabant flamand</administrativeArea>
+    </address>
+    <phone>+32 (0)2 260 09 26</phone>
+    <onlineUrl>http://www.br.fgov.be</onlineUrl>
+    <role></role>
+      </associatedParty>
+  <pubDate>
+      2018-04-08
+  </pubDate>
+  <language>fre</language>
+  <abstract>
+    <para>La base des données contient les espèces types et endémiques d&apos;Afrique Centrale pour les plantes vasculaire conservées à Lwiro (LWI). Ce projet couvre l’ensemble de trois pays d’Afrique Centrale entre autre, le Burundi, le Rwanda et la République Démocratique du Congo. La superficie géographique de cette zone est de 2399572 km2, avec respectivement 2345400 km2 pour la République Démocratique du Congo, 27834 km2 pour le Burundi et 26338 km2 pour le Rwanda.</para>
+  </abstract>
+      <keywordSet>
+            <keyword>Occurrence</keyword>
+        <keywordThesaurus>GBIF Dataset Type Vocabulary: http://rs.gbif.org/vocabulary/gbif/dataset_type.xml</keywordThesaurus>
+      </keywordSet>
+  <intellectualRights>
+    <para>To the extent possible under law, the publisher has waived all rights to these data and has dedicated them to the <ulink url="http://creativecommons.org/publicdomain/zero/1.0/legalcode"><citetitle>Public Domain (CC0 1.0)</citetitle></ulink>. Users may copy, modify, distribute and use the work, including for commercial purposes, without restriction.</para>
+  </intellectualRights>
+  <coverage>
+      <geographicCoverage>
+          <geographicDescription>L&apos;Afrique centrale dont on parle ici, couvre l&apos;ensemble de trois pays de ce territoire. Il s&apos;agit de la République Démocratique du Congo, le Rwanda et le Burundi.</geographicDescription>
+        <boundingCoordinates>
+          <westBoundingCoordinate>27.62</westBoundingCoordinate>
+          <eastBoundingCoordinate>30.1</eastBoundingCoordinate>
+          <northBoundingCoordinate>0.97</northBoundingCoordinate>
+          <southBoundingCoordinate>-4.77</southBoundingCoordinate>
+        </boundingCoordinates>
+      </geographicCoverage>
+          <temporalCoverage>
+              <rangeOfDates>
+                  <beginDate>
+                    <calendarDate>1963-01-01</calendarDate>
+                  </beginDate>
+                <endDate>
+                  <calendarDate>2015-04-01</calendarDate>
+                </endDate>
+              </rangeOfDates>
+          </temporalCoverage>
+          <taxonomicCoverage>
+              <generalTaxonomicCoverage>Ce fichier contient les informations sur les plantes vasculaires d&apos;Afrique centrale conservées dans l&apos;herbarium de Lwiro. Les plantes ont été identifiées jusqu&apos;au rang inférieur comme les sous-espèces, variétés et formes.</generalTaxonomicCoverage>
+              <taxonomicClassification>
+                <taxonRankValue>Plantae</taxonRankValue>
+              </taxonomicClassification>
+          </taxonomicCoverage>
+  </coverage>
+  <maintenance>
+    <description>
+      <para></para>
+    </description>
+    <maintenanceUpdateFrequency>asNeeded</maintenanceUpdateFrequency>
+  </maintenance>
+
+      <contact>
+    <individualName>
+        <givenName>Ithe</givenName>
+      <surName>Mwanga Mwanga</surName>
+    </individualName>
+    <organizationName>Centre de Recherche en Sciences Naturelles de Lwiro</organizationName>
+    <positionName>Chercheur</positionName>
+    <address>
+        <deliveryPoint>Bukavu</deliveryPoint>
+        <city>Bukavu</city>
+        <administrativeArea>South Kivu</administrativeArea>
+    </address>
+    <phone>+243 85 33 51 783</phone>
+    <electronicMailAddress>mwangaithe@yahoo.fr</electronicMailAddress>
+      </contact>
+  <methods>
+        <methodStep>
+          <description>
+            <para></para>
+          </description>
+        </methodStep>
+  </methods>
+</dataset>
+  <additionalMetadata>
+    <metadata>
+      <gbif>
+          <dateStamp>2015-04-28T02:26:17.329+02:00</dateStamp>
+          <hierarchyLevel>dataset</hierarchyLevel>
+            <citation>Mwanga Mwanga I (2015): Data generated from the digitization of CRSN herbarium with support from API project and JRS Biodiversity Foundation. v1.1. Herbarium du CRSN-Lwiro. Dataset/Occurrence. http://arbmis.arcosnetwork.org/ipt/resource?r=api_crsn_data&amp;v=1.1</citation>
+          <dc:replaces>22252fe5-d06e-46d3-8f6d-dc1aa57de904/v1.1.xml</dc:replaces>
+      </gbif>
+    </metadata>
+  </additionalMetadata>
+</eml:eml>

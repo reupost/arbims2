@@ -1,0 +1,261 @@
+<eml:eml xmlns:eml="eml://ecoinformatics.org/eml-2.1.1"
+         xmlns:dc="http://purl.org/dc/terms/"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="eml://ecoinformatics.org/eml-2.1.1 http://rs.gbif.org/schema/eml-gbif-profile/1.1/eml.xsd"
+         packageId="bcffbc19-b28c-42ae-995a-ff852e158ce5/v1.1" system="http://gbif.org" scope="system"
+         xml:lang="fre">
+
+<dataset>
+  <alternateIdentifier>bcffbc19-b28c-42ae-995a-ff852e158ce5</alternateIdentifier>
+  <alternateIdentifier>http://arbmis.arcosnetwork.org/ipt/resource?r=bid_crsn_data</alternateIdentifier>
+  <title xml:lang="fre">Data from CRSN herbarium digitization initiative under BID-funded project</title>
+      <creator>
+    <individualName>
+        <givenName>Faustin</givenName>
+      <surName>Gashakamba</surName>
+    </individualName>
+    <organizationName>Albertine Rift Conservation Society</organizationName>
+    <positionName>Director, Programme Development and Information Systems</positionName>
+    <address>
+        <deliveryPoint>KIG 14 Ave</deliveryPoint>
+        <city>Kigali</city>
+        <postalCode>1735 Kigali, Rwanda</postalCode>
+        <country>RW</country>
+    </address>
+    <phone>+250 783 023 303</phone>
+    <electronicMailAddress>fgashakamba@arcosnetwork.org</electronicMailAddress>
+    <onlineUrl>http://arcosnetwork.org</onlineUrl>
+      </creator>
+      <metadataProvider>
+    <individualName>
+        <givenName>Ithe</givenName>
+      <surName>Mwanga Mwanga</surName>
+    </individualName>
+    <organizationName>CRSN Lwiro</organizationName>
+    <positionName>Chercheur</positionName>
+    <address>
+        <deliveryPoint>Lwiro</deliveryPoint>
+        <city>Bukavu</city>
+        <administrativeArea>Sud Kivu</administrativeArea>
+        <country>CD</country>
+    </address>
+    <phone>(+243) 0993171611</phone>
+    <electronicMailAddress>mwangaithe@yahoo.fr</electronicMailAddress>
+      </metadataProvider>
+      <associatedParty>
+    <individualName>
+        <givenName>Faustin</givenName>
+      <surName>Gashakamba</surName>
+    </individualName>
+    <organizationName>Albertine Rift Conservation Society</organizationName>
+    <positionName>Director, Programme Development and Information Systems</positionName>
+    <address>
+        <deliveryPoint>KIG 14 Ave</deliveryPoint>
+        <city>Kigali</city>
+        <administrativeArea>Kigali City</administrativeArea>
+        <postalCode>1735 Kigali, Rwanda</postalCode>
+        <country>RW</country>
+    </address>
+    <phone>+250 783 023 303</phone>
+    <electronicMailAddress>gashakamba@gmail.com</electronicMailAddress>
+    <onlineUrl>http://arcosnetwork.org</onlineUrl>
+    <role>publisher</role>
+      </associatedParty>
+  <pubDate>
+      2018-04-08
+  </pubDate>
+  <language>fre</language>
+  <abstract>
+    <para>Cet ensemble de données a été préparé par l’équipe de l’herbarium du Centre de Recherche en Sciences Naturelles de Lwiro (CRSN-Lwiro) dans le cadre du projet financé par le programme BID coordonné par le secrétariat de GBIF.
+En collaboration avec l’équipe d’ARCOS, le projet de digitalisation de l’herbarium a été continué sous ce programme et durant 1 an de travail plus de 3000 spécimens de plantes ont été digitalisés en encodés dans le système de gestion de base de données BRAHMS.</para>
+  </abstract>
+      <keywordSet>
+            <keyword>Occurrence</keyword>
+        <keywordThesaurus>GBIF Dataset Type Vocabulary: http://rs.gbif.org/vocabulary/gbif/dataset_type.xml</keywordThesaurus>
+      </keywordSet>
+      <keywordSet>
+            <keyword>Specimen</keyword>
+        <keywordThesaurus>GBIF Dataset Subtype Vocabulary: http://rs.gbif.org/vocabulary/gbif/dataset_subtype.xml</keywordThesaurus>
+      </keywordSet>
+  <intellectualRights>
+    <para>This work is licensed under a <ulink url="http://creativecommons.org/licenses/by/4.0/legalcode"><citetitle>Creative Commons Attribution (CC-BY) 4.0 License</citetitle></ulink>.</para>
+  </intellectualRights>
+  <coverage>
+      <geographicCoverage>
+          <geographicDescription>Les données dans cet ensemble de données couvre la région de l&apos;Afrique central plus particulièrement la région de l&apos;Est du Congo belge, le Rwanda et le Burundi.</geographicDescription>
+        <boundingCoordinates>
+          <westBoundingCoordinate>27.422</westBoundingCoordinate>
+          <eastBoundingCoordinate>31.201</eastBoundingCoordinate>
+          <northBoundingCoordinate>0.615</northBoundingCoordinate>
+          <southBoundingCoordinate>-4.916</southBoundingCoordinate>
+        </boundingCoordinates>
+      </geographicCoverage>
+          <temporalCoverage>
+              <rangeOfDates>
+                  <beginDate>
+                    <calendarDate>1905-01-01</calendarDate>
+                  </beginDate>
+                <endDate>
+                  <calendarDate>2017-12-31</calendarDate>
+                </endDate>
+              </rangeOfDates>
+          </temporalCoverage>
+          <taxonomicCoverage>
+              <generalTaxonomicCoverage>Cet ensemble de données couvre les plantes supérieures (plantes vasculaires) avec un accent sur les plantes à fleurs.</generalTaxonomicCoverage>
+              <taxonomicClassification>
+                  <taxonRankName>phylum</taxonRankName>
+                <taxonRankValue>Angiospermae</taxonRankValue>
+                  <commonName>plantes à fleurs</commonName>
+              </taxonomicClassification>
+          </taxonomicCoverage>
+  </coverage>
+  <purpose>
+    <para>Cet ensemble de données a été publié afin de faciliter l’accès aux chercheurs de par le monde entier sur les données stockées dans l’herbarium de CRSN Lwiro. Ceci va leur alléger la charge de conduire la recherche sur les plantes de l’Afrique centrale sans devoir descendre sur terrain.</para>
+  </purpose>
+  <maintenance>
+    <description>
+      <para>Ces données seront maintenu par l&apos;équipe de l&apos;herbarium de CRSN Lwiro qui continuera de digitaliser les spécimens restants et les publier aussi.</para>
+    </description>
+    <maintenanceUpdateFrequency>asNeeded</maintenanceUpdateFrequency>
+  </maintenance>
+
+      <contact>
+    <individualName>
+        <givenName>Ithe</givenName>
+      <surName>Mwanga Mwanga</surName>
+    </individualName>
+    <organizationName>CRSN Lwiro</organizationName>
+    <positionName>Chercheur</positionName>
+    <address>
+        <deliveryPoint>Lwiro</deliveryPoint>
+        <city>Bukavu</city>
+        <administrativeArea>Sud Kivu</administrativeArea>
+        <country>CD</country>
+    </address>
+    <phone>+243993171611</phone>
+    <electronicMailAddress>mwangaithe@yahoo.fr</electronicMailAddress>
+      </contact>
+      <contact>
+    <individualName>
+        <givenName>Gentil</givenName>
+      <surName>Iragi</surName>
+    </individualName>
+    <organizationName>CRSN Lwiro</organizationName>
+    <positionName>Chercheur</positionName>
+    <address>
+        <deliveryPoint>Lwiro</deliveryPoint>
+        <city>Bukavu</city>
+        <administrativeArea>Sud Kivu</administrativeArea>
+        <country>CD</country>
+    </address>
+    <phone>+243993834146</phone>
+    <electronicMailAddress>iragi.gentil@gmail.com</electronicMailAddress>
+      </contact>
+      <contact>
+    <individualName>
+        <givenName>Dumbo Pazo</givenName>
+      <surName>WABIKA</surName>
+    </individualName>
+    <organizationName>CRSN Lwiro</organizationName>
+    <positionName>Chercheur</positionName>
+    <address>
+        <deliveryPoint>Lwiro</deliveryPoint>
+        <city>Bukavu</city>
+        <administrativeArea>Sud Kivu</administrativeArea>
+        <country>CD</country>
+    </address>
+    <phone>+243853634031</phone>
+    <electronicMailAddress>dumbopazo@yahoo.fr</electronicMailAddress>
+      </contact>
+  <methods>
+        <methodStep>
+          <description>
+            <para>N/A</para>
+          </description>
+        </methodStep>
+      <sampling>
+        <studyExtent>
+          <description>
+            <para>N/A</para>
+          </description>
+        </studyExtent>
+        <samplingDescription>
+          <para>N/A</para>
+        </samplingDescription>
+      </sampling>
+      <qualityControl>
+        <description>
+          <para>N/A</para>
+        </description>
+      </qualityControl>
+  </methods>
+  <project id="BID-AF2015-0115-REG">
+    <title>The Albertine Rift Biodiversity Data Mobilization Project (Mobilization des données sur la biodiversté de la région du rift Albertin)</title>
+      <personnel>
+        <individualName>
+            <givenName>Faustin</givenName>
+          <surName>Gashakamba</surName>
+        </individualName>
+        <role></role>
+      </personnel>
+      <personnel>
+        <individualName>
+            <givenName>Ithe</givenName>
+          <surName>Mwanga Mwanga</surName>
+        </individualName>
+        <role></role>
+      </personnel>
+      <personnel>
+        <individualName>
+            <givenName>Herbert</givenName>
+          <surName>Tushabe</surName>
+        </individualName>
+        <role></role>
+      </personnel>
+      <personnel>
+        <individualName>
+            <givenName>Gaspard</givenName>
+          <surName>Rwanyiziri</surName>
+        </individualName>
+        <role></role>
+      </personnel>
+      <abstract>
+        <para>Ce projet vise à mobiliser des données sur la biodiversité pour les principaux hotspots de biodiversité dans la région du Rift Albertin afin d&apos;aider les décideurs et les gestionnaires des ressources naturelles à prendre des décisions éclairées soutenant ainsi le processus de développement durable dans la région.
+Le projet s&apos;appuie sur les efforts précédents dans le cadre d&apos;un programme appelé « Système d’Information sur la Biodiversité d’ARCOS – ARBIMS », où un réseau de gestionnaires de données sur la biodiversité a été établi. Il applique un certain nombre d&apos;approches innovantes pour collecter à moindre coût de nouvelles données grâce à la science citoyenne et encourage la publication de données existantes en utilisant des data papers comme une des formes d’encouragements pour les détenteurs de données.
+En plus de cela, le projet cible les praticiens de l&apos;Evaluation de l&apos;Impact Environnemental (EIE) dans la région et développe des collaborations avec les régulateurs d&apos;EIE pour s&apos;assurer que les données sur la biodiversité générées par les études d&apos;EIE dans la région soient partagées.</para>
+      </abstract>
+      <funding>
+        <para>Le financement de ce projet a été généreusement fourni par le programme BID de l’Union Européenne coordonné par le secrétariat du GBIF.</para>
+      </funding>
+      <studyAreaDescription>
+        <descriptor name="generic"
+                    citableClassificationSystem="false">
+          <descriptorValue>Ce projet couvre les 3 pays de la région du rift Albertin notamment le Rwanda, l’Uganda et la RDC.</descriptorValue>
+        </descriptor>
+      </studyAreaDescription>
+      <designDescription>
+        <description>
+          <para>La conception de ce projet se cadre principalement autour de la mobilisation des données à travers la digitalisation des spécimens de l&apos;herbarium de Lwiro, la collection des données sur terrain, le citizen science, et la mobilisation des données existantes des EIEs.</para>
+        </description>
+      </designDescription>
+  </project>
+</dataset>
+  <additionalMetadata>
+    <metadata>
+      <gbif>
+          <dateStamp>2018-03-14T09:41:11.990+01:00</dateStamp>
+          <hierarchyLevel>dataset</hierarchyLevel>
+            <citation>Gashakamba F (2018): Data from CRSN herbarium digitization initiative under BID-funded project. v1.1. Herbarium du CRSN-Lwiro. Dataset/Occurrence. http://arbmis.arcosnetwork.org/ipt/resource?r=bid_crsn_data&amp;v=1.1</citation>
+          <bibliography>
+                <citation>Tiré de l&apos;ensemble de données publié par l&apos;herbarium CRSN Lwiro sur le portal des données d&apos;ARCOS, 2018</citation>
+          </bibliography>
+          <resourceLogoUrl>http://arbmis.arcosnetwork.org/ipt/logo.do?r=bid_crsn_data</resourceLogoUrl>
+              <collection>
+                <collectionName>L&apos;herbarium de CRSN Lwiro</collectionName>
+              </collection>
+                <specimenPreservationMethod>driedAndPressed</specimenPreservationMethod>
+          <dc:replaces>bcffbc19-b28c-42ae-995a-ff852e158ce5/v1.1.xml</dc:replaces>
+      </gbif>
+    </metadata>
+  </additionalMetadata>
+</eml:eml>

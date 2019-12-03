@@ -1,0 +1,173 @@
+
+/* The map and the location bar */
+
+.map_pane {
+    display: inline-block;
+    float: left;
+    clear: both;
+    position: relative;
+    height: 700px;
+    border: 1px solid black;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box; 
+}
+.map_normalsize {
+    width: 700px;   
+}
+
+.map_fullscreen {    
+    width: 100%;    
+}
+
+.map_controls {
+    display: inline-block;
+    float: left;
+    clear: both;
+    position: relative;
+    border: 1px solid black;
+    padding-left: 10px;    
+    padding-bottom: 5px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.map_controls_normalsize {
+    width: 700px;
+}
+
+.map_controls_fullscreen {
+    width: 100%;
+}
+
+#map-size-notice {
+    float: right;
+    padding-right: 5px;
+    display: none;
+}
+#map-wrapper {
+    width: 700px;
+}
+
+#map-location {
+    float: right;
+}
+
+#map-options {
+    position: absolute;
+    left: 13px;
+    top: 7px;
+    z-index: 3000;
+}
+
+#map-selectwrapper {
+    margin-left: 720px;
+    height: 700px;
+    overflow: auto;
+}
+
+
+
+#map-selectwrapper label {
+    display: inline-block;
+    margin-bottom: 0px;
+}
+
+.olControlLayerSwitcher label, .olControlLayerSwitcher input {
+    font-size: 10px;
+    line-height: normal;
+    margin-bottom: 1px;
+    width: auto;
+    margin-top: 1px;
+    display: inline;
+}
+
+.olControlLayerSwitcher input {
+    margin-right: 3px;
+}
+
+#occurrence_info h2 {
+    font-size: small;
+}
+#occurrence_info_close.olPopupCloseBox {
+    padding-right: 22px; //to push close button into bubble
+}
+
+.olControlSLDSelectBoxActive {
+    cursor: crosshair;
+}
+
+#map-selectwrapper {
+    margin-left: 720px;
+    height: 700px;
+    overflow: auto;
+    /* float: right; */
+}
+
+#map-selectwrapper label {
+    display: inline-block;
+    margin-bottom: 0px;
+}
+
+#map-info {
+    display: block;
+    float: left;
+}
+
+#map-boxSelect {
+}
+
+.color_show {
+    float: left;
+    width: 8px;
+    height: 8px;
+    margin: 2px 2px 2px 2px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(0,0,0,.2);
+}
+
+.btn-print-map
+{
+    border-style: solid;
+    border-width: 1px;
+    position: absolute;
+    top:0%;
+    left:0%;
+    height: 3%;
+    width: 3%;
+    background-color:white;
+}
+.btn-full-screen
+{
+    border-style: solid;
+    border-width: 1px;
+    position: absolute;
+    top:0%;
+    right:0%;
+    height: 3%;
+    width: 3%;
+    background-color:white;
+}
+.btn-partial-screen
+{
+    border-style: solid;
+    border-width: 1px;
+    position: absolute;
+    top:0%;
+    right:0%;
+    height: 3%;
+    width: 3%;
+    background-color:white;
+}
+
+#tabs-info {
+    border: none;
+    padding: 0;
+}
+
+#layertabs > div {
+    font-size: smaller;    
+}

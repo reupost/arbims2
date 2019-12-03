@@ -1,0 +1,575 @@
+id	basisOfRecord	occurrenceID	recordedBy	individualCount	eventID	scientificName	order	family	vernacularName
+T1-1	HumanObservation	ARCOS_ILAM_Bugesera_2016_1	Martin Sindikubwabo, Philip Christophersen	2	T1-1	Centropus monachus			Blue-headed Coucal
+T1-1	HumanObservation	ARCOS_ILAM_Bugesera_2016_2	Martin Sindikubwabo, Philip Christophersen	1	T1-1	Turtur tympanistria			Tambourine Dove
+T1-1	HumanObservation	ARCOS_ILAM_Bugesera_2016_3	Martin Sindikubwabo, Philip Christophersen	1	T1-1	Motacilla aguimp			African Pied Wagtail
+T1-1	HumanObservation	ARCOS_ILAM_Bugesera_2016_4	Martin Sindikubwabo, Philip Christophersen	4	T1-1	Laniarius aethiopicus			Tropical Boubou
+T1-1	HumanObservation	ARCOS_ILAM_Bugesera_2016_5	Martin Sindikubwabo, Philip Christophersen	2	T1-1	Passer griseus			Grey-headed Sparrow
+T1-1	HumanObservation	ARCOS_ILAM_Bugesera_2016_6	Martin Sindikubwabo, Philip Christophersen	5	T1-1	Pycnonotus barbatus			Common Bulbul
+T1-1	HumanObservation	ARCOS_ILAM_Bugesera_2016_7	Martin Sindikubwabo, Philip Christophersen	1	T1-1	Ploceus baglafecht			Baglafecht Weaver
+T1-1	HumanObservation	ARCOS_ILAM_Bugesera_2016_8	Martin Sindikubwabo, Philip Christophersen	1	T1-1	Ardea melanocephala			Black-headed Heron
+T1-1	HumanObservation	ARCOS_ILAM_Bugesera_2016_9	Martin Sindikubwabo, Philip Christophersen	1	T1-1	Logonosticta senegala			Red-billed Firefinch
+T1-1	HumanObservation	ARCOS_ILAM_Bugesera_2016_10	Martin Sindikubwabo, Philip Christophersen	1	T1-1	Cossypha heuglini			White-browed Robin-Chat
+T1-1	HumanObservation	ARCOS_ILAM_Bugesera_2016_11	Martin Sindikubwabo, Philip Christophersen	2	T1-1	Cinnyris venusta			Variable Sunbird
+T1-1	HumanObservation	ARCOS_ILAM_Bugesera_2016_12	Martin Sindikubwabo, Philip Christophersen	1	T1-1	Turdoides jardineii			Arrow-marked Babbler
+T1-1	HumanObservation	ARCOS_ILAM_Bugesera_2016_13	Martin Sindikubwabo, Philip Christophersen	1	T1-1	Vidua macroura			Pin-tailed Whydah
+T1-1	HumanObservation	ARCOS_ILAM_Bugesera_2016_14	Martin Sindikubwabo, Philip Christophersen	2	T1-1	Euplectes axillaris			Fan-tailed Widowbird
+T1-2	HumanObservation	ARCOS_ILAM_Bugesera_2016_15	Martin Sindikubwabo, Philip Christophersen	4	T1-2	Serinus striolatus			Streaky Seedeater
+T1-2	HumanObservation	ARCOS_ILAM_Bugesera_2016_16	Martin Sindikubwabo, Philip Christophersen	2	T1-2	Bostrychia hagedash			Hadada Ibis
+T1-2	HumanObservation	ARCOS_ILAM_Bugesera_2016_17	Martin Sindikubwabo, Philip Christophersen	4	T1-2	Euplectes axillaris			Fan-tailed Widowbird
+T1-2	HumanObservation	ARCOS_ILAM_Bugesera_2016_18	Martin Sindikubwabo, Philip Christophersen	1	T1-2	Motacilla aguimp			African Pied Wagtail
+T1-2	HumanObservation	ARCOS_ILAM_Bugesera_2016_19	Martin Sindikubwabo, Philip Christophersen	2	T1-2	Nectarinia kilmensis			Bronze Sunbird
+T1-2	HumanObservation	ARCOS_ILAM_Bugesera_2016_20	Martin Sindikubwabo, Philip Christophersen	2	T1-2	Laniarius erytrogaster			Black-headed Gonolek
+T1-2	HumanObservation	ARCOS_ILAM_Bugesera_2016_21	Martin Sindikubwabo, Philip Christophersen	2	T1-2	Lanius excubitoroides			Grey-backed Fiscal
+T1-2	HumanObservation	ARCOS_ILAM_Bugesera_2016_22	Martin Sindikubwabo, Philip Christophersen	4	T1-2	Ploceus baglafecht			Baglafecht Weaver
+T1-2	HumanObservation	ARCOS_ILAM_Bugesera_2016_23	Martin Sindikubwabo, Philip Christophersen	2	T1-2	Laniarius erytrogaster			Black-headed Gonolek
+T1-2	HumanObservation	ARCOS_ILAM_Bugesera_2016_24	Martin Sindikubwabo, Philip Christophersen	2	T1-2	Pycnonotus barbatus			Common Bulbul
+T1-2	HumanObservation	ARCOS_ILAM_Bugesera_2016_25	Martin Sindikubwabo, Philip Christophersen	2	T1-2	Passer griseus			Grey-headed Sparrow
+T1-2	HumanObservation	ARCOS_ILAM_Bugesera_2016_26	Martin Sindikubwabo, Philip Christophersen	1	T1-2	Cinnyris venusta			Variable Sunbird
+T1-2	HumanObservation	ARCOS_ILAM_Bugesera_2016_27	Martin Sindikubwabo, Philip Christophersen	2	T1-2	Turdoides sharpei			Black-lored Babbler
+T1-2	HumanObservation	ARCOS_ILAM_Bugesera_2016_28	Martin Sindikubwabo, Philip Christophersen	1	T1-2	Colius striatus			Speckled Mousebird
+T1-3	HumanObservation	ARCOS_ILAM_Bugesera_2016_29	Martin Sindikubwabo, Philip Christophersen	4	T1-3	Ploceus baglafecht			Baglafecht Weaver
+T1-3	HumanObservation	ARCOS_ILAM_Bugesera_2016_30	Martin Sindikubwabo, Philip Christophersen	2	T1-3	Laniarius erytrogaster			Black-headed Gonolek
+T1-3	HumanObservation	ARCOS_ILAM_Bugesera_2016_31	Martin Sindikubwabo, Philip Christophersen	2	T1-3	Passer griseus			Grey-headed Sparrow
+T1-3	HumanObservation	ARCOS_ILAM_Bugesera_2016_32	Martin Sindikubwabo, Philip Christophersen	1	T1-3	Cinnyris venusta			Variable Sunbird
+T1-3	HumanObservation	ARCOS_ILAM_Bugesera_2016_33	Martin Sindikubwabo, Philip Christophersen	2	T1-3	Streptoperia capicola			Ring-necked Dove
+T1-3	HumanObservation	ARCOS_ILAM_Bugesera_2016_34	Martin Sindikubwabo, Philip Christophersen	1	T1-3	Colius striatus			Speckled Mousebird
+T1-4	HumanObservation	ARCOS_ILAM_Bugesera_2016_35	Martin Sindikubwabo, Philip Christophersen	6	T1-4	Bubulcus ibis			Cattle Egret
+T1-4	HumanObservation	ARCOS_ILAM_Bugesera_2016_36	Martin Sindikubwabo, Philip Christophersen	2	T1-4	Laniarius erytrogaster			Black-headed Gonolek
+T1-4	HumanObservation	ARCOS_ILAM_Bugesera_2016_37	Martin Sindikubwabo, Philip Christophersen	1	T1-4	Centropus monachus			Blue-headed Coucal
+T1-4	HumanObservation	ARCOS_ILAM_Bugesera_2016_38	Martin Sindikubwabo, Philip Christophersen	1	T1-4	Ardea melanocephala			Black-headed Heron
+T1-4	HumanObservation	ARCOS_ILAM_Bugesera_2016_39	Martin Sindikubwabo, Philip Christophersen	2	T1-4	Lamprotornis purpuropterus			Ruppell's Long-tailed Starling
+T1-4	HumanObservation	ARCOS_ILAM_Bugesera_2016_40	Martin Sindikubwabo, Philip Christophersen	1	T1-4	Colvus albus			Pied Crow
+T1-4	HumanObservation	ARCOS_ILAM_Bugesera_2016_41	Martin Sindikubwabo, Philip Christophersen	7	T1-4	Bubulcus ibis			Cattle Egret
+T1-5	HumanObservation	ARCOS_ILAM_Bugesera_2016_42	Martin Sindikubwabo, Philip Christophersen	1	T1-5	Serinus striolatus			Streaky Seedeater
+T1-5	HumanObservation	ARCOS_ILAM_Bugesera_2016_43	Martin Sindikubwabo, Philip Christophersen	1	T1-5	Halcyon senegalensis			Woodland Kingfisher
+T1-5	HumanObservation	ARCOS_ILAM_Bugesera_2016_44	Martin Sindikubwabo, Philip Christophersen	1	T1-5	Streptopelia capicola			Ring-necked Dove
+T1-5	HumanObservation	ARCOS_ILAM_Bugesera_2016_45	Martin Sindikubwabo, Philip Christophersen	35	T1-5	Hirundo fuligula			Rock Martin
+T1-6	HumanObservation	ARCOS_ILAM_Bugesera_2016_46	Martin Sindikubwabo, Philip Christophersen	12	T1-6	Bubulcus ibis			Cattle Egret
+T1-6	HumanObservation	ARCOS_ILAM_Bugesera_2016_47	Martin Sindikubwabo, Philip Christophersen	1	T1-6	Turtur tympanistria			Tambourine Dove
+T1-6	HumanObservation	ARCOS_ILAM_Bugesera_2016_48	Martin Sindikubwabo, Philip Christophersen	4	T1-6	Centropus monachus			Blue-headed Coucal
+T1-6	HumanObservation	ARCOS_ILAM_Bugesera_2016_49	Martin Sindikubwabo, Philip Christophersen	4	T1-6	bostrychia hagedash			Hadada Ibis
+T1-6	HumanObservation	ARCOS_ILAM_Bugesera_2016_50	Martin Sindikubwabo, Philip Christophersen	1	T1-6	Balearica regulorum			Grey Crowned Crane
+T1-7	HumanObservation	ARCOS_ILAM_Bugesera_2016_51	Martin Sindikubwabo, Philip Christophersen	5	T1-7	Euplectes axillaris			Fan-tailed Widowbird
+T1-7	HumanObservation	ARCOS_ILAM_Bugesera_2016_52	Martin Sindikubwabo, Philip Christophersen	1	T1-7	Centropus monachus			Blue-headed Coucal
+T1-7	HumanObservation	ARCOS_ILAM_Bugesera_2016_53	Martin Sindikubwabo, Philip Christophersen	1	T1-7	Pternistis squamatus			Scaly Francolin
+T1-7	HumanObservation	ARCOS_ILAM_Bugesera_2016_54	Martin Sindikubwabo, Philip Christophersen	1	T1-7	Halcyon senegalensis			Woodland Kingfisher
+T1-8	HumanObservation	ARCOS_ILAM_Bugesera_2016_55	Martin Sindikubwabo, Philip Christophersen	2	T1-8	Laniarius aethiopicus			Tropical Boubou
+T1-8	HumanObservation	ARCOS_ILAM_Bugesera_2016_56	Martin Sindikubwabo, Philip Christophersen	4	T1-8	Euplectes axillaris			Fan-tailed Widowbird
+T1-8	HumanObservation	ARCOS_ILAM_Bugesera_2016_57	Martin Sindikubwabo, Philip Christophersen	6	T1-8	Colius striatus			Speckled Mousebird
+T1-8	HumanObservation	ARCOS_ILAM_Bugesera_2016_58	Martin Sindikubwabo, Philip Christophersen	1	T1-8	Muscicapa aquatica			Swamp Flycatcher
+T1-8	HumanObservation	ARCOS_ILAM_Bugesera_2016_59	Martin Sindikubwabo, Philip Christophersen	1	T1-8	Cossypha heuglini			White-browed Robin-Chat
+T1-9	HumanObservation	ARCOS_ILAM_Bugesera_2016_60	Martin Sindikubwabo, Philip Christophersen	2	T1-9	Lanius excubitoroides			Grey-backed Fiscal
+T1-9	HumanObservation	ARCOS_ILAM_Bugesera_2016_61	Martin Sindikubwabo, Philip Christophersen	4	T1-9	Turdoides jardineii			Arrow-marked Babbler
+T1-9	HumanObservation	ARCOS_ILAM_Bugesera_2016_62	Martin Sindikubwabo, Philip Christophersen	2	T1-9	Euplectes axillaris			Fan-tailed Widowbird
+T1-9	HumanObservation	ARCOS_ILAM_Bugesera_2016_63	Martin Sindikubwabo, Philip Christophersen	1	T1-9	Egretta garzetta			Little Egret
+T1-9	HumanObservation	ARCOS_ILAM_Bugesera_2016_64	Martin Sindikubwabo, Philip Christophersen	1	T1-9	Vanellus senegallus			African Wattled Lapwing
+T1-9	HumanObservation	ARCOS_ILAM_Bugesera_2016_65	Martin Sindikubwabo, Philip Christophersen	2	T1-9	Laniarius aethiopicus			Tropical Boubou
+T1-9	HumanObservation	ARCOS_ILAM_Bugesera_2016_66	Martin Sindikubwabo, Philip Christophersen	1	T1-9	Cossypha heuglini			White-browed Robin-Chat
+T1-9	HumanObservation	ARCOS_ILAM_Bugesera_2016_67	Martin Sindikubwabo, Philip Christophersen	2	T1-9	Euplectes axillaris			Fan-tailed Widowbird
+T1-9	HumanObservation	ARCOS_ILAM_Bugesera_2016_68	Martin Sindikubwabo, Philip Christophersen	1	T1-9	Polyboroides typus			African Harrier-Hawk
+T1-9	HumanObservation	ARCOS_ILAM_Bugesera_2016_69	Martin Sindikubwabo, Philip Christophersen	1	T1-9	Anastomus lamelligerus			African Open-billed Stock
+T1-9	HumanObservation	ARCOS_ILAM_Bugesera_2016_70	Martin Sindikubwabo, Philip Christophersen		T1-9	Cisticola marginatus			Winding Cisticola
+T1-10	HumanObservation	ARCOS_ILAM_Bugesera_2016_71	Martin Sindikubwabo, Philip Christophersen	12	T1-10	Bubulcus ibis			Cattle Egret
+T1-10	HumanObservation	ARCOS_ILAM_Bugesera_2016_72	Martin Sindikubwabo, Philip Christophersen	1	T1-10	Egretta garzetta			Little Egret
+T1-10	HumanObservation	ARCOS_ILAM_Bugesera_2016_73	Martin Sindikubwabo, Philip Christophersen	1	T1-10	Laniarius aethiopicus			Tropical Boubou
+T1-10	HumanObservation	ARCOS_ILAM_Bugesera_2016_74	Martin Sindikubwabo, Philip Christophersen	1	T1-10	Turtur tympanistria			Tambourine Dove
+T1-10	HumanObservation	ARCOS_ILAM_Bugesera_2016_75	Martin Sindikubwabo, Philip Christophersen	2	T1-10	Euplectes axillaris			Fan-tailed Widowbird
+T1-10	HumanObservation	ARCOS_ILAM_Bugesera_2016_76	Martin Sindikubwabo, Philip Christophersen	1	T1-10	Threskiornis aethiopicus			Sacred Ibis
+T1-10	HumanObservation	ARCOS_ILAM_Bugesera_2016_77	Martin Sindikubwabo, Philip Christophersen	2	T1-10	Balearica regulorum			Grey Crowned Crane
+T1-10	HumanObservation	ARCOS_ILAM_Bugesera_2016_78	Martin Sindikubwabo, Philip Christophersen	2	T1-10	Anastomus lamelligerus			African Open-billed Stock
+T1-10	HumanObservation	ARCOS_ILAM_Bugesera_2016_79	Martin Sindikubwabo, Philip Christophersen	4	T1-10	Vanellus senegallus			African Wattled Lapwing
+T1-10	HumanObservation	ARCOS_ILAM_Bugesera_2016_80	Martin Sindikubwabo, Philip Christophersen	1	T1-10	Scopus umbretta			Hamerkop
+T1-10	HumanObservation	ARCOS_ILAM_Bugesera_2016_81	Martin Sindikubwabo, Philip Christophersen	1	T1-10	Milvus migrans			Black Kite
+T1-10	HumanObservation	ARCOS_ILAM_Bugesera_2016_82	Martin Sindikubwabo, Philip Christophersen	3	T1-10	Centropus monachus			Blue-headed Coucal
+T2-1	HumanObservation	ARCOS_ILAM_Bugesera_2016_83	Martin Sindikubwabo, Philip Christophersen	1	T2-1	Cossypha heuglini			White-headed Black Chat
+T2-1	HumanObservation	ARCOS_ILAM_Bugesera_2016_84	Martin Sindikubwabo, Philip Christophersen	1	T2-1	Turtur tympanistria			Tambourine Dove
+T2-1	HumanObservation	ARCOS_ILAM_Bugesera_2016_85	Martin Sindikubwabo, Philip Christophersen	3	T2-1	Uraeginthus bengalus			Red-cheeked Cordon-bleu
+T2-1	HumanObservation	ARCOS_ILAM_Bugesera_2016_86	Martin Sindikubwabo, Philip Christophersen	3	T2-1	Colius striatus			Speckled Mousebird
+T2-1	HumanObservation	ARCOS_ILAM_Bugesera_2016_87	Martin Sindikubwabo, Philip Christophersen	1	T2-1	Passer griseus			Grey-headed Sparrow
+T2-1	HumanObservation	ARCOS_ILAM_Bugesera_2016_88	Martin Sindikubwabo, Philip Christophersen	52	T2-1	Riparia riparia			Sand Martin
+T2-1	HumanObservation	ARCOS_ILAM_Bugesera_2016_89	Martin Sindikubwabo, Philip Christophersen	2	T2-1	Pycnonotus barbatus			Common Bulbul
+T2-1	HumanObservation	ARCOS_ILAM_Bugesera_2016_90	Martin Sindikubwabo, Philip Christophersen	3	T2-1	Cossypha heuglini			White-browed Robin-Chat
+T2-1	HumanObservation	ARCOS_ILAM_Bugesera_2016_91	Martin Sindikubwabo, Philip Christophersen	1	T2-1	Laniarius aethiopicus			Tropical Boubou
+T2-1	HumanObservation	ARCOS_ILAM_Bugesera_2016_92	Martin Sindikubwabo, Philip Christophersen	2	T2-1	Pytilia melba			Green-winged Pytilia
+T2-1	HumanObservation	ARCOS_ILAM_Bugesera_2016_93	Martin Sindikubwabo, Philip Christophersen	3	T2-1	Turdoides sharpei			Black-lored Babbler
+T2-2	HumanObservation	ARCOS_ILAM_Bugesera_2016_94	Martin Sindikubwabo, Philip Christophersen	23	T2-2	hirundo angolensis			Angola Swallow
+T2-3	HumanObservation	ARCOS_ILAM_Bugesera_2016_95	Martin Sindikubwabo, Philip Christophersen	1	T2-3	Turtur tympanistria			Tambourine Dove
+T2-3	HumanObservation	ARCOS_ILAM_Bugesera_2016_96	Martin Sindikubwabo, Philip Christophersen	1	T2-3	Laniarius aethiopicus			Tropical Boubou
+T2-3	HumanObservation	ARCOS_ILAM_Bugesera_2016_97	Martin Sindikubwabo, Philip Christophersen	1	T2-3	Cossypha heuglini			White-browed Robin-Chat
+T2-4	HumanObservation	ARCOS_ILAM_Bugesera_2016_98	Martin Sindikubwabo, Philip Christophersen	2	T2-4	Pycnonotus barbatus			Common Bulbul
+T2-4	HumanObservation	ARCOS_ILAM_Bugesera_2016_99	Martin Sindikubwabo, Philip Christophersen	1	T2-4	Tchagra senegala			Black-headed Tchagra
+T2-4	HumanObservation	ARCOS_ILAM_Bugesera_2016_100	Martin Sindikubwabo, Philip Christophersen	2	T2-4	Laniarius aethiopicus			Tropical Boubou
+T2-4	HumanObservation	ARCOS_ILAM_Bugesera_2016_101	Martin Sindikubwabo, Philip Christophersen	1	T2-4	Lagonosticta senegala			Red-billed Firefinch
+T2-4	HumanObservation	ARCOS_ILAM_Bugesera_2016_102	Martin Sindikubwabo, Philip Christophersen	2	T2-4	Prinia subflava			Tawny-flanked Prinia
+T2-5	HumanObservation	ARCOS_ILAM_Bugesera_2016_103	Martin Sindikubwabo, Philip Christophersen	2	T2-5	Turdus pelios			African Thrush
+T2-5	HumanObservation	ARCOS_ILAM_Bugesera_2016_104	Martin Sindikubwabo, Philip Christophersen	1	T2-5	Pycnonotus barbatus			Common Bulbul
+T2-5	HumanObservation	ARCOS_ILAM_Bugesera_2016_105	Martin Sindikubwabo, Philip Christophersen	1	T2-5	Cossypha heuglini			White-browed Robin-Chat
+T2-5	HumanObservation	ARCOS_ILAM_Bugesera_2016_106	Martin Sindikubwabo, Philip Christophersen	1	T2-5	Cinnyris venusta			Variable Sunbird
+T2-6	HumanObservation	ARCOS_ILAM_Bugesera_2016_107	Martin Sindikubwabo, Philip Christophersen	1	T2-6	Turdus pelios			African Thrush
+T2-6	HumanObservation	ARCOS_ILAM_Bugesera_2016_108	Martin Sindikubwabo, Philip Christophersen	2	T2-6	Turtur tympanistria			Tambourine Dove
+T2-6	HumanObservation	ARCOS_ILAM_Bugesera_2016_109	Martin Sindikubwabo, Philip Christophersen	1	T2-6	Streptopelia capicola			Ring-necked Dove
+T2-6	HumanObservation	ARCOS_ILAM_Bugesera_2016_110	Martin Sindikubwabo, Philip Christophersen	2	T2-6	Laniarius aethiopicus			Tropical Boubou
+T2-6	HumanObservation	ARCOS_ILAM_Bugesera_2016_111	Martin Sindikubwabo, Philip Christophersen	3	T2-6	Spermestes cucullata			Bronze Mannikin
+T2-6	HumanObservation	ARCOS_ILAM_Bugesera_2016_112	Martin Sindikubwabo, Philip Christophersen	2	T2-6	Cisticola marginatus			Winding Cisticola
+T2-7	HumanObservation	ARCOS_ILAM_Bugesera_2016_113	Martin Sindikubwabo, Philip Christophersen	4	T2-7	Euplectes axillaris			Fan-tailed Widowbird
+T2-7	HumanObservation	ARCOS_ILAM_Bugesera_2016_114	Martin Sindikubwabo, Philip Christophersen	1	T2-7	Threskiornis aethiopicus			Sacred Ibis
+T2-7	HumanObservation	ARCOS_ILAM_Bugesera_2016_115	Martin Sindikubwabo, Philip Christophersen	1	T2-7	spermestes cucullatus			Bronze Mannikin
+T2-7	HumanObservation	ARCOS_ILAM_Bugesera_2016_116	Martin Sindikubwabo, Philip Christophersen	1	T2-7	Anastomus lamelligerus			African Open-billed Stock
+T2-8	HumanObservation	ARCOS_ILAM_Bugesera_2016_117	Martin Sindikubwabo, Philip Christophersen	1	T2-8	Pycnonotus barbatus			Common Bulbul
+T2-8	HumanObservation	ARCOS_ILAM_Bugesera_2016_118	Martin Sindikubwabo, Philip Christophersen	5	T2-8	Merops apiaster			European Bee-eater
+T2-9	HumanObservation	ARCOS_ILAM_Bugesera_2016_119	Martin Sindikubwabo, Philip Christophersen	2	T2-9	Cossypha heuglini			White-browed Robin-Chat
+T2-9	HumanObservation	ARCOS_ILAM_Bugesera_2016_120	Martin Sindikubwabo, Philip Christophersen	3	T2-9	Colius striatus			Speckled Mousebird
+T2-9	HumanObservation	ARCOS_ILAM_Bugesera_2016_121	Martin Sindikubwabo, Philip Christophersen	1	T2-9	Lonchura bicolor			Black-and-White Mannikin
+T2-9	HumanObservation	ARCOS_ILAM_Bugesera_2016_122	Martin Sindikubwabo, Philip Christophersen	1	T2-9	Pycnonotus barbatus			Common Bulbul
+T2-9	HumanObservation	ARCOS_ILAM_Bugesera_2016_123	Martin Sindikubwabo, Philip Christophersen	1	T2-9	Cossypha niveicapilla			Snowy-crowned Robin-Chat
+T2-9	HumanObservation	ARCOS_ILAM_Bugesera_2016_124	Martin Sindikubwabo, Philip Christophersen	1	T2-9	Buteo augur			Augur Buzzard
+T2-10	HumanObservation	ARCOS_ILAM_Bugesera_2016_125	Martin Sindikubwabo, Philip Christophersen	2	T2-10	Sernus mozambicus			Yellow-fronted Canary
+T2-10	HumanObservation	ARCOS_ILAM_Bugesera_2016_126	Martin Sindikubwabo, Philip Christophersen	4	T2-10	Pycnonotus barbatus			Common Bulbul
+T2-10	HumanObservation	ARCOS_ILAM_Bugesera_2016_127	Martin Sindikubwabo, Philip Christophersen	1	T2-10	Anaplectes melanotis			Red-headed Weaver
+T2-10	HumanObservation	ARCOS_ILAM_Bugesera_2016_128	Martin Sindikubwabo, Philip Christophersen	1	T2-10	Turtur chalcospilos			Emerald-spotted Wood-Dove
+T2-10	HumanObservation	ARCOS_ILAM_Bugesera_2016_129	Martin Sindikubwabo, Philip Christophersen	2	T2-10	Laniarius aethiopicus			Tropical Boubou
+T2-10	HumanObservation	ARCOS_ILAM_Bugesera_2016_130	Martin Sindikubwabo, Philip Christophersen	5	T2-10	Merops apiaster			European Bee-eater
+T3-1	HumanObservation	ARCOS_ILAM_Bugesera_2016_131	Martin Sindikubwabo, Philip Christophersen	1	T3-1	Ardea melanocephala			Black-headed Heron
+T3-1	HumanObservation	ARCOS_ILAM_Bugesera_2016_132	Martin Sindikubwabo, Philip Christophersen	1	T3-1	Streptopelia capicola			Ring-necked Dove
+T3-1	HumanObservation	ARCOS_ILAM_Bugesera_2016_133	Martin Sindikubwabo, Philip Christophersen	1	T3-1	Turtur tympanistria			Tambourine Dove
+T3-1	HumanObservation	ARCOS_ILAM_Bugesera_2016_134	Martin Sindikubwabo, Philip Christophersen	1	T3-1	Streptopelia semitorquata			Red-eyed Dove
+T3-1	HumanObservation	ARCOS_ILAM_Bugesera_2016_135	Martin Sindikubwabo, Philip Christophersen	1	T3-1	Cisticola marginatus			Winding Cisticola
+T3-1	HumanObservation	ARCOS_ILAM_Bugesera_2016_136	Martin Sindikubwabo, Philip Christophersen	1	T3-1	Logonosticta rubricata			African Firefinch
+T3-1	HumanObservation	ARCOS_ILAM_Bugesera_2016_137	Martin Sindikubwabo, Philip Christophersen	1	T3-1	Sernus mozambicus			Yellow-fronted Canary
+T3-1	HumanObservation	ARCOS_ILAM_Bugesera_2016_138	Martin Sindikubwabo, Philip Christophersen	3	T3-1	Quelea quelea			Red-billed Quelea
+T3-1	HumanObservation	ARCOS_ILAM_Bugesera_2016_139	Martin Sindikubwabo, Philip Christophersen	1	T3-1	Pycnonotus barbatus			Common Bulbul
+T3-1	HumanObservation	ARCOS_ILAM_Bugesera_2016_140	Martin Sindikubwabo, Philip Christophersen	2	T3-1	Colius striatus			Speckled Mousebird
+T3-1	HumanObservation	ARCOS_ILAM_Bugesera_2016_141	Martin Sindikubwabo, Philip Christophersen	1	T3-1	Ploceus ocularis			Spectacled Weaver
+T3-2	HumanObservation	ARCOS_ILAM_Bugesera_2016_142	Martin Sindikubwabo, Philip Christophersen	1	T3-2	Euplectes axillaris			Fan-tailed Widowbird
+T3-2	HumanObservation	ARCOS_ILAM_Bugesera_2016_143	Martin Sindikubwabo, Philip Christophersen	1	T3-2	Sernus mozambicus			Yellow-fronted Canary
+T3-2	HumanObservation	ARCOS_ILAM_Bugesera_2016_144	Martin Sindikubwabo, Philip Christophersen	2	T3-2	Pycnonotus barbatus			Common Bulbul
+T3-2	HumanObservation	ARCOS_ILAM_Bugesera_2016_145	Martin Sindikubwabo, Philip Christophersen	4	T3-2	Turdoides jardineii			Arrow-marked Babbler
+T3-2	HumanObservation	ARCOS_ILAM_Bugesera_2016_146	Martin Sindikubwabo, Philip Christophersen	2	T3-2	Turtur tympanistria			Tambourine Dove
+T3-2	HumanObservation	ARCOS_ILAM_Bugesera_2016_147	Martin Sindikubwabo, Philip Christophersen	2	T3-2	Turdoides sharpei			Black-lored Babbler
+T3-2	HumanObservation	ARCOS_ILAM_Bugesera_2016_148	Martin Sindikubwabo, Philip Christophersen	2	T3-2	Colius striatus			Speckled Mousebird
+T3-2	HumanObservation	ARCOS_ILAM_Bugesera_2016_149	Martin Sindikubwabo, Philip Christophersen	2	T3-2	Ploceus ocularis			Spectacled Weaver
+T3-2	HumanObservation	ARCOS_ILAM_Bugesera_2016_150	Martin Sindikubwabo, Philip Christophersen	1	T3-2	Amblyospiza albifrons			Grosbeak Weaver
+T3-2	HumanObservation	ARCOS_ILAM_Bugesera_2016_151	Martin Sindikubwabo, Philip Christophersen	2	T3-2	Ploceus melanocephalus			Yellow-backed Weaver
+T3-2	HumanObservation	ARCOS_ILAM_Bugesera_2016_152	Martin Sindikubwabo, Philip Christophersen	1	T3-2	Serinus citrinelloides			African Citril
+T3-2	HumanObservation	ARCOS_ILAM_Bugesera_2016_153	Martin Sindikubwabo, Philip Christophersen	1	T3-2	Amaurornis flavirostra			Black Crake
+T3-2	HumanObservation	ARCOS_ILAM_Bugesera_2016_154	Martin Sindikubwabo, Philip Christophersen	1	T3-2	Laniarius erytrogaster			Black-headed Gonolek
+T3-3	HumanObservation	ARCOS_ILAM_Bugesera_2016_155	Martin Sindikubwabo, Philip Christophersen	1	T3-3	Actophilornis africana			African Jacana
+T3-3	HumanObservation	ARCOS_ILAM_Bugesera_2016_156	Martin Sindikubwabo, Philip Christophersen	2	T3-3	Centropus monachus			Blue-headed Coucal
+T3-4	HumanObservation	ARCOS_ILAM_Bugesera_2016_157	Martin Sindikubwabo, Philip Christophersen	1	T3-4	Lanius collaris			Common Fiscal
+T3-4	HumanObservation	ARCOS_ILAM_Bugesera_2016_158	Martin Sindikubwabo, Philip Christophersen	1	T3-4	Streptopelia capicola			Ring-necked Dove
+T3-4	HumanObservation	ARCOS_ILAM_Bugesera_2016_159	Martin Sindikubwabo, Philip Christophersen	1	T3-4	Pycnonotus barbatus			Common Bulbul
+T3-4	HumanObservation	ARCOS_ILAM_Bugesera_2016_160	Martin Sindikubwabo, Philip Christophersen	2	T3-4	Centropus monachus			Blue-headed Coucal
+T3-4	HumanObservation	ARCOS_ILAM_Bugesera_2016_161	Martin Sindikubwabo, Philip Christophersen	1	T3-4	Laniarius aethiopicus			Tropical Boubou
+T3-4	HumanObservation	ARCOS_ILAM_Bugesera_2016_162	Martin Sindikubwabo, Philip Christophersen	2	T3-4	Cisticola marginatus			Winding Cisticola
+T3-4	HumanObservation	ARCOS_ILAM_Bugesera_2016_163	Martin Sindikubwabo, Philip Christophersen	1	T3-4	Ploceus xanthops			Holub’s Golden Weaver
+T3-5	HumanObservation	ARCOS_ILAM_Bugesera_2016_164	Martin Sindikubwabo, Philip Christophersen	1	T3-5	Laniarius erytrogaster			Black-headed Gonolek
+T3-5	HumanObservation	ARCOS_ILAM_Bugesera_2016_165	Martin Sindikubwabo, Philip Christophersen	2	T3-5	Nectarinia kilmensis			Bronze Sunbird
+T3-5	HumanObservation	ARCOS_ILAM_Bugesera_2016_166	Martin Sindikubwabo, Philip Christophersen	1	T3-5	Bostrychia hagedash			Hadada Ibis
+T3-5	HumanObservation	ARCOS_ILAM_Bugesera_2016_167	Martin Sindikubwabo, Philip Christophersen	1	T3-5	Quelea quelea			Red-billed Quelea
+T3-5	HumanObservation	ARCOS_ILAM_Bugesera_2016_168	Martin Sindikubwabo, Philip Christophersen	1	T3-5	Pycnonotus barbatus			Common Bulbul
+T3-5	HumanObservation	ARCOS_ILAM_Bugesera_2016_169	Martin Sindikubwabo, Philip Christophersen	1	T3-5	Streptopelia capicola			Ring-necked Dove
+T3-5	HumanObservation	ARCOS_ILAM_Bugesera_2016_170	Martin Sindikubwabo, Philip Christophersen	2	T3-5	Cisticola marginatus			Winding Cisticola
+T3-5	HumanObservation	ARCOS_ILAM_Bugesera_2016_171	Martin Sindikubwabo, Philip Christophersen	1	T3-5	Lophoatus occipitalis			Long-crested Eagle
+T3-6	HumanObservation	ARCOS_ILAM_Bugesera_2016_172	Martin Sindikubwabo, Philip Christophersen	2	T3-6	Turdoides sharpei			Black-lored Babbler
+T3-6	HumanObservation	ARCOS_ILAM_Bugesera_2016_173	Martin Sindikubwabo, Philip Christophersen	1	T3-6	Ploceus baglafecht			Baglafecht Weaver
+T3-6	HumanObservation	ARCOS_ILAM_Bugesera_2016_174	Martin Sindikubwabo, Philip Christophersen	1	T3-6	Amaurornis flavirostra			Black Crake
+T3-7	HumanObservation	ARCOS_ILAM_Bugesera_2016_175	Martin Sindikubwabo, Philip Christophersen	4	T3-7	Colius striatus			Speckled Mousebird
+T3-7	HumanObservation	ARCOS_ILAM_Bugesera_2016_176	Martin Sindikubwabo, Philip Christophersen	1	T3-7	Ploceus xanthops			Holub’s Golden Weaver
+T3-7	HumanObservation	ARCOS_ILAM_Bugesera_2016_177	Martin Sindikubwabo, Philip Christophersen	2	T3-7	Macronyx croceus			Yellow-throated Longclaw
+T3-7	HumanObservation	ARCOS_ILAM_Bugesera_2016_178	Martin Sindikubwabo, Philip Christophersen	2	T3-7	Pycnonotus barbatus			Common Bulbul
+T3-7	HumanObservation	ARCOS_ILAM_Bugesera_2016_179	Martin Sindikubwabo, Philip Christophersen	1	T3-7	Dicrurus adsimlis			Fork-tailed Drongo
+T3-8	HumanObservation	ARCOS_ILAM_Bugesera_2016_180	Martin Sindikubwabo, Philip Christophersen	2	T3-8	Turtur afer			Blue-spotted Wood-Dove
+T3-8	HumanObservation	ARCOS_ILAM_Bugesera_2016_181	Martin Sindikubwabo, Philip Christophersen	1	T3-8	Cisticola marginatus			Winding Cisticola
+T3-9	HumanObservation	ARCOS_ILAM_Bugesera_2016_182	Martin Sindikubwabo, Philip Christophersen	1	T3-9	Turdus pelios			African Thrush
+T3-9	HumanObservation	ARCOS_ILAM_Bugesera_2016_183	Martin Sindikubwabo, Philip Christophersen	1	T3-9	Laniarius aethiopicus			Tropical Boubou
+T3-9	HumanObservation	ARCOS_ILAM_Bugesera_2016_184	Martin Sindikubwabo, Philip Christophersen	1	T3-9	Treron calva			African Green-Pigeon
+T3-9	HumanObservation	ARCOS_ILAM_Bugesera_2016_185	Martin Sindikubwabo, Philip Christophersen	1	T3-9	Cisticola marginatus			Winding Cisticola
+T3-9	HumanObservation	ARCOS_ILAM_Bugesera_2016_186	Martin Sindikubwabo, Philip Christophersen	1	T3-9	Ploceus ocularis			Spectacled Weaver
+T3-9	HumanObservation	ARCOS_ILAM_Bugesera_2016_187	Martin Sindikubwabo, Philip Christophersen	1	T3-9	Streptopelia semitorquata			Red-eyed Dove
+T3-9	HumanObservation	ARCOS_ILAM_Bugesera_2016_188	Martin Sindikubwabo, Philip Christophersen	1	T3-9	Cinnyris erythrocerca			Red-chested Sunbird
+T3-9	HumanObservation	ARCOS_ILAM_Bugesera_2016_189	Martin Sindikubwabo, Philip Christophersen	2	T3-9	Ploceus bertrandi			Bertram's Weaver
+T3-10	HumanObservation	ARCOS_ILAM_Bugesera_2016_190	Martin Sindikubwabo, Philip Christophersen	1	T3-10	Anastomus lamelligerus			African Open-billed Stock
+T3-10	HumanObservation	ARCOS_ILAM_Bugesera_2016_191	Martin Sindikubwabo, Philip Christophersen	1	T3-10	Turdus pelios			African Thrush
+T3-10	HumanObservation	ARCOS_ILAM_Bugesera_2016_192	Martin Sindikubwabo, Philip Christophersen	1	T3-10	Cisticola marginatus			Winding Cisticola
+T3-10	HumanObservation	ARCOS_ILAM_Bugesera_2016_193	Martin Sindikubwabo, Philip Christophersen	1	T3-10	Euplectes axillaris			Fan-tailed Widowbird
+T4-1	HumanObservation	ARCOS_ILAM_Bugesera_2016_194	Martin Sindikubwabo	1	T4-1	Streptopelia capicola			Ring-necked Dove
+T4-1	HumanObservation	ARCOS_ILAM_Bugesera_2016_195	Martin Sindikubwabo	2	T4-1	Turdus pelios			African Thrush
+T4-1	HumanObservation	ARCOS_ILAM_Bugesera_2016_196	Martin Sindikubwabo	2	T4-1	Cossypha heuglini			White-browed Robin-Chat
+T4-1	HumanObservation	ARCOS_ILAM_Bugesera_2016_197	Martin Sindikubwabo	2	T4-1	Laniarius aethiopicus			Tropical Boubou
+T4-1	HumanObservation	ARCOS_ILAM_Bugesera_2016_198	Martin Sindikubwabo	2	T4-1	Nectarinia kilmensis			Bronze Sunbird
+T4-1	HumanObservation	ARCOS_ILAM_Bugesera_2016_199	Martin Sindikubwabo	1	T4-1	Apalis cinerea			Grey Apalis
+T4-2	HumanObservation	ARCOS_ILAM_Bugesera_2016_200	Martin Sindikubwabo	2	T4-2	Pycnonotus barbatus			Common Bulbul
+T4-2	HumanObservation	ARCOS_ILAM_Bugesera_2016_201	Martin Sindikubwabo	2	T4-2	Colius striatus			Speckled Mousebird
+T4-2	HumanObservation	ARCOS_ILAM_Bugesera_2016_202	Martin Sindikubwabo	1	T4-2	Pycnonotus barbatus			Common Bulbul
+T4-2	HumanObservation	ARCOS_ILAM_Bugesera_2016_203	Martin Sindikubwabo	2	T4-2	Bostrychia hagedash			Hadada Ibis
+T4-2	HumanObservation	ARCOS_ILAM_Bugesera_2016_204	Martin Sindikubwabo	2	T4-2	Turtur tympanistria			Tambourine Dove
+T4-2	HumanObservation	ARCOS_ILAM_Bugesera_2016_205	Martin Sindikubwabo	1	T4-2	Laniarius aethiopicus			Tropical Boubou
+T4-2	HumanObservation	ARCOS_ILAM_Bugesera_2016_206	Martin Sindikubwabo	1	T4-2	Aplopelia larvata			Lemon Dove
+T4-2	HumanObservation	ARCOS_ILAM_Bugesera_2016_207	Martin Sindikubwabo	1	T4-2	Treron calva			Green-Pigeon
+T4-2	HumanObservation	ARCOS_ILAM_Bugesera_2016_208	Martin Sindikubwabo	3	T4-2	Merops apiaster			European Bee-eater
+T4-2	HumanObservation	ARCOS_ILAM_Bugesera_2016_209	Martin Sindikubwabo	6	T4-2	Merops oreobates			Cinnamon-chested Bee-eater
+T4-2	HumanObservation	ARCOS_ILAM_Bugesera_2016_210	Martin Sindikubwabo	2	T4-2	Bostrychia hagedash			Hadada Ibis
+T4-3	HumanObservation	ARCOS_ILAM_Bugesera_2016_211	Martin Sindikubwabo	3	T4-3	Cossypha heuglini			White-browed Robin-Chat
+T4-3	HumanObservation	ARCOS_ILAM_Bugesera_2016_212	Martin Sindikubwabo	2	T4-3	Laniarius aethiopicus			Tropical Boubou
+T4-3	HumanObservation	ARCOS_ILAM_Bugesera_2016_213	Martin Sindikubwabo	2	T4-3	Buteo augur			Augur Buzzard
+T4-3	HumanObservation	ARCOS_ILAM_Bugesera_2016_214	Martin Sindikubwabo	2	T4-3	Lonchura bicolor			Black-and-White Mannikin
+T4-3	HumanObservation	ARCOS_ILAM_Bugesera_2016_215	Martin Sindikubwabo	1	T4-3	Emberiza flaviventris			Golden-breasted Bunting
+T4-4	HumanObservation	ARCOS_ILAM_Bugesera_2016_216	Martin Sindikubwabo	1	T4-4	Terpsiphone viridis			African Paradise Flycatcher
+T4-4	HumanObservation	ARCOS_ILAM_Bugesera_2016_217	Martin Sindikubwabo	1	T4-4	Cossypha heuglini			White-browed Robin-Chat
+T4-4	HumanObservation	ARCOS_ILAM_Bugesera_2016_218	Martin Sindikubwabo	1	T4-4	Pycnonotus barbatus			Common Bulbul
+T4-4	HumanObservation	ARCOS_ILAM_Bugesera_2016_219	Martin Sindikubwabo	2	T4-4	Laniarius erytrogaster			Black-headed Gonolek
+T4-4	HumanObservation	ARCOS_ILAM_Bugesera_2016_220	Martin Sindikubwabo	1	T4-4	Turtur tympanistria			Tambourine Dove
+T4-4	HumanObservation	ARCOS_ILAM_Bugesera_2016_221	Martin Sindikubwabo	4	T4-4	Pytilia melba			Green-winged Pytilia
+T4-4	HumanObservation	ARCOS_ILAM_Bugesera_2016_222	Martin Sindikubwabo	1	T4-4	Chalcomitra senegalensis			Scarlet-chested Sunbird
+T4-5	HumanObservation	ARCOS_ILAM_Bugesera_2016_223	Martin Sindikubwabo	1	T4-5	Pycnonotus barbatus			Common Bulbul
+T4-5	HumanObservation	ARCOS_ILAM_Bugesera_2016_224	Martin Sindikubwabo	2	T4-5	Streptopelia capicola			Ring-necked Dove
+T4-5	HumanObservation	ARCOS_ILAM_Bugesera_2016_225	Martin Sindikubwabo	10	T4-5	Merops apiaster			European Bee-eater
+T4-5	HumanObservation	ARCOS_ILAM_Bugesera_2016_226	Martin Sindikubwabo	2	T4-5	Laniarius aethiopicus			Tropical Boubou
+T4-5	HumanObservation	ARCOS_ILAM_Bugesera_2016_227	Martin Sindikubwabo	2	T4-5	Cossypha euglini			White-browed Robin-Chat
+T4-6	HumanObservation	ARCOS_ILAM_Bugesera_2016_228	Martin Sindikubwabo	2	T4-6	Centropus monachus			Blue-headed Coucal
+T4-6	HumanObservation	ARCOS_ILAM_Bugesera_2016_229	Martin Sindikubwabo	2	T4-6	Turtur chalcospilos			Emerald-spotted Wood-Dove
+T4-6	HumanObservation	ARCOS_ILAM_Bugesera_2016_230	Martin Sindikubwabo	3	T4-6	Cossypha heuglini			White-browed Robin-Chat
+T4-6	HumanObservation	ARCOS_ILAM_Bugesera_2016_231	Martin Sindikubwabo	4	T4-6	Pycnonotus barbatus			Common Bulbul
+T4-6	HumanObservation	ARCOS_ILAM_Bugesera_2016_232	Martin Sindikubwabo	1	T4-6	Emberiza flaviventris			Golden-breasted Bunting
+T4-6	HumanObservation	ARCOS_ILAM_Bugesera_2016_233	Martin Sindikubwabo	2	T4-6	Colius striatus			Speckled Mousebird
+T4-7	HumanObservation	ARCOS_ILAM_Bugesera_2016_234	Martin Sindikubwabo	5	T4-7	Pycnonotus barbatus			Common Bulbul
+T4-7	HumanObservation	ARCOS_ILAM_Bugesera_2016_235	Martin Sindikubwabo	1	T4-7	Cinnyris venusta			Variable Sunbird
+T4-7	HumanObservation	ARCOS_ILAM_Bugesera_2016_236	Martin Sindikubwabo	2	T4-7	Passer griseus			Grey-headed Sparrow
+T4-7	HumanObservation	ARCOS_ILAM_Bugesera_2016_237	Martin Sindikubwabo	1	T4-7	Dicrurus adsimlis			Fork-tailed Drongo
+T4-7	HumanObservation	ARCOS_ILAM_Bugesera_2016_238	Martin Sindikubwabo	1	T4-7	Serinus striolatus			Streaky Seedeater
+T4-8	HumanObservation	ARCOS_ILAM_Bugesera_2016_239	Martin Sindikubwabo	3	T4-8	Cossypha euglini			White-browed Robin-Chat
+T4-8	HumanObservation	ARCOS_ILAM_Bugesera_2016_240	Martin Sindikubwabo	1	T4-8	Polyboroides typus			African Harrier-Hawk
+T4-8	HumanObservation	ARCOS_ILAM_Bugesera_2016_241	Martin Sindikubwabo	1	T4-8	Dicrurus adsimlis			Fork-tailed Drongo
+T4-8	HumanObservation	ARCOS_ILAM_Bugesera_2016_242	Martin Sindikubwabo	1	T4-8	Uraeginthus bengalus			Red-cheeked Cordon-bleu
+T4-8	HumanObservation	ARCOS_ILAM_Bugesera_2016_243	Martin Sindikubwabo	4	T4-8	Merops apiaster			European Bee-eater
+T4-9	HumanObservation	ARCOS_ILAM_Bugesera_2016_244	Martin Sindikubwabo	1	T4-9	Streptopelia semitorquata			Red-eyed Dove
+T4-9	HumanObservation	ARCOS_ILAM_Bugesera_2016_245	Martin Sindikubwabo	2	T4-9	Merops apiaster			European Bee-eater
+T4-9	HumanObservation	ARCOS_ILAM_Bugesera_2016_246	Martin Sindikubwabo	1	T4-9	Streptopelia capicola			Ring-necked Dove
+T4-10	HumanObservation	ARCOS_ILAM_Bugesera_2016_247	Martin Sindikubwabo	3	T4-10	Cossypha euglini			White-browed Robin-Chat
+T4-10	HumanObservation	ARCOS_ILAM_Bugesera_2016_248	Martin Sindikubwabo	1	T4-10	Passer griseus			Grey-headed Sparrow
+T4-10	HumanObservation	ARCOS_ILAM_Bugesera_2016_249	Martin Sindikubwabo	1	T4-10	Colius striatus			Speckled Mousebird
+T5-1	HumanObservation	ARCOS_ILAM_Bugesera_2016_250	Martin Sindikubwabo	2	T5-1	Ploceus cucullatus			Black-headed Weaver
+T5-1	HumanObservation	ARCOS_ILAM_Bugesera_2016_251	Martin Sindikubwabo	4	T5-1	Turdus pelios			African Thrush
+T5-1	HumanObservation	ARCOS_ILAM_Bugesera_2016_252	Martin Sindikubwabo	3	T5-1	Ploceus baglafecht			Baglafecht Weaver
+T5-1	HumanObservation	ARCOS_ILAM_Bugesera_2016_253	Martin Sindikubwabo	2	T5-1	Euplectes axillaris			Fan-tailed Widowbird
+T5-1	HumanObservation	ARCOS_ILAM_Bugesera_2016_254	Martin Sindikubwabo	1	T5-1	Cinnyris venusta			Variable Sunbird
+T5-1	HumanObservation	ARCOS_ILAM_Bugesera_2016_255	Martin Sindikubwabo	1	T5-1	Streptopelia semitorquata			Red-eyed Dove
+T5-1	HumanObservation	ARCOS_ILAM_Bugesera_2016_256	Martin Sindikubwabo	2	T5-1	Cisticola marginatus			Winding Cisticola
+T5-1	HumanObservation	ARCOS_ILAM_Bugesera_2016_257	Martin Sindikubwabo	3	T5-1	Lagonosticta senegala			Red-billed Firefinch
+T5-2	HumanObservation	ARCOS_ILAM_Bugesera_2016_258	Martin Sindikubwabo	1	T5-2	Cinnyris erythrocerca			Red-chested Sunbird
+T5-2	HumanObservation	ARCOS_ILAM_Bugesera_2016_259	Martin Sindikubwabo	2	T5-2	Serinus striolatus			Streaky Seedeater
+T5-2	HumanObservation	ARCOS_ILAM_Bugesera_2016_260	Martin Sindikubwabo	1	T5-2	streptopelia semitorquata			Red-eyed Dove
+T5-2	HumanObservation	ARCOS_ILAM_Bugesera_2016_261	Martin Sindikubwabo	2	T5-2	Laniarius aethiopicus			Tropical Boubou
+T5-2	HumanObservation	ARCOS_ILAM_Bugesera_2016_262	Martin Sindikubwabo	1	T5-2	Pycnonotus barbatus			Common Bulbul
+T5-2	HumanObservation	ARCOS_ILAM_Bugesera_2016_263	Martin Sindikubwabo	1	T5-2	Pternistis squamatus			Scaly Francolin
+T5-2	HumanObservation	ARCOS_ILAM_Bugesera_2016_264	Martin Sindikubwabo	1	T5-2	Treptopelia chalcospilos			Emerald-spotted Wood-Dove
+T5-2	HumanObservation	ARCOS_ILAM_Bugesera_2016_265	Martin Sindikubwabo	3	T5-2	Logonosticta senegala			Red-billed Firefinch
+T5-2	HumanObservation	ARCOS_ILAM_Bugesera_2016_266	Martin Sindikubwabo	7	T5-2	Cinnyris venusta			Variable Sunbird
+T5-2	HumanObservation	ARCOS_ILAM_Bugesera_2016_267	Martin Sindikubwabo	1	T5-2	nectarinia kilmensis			Bronze Sunbird
+T5-3	HumanObservation	ARCOS_ILAM_Bugesera_2016_268	Martin Sindikubwabo	1	T5-3	Lamprotornis purpuropterus			Ruppell's Long-tailed Starling
+T5-3	HumanObservation	ARCOS_ILAM_Bugesera_2016_269	Martin Sindikubwabo	2	T5-3	Lanius collaris			Common Fiscal
+T5-3	HumanObservation	ARCOS_ILAM_Bugesera_2016_270	Martin Sindikubwabo	2	T5-3	Bostrychia hagedash			Hadada Ibis
+T5-3	HumanObservation	ARCOS_ILAM_Bugesera_2016_271	Martin Sindikubwabo	1	T5-3	streptopelia semitorquata			Red-eyed Dove
+T5-3	HumanObservation	ARCOS_ILAM_Bugesera_2016_272	Martin Sindikubwabo	4	T5-3	Turdoides sharpei			Black-lored Babbler
+T5-3	HumanObservation	ARCOS_ILAM_Bugesera_2016_273	Martin Sindikubwabo	2	T5-3	Vidua macroura			Pin-tailed Whydah
+T5-3	HumanObservation	ARCOS_ILAM_Bugesera_2016_274	Martin Sindikubwabo	5	T5-3	Ploceus cucullatus			Black-headed Weaver
+T5-4	HumanObservation	ARCOS_ILAM_Bugesera_2016_275	Martin Sindikubwabo	2	T5-4	Cossypha euglini			White-browed Robin-Chat
+T5-4	HumanObservation	ARCOS_ILAM_Bugesera_2016_276	Martin Sindikubwabo	2	T5-4	Treptopelia chalcospilos			Emerald-spotted Wood-Dove
+T5-4	HumanObservation	ARCOS_ILAM_Bugesera_2016_277	Martin Sindikubwabo	1	T5-4	Turdus pelios			African Thrush
+T5-4	HumanObservation	ARCOS_ILAM_Bugesera_2016_278	Martin Sindikubwabo	1	T5-4	streptopelia semitorquata			Red-eyed Dove
+T5-4	HumanObservation	ARCOS_ILAM_Bugesera_2016_279	Martin Sindikubwabo	2	T5-4	Bostrychia hagedash			Hadada Ibis
+T5-4	HumanObservation	ARCOS_ILAM_Bugesera_2016_280	Martin Sindikubwabo	1	T5-4	Centropus monachus			Blue-headed Coucal
+T5-5	HumanObservation	ARCOS_ILAM_Bugesera_2016_281	Martin Sindikubwabo	2	T5-5	Bostrychia hagedash			Hadada Ibis
+T5-5	HumanObservation	ARCOS_ILAM_Bugesera_2016_282	Martin Sindikubwabo		T5-5	Pternistis squamatus			Scaly Francolin
+T5-5	HumanObservation	ARCOS_ILAM_Bugesera_2016_283	Martin Sindikubwabo	1	T5-5	Kaupifalco monogrammicus			Lizard Buzzard
+T5-5	HumanObservation	ARCOS_ILAM_Bugesera_2016_284	Martin Sindikubwabo	2	T5-5	Nectarinia kilmensis			Bronze Sunbird
+T5-5	HumanObservation	ARCOS_ILAM_Bugesera_2016_285	Martin Sindikubwabo	1	T5-5	Centropus superciliosus			White-browed Coucal
+T5-5	HumanObservation	ARCOS_ILAM_Bugesera_2016_286	Martin Sindikubwabo	4	T5-5	Turdoides sharpei			Black-lored Babbler
+T5-5	HumanObservation	ARCOS_ILAM_Bugesera_2016_287	Martin Sindikubwabo	3	T5-5	Pycnonotus barbatus			Common Bulbul
+T5-6	HumanObservation	ARCOS_ILAM_Bugesera_2016_288	Martin Sindikubwabo	1	T5-6	Bubulcus ibis			Cattle Egret
+T5-6	HumanObservation	ARCOS_ILAM_Bugesera_2016_289	Martin Sindikubwabo	1	T5-6	Megaceryle maxima			Giant Kingfisher
+T5-6	HumanObservation	ARCOS_ILAM_Bugesera_2016_290	Martin Sindikubwabo	2	T5-6	Egretta garzetta			Little Egret
+T5-6	HumanObservation	ARCOS_ILAM_Bugesera_2016_291	Martin Sindikubwabo	1	T5-6	Turdus pelios			African Thrush
+T5-6	HumanObservation	ARCOS_ILAM_Bugesera_2016_292	Martin Sindikubwabo	1	T5-6	Pycnonotus barbatus			Common Bulbul
+T5-6	HumanObservation	ARCOS_ILAM_Bugesera_2016_293	Martin Sindikubwabo	2	T5-6	Lamprotornis purpuropterus			Ruppell's Long-tailed Starling
+T5-6	HumanObservation	ARCOS_ILAM_Bugesera_2016_294	Martin Sindikubwabo	1	T5-6	Actophilornis africana			African Jacana
+T5-7	HumanObservation	ARCOS_ILAM_Bugesera_2016_295	Martin Sindikubwabo	2	T5-7	Pycnonotus barbatus			Common Bulbul
+T5-7	HumanObservation	ARCOS_ILAM_Bugesera_2016_296	Martin Sindikubwabo	1	T5-7	Bocagia minuta			Marsh Tchagra
+T5-7	HumanObservation	ARCOS_ILAM_Bugesera_2016_297	Martin Sindikubwabo	2	T5-7	Scopus umbretta			Hamerkop
+T5-7	HumanObservation	ARCOS_ILAM_Bugesera_2016_298	Martin Sindikubwabo	1	T5-7	Euplectes axillaris			Fan-tailed Widowbird
+T5-8	HumanObservation	ARCOS_ILAM_Bugesera_2016_299	Martin Sindikubwabo	1	T5-8	Cossypha euglini			White-browed Robin-Chat
+T5-8	HumanObservation	ARCOS_ILAM_Bugesera_2016_300	Martin Sindikubwabo	1	T5-8	Pycnonotus barbatus			Common Bulbul
+T5-8	HumanObservation	ARCOS_ILAM_Bugesera_2016_301	Martin Sindikubwabo	2	T5-8	Lamprotornis purpuropterus			Ruppell's Long-tailed Starling
+T5-8	HumanObservation	ARCOS_ILAM_Bugesera_2016_302	Martin Sindikubwabo	10	T5-8	Ploceus cucullatus			Black-headed Weaver
+T5-8	HumanObservation	ARCOS_ILAM_Bugesera_2016_303	Martin Sindikubwabo	1	T5-8	Ploceus nigerrimus			Vieillot’s Black Weaver
+T5-9	HumanObservation	ARCOS_ILAM_Bugesera_2016_304	Martin Sindikubwabo	3	T5-9	Ploceus cucullatus			Black-headed Weaver
+T5-10	HumanObservation	ARCOS_ILAM_Bugesera_2016_305	Martin Sindikubwabo	1	T5-10	Ploceus cucullatus			Black-headed Weaver
+T5-10	HumanObservation	ARCOS_ILAM_Bugesera_2016_306	Martin Sindikubwabo	2	T5-10	Motacilla capensis			Cape Wagtail
+T5-10	HumanObservation	ARCOS_ILAM_Bugesera_2016_307	Martin Sindikubwabo	1	T5-10	nectarinia kilmensis			Bronze Sunbird
+T1-1	HumanObservation	ARCOS_ILAM_Bugesera_2016_308	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T1-1	Junonia oenone	Lepidoptera	Nymphalidae	
+T1-1	HumanObservation	ARCOS_ILAM_Bugesera_2016_309	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	2	T1-1	Ceriagron glabrum	Odonata	Coenagrionidae	
+T1-1	HumanObservation	ARCOS_ILAM_Bugesera_2016_310	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T1-1	Anthene definita	Lepidoptera	Lycaenidae	
+T1-1	HumanObservation	ARCOS_ILAM_Bugesera_2016_311	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	2	T1-1	Palpopleura lucia	Odonata	Libellulidae	
+T1-2	HumanObservation	ARCOS_ILAM_Bugesera_2016_312	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	3	T1-2	Ceriagron glabrum	Odonata	Coenagrionidae	
+T1-2	HumanObservation	ARCOS_ILAM_Bugesera_2016_313	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T1-2	Anthene definita	Lepidoptera	Lycaenidae	
+T1-2	HumanObservation	ARCOS_ILAM_Bugesera_2016_314	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T1-2	Palpopleura albifrons	Odonata	Libellulidae	
+T1-2	HumanObservation	ARCOS_ILAM_Bugesera_2016_315	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T1-2	Amarius ochlea	Lepidoptera	Nymphalidae	
+T1-2	HumanObservation	ARCOS_ILAM_Bugesera_2016_316	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T1-2	Bicyclus anynana	Lepidoptera	Nymphalidae	
+T1-3	HumanObservation	ARCOS_ILAM_Bugesera_2016_317	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T1-3	Danaus chrysippus	Lepidoptera	Nymphalidae	
+T1-3	HumanObservation	ARCOS_ILAM_Bugesera_2016_318	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T1-3	Bicyclus safitza	Lepidoptera	Nymphalidae	
+T1-3	HumanObservation	ARCOS_ILAM_Bugesera_2016_319	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T1-3	Ceriagron glabrum	Odonata	Coenagrionidae	
+T1-4	HumanObservation	ARCOS_ILAM_Bugesera_2016_320	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T1-4	Palpopleura jucunda	Odonata	Libellulidae	
+T1-4	HumanObservation	ARCOS_ILAM_Bugesera_2016_321	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	2	T1-4	Lestes pallidus	Odonata	Lestidae	
+T1-4	HumanObservation	ARCOS_ILAM_Bugesera_2016_322	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	4	T1-4	Bicyclus safitza	Lepidoptera	Nymphalidae	
+T1-4	HumanObservation	ARCOS_ILAM_Bugesera_2016_323	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T1-4	Palpopleura lucia	Odonata	Libellulidae	
+T1-5	HumanObservation	ARCOS_ILAM_Bugesera_2016_324	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T1-5	Hemistica albipunctum	Odonata	Libellulidae	
+T1-5	HumanObservation	ARCOS_ILAM_Bugesera_2016_325	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T1-5	Orthetrum angustriventre	Odonata	Libellulidae	
+T1-6	HumanObservation	ARCOS_ILAM_Bugesera_2016_326	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T1-6	Acisoma inflatum	Odonata	Libellulidae	
+T1-6	HumanObservation	ARCOS_ILAM_Bugesera_2016_327	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	10	T1-6	Lestes pallidus	Odonata	Lestidae	
+T1-6	HumanObservation	ARCOS_ILAM_Bugesera_2016_328	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	3	T1-6	Ceriagron glabrum	Odonata	Coenagrionidae	
+T1-6	HumanObservation	ARCOS_ILAM_Bugesera_2016_329	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T1-6	Hypolimnas missipus	Lepidoptera	Nymphalidae	
+T1-6	HumanObservation	ARCOS_ILAM_Bugesera_2016_330	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T1-6	Bicyclus anynana	Lepidoptera	Nymphalidae	
+T1-7	HumanObservation	ARCOS_ILAM_Bugesera_2016_331	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T1-7	Danaus chrysippus	Lepidoptera	Nymphalidae	
+T1-7	HumanObservation	ARCOS_ILAM_Bugesera_2016_332	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T1-7	Eurema brigitta	Lepidoptera	Pieridae	
+T1-7	HumanObservation	ARCOS_ILAM_Bugesera_2016_333	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	30	T1-7	Acisoma inflatum	Odonata	Libellulidae	
+T1-7	HumanObservation	ARCOS_ILAM_Bugesera_2016_334	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	4	T1-7	Ceriagron glabrum	Odonata	Coenagrionidae	
+T1-7	HumanObservation	ARCOS_ILAM_Bugesera_2016_335	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	10	T1-7	Palpopleura lucia	Odonata	Libellulidae	
+T1-7	HumanObservation	ARCOS_ILAM_Bugesera_2016_336	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T1-7	Lestes pallidus	Odonata	Lestidae	
+T1-7	HumanObservation	ARCOS_ILAM_Bugesera_2016_337	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	2	T1-7	Leuchitonea levubu	Lepidoptera	Hesperidae	
+T1-8	HumanObservation	ARCOS_ILAM_Bugesera_2016_338	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T1-8	Teriomima zuluana	Lepidoptera	Nymphalidae	
+T1-8	HumanObservation	ARCOS_ILAM_Bugesera_2016_339	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	15	T1-8	Ceriagron glabrum	Odonata	Coenagrionidae	
+T1-8	HumanObservation	ARCOS_ILAM_Bugesera_2016_340	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	6	T1-8	Palpopleura jucunda	Odonata	Libellulidae	
+T1-8	HumanObservation	ARCOS_ILAM_Bugesera_2016_341	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	2	T1-8	Hemistica albipunctum	Odonata	Libellulidae	
+T1-8	HumanObservation	ARCOS_ILAM_Bugesera_2016_342	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	2	T1-8	Anthene definita	Lepidoptera	Nymphalidae	
+T1-8	HumanObservation	ARCOS_ILAM_Bugesera_2016_343	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T1-8	Eurema brigitta	Lepidoptera	Pieridae	
+T1-8	HumanObservation	ARCOS_ILAM_Bugesera_2016_344	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	8	T1-8	Leuchitonea levubu	Lepidoptera	Hesperidae	
+T1-8	HumanObservation	ARCOS_ILAM_Bugesera_2016_345	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	4	T1-8	Anthene definita	Lepidoptera	Nymphalidae	
+T1-9	HumanObservation	ARCOS_ILAM_Bugesera_2016_346	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T1-9	Brachythemis wilsoni	Odonata	Libellulidae	
+T1-9	HumanObservation	ARCOS_ILAM_Bugesera_2016_347	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	8	T1-9	Bicyclus safitza	Lepidoptera	Nymphalidae	
+T1-9	HumanObservation	ARCOS_ILAM_Bugesera_2016_348	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	10	T1-9	Acisoma inflatum	Odonata	Libellulidae	
+T1-9	HumanObservation	ARCOS_ILAM_Bugesera_2016_349	Jean Paul Kubwimana, Jean de Dieu Uwizerimana		T1-9	Eurema hebace	Lepidoptera	Pieridae	
+T1-10	HumanObservation	ARCOS_ILAM_Bugesera_2016_350	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T1-10	Hadrothermis scabrifrons	Odonata	Libellulidae	
+T1-10	HumanObservation	ARCOS_ILAM_Bugesera_2016_351	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	4	T1-10	Crocothemis erythrea	Odonata	Libellulidae	
+T1-10	HumanObservation	ARCOS_ILAM_Bugesera_2016_352	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	6	T1-10	Ceriagron glabrum	Odonata	Coenagrionidae	
+T1-10	HumanObservation	ARCOS_ILAM_Bugesera_2016_353	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	9	T1-10	Palpopleura lucia	Odonata	Libellulidae	
+T1-10	HumanObservation	ARCOS_ILAM_Bugesera_2016_354	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	2	T1-10	Acisoma inflatum	Odonata	Libellulidae	
+T2-1	HumanObservation	ARCOS_ILAM_Bugesera_2016_355	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	3	T2-1	Bicyclus safitza	Lepidoptera	Nymphalidae	
+T2-1	HumanObservation	ARCOS_ILAM_Bugesera_2016_356	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	6	T2-1	Ceriagron glabrum	Odonata	Coenagrionidae	
+T2-1	HumanObservation	ARCOS_ILAM_Bugesera_2016_357	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	4	T2-1	Hadrothermis scabrifrons	Odonata	Libellulidae	
+T2-1	HumanObservation	ARCOS_ILAM_Bugesera_2016_358	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	7	T2-1	Acisoma inflatum	Odonata	Libellulidae	
+T2-1	HumanObservation	ARCOS_ILAM_Bugesera_2016_359	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	2	T2-1	Eurema hebace	Lepidoptera	Pieridae	
+T2-1	HumanObservation	ARCOS_ILAM_Bugesera_2016_360	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T2-1	Eurema brigitta	Lepidoptera	Pieridae	
+T2-1	HumanObservation	ARCOS_ILAM_Bugesera_2016_361	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	2	T2-1	Palpopleura albifrons	Odonata	Libellulidae	
+T2-1	HumanObservation	ARCOS_ILAM_Bugesera_2016_362	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T2-1	Palpopleura jucunda	Odonata	Libellulidae	
+T2-1	HumanObservation	ARCOS_ILAM_Bugesera_2016_363	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	2	T2-1	Orthetrum angustriventre	Odonata	Libellulidae	
+T2-1	HumanObservation	ARCOS_ILAM_Bugesera_2016_364	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T2-1	Palpopleura lucia	Odonata	Libellulidae	
+T2-1	HumanObservation	ARCOS_ILAM_Bugesera_2016_365	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T2-1	Catopsilia florella	Lepidoptera	Pieridae	
+T2-2	HumanObservation	ARCOS_ILAM_Bugesera_2016_366	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T2-2	Phalanta phalantha	Lepidoptera	Nymphalidae	
+T2-2	HumanObservation	ARCOS_ILAM_Bugesera_2016_367	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T2-2	Junonia oenone	Lepidoptera	Nymphalidae	
+T2-2	HumanObservation	ARCOS_ILAM_Bugesera_2016_368	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	2	T2-2	Ceriagron glabrum	Odonata	Coenagrionidae	
+T2-2	HumanObservation	ARCOS_ILAM_Bugesera_2016_369	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	3	T2-2	Catopsilia florella	Lepidoptera	Pieridae	
+T2-2	HumanObservation	ARCOS_ILAM_Bugesera_2016_370	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	3	T2-2	Hamanumida daedalus	Lepidoptera	Nymphalidae	
+T2-2	HumanObservation	ARCOS_ILAM_Bugesera_2016_371	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T2-2	Palpopleura lucia	Odonata	Libellulidae	
+T2-3	HumanObservation	ARCOS_ILAM_Bugesera_2016_372	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	4	T2-3	Colotis danae	Lepidoptera	Pieridae	
+T2-3	HumanObservation	ARCOS_ILAM_Bugesera_2016_373	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T2-3	Eurema brigitta	Lepidoptera	Pieridae	
+T2-3	HumanObservation	ARCOS_ILAM_Bugesera_2016_374	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T2-3	Junonia hierta	Lepidoptera	Nymphalidae	
+T2-3	HumanObservation	ARCOS_ILAM_Bugesera_2016_375	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T2-3	Danaus chrysippus	Lepidoptera	Nymphalidae	
+T2-3	HumanObservation	ARCOS_ILAM_Bugesera_2016_376	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T2-3	Junonia oenone	Lepidoptera	Nymphalidae	
+T2-3	HumanObservation	ARCOS_ILAM_Bugesera_2016_377	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	2	T2-3	Hypolimnas missipus	Lepidoptera	Nymphalidae	
+T2-3	HumanObservation	ARCOS_ILAM_Bugesera_2016_378	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	3	T2-3	Bicyclus safitza	Lepidoptera	Nymphalidae	
+T2-3	HumanObservation	ARCOS_ILAM_Bugesera_2016_379	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T2-3	Palpopleura jucunda	Odonata	Libellulidae	
+T2-3	HumanObservation	ARCOS_ILAM_Bugesera_2016_380	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T2-3	Hemistica albipunctum	Odonata	Libellulidae	
+T2-3	HumanObservation	ARCOS_ILAM_Bugesera_2016_381	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T2-3	Papilio demodocus	Lepidoptera	Papillionidae	
+T2-4	HumanObservation	ARCOS_ILAM_Bugesera_2016_382	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T2-4	Orthetrum angustriventre	Odonata	Libellulidae	
+T2-4	HumanObservation	ARCOS_ILAM_Bugesera_2016_383	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T2-4	Hypolimnas missipus	Lepidoptera	Nymphalidae	
+T2-4	HumanObservation	ARCOS_ILAM_Bugesera_2016_384	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T2-4	Catopsilia florella	Lepidoptera	Nymphalidae	
+T2-4	HumanObservation	ARCOS_ILAM_Bugesera_2016_385	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T2-4	Junonia oenone	Lepidoptera	Nymphalidae	
+T2-5	HumanObservation	ARCOS_ILAM_Bugesera_2016_386	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T2-5	Lestes pallidus	Odonata	Lestidae	
+T2-6	HumanObservation	ARCOS_ILAM_Bugesera_2016_387	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	4	T2-6	Palpopleura jucunda	Odonata	Libellulidae	
+T2-6	HumanObservation	ARCOS_ILAM_Bugesera_2016_388	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	2	T2-6	Phalanta phalantha	Lepidoptera	Nymphalidae	
+T2-6	HumanObservation	ARCOS_ILAM_Bugesera_2016_389	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T2-6	Colotis danae	Lepidoptera	Pieridae	
+T2-6	HumanObservation	ARCOS_ILAM_Bugesera_2016_390	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	5	T2-6	Bicyclus anynana	Lepidoptera	Nymphalidae	
+T2-7	HumanObservation	ARCOS_ILAM_Bugesera_2016_391	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	70	T2-7	Palpopleura lucia	Odonata	Libellulidae	
+T2-7	HumanObservation	ARCOS_ILAM_Bugesera_2016_392	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	2	T2-7	orthetrum julia	Odonata	Libellulidae	
+T2-7	HumanObservation	ARCOS_ILAM_Bugesera_2016_393	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	20	T2-7	Orthetrum angustriventre	Odonata	Libellulidae	
+T2-7	HumanObservation	ARCOS_ILAM_Bugesera_2016_394	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	15	T2-7	Brachythemis wilsoni	Odonata	Libellulidae	
+T2-7	HumanObservation	ARCOS_ILAM_Bugesera_2016_395	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	50	T2-7	Palpopleura jucunda	Odonata	Libellulidae	
+T2-7	HumanObservation	ARCOS_ILAM_Bugesera_2016_396	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T2-7	Eurytela dryope	Lepidoptera	Nymphalidae	
+T2-8	HumanObservation	ARCOS_ILAM_Bugesera_2016_397	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	5	T2-8	Ceriagron glabrum	Odonata	Coenagrionidae	
+T2-8	HumanObservation	ARCOS_ILAM_Bugesera_2016_398	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T2-8	Nepheronia argia	Lepidoptera	Pieridae	
+T2-9	HumanObservation	ARCOS_ILAM_Bugesera_2016_399	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T2-9	Eurytela dryope	Lepidoptera	Nymphalidae	
+T2-9	HumanObservation	ARCOS_ILAM_Bugesera_2016_400	Jean Paul Kubwimana, Jean de Dieu Uwizerimana		T2-9	Diastotoma seror03	Odonata	Gomphidae	
+T2-9	HumanObservation	ARCOS_ILAM_Bugesera_2016_401	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	2	T2-9	Euphaedra neophron	Lepidoptera	Nymphalidae	
+T2-10	HumanObservation	ARCOS_ILAM_Bugesera_2016_402	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	2	T2-10	Phalanta phalantha	Lepidoptera	Nymphalidae	
+T2-10	HumanObservation	ARCOS_ILAM_Bugesera_2016_403	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T2-10	orthetrum julia	Odonata	Libellulidae	
+T2-10	HumanObservation	ARCOS_ILAM_Bugesera_2016_404	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T2-10	Catopsilia florella	Lepidoptera	Nymphalidae	
+T2-10	HumanObservation	ARCOS_ILAM_Bugesera_2016_405	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T2-10	Euphaedra neophron	Lepidoptera	Nymphalidae	
+T2-10	HumanObservation	ARCOS_ILAM_Bugesera_2016_406	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T2-10	Bicyclus safitza	Lepidoptera	Nymphalidae	
+T2-10	HumanObservation	ARCOS_ILAM_Bugesera_2016_407	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T2-10	Colotis danae	Lepidoptera	Pieridae	
+T3-1	HumanObservation	ARCOS_ILAM_Bugesera_2016_408	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	80	T3-1	Colotis danae	Lepidoptera	Pieridae	
+T3-1	HumanObservation	ARCOS_ILAM_Bugesera_2016_409	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	4	T3-1	Eurema brigitta	Lepidoptera	Nymphalidae	
+T3-1	HumanObservation	ARCOS_ILAM_Bugesera_2016_410	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	12	T3-1	Ceriagron glabrum	Odonata	Coenagrionidae	
+T3-1	HumanObservation	ARCOS_ILAM_Bugesera_2016_411	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T3-1	Amarius ochlea	Lepidoptera	Nymphalidae	
+T3-1	HumanObservation	ARCOS_ILAM_Bugesera_2016_412	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T3-1	Brachythemis wilsoni	Odonata	Libellulidae	
+T3-1	HumanObservation	ARCOS_ILAM_Bugesera_2016_413	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T3-1	Aethiothemis bequaerti	Odonata	Libellulidae	
+T3-1	HumanObservation	ARCOS_ILAM_Bugesera_2016_414	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T3-1	Orthetrum africanum	Odonata	Libellulidae	
+T3-1	HumanObservation	ARCOS_ILAM_Bugesera_2016_415	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	20	T3-1	Palpopleura lucia	Odonata	Libellulidae	
+T3-2	HumanObservation	ARCOS_ILAM_Bugesera_2016_416	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	30	T3-2	Ceriagron glabrum	Odonata	Coenagrionidae	
+T3-2	HumanObservation	ARCOS_ILAM_Bugesera_2016_417	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	50	T3-2	Colotis danae	Lepidoptera	Nymphalidae	
+T3-2	HumanObservation	ARCOS_ILAM_Bugesera_2016_418	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	5	T3-2	Amarius ochlea	Lepidoptera	Nymphalidae	
+T3-3	HumanObservation	ARCOS_ILAM_Bugesera_2016_419	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	15	T3-3	Palpopleura lucia	Odonata	Libellulidae	
+T3-3	HumanObservation	ARCOS_ILAM_Bugesera_2016_420	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	4	T3-3	Ceriagron glabrum	Odonata	Coenagrionidae	
+T3-3	HumanObservation	ARCOS_ILAM_Bugesera_2016_421	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	2	T3-3	Orthetrum angustriventre	Odonata	Libellulidae	
+T3-3	HumanObservation	ARCOS_ILAM_Bugesera_2016_422	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T3-3	Orthetrum africanum	Odonata	Libellulidae	
+T3-3	HumanObservation	ARCOS_ILAM_Bugesera_2016_423	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T3-3	Eronia leda	Lepidoptera	Pieridae	
+T3-3	HumanObservation	ARCOS_ILAM_Bugesera_2016_424	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	2	T3-3	Acisoma inflatum	Odonata	Libellulidae	
+T3-3	HumanObservation	ARCOS_ILAM_Bugesera_2016_425	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T3-3	Junonia orithya	Lepidoptera	Nymphalidae	
+T3-3	HumanObservation	ARCOS_ILAM_Bugesera_2016_426	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	4	T3-3	Danaus chrysippus	Lepidoptera	Nymphalidae	
+T3-3	HumanObservation	ARCOS_ILAM_Bugesera_2016_427	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T3-3	Trithemis furva	Odonata	Libellulidae	
+T3-4	HumanObservation	ARCOS_ILAM_Bugesera_2016_428	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	10	T3-4	Ceriagron glabrum	Odonata	Coenagrionidae	
+T3-4	HumanObservation	ARCOS_ILAM_Bugesera_2016_429	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	5	T3-4	Amarius nivius	Lepidoptera	Nymphalidae	
+T3-4	HumanObservation	ARCOS_ILAM_Bugesera_2016_430	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T3-4	Brachythemis wilsoni	Odonata	Libellulidae	
+T3-4	HumanObservation	ARCOS_ILAM_Bugesera_2016_431	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	6	T3-4	Palpopleura lucia	Odonata	Libellulidae	
+T3-4	HumanObservation	ARCOS_ILAM_Bugesera_2016_432	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	3	T3-4	Acisoma inflatum	Odonata	Libellulidae	
+T3-4	HumanObservation	ARCOS_ILAM_Bugesera_2016_433	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	5	T3-4	Selysothemis nigra	Odonata	Libellulidae	
+T3-4	HumanObservation	ARCOS_ILAM_Bugesera_2016_434	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T3-4	Danaus chrysippus	Lepidoptera	Nymphalidae	
+T3-4	HumanObservation	ARCOS_ILAM_Bugesera_2016_435	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	2	T3-4	Bicyclus safitza	Lepidoptera	Nymphalidae	
+T3-5	HumanObservation	ARCOS_ILAM_Bugesera_2016_436	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	8	T3-5	Palpopleura lucia	Odonata	Libellulidae	
+T3-5	HumanObservation	ARCOS_ILAM_Bugesera_2016_437	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	2	T3-5	Colotis danae	Lepidoptera	Pieridae	
+T3-5	HumanObservation	ARCOS_ILAM_Bugesera_2016_438	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T3-5	Hypolimnas missipus	Lepidoptera	Nymphalidae	
+T3-5	HumanObservation	ARCOS_ILAM_Bugesera_2016_439	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T3-5	Ceriagron glabrum	Odonata	Coenagrionidae	
+T3-5	HumanObservation	ARCOS_ILAM_Bugesera_2016_440	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	2	T3-5	Teriomima zuluana	Lepidoptera	Nymphalidae	
+T3-5	HumanObservation	ARCOS_ILAM_Bugesera_2016_441	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	5	T3-5	Colotis danae	Lepidoptera	Pieridae	
+T3-6	HumanObservation	ARCOS_ILAM_Bugesera_2016_442	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	10	T3-6	Ceriagron glabrum	Odonata	Coenagrionidae	
+T3-6	HumanObservation	ARCOS_ILAM_Bugesera_2016_443	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	40	T3-6	Colotis danae	Lepidoptera	Pieridae	
+T3-6	HumanObservation	ARCOS_ILAM_Bugesera_2016_444	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	5	T3-6	Palpopleura lucia	Odonata	Libellulidae	
+T3-6	HumanObservation	ARCOS_ILAM_Bugesera_2016_445	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	2	T3-6	Amarius nivius	Lepidoptera	Nymphalidae	
+T3-6	HumanObservation	ARCOS_ILAM_Bugesera_2016_446	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	3	T3-6	Junonia oenone	Lepidoptera	Nymphalidae	
+T3-6	HumanObservation	ARCOS_ILAM_Bugesera_2016_447	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T3-6	Bicyclus safitza	Lepidoptera	Nymphalidae	
+T3-6	HumanObservation	ARCOS_ILAM_Bugesera_2016_448	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	2	T3-6	Eurema brigitta	Lepidoptera	Pieridae	
+T3-6	HumanObservation	ARCOS_ILAM_Bugesera_2016_449	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	2	T3-6	Teriomima zuluana	Lepidoptera	Nymphalidae	
+T3-6	HumanObservation	ARCOS_ILAM_Bugesera_2016_450	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T3-6	Junonia orithya	Lepidoptera	Nymphalidae	
+T3-6	HumanObservation	ARCOS_ILAM_Bugesera_2016_451	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T3-6	Precis ceryne	Lepidoptera	Nymphalidae	
+T3-7	HumanObservation	ARCOS_ILAM_Bugesera_2016_452	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T3-7	Eurema brigitta	Lepidoptera	Nymphalidae	
+T3-7	HumanObservation	ARCOS_ILAM_Bugesera_2016_453	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	5	T3-7	Teriomima zuluana	Lepidoptera	Nymphalidae	
+T3-7	HumanObservation	ARCOS_ILAM_Bugesera_2016_454	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	25	T3-7	Colotis danae	Lepidoptera	Pieridae	
+T3-7	HumanObservation	ARCOS_ILAM_Bugesera_2016_455	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	3	T3-7	Brachythemis wilsoni	Odonata	Libellulidae	
+T3-8	HumanObservation	ARCOS_ILAM_Bugesera_2016_456	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	60	T3-8	Colotis danae	Lepidoptera	Pieridae	
+T3-8	HumanObservation	ARCOS_ILAM_Bugesera_2016_457	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	4	T3-8	Bicyclus anynana	Lepidoptera	Nymphalidae	
+T3-8	HumanObservation	ARCOS_ILAM_Bugesera_2016_458	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	3	T3-8	Amarius nivius	Lepidoptera	Nymphalidae	
+T3-8	HumanObservation	ARCOS_ILAM_Bugesera_2016_459	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T3-8	Mylothris agathina	Lepidoptera	Pieridae	
+T3-8	HumanObservation	ARCOS_ILAM_Bugesera_2016_460	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	2	T3-8	Teriomima zuluana	Lepidoptera	Nymphalidae	
+T3-9	HumanObservation	ARCOS_ILAM_Bugesera_2016_461	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	10	T3-9	Ceriagron glabrum	Odonata	Coenagrionidae	
+T3-9	HumanObservation	ARCOS_ILAM_Bugesera_2016_462	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	7	T3-9	Selysothemis nigra	Odonata	Libellulidae	
+T3-9	HumanObservation	ARCOS_ILAM_Bugesera_2016_463	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	5	T3-9	Amarius nivius	Lepidoptera	Nymphalidae	
+T3-9	HumanObservation	ARCOS_ILAM_Bugesera_2016_464	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	25	T3-9	Colotis danae	Lepidoptera	Pieridae	
+T3-9	HumanObservation	ARCOS_ILAM_Bugesera_2016_465	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	5	T3-9	Teriomima zuluana	Lepidoptera	Nymphalidae	
+T3-9	HumanObservation	ARCOS_ILAM_Bugesera_2016_466	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	6	T3-9	Palpopleura albifrons	Odonata	Libellulidae	
+T3-10	HumanObservation	ARCOS_ILAM_Bugesera_2016_467	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	15	T3-10	Ceriagron glabrum	Odonata	Coenagrionidae	
+T3-10	HumanObservation	ARCOS_ILAM_Bugesera_2016_468	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	2	T3-10	Amarius nivius	Lepidoptera	Nymphalidae	
+T3-10	HumanObservation	ARCOS_ILAM_Bugesera_2016_469	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	30	T3-10	Colotis danae	Lepidoptera	Pieridae	
+T3-10	HumanObservation	ARCOS_ILAM_Bugesera_2016_470	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	3	T3-10	Bicyclus safitza	Lepidoptera	Nymphalidae	
+T3-10	HumanObservation	ARCOS_ILAM_Bugesera_2016_471	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	6	T3-10	Palpopleura lucia	Odonata	Libellulidae	
+T3-10	HumanObservation	ARCOS_ILAM_Bugesera_2016_472	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T3-10	Palpopleura jucunda	Odonata	Libellulidae	
+T4-1	HumanObservation	ARCOS_ILAM_Bugesera_2016_473	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T4-1	Bicyclus safitza	Lepidoptera	Nymphalidae	
+T4-1	HumanObservation	ARCOS_ILAM_Bugesera_2016_474	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	10	T4-1	Ceriagron glabrum	Odonata	Coenagrionidae	
+T4-1	HumanObservation	ARCOS_ILAM_Bugesera_2016_475	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	3	T4-1	Amarius nivius	Lepidoptera	Nymphalidae	
+T4-1	HumanObservation	ARCOS_ILAM_Bugesera_2016_476	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T4-1	Teriomima zuluana	Lepidoptera	Nymphalidae	
+T4-1	HumanObservation	ARCOS_ILAM_Bugesera_2016_477	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T4-1	Bicyclus anynana	Lepidoptera	Nymphalidae	
+T4-2	HumanObservation	ARCOS_ILAM_Bugesera_2016_478	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	11	T4-2	Ceriagron glabrum	Odonata	Coenagrionidae	
+T4-2	HumanObservation	ARCOS_ILAM_Bugesera_2016_479	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	5	T4-2	Eurema brigitta	Lepidoptera	Nymphalidae	
+T4-2	HumanObservation	ARCOS_ILAM_Bugesera_2016_480	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	3	T4-2	Bicyclus anynana	Lepidoptera	Nymphalidae	
+T4-2	HumanObservation	ARCOS_ILAM_Bugesera_2016_481	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T4-2	Pontia helice	Lepidoptera	Pieridae	
+T4-3	HumanObservation	ARCOS_ILAM_Bugesera_2016_482	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	15	T4-3	Acisoma inflatum	Odonata	Libellulidae	
+T4-3	HumanObservation	ARCOS_ILAM_Bugesera_2016_483	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	3	T4-3	Palpopleura albifrons		Libellulidae	
+T4-3	HumanObservation	ARCOS_ILAM_Bugesera_2016_484	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	2	T4-3	Brachythemis wilsoni		Libellulidae	
+T4-3	HumanObservation	ARCOS_ILAM_Bugesera_2016_485	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T4-3	Selysothemis nigra		Libellulidae	
+T4-3	HumanObservation	ARCOS_ILAM_Bugesera_2016_486	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T4-3	Phalanta phalantha	Lepidoptera	Nymphalidae	
+T4-3	HumanObservation	ARCOS_ILAM_Bugesera_2016_487	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	5	T4-3	Orthetrum icteromelas	Odonata	Libellulidae	
+T4-4	HumanObservation	ARCOS_ILAM_Bugesera_2016_488	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	10	T4-4	Ceriagron glabrum	Odonata	Coenagrionidae	
+T4-4	HumanObservation	ARCOS_ILAM_Bugesera_2016_489	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	2	T4-4	Bicyclus safitza	Lepidoptera	Nymphalidae	
+T4-4	HumanObservation	ARCOS_ILAM_Bugesera_2016_490	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T4-4	Lestes pallidus	Odonata	Lestidae	
+T4-4	HumanObservation	ARCOS_ILAM_Bugesera_2016_491	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T4-4	Selysothemis nigra	Odonata	Libellulidae	
+T4-4	HumanObservation	ARCOS_ILAM_Bugesera_2016_492	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T4-4	Eurytela dryope	Lepidoptera	Nymphalidae	
+T4-4	HumanObservation	ARCOS_ILAM_Bugesera_2016_493	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T4-4	Orthetrum icteromelas	Odonata	Libellulidae	
+T4-4	HumanObservation	ARCOS_ILAM_Bugesera_2016_494	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T4-4	Colotis danae	Lepidoptera	Pieridae	
+T4-5	HumanObservation	ARCOS_ILAM_Bugesera_2016_495	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	2	T4-5	Orthetrum icteromelas	Odonata	Libellulidae	
+T4-5	HumanObservation	ARCOS_ILAM_Bugesera_2016_496	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	5	T4-5	Bicyclus safitza	Lepidoptera	Nymphalidae	
+T4-5	HumanObservation	ARCOS_ILAM_Bugesera_2016_497	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	3	T4-5	Colotis danae	Lepidoptera	Pieridae	
+T4-5	HumanObservation	ARCOS_ILAM_Bugesera_2016_498	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T4-5	Lestes pallidus	Lepidoptera	Lestidae	
+T4-5	HumanObservation	ARCOS_ILAM_Bugesera_2016_499	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	2	T4-5	Palpopleura albifrons	Odonata	Libellulidae	
+T4-6	HumanObservation	ARCOS_ILAM_Bugesera_2016_500	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	6	T4-6	Orthetrum icteromelas	Odonata	Libellulidae	
+T4-6	HumanObservation	ARCOS_ILAM_Bugesera_2016_501	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	5	T4-6	Palpopleura albifrons	Odonata	Libellulidae	
+T4-6	HumanObservation	ARCOS_ILAM_Bugesera_2016_502	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	7	T4-6	Colotis danae	Lepidoptera	Pieridae	
+T4-6	HumanObservation	ARCOS_ILAM_Bugesera_2016_503	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	5	T4-6	Ceriagron glabrum	Odonata	Coenagrionidae	
+T4-6	HumanObservation	ARCOS_ILAM_Bugesera_2016_504	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T4-6	Phalanta phalantha	Lepidoptera	Nymphalidae	
+T4-6	HumanObservation	ARCOS_ILAM_Bugesera_2016_505	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T4-6	Eurytela dryope	Lepidoptera	Nymphalidae	
+T4-7	HumanObservation	ARCOS_ILAM_Bugesera_2016_506	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	4	T4-7	Orthetrum icteromelas	Odonata	Libellulidae	
+T4-7	HumanObservation	ARCOS_ILAM_Bugesera_2016_507	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	11	T4-7	Eurema hebace	Lepidoptera	Nymphalidae	
+T4-7	HumanObservation	ARCOS_ILAM_Bugesera_2016_508	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T4-7	Trithemis furva	Odonata	Libellulidae	
+T4-7	HumanObservation	ARCOS_ILAM_Bugesera_2016_509	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	2	T4-7	Nepheronia argia	Lepidoptera	Pieridae	
+T4-7	HumanObservation	ARCOS_ILAM_Bugesera_2016_510	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T4-7	Hadrothermis scabrifrons	Odonata	Libellulidae	
+T4-8	HumanObservation	ARCOS_ILAM_Bugesera_2016_511	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T4-8	Palpopleura albifrons	Odonata	Libellulidae	
+T4-8	HumanObservation	ARCOS_ILAM_Bugesera_2016_512	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T4-8	Amarius nivius	Lepidoptera	Nymphalidae	
+T4-8	HumanObservation	ARCOS_ILAM_Bugesera_2016_513	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T4-8	Colotis danae	Lepidoptera	Pieridae	
+T4-8	HumanObservation	ARCOS_ILAM_Bugesera_2016_514	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T4-8	Bicyclus safitza	Lepidoptera	Nymphalidae	
+T4-9	HumanObservation	ARCOS_ILAM_Bugesera_2016_515	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	2	T4-9	Eurema hebace	Lepidoptera	Nymphalidae	
+T4-9	HumanObservation	ARCOS_ILAM_Bugesera_2016_516	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T4-9	Nepheronia argia	Lepidoptera	Pieridae	
+T4-9	HumanObservation	ARCOS_ILAM_Bugesera_2016_517	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	6	T4-9	Colotis danae	Lepidoptera	Pieridae	
+T4-9	HumanObservation	ARCOS_ILAM_Bugesera_2016_518	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	4	T4-9	Anax ephigger	Odonata	Aeshinidae	
+T4-10	HumanObservation	ARCOS_ILAM_Bugesera_2016_519	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T4-10	Eurytela dryope	Lepidoptera	Nymphalidae	
+T4-10	HumanObservation	ARCOS_ILAM_Bugesera_2016_520	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	3	T4-10	Colotis danae	Lepidoptera	Pieridae	
+T4-10	HumanObservation	ARCOS_ILAM_Bugesera_2016_521	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	5	T4-10	Nepheronia argia	Lepidoptera	Pieridae	
+T5-1	HumanObservation	ARCOS_ILAM_Bugesera_2016_522	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T5-1	Amarius nivius	Lepidoptera	Nymphalidae	
+T5-1	HumanObservation	ARCOS_ILAM_Bugesera_2016_523	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	3	T5-1	Colotis danae	Lepidoptera	Pieridae	
+T5-1	HumanObservation	ARCOS_ILAM_Bugesera_2016_524	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	2	T5-1	Bicyclus safitza	Lepidoptera	Nymphalidae	
+T5-1	HumanObservation	ARCOS_ILAM_Bugesera_2016_525	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	6	T5-1	Bicyclus anynana	Lepidoptera	Nymphalidae	
+T5-1	HumanObservation	ARCOS_ILAM_Bugesera_2016_526	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T5-1	Hemistica albipunctum	Odonata	Libellulidae	
+T5-2	HumanObservation	ARCOS_ILAM_Bugesera_2016_527	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	5	T5-2	Amarius nivius	Lepidoptera	Nymphalidae	
+T5-2	HumanObservation	ARCOS_ILAM_Bugesera_2016_528	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	25	T5-2	Colotis danae	Lepidoptera	Pieridae	
+T5-2	HumanObservation	ARCOS_ILAM_Bugesera_2016_529	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	2	T5-2	Precis ceryne	Lepidoptera	Nymphalidae	
+T5-2	HumanObservation	ARCOS_ILAM_Bugesera_2016_530	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T5-2	Orthetrum africanum	Odonata	Libellulidae	
+T5-2	HumanObservation	ARCOS_ILAM_Bugesera_2016_531	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	2	T5-2	Palpopleura lucia	Odonata	Libellulidae	
+T5-2	HumanObservation	ARCOS_ILAM_Bugesera_2016_532	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	9	T5-2	Bicyclus safitza	Lepidoptera	Nymphalidae	
+T5-2	HumanObservation	ARCOS_ILAM_Bugesera_2016_533	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T5-2	Phalanta phalantha	Lepidoptera	Nymphalidae	
+T5-3	HumanObservation	ARCOS_ILAM_Bugesera_2016_534	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	4	T5-3	Bicyclus anynana	Lepidoptera	Nymphalidae	
+T5-3	HumanObservation	ARCOS_ILAM_Bugesera_2016_535	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	8	T5-3	Colotis danae	Lepidoptera	Pieridae	
+T5-4	HumanObservation	ARCOS_ILAM_Bugesera_2016_536	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T5-4	Brachythemis wilsoni	Odonata	Libellulidae	
+T5-4	HumanObservation	ARCOS_ILAM_Bugesera_2016_537	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T5-4	Palpopleura albifrons	Odonata	Libellulidae	
+T5-4	HumanObservation	ARCOS_ILAM_Bugesera_2016_538	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T5-4	Palpopleura lucia	Odonata	Libellulidae	
+T5-4	HumanObservation	ARCOS_ILAM_Bugesera_2016_539	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	3	T5-4	Ceriagron glabrum	Odonata	Coenagrionidae	
+T5-4	HumanObservation	ARCOS_ILAM_Bugesera_2016_540	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	2	T5-4	Colotis danae	Lepidoptera	Pieridae	
+T5-4	HumanObservation	ARCOS_ILAM_Bugesera_2016_541	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	15	T5-4	Bicyclus safitza	Lepidoptera	Nymphalidae	
+T5-4	HumanObservation	ARCOS_ILAM_Bugesera_2016_542	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	5	T5-4	Bicyclus anynana	Lepidoptera	Nymphalidae	
+T5-5	HumanObservation	ARCOS_ILAM_Bugesera_2016_543	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T5-5	Brachythemis wilsoni	Odonata	Libellulidae	
+T5-5	HumanObservation	ARCOS_ILAM_Bugesera_2016_544	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	3	T5-5	Ypthima asterope	Lepidoptera	Nymphalidae	
+T5-5	HumanObservation	ARCOS_ILAM_Bugesera_2016_545	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	2	T5-5	Colotis danae	Lepidoptera	Pieridae	
+T5-5	HumanObservation	ARCOS_ILAM_Bugesera_2016_546	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	2	T5-5	Anax gladiator	Odonata	Aeshinidae	
+T5-6	HumanObservation	ARCOS_ILAM_Bugesera_2016_547	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T5-6	Amarius nivius	Lepidoptera	Nymphalidae	
+T5-6	HumanObservation	ARCOS_ILAM_Bugesera_2016_548	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	3	T5-6	Colotis danae	Lepidoptera	Pieridae	
+T5-6	HumanObservation	ARCOS_ILAM_Bugesera_2016_549	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	6	T5-6	Mylothris agathina	Lepidoptera	Nymphalidae	
+T5-6	HumanObservation	ARCOS_ILAM_Bugesera_2016_550	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	2	T5-6	Brachythemis wilsoni	Odonata	Libellulidae	
+T5-6	HumanObservation	ARCOS_ILAM_Bugesera_2016_551	Jean Paul Kubwimana, Jean de Dieu Uwizerimana		T5-6	Eronia leda	Lepidoptera	Pieridae	
+T5-7	HumanObservation	ARCOS_ILAM_Bugesera_2016_552	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T5-7	Orthetrum africanum	Odonata	Libellulidae	
+T5-7	HumanObservation	ARCOS_ILAM_Bugesera_2016_553	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	15	T5-7	Colotis danae	Lepidoptera	Pieridae	
+T5-7	HumanObservation	ARCOS_ILAM_Bugesera_2016_554	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T5-7	Orthetrum angustiventre	Odonata	Libellulidae	
+T5-7	HumanObservation	ARCOS_ILAM_Bugesera_2016_555	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	6	T5-7	Hemistica albipunctum	Odonata	Libellulidae	
+T5-7	HumanObservation	ARCOS_ILAM_Bugesera_2016_556	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T5-7	Anas gladiator	Odonata	Aeshinidae	
+T5-8	HumanObservation	ARCOS_ILAM_Bugesera_2016_557	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T5-8	Orthetrum africanum	Odonata	Libellulidae	
+T5-8	HumanObservation	ARCOS_ILAM_Bugesera_2016_558	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	8	T5-8	Colotis danae	Lepidoptera	Pieridae	
+T5-8	HumanObservation	ARCOS_ILAM_Bugesera_2016_559	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T5-8	Amarius nivius	Lepidoptera	Nymphalidae	
+T5-8	HumanObservation	ARCOS_ILAM_Bugesera_2016_560	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	2	T5-8	Ypthima asterope	Lepidoptera	Nymphalidae	
+T5-8	HumanObservation	ARCOS_ILAM_Bugesera_2016_561	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T5-8	Palpopleura lucia	Odonata	Libellulidae	
+T5-8	HumanObservation	ARCOS_ILAM_Bugesera_2016_562	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T5-8	Palpopleura albifrons	Odonata	Libellulidae	
+T5-9	HumanObservation	ARCOS_ILAM_Bugesera_2016_563	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T5-9	Ypthima asterope	Lepidoptera	Nymphalidae	
+T5-9	HumanObservation	ARCOS_ILAM_Bugesera_2016_564	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	20	T5-9	Colotis danae	Lepidoptera	Pieridae	
+T5-9	HumanObservation	ARCOS_ILAM_Bugesera_2016_565	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T5-9	Precis ceryne	Lepidoptera	Nymphalidae	
+T5-9	HumanObservation	ARCOS_ILAM_Bugesera_2016_566	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T5-9	Palpopleura lucia	Odonata	Libellulidae	
+T5-10	HumanObservation	ARCOS_ILAM_Bugesera_2016_567	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	2	T5-10	Palpopleura albifrons	Odonata	Libellulidae	
+T5-10	HumanObservation	ARCOS_ILAM_Bugesera_2016_568	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	30	T5-10	Orthetrum julia	Odonata	Libellulidae	
+T5-10	HumanObservation	ARCOS_ILAM_Bugesera_2016_569	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	20	T5-10	Colotis danae	Lepidoptera	Pieridae	
+T5-10	HumanObservation	ARCOS_ILAM_Bugesera_2016_570	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	2	T5-10	Amarius nivius	Lepidoptera	Nymphalidae	
+T5-10	HumanObservation	ARCOS_ILAM_Bugesera_2016_571	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T5-10	Precis ceryne	Lepidoptera	Nymphalidae	
+T5-10	HumanObservation	ARCOS_ILAM_Bugesera_2016_572	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	6	T5-10	Ceriagron glabrum	Odonata	Coenagrionidae	
+T5-10	HumanObservation	ARCOS_ILAM_Bugesera_2016_573	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	5	T5-10	orthetrum glabrum	Odonata	Libellulidae	
+T5-10	HumanObservation	ARCOS_ILAM_Bugesera_2016_574	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T5-10	Orthetrum africanum	Odonata	Libellulidae	

@@ -1,0 +1,153 @@
+<eml:eml xmlns:eml="eml://ecoinformatics.org/eml-2.1.1"
+         xmlns:dc="http://purl.org/dc/terms/"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="eml://ecoinformatics.org/eml-2.1.1 http://rs.gbif.org/schema/eml-gbif-profile/1.1/eml.xsd"
+         packageId="4a7f53e7-3835-4f02-ad40-cf6e5219d910/v1.1" system="http://gbif.org" scope="system"
+         xml:lang="eng">
+
+<dataset>
+  <alternateIdentifier>4a7f53e7-3835-4f02-ad40-cf6e5219d910</alternateIdentifier>
+  <alternateIdentifier>http://arbmis.arcosnetwork.org/ipt/resource?r=coeb-ur-abc-2018</alternateIdentifier>
+  <title xml:lang="eng">Freshwater biodiversity of Rwanda, data recorded from theses of students of University of Rwanda (UR)</title>
+      <creator>
+    <individualName>
+        <givenName>Yvette</givenName>
+      <surName>Umurungi</surName>
+    </individualName>
+    <organizationName>Centre of Excellence in Biodiversity and Natural Resources Management (CoEB)</organizationName>
+    <positionName>Research affiliate</positionName>
+    <address>
+        <deliveryPoint>University Avenue</deliveryPoint>
+        <city>Huye</city>
+        <administrativeArea>Southern Province</administrativeArea>
+        <postalCode>512 Butare, Rwanda</postalCode>
+        <country>RW</country>
+    </address>
+    <phone>+250 788 769 652</phone>
+    <electronicMailAddress>umurungiyvette@gmail.com</electronicMailAddress>
+    <onlineUrl>http://coebiodiversity.ur.ac.rw/</onlineUrl>
+      </creator>
+      <metadataProvider>
+    <individualName>
+        <givenName>Yvette</givenName>
+      <surName>Umurungi</surName>
+    </individualName>
+    <organizationName>Centre of Excellence in Biodiversity and Natural Resources Management (CoEB)</organizationName>
+    <positionName>Research affiliate</positionName>
+    <address>
+        <deliveryPoint>University Avenue</deliveryPoint>
+        <city>Huye</city>
+        <administrativeArea>Southern Province</administrativeArea>
+        <postalCode>512 Butare, Rwanda</postalCode>
+        <country>RW</country>
+    </address>
+    <phone>+250 788 769 652</phone>
+    <electronicMailAddress>umurungiyvette@gmail.com</electronicMailAddress>
+    <onlineUrl>http://coebiodiversity.ur.ac.rw/</onlineUrl>
+      </metadataProvider>
+      <associatedParty>
+    <individualName>
+        <givenName>Yvette</givenName>
+      <surName>Umurungi</surName>
+    </individualName>
+    <organizationName>Center of Excellence in Biodiversity and Natural Resource Management at University of Rwanda</organizationName>
+    <positionName>Project Manager</positionName>
+    <address>
+        <city>Huye</city>
+        <administrativeArea>Southern Province</administrativeArea>
+        <country>RW</country>
+    </address>
+    <phone>+250788769652</phone>
+    <electronicMailAddress>umurungiyvette@gmail.com</electronicMailAddress>
+    <role>user</role>
+      </associatedParty>
+  <pubDate>
+      2018-07-26
+  </pubDate>
+  <language>eng</language>
+  <abstract>
+    <para>This dataset was compiled by the Centre of Excellence in Biodiversity and Natural Resources Management (CoEB) at University of Rwanda.
+The data was digitized from memoirs and theses of graduates from the university as part of the African Biodiversity Challenge.</para>
+  </abstract>
+      <keywordSet>
+            <keyword>Occurrence</keyword>
+        <keywordThesaurus>GBIF Dataset Type Vocabulary: http://rs.gbif.org/vocabulary/gbif/dataset_type.xml</keywordThesaurus>
+      </keywordSet>
+      <keywordSet>
+            <keyword>Observation</keyword>
+        <keywordThesaurus>GBIF Dataset Subtype Vocabulary: http://rs.gbif.org/vocabulary/gbif/dataset_subtype.xml</keywordThesaurus>
+      </keywordSet>
+  <intellectualRights>
+    <para>This work is licensed under a <ulink url="http://creativecommons.org/licenses/by/4.0/legalcode"><citetitle>Creative Commons Attribution (CC-BY) 4.0 License</citetitle></ulink>.</para>
+  </intellectualRights>
+  <coverage>
+      <geographicCoverage>
+          <geographicDescription>Data covers different sites in Rwanda</geographicDescription>
+        <boundingCoordinates>
+          <westBoundingCoordinate>28.861</westBoundingCoordinate>
+          <eastBoundingCoordinate>30.959</eastBoundingCoordinate>
+          <northBoundingCoordinate>-1.044</northBoundingCoordinate>
+          <southBoundingCoordinate>-2.833</southBoundingCoordinate>
+        </boundingCoordinates>
+      </geographicCoverage>
+  </coverage>
+  <maintenance>
+    <description>
+      <para></para>
+    </description>
+    <maintenanceUpdateFrequency>asNeeded</maintenanceUpdateFrequency>
+  </maintenance>
+
+      <contact>
+    <individualName>
+        <givenName>Yvette</givenName>
+      <surName>Umurungi</surName>
+    </individualName>
+    <organizationName>Centre of Excellence in Biodiversity and Natural Resources Management (CoEB)</organizationName>
+    <positionName>Research affiliate</positionName>
+    <address>
+        <deliveryPoint>University Avenue</deliveryPoint>
+        <city>Huye</city>
+        <administrativeArea>Southern Province</administrativeArea>
+        <postalCode>512 Butare, Rwanda</postalCode>
+        <country>RW</country>
+    </address>
+    <phone>+250 788 769 652</phone>
+    <electronicMailAddress>umurungiyvette@gmail.com</electronicMailAddress>
+    <onlineUrl>http://coebiodiversity.ur.ac.rw/</onlineUrl>
+      </contact>
+  <project id="ABC-Project-CoEB-ARCOS">
+    <title>Integrated Freshwater Biodiversity Information to Guide Informed Decision-Making</title>
+      <personnel>
+        <individualName>
+            <givenName>Prof Beth</givenName>
+          <surName>Kaplin</surName>
+        </individualName>
+        <role>principalInvestigator</role>
+      </personnel>
+      <personnel>
+        <individualName>
+            <givenName>Yvette</givenName>
+          <surName>Umurungi</surName>
+        </individualName>
+        <role>pointOfContact</role>
+      </personnel>
+      <personnel>
+        <individualName>
+            <givenName>Faustin</givenName>
+          <surName>Gashakamba</surName>
+        </individualName>
+        <role>publisher</role>
+      </personnel>
+  </project>
+</dataset>
+  <additionalMetadata>
+    <metadata>
+      <gbif>
+          <dateStamp>2018-05-08T05:42:37.282+02:00</dateStamp>
+          <hierarchyLevel>dataset</hierarchyLevel>
+          <dc:replaces>4a7f53e7-3835-4f02-ad40-cf6e5219d910/v1.1.xml</dc:replaces>
+      </gbif>
+    </metadata>
+  </additionalMetadata>
+</eml:eml>

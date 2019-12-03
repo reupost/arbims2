@@ -1,0 +1,774 @@
+id	basisOfRecord	occurrenceID	occurrenceRemarks	individualCount	behavior	eventID	identifiedBy	scientificName	order	family	vernacularName
+T3-1	HumanObservation	ARCOS_ILAM_2017_1		1		T3-1	Martin Sindikubwabo, Toa Avalos	Bostrychia hagedash			Hadada Ibis
+T3-1	HumanObservation	ARCOS_ILAM_2017_2		3		T3-1	Martin Sindikubwabo, Toa Avalos	Cossypha euglini			White-browed Robin -Chat
+T3-1	HumanObservation	ARCOS_ILAM_2017_3		3		T3-1	Martin Sindikubwabo, Toa Avalos	Streptopelia capicola			Ble -spoted Wood-Dove
+T3-1	HumanObservation	ARCOS_ILAM_2017_4		2		T3-1	Martin Sindikubwabo, Toa Avalos	Streptopelia semitorquata			Red-eyed Dove
+T3-1	HumanObservation	ARCOS_ILAM_2017_5		3		T3-1	Martin Sindikubwabo, Toa Avalos	Laniarius aethiopicus			Tropical Boubou
+T3-1	HumanObservation	ARCOS_ILAM_2017_6		2		T3-1	Martin Sindikubwabo, Toa Avalos	Ploceus cucullatus			Black headed weaver
+T3-1	HumanObservation	ARCOS_ILAM_2017_7		2		T3-1	Martin Sindikubwabo, Toa Avalos	Ploceus xanthops			Holub's Golden Weaver
+T3-1	HumanObservation	ARCOS_ILAM_2017_8		1		T3-1	Martin Sindikubwabo, Toa Avalos	Nectarinia famosa			Malachite Sun bird
+T3-1	HumanObservation	ARCOS_ILAM_2017_9		1		T3-1	Martin Sindikubwabo, Toa Avalos	Pycnonotus barbatus			Common Bulbul
+T3-1	HumanObservation	ARCOS_ILAM_2017_10		2		T3-1	Martin Sindikubwabo, Toa Avalos	Cisticola marginatus			Winding Cisticola
+T3-1	HumanObservation	ARCOS_ILAM_2017_11		1		T3-1	Martin Sindikubwabo, Toa Avalos	Logonosticta senegala			Red-billed Firefinch
+T3-2	HumanObservation	ARCOS_ILAM_2017_12		1		T3-2	Martin Sindikubwabo, Toa Avalos	Centrepus monachus			Blue-headed Coucal
+T3-2	HumanObservation	ARCOS_ILAM_2017_13		1		T3-2	Martin Sindikubwabo, Toa Avalos	Nectarnia kilimensis			Bronze Sunbird
+T3-2	HumanObservation	ARCOS_ILAM_2017_14		6		T3-2	Martin Sindikubwabo, Toa Avalos	Pycnonotus barbatus			Common Bulbul
+T3-2	HumanObservation	ARCOS_ILAM_2017_15		4		T3-2	Martin Sindikubwabo, Toa Avalos	Ploceus  ocularis			Spectacled Weaver
+T3-2	HumanObservation	ARCOS_ILAM_2017_16		3		T3-2	Martin Sindikubwabo, Toa Avalos	Bostrychia hagedash			Hadada Ibis
+T3-2	HumanObservation	ARCOS_ILAM_2017_17		2		T3-2	Martin Sindikubwabo, Toa Avalos	cyniris venusta			Variable Sunbird
+T3-3	HumanObservation	ARCOS_ILAM_2017_18		1		T3-3	Martin Sindikubwabo, Toa Avalos	Streptopelia capicola			Ring-necked Dove
+T3-3	HumanObservation	ARCOS_ILAM_2017_19		1		T3-3	Martin Sindikubwabo, Toa Avalos	Bostrychia hagedash			Hadada Ibis
+T3-3	HumanObservation	ARCOS_ILAM_2017_20		3		T3-3	Martin Sindikubwabo, Toa Avalos	Ploceus xanthops			Holub's Golden Weaver
+T3-4	HumanObservation	ARCOS_ILAM_2017_21		2		T3-4	Martin Sindikubwabo, Toa Avalos	Turdoides jardineii			Arrow-marked Babbler
+T3-4	HumanObservation	ARCOS_ILAM_2017_22		1		T3-4	Martin Sindikubwabo, Toa Avalos	Ploceus xanthops			Holub's Golden Weaver
+T3-4	HumanObservation	ARCOS_ILAM_2017_23		1		T3-4	Martin Sindikubwabo, Toa Avalos	Turtur tympanistria			Tumbourine Dove
+T3-5	HumanObservation	ARCOS_ILAM_2017_24		1		T3-5	Martin Sindikubwabo, Toa Avalos	Laniarius aethiopicus			Tropical Boubou
+T3-5	HumanObservation	ARCOS_ILAM_2017_25		1		T3-5	Martin Sindikubwabo, Toa Avalos	Laniarius erytrogaster			Black heade gonoleke
+T3-5	HumanObservation	ARCOS_ILAM_2017_26		8		T3-5	Martin Sindikubwabo, Toa Avalos	Merops apiaster			European Bee-eater
+T3-5	HumanObservation	ARCOS_ILAM_2017_27		1		T3-5	Martin Sindikubwabo, Toa Avalos	Ardea melanocephala			Grey heded Heron
+T3-5	HumanObservation	ARCOS_ILAM_2017_28		1		T3-5	Martin Sindikubwabo, Toa Avalos	Bostrychia hagedash			Hadada Ibis
+T3-6	HumanObservation	ARCOS_ILAM_2017_29		2		T3-6	Martin Sindikubwabo, Toa Avalos	Ploceus cucullatus			Black headed weaver
+T3-6	HumanObservation	ARCOS_ILAM_2017_30		1		T3-6	Martin Sindikubwabo, Toa Avalos	Laniarius aethiopicus			Tropical Boubou
+T3-6	HumanObservation	ARCOS_ILAM_2017_31		2		T3-6	Martin Sindikubwabo, Toa Avalos	Pycnonotus barbatus			Common Bulbul
+T3-6	HumanObservation	ARCOS_ILAM_2017_32		4		T3-6	Martin Sindikubwabo, Toa Avalos	Nectarnia famosa			Malachite Sun bird
+T3-6	HumanObservation	ARCOS_ILAM_2017_33		1		T3-6	Martin Sindikubwabo, Toa Avalos	Cinnyris erythrocerca			Red -chested Sunbird
+T3-6	HumanObservation	ARCOS_ILAM_2017_34		2		T3-6	Martin Sindikubwabo, Toa Avalos	Bostrychia hagedash			hadada Ibis
+T3-7	HumanObservation	ARCOS_ILAM_2017_35				T3-7	Martin Sindikubwabo, Toa Avalos	ciconia ciconia			White Stock
+T3-7	HumanObservation	ARCOS_ILAM_2017_36		2		T3-7	Martin Sindikubwabo, Toa Avalos	Hirundo rustica			Barn Swallow
+T3-8	HumanObservation	ARCOS_ILAM_2017_37		12		T3-8	Martin Sindikubwabo, Toa Avalos	Hirundo rustica			Barn Swallow
+T3-8	HumanObservation	ARCOS_ILAM_2017_38		2		T3-8	Martin Sindikubwabo, Toa Avalos	Pycnonotus barbatus			Common Bulbul
+T3-8	HumanObservation	ARCOS_ILAM_2017_39		4		T3-8	Martin Sindikubwabo, Toa Avalos	Bostrychia hagedash			Hadada Ibis
+T3-9	HumanObservation	ARCOS_ILAM_2017_40		1		T3-9	Martin Sindikubwabo, Toa Avalos	Cinnyris erythrocerca			Red-chested Sunbird
+T3-9	HumanObservation	ARCOS_ILAM_2017_41		1		T3-9	Martin Sindikubwabo, Toa Avalos	Laniarius aethiopicus			Red eyed dove
+T3-9	HumanObservation	ARCOS_ILAM_2017_42		2		T3-9	Martin Sindikubwabo, Toa Avalos	Ploceus ocularis			Spectacled Weaver
+T3-10	HumanObservation	ARCOS_ILAM_2017_43		1		T3-10	Martin Sindikubwabo, Toa Avalos	Euplectes axillaris			Fan-tailed Widowbird
+T3-10	HumanObservation	ARCOS_ILAM_2017_44		1		T3-10	Martin Sindikubwabo, Toa Avalos	Ardea melanocephala			Grey heded Heron
+T3-10	HumanObservation	ARCOS_ILAM_2017_45		2		T3-10	Martin Sindikubwabo, Toa Avalos	Balearica regulorum			Grey Crowned Crane
+T4-1	HumanObservation	ARCOS_ILAM_2017_46				T4-1	Martin Sindikubwabo, Toa Avalos	Pycnonotus barbatus			Common Bulbul
+T4-1	HumanObservation	ARCOS_ILAM_2017_47		2		T4-1	Martin Sindikubwabo, Toa Avalos	Turdoides jardineii			Arrow-marked Babbler
+T4-2	HumanObservation	ARCOS_ILAM_2017_48		1		T4-2	Martin Sindikubwabo, Toa Avalos	Turdoides jardineii			Arrow-marked Babbler
+T4-3	HumanObservation	ARCOS_ILAM_2017_49		1		T4-3	Martin Sindikubwabo, Toa Avalos	Terpsiphone viridis			African paradise-flycather
+T4-3	HumanObservation	ARCOS_ILAM_2017_50		4		T4-3	Martin Sindikubwabo, Toa Avalos	Turdoides jardineii			Arrow-marked Babbler
+T4-3	HumanObservation	ARCOS_ILAM_2017_51		2		T4-3	Martin Sindikubwabo, Toa Avalos	Milvus migrans			Black Kite
+T4-3	HumanObservation	ARCOS_ILAM_2017_52		1		T4-3	Martin Sindikubwabo, Toa Avalos	Cuculus solitalius			Red-Chested Cuckoo
+T4-3	HumanObservation	ARCOS_ILAM_2017_53		1		T4-3	Martin Sindikubwabo, Toa Avalos	Laniarius aethiopicus			TRopical Boubou
+T4-3	HumanObservation	ARCOS_ILAM_2017_54		1		T4-3	Martin Sindikubwabo, Toa Avalos	Colius striatus			Speckled Mousebird
+T4-3	HumanObservation	ARCOS_ILAM_2017_55		2		T4-3	Martin Sindikubwabo, Toa Avalos	Turdus pelios			African Thrush
+T4-3	HumanObservation	ARCOS_ILAM_2017_56		2		T4-3	Martin Sindikubwabo, Toa Avalos	Cyniris venusta			Variable Sunbird
+T4-3	HumanObservation	ARCOS_ILAM_2017_57		1		T4-3	Martin Sindikubwabo, Toa Avalos	Ploceus xanthops			Holub's Golden Weaver
+T4-3	HumanObservation	ARCOS_ILAM_2017_58		2		T4-3	Martin Sindikubwabo, Toa Avalos	Centrepus monachus			Blue-headed Coucal
+T4-4	HumanObservation	ARCOS_ILAM_2017_59		3		T4-4	Martin Sindikubwabo, Toa Avalos	Colius striatus			Speckled Mousebird
+T4-4	HumanObservation	ARCOS_ILAM_2017_60		1		T4-4	Martin Sindikubwabo, Toa Avalos	Saxcolola torqua			Common Stonechat
+T4-4	HumanObservation	ARCOS_ILAM_2017_61		1		T4-4	Martin Sindikubwabo, Toa Avalos	Cossypha euglini			White-browed Robin -Chat
+T4-4	HumanObservation	ARCOS_ILAM_2017_62		1		T4-4	Martin Sindikubwabo, Toa Avalos	Ploceus cucullatus			Black-headed Weaver
+T4-4	HumanObservation	ARCOS_ILAM_2017_63		1		T4-4	Martin Sindikubwabo, Toa Avalos	Ploceus xanthops			Holub's Golden Weaver
+T4-5	HumanObservation	ARCOS_ILAM_2017_64		1		T4-5	Martin Sindikubwabo, Toa Avalos	Cuculus solitalius			Red-Chested Cuckoo
+T4-5	HumanObservation	ARCOS_ILAM_2017_65		2		T4-5	Martin Sindikubwabo, Toa Avalos	Streptopelia capicola			Ble -spoted Wood-Dove
+T4-6	HumanObservation	ARCOS_ILAM_2017_66		1		T4-6	Martin Sindikubwabo, Toa Avalos	Streptopelia capicola			Ble -spoted Wood-Dove
+T4-6	HumanObservation	ARCOS_ILAM_2017_67		1		T4-6	Martin Sindikubwabo, Toa Avalos	Pycnonotus barbatus			Common Bulbul
+T4-7	HumanObservation	ARCOS_ILAM_2017_68		2		T4-7	Martin Sindikubwabo, Toa Avalos	Laniarius erytrogaster			Black-headed Gonolek
+T4-8	HumanObservation	ARCOS_ILAM_2017_69		3		T4-8	Martin Sindikubwabo, Toa Avalos	Nectarnia kilimensis			Bronze Sunbird
+T4-8	HumanObservation	ARCOS_ILAM_2017_70		1		T4-8	Martin Sindikubwabo, Toa Avalos	Turdus pelios			African Thrush
+T4-8	HumanObservation	ARCOS_ILAM_2017_71		1		T4-8	Martin Sindikubwabo, Toa Avalos	Terpsiphone viridis			African paradise-flycather
+T4-8	HumanObservation	ARCOS_ILAM_2017_72		1		T4-8	Martin Sindikubwabo, Toa Avalos	Cossypha euglini			White-browed Robin -Chat
+T4-9	HumanObservation	ARCOS_ILAM_2017_73		1		T4-9	Martin Sindikubwabo, Toa Avalos	Pycnonotus barbatus			Common Bulbul
+T4-9	HumanObservation	ARCOS_ILAM_2017_74		2		T4-9	Martin Sindikubwabo, Toa Avalos	Macronyx croceus			Yellow-throated Longclaw
+T4-9	HumanObservation	ARCOS_ILAM_2017_75		3		T4-9	Martin Sindikubwabo, Toa Avalos	Cossypha euglini			White-browed Robin -Chat
+T4-9	HumanObservation	ARCOS_ILAM_2017_76		3		T4-9	Martin Sindikubwabo, Toa Avalos	cyniris venusta			Variable Sunbird
+T4-9	HumanObservation	ARCOS_ILAM_2017_77		1		T4-9	Martin Sindikubwabo, Toa Avalos	Passer griseus			Grey-headed Sparrow
+T4-10	HumanObservation	ARCOS_ILAM_2017_78		1		T4-10	Martin Sindikubwabo, Toa Avalos	Lophaetus occiptalis			Long-crested eagle
+T5-1	HumanObservation	ARCOS_ILAM_2017_79		2		T5-1	Martin Sindikubwabo, Toa Avalos	Ploceus cucullatus			Black-headed Weaver
+T5-1	HumanObservation	ARCOS_ILAM_2017_80				T5-1	Martin Sindikubwabo, Toa Avalos	Cinnyris venusta			Variable Sunbird
+T5-1	HumanObservation	ARCOS_ILAM_2017_81		1		T5-1	Martin Sindikubwabo, Toa Avalos	Cinnyris venusta			Variable Sunbird
+T5-1	HumanObservation	ARCOS_ILAM_2017_82		2		T5-1	Martin Sindikubwabo, Toa Avalos	Cisticola marginatus			Winding Cisticola
+T5-1	HumanObservation	ARCOS_ILAM_2017_83		3		T5-1	Martin Sindikubwabo, Toa Avalos	Lagonosticta senegala			Red-billed Firefinch
+T5-1	HumanObservation	ARCOS_ILAM_2017_84		2		T5-1	Martin Sindikubwabo, Toa Avalos	Streptopelia capicola			Ble -spoted Wood-Dove
+T5-1	HumanObservation	ARCOS_ILAM_2017_85		3		T5-1	Martin Sindikubwabo, Toa Avalos	Psalidoprocne holomelas			Black Sow-wing
+T5-1	HumanObservation	ARCOS_ILAM_2017_86		1		T5-1	Martin Sindikubwabo, Toa Avalos	Psalidoprocne holomelas			Black Sow-wing
+T5-2	HumanObservation	ARCOS_ILAM_2017_87		2		T5-2	Martin Sindikubwabo, Toa Avalos	Serinus striolatus			Streaky Seedeater
+T5-2	HumanObservation	ARCOS_ILAM_2017_88		1		T5-2	Martin Sindikubwabo, Toa Avalos	Pycnonotus barbatus			Common Bulbul
+T5-2	HumanObservation	ARCOS_ILAM_2017_89		1		T5-2	Martin Sindikubwabo, Toa Avalos	Nectarnia kilimensis			Bronze Sunbird
+T5-2	HumanObservation	ARCOS_ILAM_2017_90		1		T5-2	Martin Sindikubwabo, Toa Avalos	Colius striatus			Speckled mousebird
+T5-2	HumanObservation	ARCOS_ILAM_2017_91		1		T5-2	Martin Sindikubwabo, Toa Avalos	Sernus mozambicus			Yellow-fronted Canary
+T5-2	HumanObservation	ARCOS_ILAM_2017_92		2		T5-2	Martin Sindikubwabo, Toa Avalos	nectarinia famosa			Malachite Sun bird
+T5-2	HumanObservation	ARCOS_ILAM_2017_93		1		T5-2	Martin Sindikubwabo, Toa Avalos	Ploceus cucullatus			Black-headed Weaver
+T5-3	HumanObservation	ARCOS_ILAM_2017_94		1		T5-3	Martin Sindikubwabo, Toa Avalos	Lamprotornis purpuropterus			Ruppell's Long-tailed Starling
+T5-3	HumanObservation	ARCOS_ILAM_2017_95		5		T5-3	Martin Sindikubwabo, Toa Avalos	streptopelia semitorquata			Red-eyed Dove
+T5-3	HumanObservation	ARCOS_ILAM_2017_96		3		T5-3	Martin Sindikubwabo, Toa Avalos	Streptopelia capicola			Ble -spoted Wood-Dove
+T5-3	HumanObservation	ARCOS_ILAM_2017_97		1		T5-3	Martin Sindikubwabo, Toa Avalos	Terpsiphone viridis			African paradise-flycather
+T5-3	HumanObservation	ARCOS_ILAM_2017_98		2		T5-3	Martin Sindikubwabo, Toa Avalos	Colius striatus			Speckled mousebird
+T5-3	HumanObservation	ARCOS_ILAM_2017_99		1		T5-3	Martin Sindikubwabo, Toa Avalos	Nectarnia kilimensis			Bronze Sunbird
+T5-3	HumanObservation	ARCOS_ILAM_2017_100		2		T5-3	Martin Sindikubwabo, Toa Avalos	Pycnonotus barbatus			Common Bulbul
+T5-4	HumanObservation	ARCOS_ILAM_2017_101		4		T5-4	Martin Sindikubwabo, Toa Avalos	Streptopelia capicola			Ble -spoted Wood-Dove
+T5-4	HumanObservation	ARCOS_ILAM_2017_102		2		T5-4	Martin Sindikubwabo, Toa Avalos	streptopelia semitorquata			Red-eyed Dove
+T5-4	HumanObservation	ARCOS_ILAM_2017_103		1		T5-4	Martin Sindikubwabo, Toa Avalos	Cuculus Solitarius			Red-Chested Cuckoo
+T5-4	HumanObservation	ARCOS_ILAM_2017_104		6		T5-4	Martin Sindikubwabo, Toa Avalos	Turdoides jardineii			Arrow-marked Babbler
+T5-4	HumanObservation	ARCOS_ILAM_2017_105		2		T5-4	Martin Sindikubwabo, Toa Avalos	nectarinia famosa			Blonze sun bird
+T5-5	HumanObservation	ARCOS_ILAM_2017_106		1		T5-5	Martin Sindikubwabo, Toa Avalos	Centropus superciliosus			White-browed Coucal
+T5-5	HumanObservation	ARCOS_ILAM_2017_107		1		T5-5	Martin Sindikubwabo, Toa Avalos	Pycnonotus barbatus			Common Bulbul
+T5-5	HumanObservation	ARCOS_ILAM_2017_108				T5-5	Martin Sindikubwabo, Toa Avalos	Muscicapa aquatica			Swamp Flycatcher
+T5-6	HumanObservation	ARCOS_ILAM_2017_109		1		T5-6	Martin Sindikubwabo, Toa Avalos	Macronyx croceus			Yellow-throated Longclow
+T5-6	HumanObservation	ARCOS_ILAM_2017_110		1		T5-6	Martin Sindikubwabo, Toa Avalos	Threskiornis aethiopicus			Sacred Ibis
+T5-6	HumanObservation	ARCOS_ILAM_2017_111		1		T5-6	Martin Sindikubwabo, Toa Avalos	Cinnyris erythrocerca			Red-chested Sunbird
+T5-7	HumanObservation	ARCOS_ILAM_2017_112		6		T5-7	Martin Sindikubwabo, Toa Avalos	Turdoides jardineii			Arrow-marked Babbler
+T5-7	HumanObservation	ARCOS_ILAM_2017_113		2		T5-7	Martin Sindikubwabo, Toa Avalos	Bubulcus ibis			Cattle Egret
+T5-7	HumanObservation	ARCOS_ILAM_2017_114		4		T5-7	Martin Sindikubwabo, Toa Avalos	Scopus umbretta			Hamerkop
+T5-8	HumanObservation	ARCOS_ILAM_2017_115		8		T5-8	Martin Sindikubwabo, Toa Avalos	Ploceus cucullatus			Black headed weaver
+T5-8	HumanObservation	ARCOS_ILAM_2017_116		1		T5-8	Martin Sindikubwabo, Toa Avalos	Vidua macroura			Pin-tailed Whydah
+T5-9	HumanObservation	ARCOS_ILAM_2017_117		1		T5-9	Martin Sindikubwabo, Toa Avalos	Lophaetus occipitalis			Long-crested eagle
+T5-9	HumanObservation	ARCOS_ILAM_2017_118		1		T5-9	Martin Sindikubwabo, Toa Avalos	Pycnonotus barbatus			Common Bulbul
+T5-9	HumanObservation	ARCOS_ILAM_2017_119		2		T5-9	Martin Sindikubwabo, Toa Avalos	Turtur tympanistria			Tambourine Dove
+T5-9	HumanObservation	ARCOS_ILAM_2017_120		10		T5-9	Martin Sindikubwabo, Toa Avalos	Ardea cinerea			Grey Heron
+T5-9	HumanObservation	ARCOS_ILAM_2017_121		1		T5-9	Martin Sindikubwabo, Toa Avalos	Bubulcus ibis			Cattle Egret
+T5-9	HumanObservation	ARCOS_ILAM_2017_122		3		T5-9	Martin Sindikubwabo, Toa Avalos	streptopelia semitorquata			Red-eyed Dove
+T5-10	HumanObservation	ARCOS_ILAM_2017_123		1		T5-10	Martin Sindikubwabo, Toa Avalos	Pycnonotus barbatus			Common Bulbul
+T5-10	HumanObservation	ARCOS_ILAM_2017_124		1		T5-10	Martin Sindikubwabo, Toa Avalos	Ploceus xanthops			Holub's Golden Weaver
+T5-10	HumanObservation	ARCOS_ILAM_2017_125		1		T5-10	Martin Sindikubwabo, Toa Avalos	bostrychia hagedash			Hadada ibis
+T5-10	HumanObservation	ARCOS_ILAM_2017_126		2		T5-10	Martin Sindikubwabo, Toa Avalos	Dicrus adsimilis			Fork -tailed Drongo
+T5-10	HumanObservation	ARCOS_ILAM_2017_127		1		T5-10	Martin Sindikubwabo, Toa Avalos	Centrepus monachus			Blue-headed Coucal
+T5-10	HumanObservation	ARCOS_ILAM_2017_128		1		T5-10	Martin Sindikubwabo, Toa Avalos	Ardea cinerea			Grey Heron
+T4-10	HumanObservation	ARCOS_ILAM_2017_129		3		T4-10	Martin Sindikubwabo, Toa Avalos	Passer griseus			Grey-headed Sparrow
+T4-10	HumanObservation	ARCOS_ILAM_2017_130		1		T4-10	Martin Sindikubwabo, Toa Avalos	Colius striatus			Speckled mousebird
+T3-1	HumanObservation	ARCOS_ILAM_2017_131		80		T3-1	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	Colotis danae	Lepidoptera	Pieridae	
+T3-1	HumanObservation	ARCOS_ILAM_2017_132		4		T3-1	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	Eurema brigitta	Lepidoptera	Nymphalidae	
+T3-1	HumanObservation	ARCOS_ILAM_2017_133		1		T3-1	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	Amarius ochlea	Lepidoptera	Nymphalidae	
+T3-2	HumanObservation	ARCOS_ILAM_2017_134		50		T3-2	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	Colotis danae	Lepidoptera	Nymphalidae	
+T3-2	HumanObservation	ARCOS_ILAM_2017_135		5		T3-2	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	Amarius ochlea	Lepidoptera	Nymphalidae	
+T3-3	HumanObservation	ARCOS_ILAM_2017_136		1		T3-3	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	Eronia leda	Lepidoptera	Pieridae	
+T3-3	HumanObservation	ARCOS_ILAM_2017_137		1		T3-3	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	Junonia orithya	Lepidoptera	Nymphalidae	
+T3-3	HumanObservation	ARCOS_ILAM_2017_138		4		T3-3	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	Danaus chrysippus	Lepidoptera	Nymphalidae	
+T3-4	HumanObservation	ARCOS_ILAM_2017_139		5		T3-4	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	Amarius nivius	Lepidoptera	Nymphalidae	
+T3-4	HumanObservation	ARCOS_ILAM_2017_140		1		T3-4	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	Danaus chrysippus	Lepidoptera	Nymphalidae	
+T3-4	HumanObservation	ARCOS_ILAM_2017_141		2		T3-4	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	Bicyclus safitza	Lepidoptera	Nymphalidae	
+T3-5	HumanObservation	ARCOS_ILAM_2017_142		2		T3-5	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	Colotis danae	Lepidoptera	Pieridae	
+T3-5	HumanObservation	ARCOS_ILAM_2017_143		1		T3-5	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	Hypolimnas missipus	Lepidoptera	Nymphalidae	
+T3-5	HumanObservation	ARCOS_ILAM_2017_144		2		T3-5	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	Teriomima zuluana	Lepidoptera	Nymphalidae	
+T3-5	HumanObservation	ARCOS_ILAM_2017_145		5		T3-5	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	Colotis danae	Lepidoptera	Pieridae	
+T3-6	HumanObservation	ARCOS_ILAM_2017_146		40		T3-6	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	Colotis danae	Lepidoptera	Pieridae	
+T3-6	HumanObservation	ARCOS_ILAM_2017_147		2		T3-6	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	Amarius nivius	Lepidoptera	Nymphalidae	
+T3-6	HumanObservation	ARCOS_ILAM_2017_148		3		T3-6	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	Junonia oenone	Lepidoptera	Nymphalidae	
+T3-6	HumanObservation	ARCOS_ILAM_2017_149		1		T3-6	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	Bicyclus safitza	Lepidoptera	Nymphalidae	
+T3-6	HumanObservation	ARCOS_ILAM_2017_150		2		T3-6	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	Eurema brigitta	Lepidoptera	Pieridae	
+T3-6	HumanObservation	ARCOS_ILAM_2017_151		2		T3-6	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	Teriomima zuluana	Lepidoptera	Nymphalidae	
+T3-6	HumanObservation	ARCOS_ILAM_2017_152		1		T3-6	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	Junonia orithya	Lepidoptera	Nymphalidae	
+T3-6	HumanObservation	ARCOS_ILAM_2017_153		1		T3-6	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	Precis ceryne	Lepidoptera	Nymphalidae	
+T3-7	HumanObservation	ARCOS_ILAM_2017_154		1		T3-7	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	Eurema brigitta	Lepidoptera	Nymphalidae	
+T3-7	HumanObservation	ARCOS_ILAM_2017_155		5		T3-7	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	Teriomima zuluana	Lepidoptera	Nymphalidae	
+T3-7	HumanObservation	ARCOS_ILAM_2017_156		25		T3-7	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	Colotis danae	Lepidoptera	Pieridae	
+T3-8	HumanObservation	ARCOS_ILAM_2017_157		60		T3-8	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	Colotis danae	Lepidoptera	Pieridae	
+T3-8	HumanObservation	ARCOS_ILAM_2017_158		4		T3-8	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	Bicyclus anynana	Lepidoptera	Nymphalidae	
+T3-8	HumanObservation	ARCOS_ILAM_2017_159		3		T3-8	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	Amarius nivius	Lepidoptera	Nymphalidae	
+T3-8	HumanObservation	ARCOS_ILAM_2017_160		1		T3-8	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	Mylothris agathina	Lepidoptera	Pieridae	
+T3-8	HumanObservation	ARCOS_ILAM_2017_161		2		T3-8	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	Teriomima zuluana	Lepidoptera	Nymphalidae	
+T3-9	HumanObservation	ARCOS_ILAM_2017_162		5		T3-9	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	Amarius nivius	Lepidoptera	Nymphalidae	
+T3-9	HumanObservation	ARCOS_ILAM_2017_163		25		T3-9	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	Colotis danae	Lepidoptera	Pieridae	
+T3-9	HumanObservation	ARCOS_ILAM_2017_164		5		T3-9	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	Teriomima zuluana	Lepidoptera	Nymphalidae	
+T3-10	HumanObservation	ARCOS_ILAM_2017_165		2		T3-10	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	Amarius nivius	Lepidoptera	Nymphalidae	
+T3-10	HumanObservation	ARCOS_ILAM_2017_166		30		T3-10	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	Colotis danae	Lepidoptera	Pieridae	
+T3-10	HumanObservation	ARCOS_ILAM_2017_167		3		T3-10	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	Bicyclus safitza	Lepidoptera	Nymphalidae	
+T4-1	HumanObservation	ARCOS_ILAM_2017_168		1		T4-1	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	Bicyclus safitza	Lepidoptera	Nymphalidae	
+T4-1	HumanObservation	ARCOS_ILAM_2017_169		3		T4-1	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	Amarius nivius	Lepidoptera	Nymphalidae	
+T4-1	HumanObservation	ARCOS_ILAM_2017_170		1		T4-1	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	Teriomima zuluana	Lepidoptera	Nymphalidae	
+T4-1	HumanObservation	ARCOS_ILAM_2017_171		1		T4-1	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	Bicyclus anynana	Lepidoptera	Nymphalidae	
+T4-2	HumanObservation	ARCOS_ILAM_2017_172		5		T4-2	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	Eurema brigitta	Lepidoptera	Nymphalidae	
+T4-2	HumanObservation	ARCOS_ILAM_2017_173		3		T4-2	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	Bicyclus anynana	Lepidoptera	Nymphalidae	
+T4-2	HumanObservation	ARCOS_ILAM_2017_174		1		T4-2	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	Pontia helice	Lepidoptera	Pieridae	
+T4-3	HumanObservation	ARCOS_ILAM_2017_175		1		T4-3	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	Phalanta phalantha	Lepidoptera	Nymphalidae	
+T4-4	HumanObservation	ARCOS_ILAM_2017_176		2		T4-4	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	Bicyclus safitza	Lepidoptera	Nymphalidae	
+T4-4	HumanObservation	ARCOS_ILAM_2017_177		1		T4-4	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	Eurytela dryope	Lepidoptera	Nymphalidae	
+T4-4	HumanObservation	ARCOS_ILAM_2017_178		1		T4-4	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	Colotis danae	Lepidoptera	Pieridae	
+T4-5	HumanObservation	ARCOS_ILAM_2017_179		5		T4-5	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	Bicyclus safitza	Lepidoptera	Nymphalidae	
+T4-5	HumanObservation	ARCOS_ILAM_2017_180		3		T4-5	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	Colotis danae	Lepidoptera	Pieridae	
+T4-5	HumanObservation	ARCOS_ILAM_2017_181		1		T4-5	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	Lestes pallidus	Lepidoptera	Lestidae	
+T4-6	HumanObservation	ARCOS_ILAM_2017_182		7		T4-6	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	Colotis danae	Lepidoptera	Pieridae	
+T4-6	HumanObservation	ARCOS_ILAM_2017_183		1		T4-6	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	Phalanta phalantha	Lepidoptera	Nymphalidae	
+T4-6	HumanObservation	ARCOS_ILAM_2017_184		1		T4-6	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	Eurytela dryope	Lepidoptera	Nymphalidae	
+T4-7	HumanObservation	ARCOS_ILAM_2017_185		11		T4-7	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	Eurema hebace	Lepidoptera	Nymphalidae	
+T4-7	HumanObservation	ARCOS_ILAM_2017_186		2		T4-7	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	Nepheronia argia	Lepidoptera	Pieridae	
+T4-8	HumanObservation	ARCOS_ILAM_2017_187		1		T4-8	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	Amarius nivius	Lepidoptera	Nymphalidae	
+T4-8	HumanObservation	ARCOS_ILAM_2017_188		1		T4-8	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	Colotis danae	Lepidoptera	Pieridae	
+T4-8	HumanObservation	ARCOS_ILAM_2017_189		1		T4-8	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	Bicyclus safitza	Lepidoptera	Nymphalidae	
+T4-9	HumanObservation	ARCOS_ILAM_2017_190		2		T4-9	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	Eurema hebace	Lepidoptera	Nymphalidae	
+T4-9	HumanObservation	ARCOS_ILAM_2017_191		1		T4-9	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	Nepheronia argia	Lepidoptera	Pieridae	
+T4-9	HumanObservation	ARCOS_ILAM_2017_192		6		T4-9	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	Colotis danae	Lepidoptera	Pieridae	
+T4-10	HumanObservation	ARCOS_ILAM_2017_193		1		T4-10	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	Eurytela dryope	Lepidoptera	Nymphalidae	
+T4-10	HumanObservation	ARCOS_ILAM_2017_194		3		T4-10	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	Colotis danae	Lepidoptera	Pieridae	
+T4-10	HumanObservation	ARCOS_ILAM_2017_195		5		T4-10	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	Nepheronia argia	Lepidoptera	Pieridae	
+T5-1	HumanObservation	ARCOS_ILAM_2017_196		1		T5-1	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	Amarius nivius	Lepidoptera	Nymphalidae	
+T5-1	HumanObservation	ARCOS_ILAM_2017_197		3		T5-1	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	Colotis danae	Lepidoptera	Pieridae	
+T5-1	HumanObservation	ARCOS_ILAM_2017_198		2		T5-1	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	Bicyclus safitza	Lepidoptera	Nymphalidae	
+T5-1	HumanObservation	ARCOS_ILAM_2017_199		6		T5-1	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	Bicyclus anynana	Lepidoptera	Nymphalidae	
+T5-2	HumanObservation	ARCOS_ILAM_2017_200		5		T5-2	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	Amarius nivius	Lepidoptera	Nymphalidae	
+T5-2	HumanObservation	ARCOS_ILAM_2017_201		25		T5-2	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	Colotis danae	Lepidoptera	Pieridae	
+T5-2	HumanObservation	ARCOS_ILAM_2017_202		2		T5-2	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	Precis ceryne	Lepidoptera	Nymphalidae	
+T5-2	HumanObservation	ARCOS_ILAM_2017_203		9		T5-2	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	Bicyclus safitza	Lepidoptera	Nymphalidae	
+T5-2	HumanObservation	ARCOS_ILAM_2017_204		1		T5-2	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	Phalanta phalantha	Lepidoptera	Nymphalidae	
+T5-3	HumanObservation	ARCOS_ILAM_2017_205		4		T5-3	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	Bicyclus anynana	Lepidoptera	Nymphalidae	
+T5-3	HumanObservation	ARCOS_ILAM_2017_206		8		T5-3	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	Colotis danae	Lepidoptera	Pieridae	
+T5-4	HumanObservation	ARCOS_ILAM_2017_207		2		T5-4	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	Colotis danae	Lepidoptera	Pieridae	
+T5-4	HumanObservation	ARCOS_ILAM_2017_208		15		T5-4	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	Bicyclus safitza	Lepidoptera	Nymphalidae	
+T5-4	HumanObservation	ARCOS_ILAM_2017_209		5		T5-4	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	Bicyclus anynana	Lepidoptera	Nymphalidae	
+T5-5	HumanObservation	ARCOS_ILAM_2017_210		3		T5-5	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	Ypthima asterope	Lepidoptera	Nymphalidae	
+T5-5	HumanObservation	ARCOS_ILAM_2017_211		2		T5-5	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	Colotis danae	Lepidoptera	Pieridae	
+T5-6	HumanObservation	ARCOS_ILAM_2017_212		1		T5-6	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	Amarius nivius	Lepidoptera	Nymphalidae	
+T5-6	HumanObservation	ARCOS_ILAM_2017_213		3		T5-6	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	Colotis danae	Lepidoptera	Pieridae	
+T5-6	HumanObservation	ARCOS_ILAM_2017_214		6		T5-6	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	Mylothris agathina	Lepidoptera	Nymphalidae	
+T5-6	HumanObservation	ARCOS_ILAM_2017_215				T5-6	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	Eronia leda	Lepidoptera	Pieridae	
+T5-7	HumanObservation	ARCOS_ILAM_2017_216		15		T5-7	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	Colotis danae	Lepidoptera	Pieridae	
+T5-8	HumanObservation	ARCOS_ILAM_2017_217		8		T5-8	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	Colotis danae	Lepidoptera	Pieridae	
+T5-8	HumanObservation	ARCOS_ILAM_2017_218		1		T5-8	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	Amarius nivius	Lepidoptera	Nymphalidae	
+T5-8	HumanObservation	ARCOS_ILAM_2017_219		2		T5-8	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	Ypthima asterope	Lepidoptera	Nymphalidae	
+T5-9	HumanObservation	ARCOS_ILAM_2017_220		1		T5-9	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	Ypthima asterope	Lepidoptera	Nymphalidae	
+T5-9	HumanObservation	ARCOS_ILAM_2017_221		20		T5-9	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	Colotis danae	Lepidoptera	Pieridae	
+T5-9	HumanObservation	ARCOS_ILAM_2017_222		1		T5-9	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	Precis ceryne	Lepidoptera	Nymphalidae	
+T5-10	HumanObservation	ARCOS_ILAM_2017_223		20		T5-10	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	Colotis danae	Lepidoptera	Pieridae	
+T5-10	HumanObservation	ARCOS_ILAM_2017_224		2		T5-10	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	Amarius nivius	Lepidoptera	Nymphalidae	
+T5-10	HumanObservation	ARCOS_ILAM_2017_225		1		T5-10	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	Precis ceryne	Lepidoptera	Nymphalidae	
+T3-1	HumanObservation	ARCOS_ILAM_2017_226		12		T3-1	Jean Paul Kubwimana	Ceriagron glabrum	Odonata	Coenagrionidae	
+T3-1	HumanObservation	ARCOS_ILAM_2017_227		1		T3-1	Jean Paul Kubwimana	Brachythemis wilsoni	Odonata	Libellulidae	
+T3-1	HumanObservation	ARCOS_ILAM_2017_228		1		T3-1	Jean Paul Kubwimana	Aethiothemis bequaerti	Odonata	Libellulidae	
+T3-1	HumanObservation	ARCOS_ILAM_2017_229		1		T3-1	Jean Paul Kubwimana	Orthetrum  africanum	Odonata	Libellulidae	
+T3-1	HumanObservation	ARCOS_ILAM_2017_230		20		T3-1	Jean Paul Kubwimana	Palpopleura lucia	Odonata	Libellulidae	
+T3-1	HumanObservation	ARCOS_ILAM_2017_231		30		T3-1	Jean Paul Kubwimana	Ceriagron glabrum	Odonata	Coenagrionidae	
+T3-2	HumanObservation	ARCOS_ILAM_2017_232				T3-2	Jean Paul Kubwimana	No individual	No individual		
+T3-3	HumanObservation	ARCOS_ILAM_2017_233		15		T3-3	Jean Paul Kubwimana	Palpopleura lucia	Odonata	Libellulidae	
+T3-3	HumanObservation	ARCOS_ILAM_2017_234		4		T3-3	Jean Paul Kubwimana	Ceriagron glabrum	Odonata	Coenagrionidae	
+T3-3	HumanObservation	ARCOS_ILAM_2017_235		2		T3-3	Jean Paul Kubwimana	Orthetrum angustriventre	Odonata	Libellulidae	
+T3-3	HumanObservation	ARCOS_ILAM_2017_236		1		T3-3	Jean Paul Kubwimana	Orthetrum africanum	Odonata	Libellulidae	
+T3-3	HumanObservation	ARCOS_ILAM_2017_237		2		T3-3	Jean Paul Kubwimana	Acisoma inflatum	Odonata	Libellulidae	
+T3-3	HumanObservation	ARCOS_ILAM_2017_238		1		T3-3	Jean Paul Kubwimana	Trithemis furva	Odonata	Libellulidae	
+T3-4	HumanObservation	ARCOS_ILAM_2017_239		10		T3-4	Jean Paul Kubwimana	Ceriagron glabrum	Odonata	Coenagrionidae	
+T3-4	HumanObservation	ARCOS_ILAM_2017_240		1		T3-4	Jean Paul Kubwimana	Brachythemis wilsoni	Odonata	Libellulidae	
+T3-4	HumanObservation	ARCOS_ILAM_2017_241		6		T3-4	Jean Paul Kubwimana	Palpopleura lucia	Odonata	Libellulidae	
+T3-4	HumanObservation	ARCOS_ILAM_2017_242		3		T3-4	Jean Paul Kubwimana	Acisoma inflatum	Odonata	Libellulidae	
+T3-4	HumanObservation	ARCOS_ILAM_2017_243		5		T3-4	Jean Paul Kubwimana	Selysothemis nigra	Odonata	Libellulidae	
+T3-5	HumanObservation	ARCOS_ILAM_2017_244		8		T3-5	Jean Paul Kubwimana	Palpopleura lucia	Odonata	Libellulidae	
+T3-5	HumanObservation	ARCOS_ILAM_2017_245		1		T3-5	Jean Paul Kubwimana	Ceriagron glabrum	Odonata	Coenagrionidae	
+T3-6	HumanObservation	ARCOS_ILAM_2017_246		10		T3-6	Jean Paul Kubwimana	Ceriagron glabrum	Odonata	Coenagrionidae	
+T3-6	HumanObservation	ARCOS_ILAM_2017_247		5		T3-6	Jean Paul Kubwimana	Palpopleura lucia	Odonata	Libellulidae	
+T3-7	HumanObservation	ARCOS_ILAM_2017_248		3		T3-7	Jean Paul Kubwimana	Brachythemis wilsoni	Odonata	Libellulidae	
+T3-8	HumanObservation	ARCOS_ILAM_2017_249				T3-8	Jean Paul Kubwimana	No individual	No individual		
+T3-9	HumanObservation	ARCOS_ILAM_2017_250		10		T3-9	Jean Paul Kubwimana	Ceriagron glabrum	Odonata	Coenagrionidae	
+T3-9	HumanObservation	ARCOS_ILAM_2017_251		7		T3-9	Jean Paul Kubwimana	Selysothemis nigra	Odonata	Libellulidae	
+T3-9	HumanObservation	ARCOS_ILAM_2017_252		6		T3-9	Jean Paul Kubwimana	Palpopleura albifrons	Odonata	Libellulidae	
+T3-10	HumanObservation	ARCOS_ILAM_2017_253		15		T3-10	Jean Paul Kubwimana	Ceriagron glabrum	Odonata	Coenagrionidae	
+T3-10	HumanObservation	ARCOS_ILAM_2017_254		6		T3-10	Jean Paul Kubwimana	Palpopleura lucia	Odonata	Libellulidae	
+T3-10	HumanObservation	ARCOS_ILAM_2017_255		1		T3-10	Jean Paul Kubwimana	Palpopleura jucunda	Odonata	Libellulidae	
+T4-1	HumanObservation	ARCOS_ILAM_2017_256		10		T4-1	Jean Paul Kubwimana	Ceriagron glabrum	Odonata	Coenagrionidae	
+T4-2	HumanObservation	ARCOS_ILAM_2017_257		11		T4-2	Jean Paul Kubwimana	Ceriagron glabrum	Odonata	Coenagrionidae	
+T4-3	HumanObservation	ARCOS_ILAM_2017_258		15		T4-3	Jean Paul Kubwimana	Acisoma inflatum	Odonata	Libellulidae	
+T4-3	HumanObservation	ARCOS_ILAM_2017_259		3		T4-3	Jean Paul Kubwimana	Palpopleura albifrons	Odonata	Libellulidae	
+T4-3	HumanObservation	ARCOS_ILAM_2017_260		2		T4-3	Jean Paul Kubwimana	Brachythemis wilsoni	Odonata	Libellulidae	
+T4-3	HumanObservation	ARCOS_ILAM_2017_261		1		T4-3	Jean Paul Kubwimana	Selysothemis nigra	Odonata	Libellulidae	
+T4-3	HumanObservation	ARCOS_ILAM_2017_262		5		T4-3	Jean Paul Kubwimana	Orthetrum icteromelas	Odonata	Libellulidae	
+T4-4	HumanObservation	ARCOS_ILAM_2017_263		10		T4-4	Jean Paul Kubwimana	Ceriagron glabrum	Odonata	Coenagrionidae	
+T4-4	HumanObservation	ARCOS_ILAM_2017_264		1		T4-4	Jean Paul Kubwimana	Lestes pallidus	Odonata	Lestidae	
+T4-4	HumanObservation	ARCOS_ILAM_2017_265		1		T4-4	Jean Paul Kubwimana	Selysothemis nigra	Odonata	Libellulidae	
+T4-4	HumanObservation	ARCOS_ILAM_2017_266		1		T4-4	Jean Paul Kubwimana	Orthetrum icteromelas	Odonata	Libellulidae	
+T4-5	HumanObservation	ARCOS_ILAM_2017_267		2		T4-5	Jean Paul Kubwimana	Orthetrum icteromelas	Odonata	Libellulidae	
+T4-5	HumanObservation	ARCOS_ILAM_2017_268		2		T4-5	Jean Paul Kubwimana	Palpopleura albifrons	Odonata	Libellulidae	
+T4-6	HumanObservation	ARCOS_ILAM_2017_269		6		T4-6	Jean Paul Kubwimana	Orthetrum icteromelas	Odonata	Libellulidae	
+T4-6	HumanObservation	ARCOS_ILAM_2017_270		5		T4-6	Jean Paul Kubwimana	Palpopleura albifrons	Odonata	Libellulidae	
+T4-6	HumanObservation	ARCOS_ILAM_2017_271		5		T4-6	Jean Paul Kubwimana	Ceriagron glabrum	Odonata	Coenagrionidae	
+T4-7	HumanObservation	ARCOS_ILAM_2017_272		4		T4-7	Jean Paul Kubwimana	Orthetrum icteromelas	Odonata	Libellulidae	
+T4-7	HumanObservation	ARCOS_ILAM_2017_273		1		T4-7	Jean Paul Kubwimana	Trithemis furva	Odonata	Libellulidae	
+T4-7	HumanObservation	ARCOS_ILAM_2017_274		1		T4-7	Jean Paul Kubwimana	Hadrothermis scabrifrons	Odonata	Libellulidae	
+T4-8	HumanObservation	ARCOS_ILAM_2017_275		1		T4-8	Jean Paul Kubwimana	Palpopleura albifrons	Odonata	Libellulidae	
+T4-9	HumanObservation	ARCOS_ILAM_2017_276		4		T4-9	Jean Paul Kubwimana	Anax ephigger	Odonata	Aeshinidae	
+T4-10	HumanObservation	ARCOS_ILAM_2017_277				T4-10	Jean Paul Kubwimana	No individual	No individual		
+T5-1	HumanObservation	ARCOS_ILAM_2017_278		1		T5-1	Jean Paul Kubwimana	Hemistica albipunctum	Odonata	Libellulidae	
+T5-2	HumanObservation	ARCOS_ILAM_2017_279		1		T5-2	Jean Paul Kubwimana	Orthetrum africanum	Odonata	Libellulidae	
+T5-2	HumanObservation	ARCOS_ILAM_2017_280		2		T5-2	Jean Paul Kubwimana	Palpopleura lucia	Odonata	Libellulidae	
+T5-3	HumanObservation	ARCOS_ILAM_2017_281				T5-3	Jean Paul Kubwimana	No individual	No individual		
+T5-4	HumanObservation	ARCOS_ILAM_2017_282		1		T5-4	Jean Paul Kubwimana	Brachythemis wilsoni	Odonata	Libellulidae	
+T5-4	HumanObservation	ARCOS_ILAM_2017_283		1		T5-4	Jean Paul Kubwimana	Palpopleura albifrons	Odonata	Libellulidae	
+T5-4	HumanObservation	ARCOS_ILAM_2017_284		1		T5-4	Jean Paul Kubwimana	Palpopleura lucia	Odonata	Libellulidae	
+T5-4	HumanObservation	ARCOS_ILAM_2017_285		3		T5-4	Jean Paul Kubwimana	Ceriagron glabrum	Odonata	Coenagrionidae	
+T5-5	HumanObservation	ARCOS_ILAM_2017_286		1		T5-5	Jean Paul Kubwimana	Brachythemis wilsoni	Odonata	Libellulidae	
+T5-5	HumanObservation	ARCOS_ILAM_2017_287		2		T5-5	Jean Paul Kubwimana	Anax gladiator	Odonata	Aeshinidae	
+T5-6	HumanObservation	ARCOS_ILAM_2017_288		2		T5-6	Jean Paul Kubwimana	Brachythemis wilsoni	Odonata	Libellulidae	
+T5-7	HumanObservation	ARCOS_ILAM_2017_289		1		T5-7	Jean Paul Kubwimana	Orthetrum africanum	Odonata	Libellulidae	
+T5-7	HumanObservation	ARCOS_ILAM_2017_290		1		T5-7	Jean Paul Kubwimana	Orthetrum angustiventre	Odonata	Libellulidae	
+T5-7	HumanObservation	ARCOS_ILAM_2017_291		6		T5-7	Jean Paul Kubwimana	Hemistica albipunctum	Odonata	Libellulidae	
+T5-7	HumanObservation	ARCOS_ILAM_2017_292		1		T5-7	Jean Paul Kubwimana	Anas gladiator	Odonata	Aeshinidae	
+T5-8	HumanObservation	ARCOS_ILAM_2017_293		1		T5-8	Jean Paul Kubwimana	Orthetrum africanum	Odonata	Libellulidae	
+T5-8	HumanObservation	ARCOS_ILAM_2017_294		1		T5-8	Jean Paul Kubwimana	Palpopleura lucia	Odonata	Libellulidae	
+T5-8	HumanObservation	ARCOS_ILAM_2017_295		1		T5-8	Jean Paul Kubwimana	Palpopleura albifrons	Odonata	Libellulidae	
+T5-9	HumanObservation	ARCOS_ILAM_2017_296				T5-9	Jean Paul Kubwimana	No individual	No individual		
+T5-10	HumanObservation	ARCOS_ILAM_2017_297		1		T5-10	Jean Paul Kubwimana	Palpopleura lucia	Odonata	Libellulidae	
+T5-10	HumanObservation	ARCOS_ILAM_2017_298		2		T5-10	Jean Paul Kubwimana	Palpopleura albifrons	Odonata	Libellulidae	
+T5-10	HumanObservation	ARCOS_ILAM_2017_299		30		T5-10	Jean Paul Kubwimana	Orthetrum julia	Odonata	Libellulidae	
+T5-10	HumanObservation	ARCOS_ILAM_2017_300		6		T5-10	Jean Paul Kubwimana	Ceriagron glabrum	Odonata	Coenagrionidae	
+T5-10	HumanObservation	ARCOS_ILAM_2017_301		5		T5-10	Jean Paul Kubwimana	orthetrum glabrum	Odonata	Libellulidae	
+T5-10	HumanObservation	ARCOS_ILAM_2017_302		1		T5-10	Jean Paul Kubwimana	Orthetrum africanum	Odonata	Libellulidae	
+T6-1	HumanObservation	ARCOS_ILAM_2017_303		6		T6-1	Martin Sindikubwabo, Toa Avalos	Nettapus auritus			African Pygmy-goose
+T6-1	HumanObservation	ARCOS_ILAM_2017_304		25		T6-1	Martin Sindikubwabo, Toa Avalos	Riparia riparia			Sand Martin
+T6-1	HumanObservation	ARCOS_ILAM_2017_305		8		T6-1	Martin Sindikubwabo, Toa Avalos	Turdoides jardineii			Arrow-marked Babbler
+T6-1	HumanObservation	ARCOS_ILAM_2017_306		12		T6-1	Martin Sindikubwabo, Toa Avalos	Bubulcus ibis			Cattle Egret
+T6-1	HumanObservation	ARCOS_ILAM_2017_307		1		T6-1	Martin Sindikubwabo, Toa Avalos	Riparia paludicola			Prain Martin
+T6-1	HumanObservation	ARCOS_ILAM_2017_308		2		T6-1	Martin Sindikubwabo, Toa Avalos	streptopelia semitorquata			Red eyed dove
+T6-1	HumanObservation	ARCOS_ILAM_2017_309		2		T6-1	Martin Sindikubwabo, Toa Avalos	Cisticola marginatus			Winding Cisticola
+T6-1	HumanObservation	ARCOS_ILAM_2017_310		2		T6-1	Martin Sindikubwabo, Toa Avalos	Dicrus adsimilis			Fork -tailed Drongo
+T6-1	HumanObservation	ARCOS_ILAM_2017_311		2		T6-1	Martin Sindikubwabo, Toa Avalos	streptopelia semitorquata			Red eyed dove
+T6-2	HumanObservation	ARCOS_ILAM_2017_312		2		T6-2	Martin Sindikubwabo, Toa Avalos	Cisticola marginatus			Winding Cisticola
+T6-2	HumanObservation	ARCOS_ILAM_2017_313		1		T6-2	Martin Sindikubwabo, Toa Avalos	Hirundo angolensis			Angola Swallow
+T6-2	HumanObservation	ARCOS_ILAM_2017_314		2		T6-2	Martin Sindikubwabo, Toa Avalos	Hirundo fuligula			Rock Martin
+T6-2	HumanObservation	ARCOS_ILAM_2017_315		4		T6-2	Martin Sindikubwabo, Toa Avalos	Cisticola marginatus			Winding Cisticola
+T6-2	HumanObservation	ARCOS_ILAM_2017_316		3		T6-2	Martin Sindikubwabo, Toa Avalos	Laniarius aethiopicus			Tropical Boubou
+T6-3	HumanObservation	ARCOS_ILAM_2017_317		1		T6-3	Martin Sindikubwabo, Toa Avalos	Cisticola marginatus			Winding Cisticola
+T6-3	HumanObservation	ARCOS_ILAM_2017_318		3		T6-3	Martin Sindikubwabo, Toa Avalos	Laniarius aethiopicus			Tropical Boubou
+T6-3	HumanObservation	ARCOS_ILAM_2017_319		4		T6-3	Martin Sindikubwabo, Toa Avalos	Cisticola marginatus			Winding Cisticola
+T6-3	HumanObservation	ARCOS_ILAM_2017_320		1		T6-3	Martin Sindikubwabo, Toa Avalos	Polyboroides typus			African Harrier Hawk
+T6-3	HumanObservation	ARCOS_ILAM_2017_321		1		T6-3	Martin Sindikubwabo, Toa Avalos	Muscicapa aquatica			Swamp Flycatcher
+T6-4	HumanObservation	ARCOS_ILAM_2017_322		2		T6-4	Martin Sindikubwabo, Toa Avalos	Cisticola marginatus			Winding Cisticola
+T6-5	HumanObservation	ARCOS_ILAM_2017_323		4		T6-5	Martin Sindikubwabo, Toa Avalos	Cisticola marginatus			Winding Cisticola
+T6-5	HumanObservation	ARCOS_ILAM_2017_324		2		T6-5	Martin Sindikubwabo, Toa Avalos	Vanellus crassirostris			Long-toed Lapwing
+T6-5	HumanObservation	ARCOS_ILAM_2017_325		1		T6-5	Martin Sindikubwabo, Toa Avalos	Euplectes axillaris			Fan-tailed Widowbird
+T6-5	HumanObservation	ARCOS_ILAM_2017_326		4		T6-5	Martin Sindikubwabo, Toa Avalos	Hirundo fuligula			Rock Martin
+T6-5	HumanObservation	ARCOS_ILAM_2017_327		1		T6-5	Martin Sindikubwabo, Toa Avalos	Motacilla flava			Yellow Wagtail
+T6-5	HumanObservation	ARCOS_ILAM_2017_328		10		T6-5	Martin Sindikubwabo, Toa Avalos	Hirundo angolensis			Angola Swallow
+T6-5	HumanObservation	ARCOS_ILAM_2017_329		1		T6-5	Martin Sindikubwabo, Toa Avalos	Alopochen aegyptiacus			Egyptian Goose
+T6-6	HumanObservation	ARCOS_ILAM_2017_330		2		T6-6	Martin Sindikubwabo, Toa Avalos	Alopochen aegyptiacus			Egyptian Goose
+T6-6	HumanObservation	ARCOS_ILAM_2017_331		12		T6-6	Martin Sindikubwabo, Toa Avalos	Merops apiaster			European Bee-eater
+T6-6	HumanObservation	ARCOS_ILAM_2017_332		2		T6-6	Martin Sindikubwabo, Toa Avalos	Cisticola marginatus			Winding Cisticola
+T6-7	HumanObservation	ARCOS_ILAM_2017_333		6		T6-7	Martin Sindikubwabo, Toa Avalos	Merops apiaster			European Bee-eater
+T6-7	HumanObservation	ARCOS_ILAM_2017_334		4		T6-7	Martin Sindikubwabo, Toa Avalos	Hirundo angolensis			Angola Swallow
+T6-7	HumanObservation	ARCOS_ILAM_2017_335		1		T6-7	Martin Sindikubwabo, Toa Avalos	Euplectes axillaris			Fan-tailed Widowbird
+T6-7	HumanObservation	ARCOS_ILAM_2017_336		1		T6-7	Martin Sindikubwabo, Toa Avalos	Cisticola marginatus			Winding Cisticola
+T6-8	HumanObservation	ARCOS_ILAM_2017_337		2		T6-8	Martin Sindikubwabo, Toa Avalos	Streptopelia capicola			Ble -spoted Wood-Dove
+T6-8	HumanObservation	ARCOS_ILAM_2017_338		1		T6-8	Martin Sindikubwabo, Toa Avalos	Cisticola marginatus			Winding Cisticola
+T6-8	HumanObservation	ARCOS_ILAM_2017_339		3		T6-8	Martin Sindikubwabo, Toa Avalos	Ploceus xanthops			Holub's Golden Weaver
+T6-9	HumanObservation	ARCOS_ILAM_2017_340		2		T6-9	Martin Sindikubwabo, Toa Avalos	Pycnonotus barbatus			Common Bulbul
+T6-9	HumanObservation	ARCOS_ILAM_2017_341		3		T6-9	Martin Sindikubwabo, Toa Avalos	Turtur chalcospilos			Emerald-spotted Wood-Dove
+T6-9	HumanObservation	ARCOS_ILAM_2017_342		5		T6-9	Martin Sindikubwabo, Toa Avalos	Ploceus cucullatus			Black-headed Weaver
+T6-9	HumanObservation	ARCOS_ILAM_2017_343		1		T6-9	Martin Sindikubwabo, Toa Avalos	Dicrus adsimilis			Fork -tailed Drongo
+T6-9	HumanObservation	ARCOS_ILAM_2017_344		1		T6-9	Martin Sindikubwabo, Toa Avalos	Lanius excubitoroides			Grey-backed Fiscal
+T6-9	HumanObservation	ARCOS_ILAM_2017_345		3		T6-9	Martin Sindikubwabo, Toa Avalos	Serinus mozambicus			Yellow-fronted Canary
+T6-10	HumanObservation	ARCOS_ILAM_2017_346		2		T6-10	Martin Sindikubwabo, Toa Avalos	Turtur chalcospilos			Emerald-spotted Wood-Dove
+T6-10	HumanObservation	ARCOS_ILAM_2017_347		2		T6-10	Martin Sindikubwabo, Toa Avalos	Motacilla flava			Yellow Wagtail
+T6-10	HumanObservation	ARCOS_ILAM_2017_348		3		T6-10	Martin Sindikubwabo, Toa Avalos	Passer griseus			Grey-headed Sparrow
+T6-10	HumanObservation	ARCOS_ILAM_2017_349		2		T6-10	Martin Sindikubwabo, Toa Avalos	Motacilla capensis			Cape wagetail
+T7-1	HumanObservation	ARCOS_ILAM_2017_350		12		T7-1	Martin Sindikubwabo, Toa Avalos	Halcyon senegalensis			Woodland Kingfisher
+T7-1	HumanObservation	ARCOS_ILAM_2017_351		30		T7-1	Martin Sindikubwabo, Toa Avalos	Ploceus cucullatus			Black headed weaver
+T7-1	HumanObservation	ARCOS_ILAM_2017_352		25		T7-1	Martin Sindikubwabo, Toa Avalos	Nettapus auritus			African Pygmy-goose
+T7-1	HumanObservation	ARCOS_ILAM_2017_353		2		T7-1	Martin Sindikubwabo, Toa Avalos	Ceryle rudis			Pied Kingfisher
+T7-1	HumanObservation	ARCOS_ILAM_2017_354		1		T7-1	Martin Sindikubwabo, Toa Avalos	Dicrus adsimilis			Fork -tailed Drongo
+T7-1	HumanObservation	ARCOS_ILAM_2017_355		1		T7-1	Martin Sindikubwabo, Toa Avalos	Bubulcus ibis			Cattle Egret
+T7-1	HumanObservation	ARCOS_ILAM_2017_356		1		T7-1	Martin Sindikubwabo, Toa Avalos	Turtur chalcospilos			Emerald-spotted Wood-Dove
+T7-1	HumanObservation	ARCOS_ILAM_2017_357		8		T7-1	Martin Sindikubwabo, Toa Avalos	Lamprotornis purpuropterus			Ruppell's Long-tailed Starling
+T7-2	HumanObservation	ARCOS_ILAM_2017_358		3		T7-2	Martin Sindikubwabo, Toa Avalos	Ceryle rudis			Pied Kingfisher
+T7-2	HumanObservation	ARCOS_ILAM_2017_359		3		T7-2	Martin Sindikubwabo, Toa Avalos	Lamprotornis purpuropterus			Ruppell's Long-tailed Starling
+T7-2	HumanObservation	ARCOS_ILAM_2017_360		1		T7-2	Martin Sindikubwabo, Toa Avalos	pycnonotus barbatus			Common Bulbul
+T7-2	HumanObservation	ARCOS_ILAM_2017_361		1		T7-2	Martin Sindikubwabo, Toa Avalos	Streptopelia semitorquata			Red eyed dove
+T7-2	HumanObservation	ARCOS_ILAM_2017_362		3		T7-2	Martin Sindikubwabo, Toa Avalos	Turtur chalcospilos			Emerald-spotted Wood-Dove
+T7-2	HumanObservation	ARCOS_ILAM_2017_363		2		T7-2	Martin Sindikubwabo, Toa Avalos	Cisticola marginatus			Winding Cisticola
+T7-2	HumanObservation	ARCOS_ILAM_2017_364		1		T7-2	Martin Sindikubwabo, Toa Avalos	Dicrus adsimilis			Fork -tailed Drongo
+T7-3	HumanObservation	ARCOS_ILAM_2017_365		1		T7-3	Martin Sindikubwabo, Toa Avalos	Turdus pelios			African Thrush
+T7-3	HumanObservation	ARCOS_ILAM_2017_366		1		T7-3	Martin Sindikubwabo, Toa Avalos	Turtur chalcospilos			Emerald-spotted Wood-Dove
+T7-3	HumanObservation	ARCOS_ILAM_2017_367		4		T7-3	Martin Sindikubwabo, Toa Avalos	Turtur chalcospilos			Arrow-marked Babbler
+T7-3	HumanObservation	ARCOS_ILAM_2017_368		1		T7-3	Martin Sindikubwabo, Toa Avalos	Hirundo fuligula			Rock Martin
+T7-3	HumanObservation	ARCOS_ILAM_2017_369		1		T7-3	Martin Sindikubwabo, Toa Avalos	Streptopelia semitorquata			Red eyed dove
+T7-3	HumanObservation	ARCOS_ILAM_2017_370		1		T7-3	Martin Sindikubwabo, Toa Avalos	Streptopelia capicola			Bleu -spoted Wood-Dove
+T7-3	HumanObservation	ARCOS_ILAM_2017_371		1		T7-3	Martin Sindikubwabo, Toa Avalos	Terpsiphone viridis			African paradise-flycather
+T7-3	HumanObservation	ARCOS_ILAM_2017_372		3		T7-3	Martin Sindikubwabo, Toa Avalos	Cossypha euglini			White-browed Robin -Chat
+T7-4	HumanObservation	ARCOS_ILAM_2017_373		1		T7-4	Martin Sindikubwabo, Toa Avalos	Dicrus adsimilis			Fork -tailed Drongo
+T7-4	HumanObservation	ARCOS_ILAM_2017_374		1		T7-4	Martin Sindikubwabo, Toa Avalos	Ceryle rudis			Pied Kingfisher
+T7-4	HumanObservation	ARCOS_ILAM_2017_375		1		T7-4	Martin Sindikubwabo, Toa Avalos	Vidua macroura			Speckled mousebird
+T7-4	HumanObservation	ARCOS_ILAM_2017_376		4		T7-4	Martin Sindikubwabo, Toa Avalos	Turdoides jardineii			Arrow-marked Babbler
+T7-4	HumanObservation	ARCOS_ILAM_2017_377		1		T7-4	Martin Sindikubwabo, Toa Avalos	Turdus pelios			African Thrush
+T7-4	HumanObservation	ARCOS_ILAM_2017_378		1		T7-4	Martin Sindikubwabo, Toa Avalos	Streptopelia capicola			Bleu -spoted Wood-Dove
+T7-4	HumanObservation	ARCOS_ILAM_2017_379		1		T7-4	Martin Sindikubwabo, Toa Avalos	Centrepus superciliosus			White-browed Coucal
+T7-5	HumanObservation	ARCOS_ILAM_2017_380		2		T7-5	Martin Sindikubwabo, Toa Avalos	Turtur chalcospilos			Arrow-marked Babbler
+T7-5	HumanObservation	ARCOS_ILAM_2017_381		1		T7-5	Martin Sindikubwabo, Toa Avalos	Streptopelia semitorquata			Red eyed dove
+T7-5	HumanObservation	ARCOS_ILAM_2017_382		1		T7-5	Martin Sindikubwabo, Toa Avalos	Turtur chalcospilos			Emerald-spotted Wood-Dove
+T7-5	HumanObservation	ARCOS_ILAM_2017_383		6		T7-5	Martin Sindikubwabo, Toa Avalos	Ceryle rudis			Pied Kingfisher
+T7-5	HumanObservation	ARCOS_ILAM_2017_384		1		T7-5	Martin Sindikubwabo, Toa Avalos	Bubulcus ibis			Cattle Egret
+T7-5	HumanObservation	ARCOS_ILAM_2017_385		1		T7-5	Martin Sindikubwabo, Toa Avalos	Euplectes axillaris			Fan-tailed Widowbird
+T7-6	HumanObservation	ARCOS_ILAM_2017_386		1		T7-6	Martin Sindikubwabo, Toa Avalos	pycnonotus barbatus			Common Bulbul
+T7-6	HumanObservation	ARCOS_ILAM_2017_387		2		T7-6	Martin Sindikubwabo, Toa Avalos	Cossypha euglini			White-browed Robin -Chat
+T7-6	HumanObservation	ARCOS_ILAM_2017_388		1		T7-6	Martin Sindikubwabo, Toa Avalos	Ceryle rudis			Pied Kingfisher
+T7-6	HumanObservation	ARCOS_ILAM_2017_389		2		T7-6	Martin Sindikubwabo, Toa Avalos	Streptopelia semitorquata			Red eyed dove
+T7-7	HumanObservation	ARCOS_ILAM_2017_390		2		T7-7	Martin Sindikubwabo, Toa Avalos	pycnonotus barbatus			Common Bulbul
+T7-7	HumanObservation	ARCOS_ILAM_2017_391		1		T7-7	Martin Sindikubwabo, Toa Avalos	Mymecocichla arnoti			White-headed Black Chat
+T7-7	HumanObservation	ARCOS_ILAM_2017_392		2		T7-7	Martin Sindikubwabo, Toa Avalos	Cossypha euglini			White-browed Robin -Chat
+T7-7	HumanObservation	ARCOS_ILAM_2017_393		6		T7-7	Martin Sindikubwabo, Toa Avalos	Turtur chalcospilos			Arrow-marked Babbler
+T7-8	HumanObservation	ARCOS_ILAM_2017_394		1		T7-8	Martin Sindikubwabo, Toa Avalos	Cossypha euglini			White-browed Robin -Chat
+T7-8	HumanObservation	ARCOS_ILAM_2017_395		2		T7-8	Martin Sindikubwabo, Toa Avalos	Laniarius erytrogaster			Black-headed Gonolek
+T7-8	HumanObservation	ARCOS_ILAM_2017_396		2		T7-8	Martin Sindikubwabo, Toa Avalos	Halcyon senegalensis			Woodland Kingfisher
+T7-8	HumanObservation	ARCOS_ILAM_2017_397		1		T7-8	Martin Sindikubwabo, Toa Avalos	Streptopelia capicola			Bleu -spoted Wood-Dove
+T7-9	HumanObservation	ARCOS_ILAM_2017_398		1		T7-9	Martin Sindikubwabo, Toa Avalos	Ceryle rudis			Woodland Kingfisher
+T7-9	HumanObservation	ARCOS_ILAM_2017_399		8		T7-9	Martin Sindikubwabo, Toa Avalos	Ploceus cucullatus			Black-headed Weaver
+T7-9	HumanObservation	ARCOS_ILAM_2017_400		4		T7-9	Martin Sindikubwabo, Toa Avalos	Turtur chalcospilos			Arrow-marked Babbler
+T7-10	HumanObservation	ARCOS_ILAM_2017_401		3		T7-10	Martin Sindikubwabo, Toa Avalos	Turtur chalcospilos			Arrow-marked Babbler
+T7-10	HumanObservation	ARCOS_ILAM_2017_402		1		T7-10	Martin Sindikubwabo, Toa Avalos	Halcyon senegalensis			Woodland Kingfisher
+T7-1	HumanObservation	ARCOS_ILAM_2017_403		25		T7-1	Martin Sindikubwabo, Toa Avalos	Ploceus cucullatus			Black headed weaver
+T7-1	HumanObservation	ARCOS_ILAM_2017_404		2		T7-1	Martin Sindikubwabo, Toa Avalos	pycnonotus barbatus			Common Bulbul
+T7-1	HumanObservation	ARCOS_ILAM_2017_405		1		T7-1	Martin Sindikubwabo, Toa Avalos	Cisticola marginatus			Winding Cisticola
+T7-1	HumanObservation	ARCOS_ILAM_2017_406		2		T7-1	Martin Sindikubwabo, Toa Avalos	Milvus migrans			Black Kite
+T7-1	HumanObservation	ARCOS_ILAM_2017_407		1		T7-1	Martin Sindikubwabo, Toa Avalos	Ceryle rudis			Pied Kingfisher
+T7-1	HumanObservation	ARCOS_ILAM_2017_408		1		T7-1	Martin Sindikubwabo, Toa Avalos	Bubulcus ibis			Cattle Egret
+T7-1	HumanObservation	ARCOS_ILAM_2017_409		1		T7-1	Martin Sindikubwabo, Toa Avalos	Streptopelia semitorquata			Red eyed dove
+T7-1	HumanObservation	ARCOS_ILAM_2017_410		1		T7-1	Martin Sindikubwabo, Toa Avalos	Motacilla capensis			Cape wagetail
+T7-2	HumanObservation	ARCOS_ILAM_2017_411		1		T7-2	Martin Sindikubwabo, Toa Avalos	Milvus migrans			Black Kite
+T7-2	HumanObservation	ARCOS_ILAM_2017_412		2		T7-2	Martin Sindikubwabo, Toa Avalos	Turtur chalcospilos			Emerald-spotted Wood-Dove
+T7-2	HumanObservation	ARCOS_ILAM_2017_413		1		T7-2	Martin Sindikubwabo, Toa Avalos	pycnonotus barbatus			Common Bulbul
+T7-2	HumanObservation	ARCOS_ILAM_2017_414		1		T7-2	Martin Sindikubwabo, Toa Avalos	Streptopelia capicola			Bleu -spoted Wood-Dove
+T7-2	HumanObservation	ARCOS_ILAM_2017_415		2		T7-2	Martin Sindikubwabo, Toa Avalos	Ceryle rudis			Pied Kingfisher
+T7-3	HumanObservation	ARCOS_ILAM_2017_416		8		T7-3	Martin Sindikubwabo, Toa Avalos	Ploceus cucullatus			Black headed weaver
+T7-3	HumanObservation	ARCOS_ILAM_2017_417		4		T7-3	Martin Sindikubwabo, Toa Avalos	Dicrus adsimilis			Fork -tailed Drongo
+T7-3	HumanObservation	ARCOS_ILAM_2017_418		1		T7-3	Martin Sindikubwabo, Toa Avalos	Streptopelia capicola			Bleu -spoted Wood-Dove
+T7-3	HumanObservation	ARCOS_ILAM_2017_419		1		T7-3	Martin Sindikubwabo, Toa Avalos	Colius striatus			Speckled mousebird
+T7-3	HumanObservation	ARCOS_ILAM_2017_420		2		T7-3	Martin Sindikubwabo, Toa Avalos	Laniarius erytrogaster			Black-headed Gonolek
+T7-3	HumanObservation	ARCOS_ILAM_2017_421		2		T7-3	Martin Sindikubwabo, Toa Avalos	Milvus migrans			Black Kite
+T7-3	HumanObservation	ARCOS_ILAM_2017_422		2		T7-3	Martin Sindikubwabo, Toa Avalos	Cossypha euglini			White-browed Robin -Chat
+T7-3	HumanObservation	ARCOS_ILAM_2017_423		2		T7-3	Martin Sindikubwabo, Toa Avalos	Streptopelia capicola			Ring-necked Dove
+T7-3	HumanObservation	ARCOS_ILAM_2017_424		1		T7-3	Martin Sindikubwabo, Toa Avalos	Nectarinia famosa			Malachite Sun bird
+T7-4	HumanObservation	ARCOS_ILAM_2017_425		1		T7-4	Martin Sindikubwabo, Toa Avalos	Streptopelia semitorquata			Red eyed dove
+T7-4	HumanObservation	ARCOS_ILAM_2017_426		1		T7-4	Martin Sindikubwabo, Toa Avalos	Streptopelia capicola			Bleu -spoted Wood-Dove
+T7-4	HumanObservation	ARCOS_ILAM_2017_427		1		T7-4	Martin Sindikubwabo, Toa Avalos	Nectarnia kilimensis			Bronze Sunbird
+T7-5	HumanObservation	ARCOS_ILAM_2017_428		4		T7-5	Martin Sindikubwabo, Toa Avalos	Pycnonotus barbatus			Common Bulbul
+T7-5	HumanObservation	ARCOS_ILAM_2017_429		2		T7-5	Martin Sindikubwabo, Toa Avalos	Streptopelia capicola			Bleu -spoted Wood-Dove
+T7-5	HumanObservation	ARCOS_ILAM_2017_430		1		T7-5	Martin Sindikubwabo, Toa Avalos	Streptopelia semitorquata			Red eyed dove
+T7-5	HumanObservation	ARCOS_ILAM_2017_431		1		T7-5	Martin Sindikubwabo, Toa Avalos	Ploceus xanthops			Holub's Golden Weaver
+T7-5	HumanObservation	ARCOS_ILAM_2017_432		1		T7-5	Martin Sindikubwabo, Toa Avalos	Laniarius aethiopicus			Tropical Boubou
+T7-6	HumanObservation	ARCOS_ILAM_2017_433		1		T7-6	Martin Sindikubwabo, Toa Avalos	Ceryle rudis			Pied Kingfisher
+T7-6	HumanObservation	ARCOS_ILAM_2017_434		1		T7-6	Martin Sindikubwabo, Toa Avalos	Actophiphilornis africanus			African Jacana
+T7-6	HumanObservation	ARCOS_ILAM_2017_435		5		T7-6	Martin Sindikubwabo, Toa Avalos	Milvus migrans			Black Kite
+T7-6	HumanObservation	ARCOS_ILAM_2017_436		1		T7-6	Martin Sindikubwabo, Toa Avalos	Turdoides jardineii			Arrow-marked Babbler
+T7-7	HumanObservation	ARCOS_ILAM_2017_437		1		T7-7	Martin Sindikubwabo, Toa Avalos	Ceryle rudis			Woodland Kingfisher
+T7-7	HumanObservation	ARCOS_ILAM_2017_438		9		T7-7	Martin Sindikubwabo, Toa Avalos	Milvus migrans			Black Kite
+T7-7	HumanObservation	ARCOS_ILAM_2017_439		2		T7-7	Martin Sindikubwabo, Toa Avalos	Laniarius erytrogaster			Black-headed Gonolek
+T7-8	HumanObservation	ARCOS_ILAM_2017_440		1		T7-8	Martin Sindikubwabo, Toa Avalos	Streptopelia capicola			Bleu -spoted Wood-Dove
+T7-8	HumanObservation	ARCOS_ILAM_2017_441		1		T7-8	Martin Sindikubwabo, Toa Avalos	Ploceus cucullatus			Black headed weaver
+T7-8	HumanObservation	ARCOS_ILAM_2017_442		1		T7-8	Martin Sindikubwabo, Toa Avalos	Turdus pelios			African Thrush
+T7-9	HumanObservation	ARCOS_ILAM_2017_443		4		T7-9	Martin Sindikubwabo, Toa Avalos	Lamprotornis purpuropterus			Ruppell's Long-tailed Starling
+T7-9	HumanObservation	ARCOS_ILAM_2017_444		4		T7-9	Martin Sindikubwabo, Toa Avalos	Dicrus adsimilis			Fork -tailed Drongo
+T7-9	HumanObservation	ARCOS_ILAM_2017_445		1		T7-9	Martin Sindikubwabo, Toa Avalos	Milvus migrans			Black Kite
+T7-9	HumanObservation	ARCOS_ILAM_2017_446		1		T7-9	Martin Sindikubwabo, Toa Avalos	pycnonotus barbatus			Common Bulbul
+T7-10	HumanObservation	ARCOS_ILAM_2017_447		4		T7-10	Martin Sindikubwabo, Toa Avalos	Turdoides jardineii			Arrow-marked Babbler
+T7-10	HumanObservation	ARCOS_ILAM_2017_448		5		T7-10	Martin Sindikubwabo, Toa Avalos	Lamprotornis purpuropterus			Ruppell's Long-tailed Starling
+T7-10	HumanObservation	ARCOS_ILAM_2017_449		1		T7-10	Martin Sindikubwabo, Toa Avalos	Logonosticta rubricata			African fire finch
+T7-10	HumanObservation	ARCOS_ILAM_2017_450		1		T7-10	Martin Sindikubwabo, Toa Avalos	Zostreps senegalensis			Yellow white-eye
+T7-10	HumanObservation	ARCOS_ILAM_2017_451		1		T7-10	Martin Sindikubwabo, Toa Avalos	Andropadus latirostris			Yellow-whiskered Greenbul
+T6-1	HumanObservation	ARCOS_ILAM_2017_452		1		T6-1	Martin Sindikubwabo, Toa Avalos	Actophiphilornis africanus			African Jacana
+T6-1	HumanObservation	ARCOS_ILAM_2017_453		3		T6-1	Martin Sindikubwabo, Toa Avalos	Euplectes axillaris			fan-tailed Widowbird
+T6-1	HumanObservation	ARCOS_ILAM_2017_454		1		T6-1	Martin Sindikubwabo, Toa Avalos	Streptopelia semitorquata			Red eyed dove
+T6-1	HumanObservation	ARCOS_ILAM_2017_455		1		T6-1	Martin Sindikubwabo, Toa Avalos	Euplectes hordeaceus			Black- winged Red Bishop
+T6-1	HumanObservation	ARCOS_ILAM_2017_456		12		T6-1	Martin Sindikubwabo, Toa Avalos	Merops apiaster			European Bee-eater
+T6-1	HumanObservation	ARCOS_ILAM_2017_457		1		T6-1	Martin Sindikubwabo, Toa Avalos	pycnonotus barbatus			Common Bulbul
+T6-1	HumanObservation	ARCOS_ILAM_2017_458		15		T6-1	Martin Sindikubwabo, Toa Avalos	Ploceus cucullatus			Black headed weaver
+T6-2	HumanObservation	ARCOS_ILAM_2017_459		3		T6-2	Martin Sindikubwabo, Toa Avalos	Merops apiaster			European Bee-eater
+T6-2	HumanObservation	ARCOS_ILAM_2017_460		2		T6-2	Martin Sindikubwabo, Toa Avalos	Cisticola marginatus			Winding Cisticola
+T6-2	HumanObservation	ARCOS_ILAM_2017_461		1		T6-2	Martin Sindikubwabo, Toa Avalos	Cossypha euglini			White-browed Robin -Chat
+T6-3	HumanObservation	ARCOS_ILAM_2017_462		1		T6-3	Martin Sindikubwabo, Toa Avalos	Balearica regulorum			Grey Crowned Crane
+T6-4	HumanObservation	ARCOS_ILAM_2017_463		1		T6-4	Martin Sindikubwabo, Toa Avalos	Cisticola marginatus			Winding Cisticola
+T3-1	HumanObservation	ARCOS_ILAM_2017_464	Some individuals  plants were bent down	50	Non Flowering	T3-1	Narcisse Uwitonze	Bambusa vulgaris		Poaceae	
+T3-1	HumanObservation	ARCOS_ILAM_2017_465	Some individuals  plants were bent down	2	Non Flowering	T3-1	Narcisse Uwitonze	Cyperus papyrus		Cyperaceae	
+T3-1	HumanObservation	ARCOS_ILAM_2017_466	Some individuals  plants were bent down	3	Flowering	T3-1	Narcisse Uwitonze	Ludwigia abyssinica		Onagraceae	
+T3-1	HumanObservation	ARCOS_ILAM_2017_467	Agriculture dominating  the natural vegetation	5	Non Flowering	T3-1	Narcisse Uwitonze	Cyperus papyrus		Cyperaceae	
+T3-1	HumanObservation	ARCOS_ILAM_2017_468	Agriculture dominating  the natural vegetation	3	Non Flowering	T3-1	Narcisse Uwitonze	Cyperus latifolius		Cyperaceae	
+T3-1	HumanObservation	ARCOS_ILAM_2017_469	Agriculture dominating  the natural vegetation	4	Flowering	T3-1	Narcisse Uwitonze	Albizia vescilor		Fabaceae	
+T3-1	HumanObservation	ARCOS_ILAM_2017_470	Agriculture dominating  the natural vegetation	5	Non Flowering	T3-1	Narcisse Uwitonze	Laportea alatipes		Urticaceae	
+T3-1	HumanObservation	ARCOS_ILAM_2017_471	Agriculture dominating  the natural vegetation	3	Flowering	T3-1	Narcisse Uwitonze	Albizia vescilor		Fabaceae	
+T3-1	HumanObservation	ARCOS_ILAM_2017_472	Agriculture dominating  the natural vegetation	4	Flowering	T3-1	Narcisse Uwitonze	Leonitis neputifolia		Lamiaceae	
+T3-1	HumanObservation	ARCOS_ILAM_2017_473	Agriculture dominating  the natural vegetation	5	Flowering	T3-1	Narcisse Uwitonze	Bothriocline longipes		Asteraceae	
+T3-1	HumanObservation	ARCOS_ILAM_2017_474	Agriculture dominating  the natural vegetation	3	Flowering	T3-1	Narcisse Uwitonze	Albizia vescilor		Fabaceae	
+T3-1	HumanObservation	ARCOS_ILAM_2017_475	Agriculture dominating  the natural vegetation	1	Flowering	T3-1	Narcisse Uwitonze	Polygonum senegalens		Polygonaceae	
+T3-1	HumanObservation	ARCOS_ILAM_2017_476	Agriculture dominating  the natural vegetation	3	Non Flowering	T3-1	Narcisse Uwitonze	Cyperus latifolius		Cyperaceae	
+T3-2	HumanObservation	ARCOS_ILAM_2017_477	Agriculture dominating  the natural vegetation	4	Flowering	T3-2	Narcisse Uwitonze	Cyperus denudatus		Cyperaceae	
+T3-2	HumanObservation	ARCOS_ILAM_2017_478	Agriculture dominating  the natural vegetation	3	Flowering	T3-2	Narcisse Uwitonze	Leonitis neputifolia		Asteraceae	
+T3-2	HumanObservation	ARCOS_ILAM_2017_479	Agriculture dominating  the natural vegetation	2	Flowering	T3-2	Narcisse Uwitonze	Albizia vescilor		Fabaceae	
+T3-2	HumanObservation	ARCOS_ILAM_2017_480	Agriculture dominating  the natural vegetation	20	Non Flowering	T3-2	Narcisse Uwitonze	Cyperus papyrus		Cyperaceae	
+T3-2	HumanObservation	ARCOS_ILAM_2017_481	Agriculture dominating  the natural vegetation	2	Flowering	T3-2	Narcisse Uwitonze	Ricinus communis		Asteraceae	
+T3-2	HumanObservation	ARCOS_ILAM_2017_482	Agriculture dominating  the natural vegetation	2	Flowering	T3-2	Narcisse Uwitonze	Leonitis neputifolia		Lamiaceae	
+T3-2	HumanObservation	ARCOS_ILAM_2017_483	Agriculture dominating  the natural vegetation	5	Non Flowering	T3-2	Narcisse Uwitonze	Cyperus papyrus		Cyperaceae	
+T3-2	HumanObservation	ARCOS_ILAM_2017_484	Agriculture dominating  the natural vegetation	4	Flowering	T3-2	Narcisse Uwitonze	Bothriocline longipes		Asteraceae	
+T3-2	HumanObservation	ARCOS_ILAM_2017_485	Agriculture dominating  the natural vegetation	4	With Fruits	T3-2	Narcisse Uwitonze	Albizia vescilor		Fabaceae	
+T3-2	HumanObservation	ARCOS_ILAM_2017_486	Agriculture dominating  the natural vegetation	20	Non Flowering	T3-2	Narcisse Uwitonze	C. latifolius		Ceyperaceae	
+T3-2	HumanObservation	ARCOS_ILAM_2017_487	Agriculture dominating  the natural vegetation	7	Flowering	T3-2	Narcisse Uwitonze	Leonitis neputifolia		Asteraceae	
+T3-2	HumanObservation	ARCOS_ILAM_2017_488	Agriculture dominating  the natural vegetation	15	Flowering	T3-2	Narcisse Uwitonze	Bidens pilosa		Asteraceae	
+T3-2	HumanObservation	ARCOS_ILAM_2017_489	Agriculture dominating  the natural vegetation	10	With Fruits	T3-2	Narcisse Uwitonze	Albizia vescilor		Fabaceae	
+T3-2	HumanObservation	ARCOS_ILAM_2017_490	Agriculture dominating  the natural vegetation	12	Non Flowering	T3-2	Narcisse Uwitonze	C. latifolius		Cyperaceae	
+T3-3	HumanObservation	ARCOS_ILAM_2017_491	Beans plantation even in the transect	4	Flowering	T3-3	Narcisse Uwitonze	Albizia vescilor		Fabaceae	
+T3-3	HumanObservation	ARCOS_ILAM_2017_492	Beans plantation	10	Non Flowering	T3-3	Narcisse Uwitonze	Bambusa vulgaris		Fabaceae	
+T3-3	HumanObservation	ARCOS_ILAM_2017_493	Beans plantation	4	Non Flowering	T3-3	Narcisse Uwitonze	Dracaeana afromontana		Draceanaceae	
+T3-3	HumanObservation	ARCOS_ILAM_2017_494	Beans plantation	4	Non Flowering	T3-3	Narcisse Uwitonze	Polygonum senegalens		Polygonaceae	
+T3-3	HumanObservation	ARCOS_ILAM_2017_495	Beans plantation	3	Non Flowering	T3-3	Narcisse Uwitonze	Psidiumguajava		Myrtaceae	
+T3-3	HumanObservation	ARCOS_ILAM_2017_496	Beans plantation	5	Non Flowering	T3-3	Narcisse Uwitonze	Bambusa vulgaris		Fabaceae	
+T3-3	HumanObservation	ARCOS_ILAM_2017_497	Beans plantation	4	With Fruits	T3-3	Narcisse Uwitonze	Albizia vescilor		Fabaceae	
+T3-3	HumanObservation	ARCOS_ILAM_2017_498	Beans plantation	20	With Fruits	T3-3	Narcisse Uwitonze	Lantana camara		Verbenaceae	
+T3-3	HumanObservation	ARCOS_ILAM_2017_499	Beans plantation	1	Non Flowering	T3-3	Narcisse Uwitonze	Eucalyptus sp		Myrtaceae	
+T3-3	HumanObservation	ARCOS_ILAM_2017_500	Beans plantation	3	Non Flowering	T3-3	Narcisse Uwitonze	Vernonia amygadalina		Asteraceae	
+T3-3	HumanObservation	ARCOS_ILAM_2017_501	Beans plantation	1	Non Flowering	T3-3	Narcisse Uwitonze	Erythrina abyssinica		Fabaceae	
+T3-3	HumanObservation	ARCOS_ILAM_2017_502	Different crop plantation	50	Non Flowering	T3-3	Narcisse Uwitonze	Cyperus papyrus		Cyperaceae	
+T3-3	HumanObservation	ARCOS_ILAM_2017_503	Different crop plantation	7	With Fruits	T3-3	Narcisse Uwitonze	Eucalyptus sp		Myrtaceae	
+T3-3	HumanObservation	ARCOS_ILAM_2017_504	Different crop plantation	5	Non Flowering	T3-3	Narcisse Uwitonze	Cyperus latifolius		Cyperaceae	
+T3-3	HumanObservation	ARCOS_ILAM_2017_505	Different crop plantation	7	Non Flowering	T3-3	Narcisse Uwitonze	Cyperus papyrus		Cyperaceae	
+T3-3	HumanObservation	ARCOS_ILAM_2017_506	Different crop plantation	4	With Fruits	T3-3	Narcisse Uwitonze	Albizia vescilor		Fabaceae	
+T3-3	HumanObservation	ARCOS_ILAM_2017_507	Different crop plantation	18	Non Flowering	T3-3	Narcisse Uwitonze	Cyperus papyrus			
+T3-4	HumanObservation	ARCOS_ILAM_2017_508	Different crop plantation	10	Flowering	T3-4	Narcisse Uwitonze	Cyperus latifolius			
+T3-4	HumanObservation	ARCOS_ILAM_2017_509	Different crop plantation	5	With Fruits	T3-4	Narcisse Uwitonze	Cyperus papyrus			
+T3-4	HumanObservation	ARCOS_ILAM_2017_510	Different crop plantation	1	Non Flowering	T3-4	Narcisse Uwitonze	Laportea alatipes			
+T3-4	HumanObservation	ARCOS_ILAM_2017_511	Different crop plantation	1	Non Flowering	T3-4	Narcisse Uwitonze	Klanchoe crenata		Crassulaceae	
+T3-4	HumanObservation	ARCOS_ILAM_2017_512	Different crop plantation	30	Non Flowering	T3-4	Narcisse Uwitonze	Bambusa vulgaris		Fabaceae	
+T3-4	HumanObservation	ARCOS_ILAM_2017_513	Different crop plantation	4	Non Flowering	T3-4	Narcisse Uwitonze	Cyperus latifolius		Cyperaceae	
+T3-4	HumanObservation	ARCOS_ILAM_2017_514	Different crop plantation	4	Flowering	T3-4	Narcisse Uwitonze	Ricinus communis		Asteraceae	
+T3-4	HumanObservation	ARCOS_ILAM_2017_515	Different crop plantation	15	Non Flowering	T3-4	Narcisse Uwitonze	Bambusa vulgaris		Fabaceae	
+T3-4	HumanObservation	ARCOS_ILAM_2017_516	Different crop plantation	1	Non Flowering	T3-4	Narcisse Uwitonze	Grevellea robusta			
+T3-4	HumanObservation	ARCOS_ILAM_2017_517	Different crop plantation	7	Non Flowering	T3-4	Narcisse Uwitonze	Cyperus latifolius		Cyperaceae	
+T3-4	HumanObservation	ARCOS_ILAM_2017_518	Different crop plantation	5	Flowering	T3-4	Narcisse Uwitonze	Ricinus communis		Asteraceae	
+T3-4	HumanObservation	ARCOS_ILAM_2017_519	Different crop plantation	10	Non Flowering	T3-4	Narcisse Uwitonze	Bambusa vulgaris		Fabaceae	
+T3-5	HumanObservation	ARCOS_ILAM_2017_520	People keeping the cows and goats			T3-5	Narcisse Uwitonze	No wetland species found			
+T3-5	HumanObservation	ARCOS_ILAM_2017_521	People keeping the cows and goats	10	Flowering	T3-5	Narcisse Uwitonze	Eicornia crassipes			
+T3-5	HumanObservation	ARCOS_ILAM_2017_522	People keeping the cows and goats	3	Non Flowering	T3-5	Narcisse Uwitonze	Cyperus latifolius		Cyperaceae	
+T3-5	HumanObservation	ARCOS_ILAM_2017_523	People keeping the cows and goats	5	With Fruits	T3-5	Narcisse Uwitonze	Lantana camara		Verbenaceae	
+T3-5	HumanObservation	ARCOS_ILAM_2017_524	People keeping the cows and goats	5	Non Flowering	T3-5	Narcisse Uwitonze	Cyperus papyrus		Cyperaceae	
+T3-5	HumanObservation	ARCOS_ILAM_2017_525	People keeping the cows and goats	3	Non Flowering	T3-5	Narcisse Uwitonze	Grevellea robusta			
+T3-5	HumanObservation	ARCOS_ILAM_2017_526	People keeping the cows and goats	5	With Fruits	T3-5	Narcisse Uwitonze	Eucalyptus sp		Myrtaceae	
+T3-5	HumanObservation	ARCOS_ILAM_2017_527	People keeping the cows and goats	3	Non Flowering	T3-5	Narcisse Uwitonze	Ficus  indica			
+T3-5	HumanObservation	ARCOS_ILAM_2017_528	People keeping the cows and goats	2	Non Flowering	T3-5	Narcisse Uwitonze	Euphorbia trucalli		Euphorbiaceae	
+T3-5	HumanObservation	ARCOS_ILAM_2017_529	People keeping the cows and goats	1	Non Flowering	T3-5	Narcisse Uwitonze	Agave sisalana		Agavaceae	
+T3-5	HumanObservation	ARCOS_ILAM_2017_530	People keeping the cows and goats	1	Non Flowering	T3-5	Narcisse Uwitonze	Ficus  indica			
+T3-5	HumanObservation	ARCOS_ILAM_2017_531	People keeping the cows and goats	20	Flowering	T3-5	Narcisse Uwitonze	Eicornia crassipes			
+T3-5	HumanObservation	ARCOS_ILAM_2017_532	People keeping the cows and goats	2	With Fruits	T3-5	Narcisse Uwitonze	Lantana camara		Verbenaceae	
+T3-5	HumanObservation	ARCOS_ILAM_2017_533	Different crop plantation	20	Non Flowering	T3-5	Narcisse Uwitonze	Cyperus latifolius		Cyperaceae	
+T3-5	HumanObservation	ARCOS_ILAM_2017_534	Different crop plantation	10	Non Flowering	T3-5	Narcisse Uwitonze	Cyperus latifolius		Cyperaceae	
+T3-6	HumanObservation	ARCOS_ILAM_2017_535	Different crop plantation	10	Non Flowering	T3-6	Narcisse Uwitonze	Bambusa vulgaris		Fabaceae	
+T3-6	HumanObservation	ARCOS_ILAM_2017_536	Different crop plantation	4	Non Flowering	T3-6	Narcisse Uwitonze	Cyperus papyrus		Cyperaceae	
+T3-6	HumanObservation	ARCOS_ILAM_2017_537	Different crop plantation	4	Flowering	T3-6	Narcisse Uwitonze	Eicornia crassipes			
+T3-6	HumanObservation	ARCOS_ILAM_2017_538	Different crop plantation	2	Flowering	T3-6	Narcisse Uwitonze	Albizia vescilor		Fabaceae	
+T3-6	HumanObservation	ARCOS_ILAM_2017_539	Different crop plantation	8	Non Flowering	T3-6	Narcisse Uwitonze	Cyperus papyrus		Cyperaceae	
+T3-6	HumanObservation	ARCOS_ILAM_2017_540	Different crop plantation	12	With Fruits	T3-6	Narcisse Uwitonze	Lantana camara		Verbenaceae	
+T3-6	HumanObservation	ARCOS_ILAM_2017_541	Different crop plantation	1	Flowering	T3-6	Narcisse Uwitonze	Albizia vescilor		Fabaceae	
+T3-6	HumanObservation	ARCOS_ILAM_2017_542	Different crop plantation	5	Non Flowering	T3-6	Narcisse Uwitonze	Cyperus papyrus		Cyperaceae	
+T3-6	HumanObservation	ARCOS_ILAM_2017_543	Different crop plantation	3	With Fruits	T3-6	Narcisse Uwitonze	Eucalyptus sp		Myrtaceae	
+T3-6	HumanObservation	ARCOS_ILAM_2017_544	Different crop plantation	1	Non Flowering	T3-6	Narcisse Uwitonze	Ficus  indica			
+T3-6	HumanObservation	ARCOS_ILAM_2017_545	Different crop plantation	5	Flowering	T3-6	Narcisse Uwitonze	Eicornia crassipes			
+T3-6	HumanObservation	ARCOS_ILAM_2017_546	Different crop plantation	2	Flowering	T3-6	Narcisse Uwitonze	Ricinus communis		Asteraceae	
+T3-6	HumanObservation	ARCOS_ILAM_2017_547	Different crop plantation	2	Non Flowering	T3-6	Narcisse Uwitonze	Erythrina abyssinica		Fabaceae	
+T3-6	HumanObservation	ARCOS_ILAM_2017_548	Different crop plantation	2	Flowering	T3-6	Narcisse Uwitonze	Albizia vescilor		Fabaceae	
+T3-7	HumanObservation	ARCOS_ILAM_2017_549	Different crop plantation	3	Flowering	T3-7	Narcisse Uwitonze	Eicornia crassipes			
+T3-7	HumanObservation	ARCOS_ILAM_2017_550	Different crop plantation	2	Non Flowering	T3-7	Narcisse Uwitonze	Ricinus communis		asteraceae	
+T3-7	HumanObservation	ARCOS_ILAM_2017_551	Different crop plantation	3	Non Flowering	T3-7	Narcisse Uwitonze	Polygonum senegalens		Polygonaceae	
+T3-7	HumanObservation	ARCOS_ILAM_2017_552	Different crop plantation	2	Non Flowering	T3-7	Narcisse Uwitonze	Cyperus papyrus		cyperaceae	
+T3-7	HumanObservation	ARCOS_ILAM_2017_553	Different crop plantation	2	Non Flowering	T3-7	Narcisse Uwitonze	Cyperus latifolius		cyperaceae	
+T3-7	HumanObservation	ARCOS_ILAM_2017_554	Different crop plantation	2	Flowering	T3-7	Narcisse Uwitonze	Eicornia crassipes			
+T3-7	HumanObservation	ARCOS_ILAM_2017_555	Animal grazing	2		T3-7	Narcisse Uwitonze	Eucalyptus sp		Myrtaceae	
+T3-7	HumanObservation	ARCOS_ILAM_2017_556	Animal grazing	2		T3-7	Narcisse Uwitonze	Grevellea robusta			
+T3-7	HumanObservation	ARCOS_ILAM_2017_557	Animal grazing	5		T3-7	Narcisse Uwitonze	Cyperus papyrus		Cyperaceae	
+T3-7	HumanObservation	ARCOS_ILAM_2017_558	Animal grazing	6		T3-7	Narcisse Uwitonze	Eucalyptus sp		Myrtaceae	
+T3-8	HumanObservation	ARCOS_ILAM_2017_559	Animal grazing	4		T3-8	Narcisse Uwitonze	Cyperus papyrus		Cyperaceae	
+T3-8	HumanObservation	ARCOS_ILAM_2017_560	Animal grazing	3		T3-8	Narcisse Uwitonze	Albizia vescilor		Fabaceae	
+T3-8	HumanObservation	ARCOS_ILAM_2017_561	Different crop plantation	2		T3-8	Narcisse Uwitonze	Stachys aculeolata		poaceae	
+T3-8	HumanObservation	ARCOS_ILAM_2017_562	Different crop plantation	2		T3-8	Narcisse Uwitonze	Albizia vescilor		Fabaceae	
+T3-8	HumanObservation	ARCOS_ILAM_2017_563	Different crop plantation	2		T3-8	Narcisse Uwitonze	Stachys aculeolata		Poaceae	
+T3-8	HumanObservation	ARCOS_ILAM_2017_564	Different crop plantation	2		T3-8	Narcisse Uwitonze	Cyperus papyrus		Cyperaceae	
+T3-8	HumanObservation	ARCOS_ILAM_2017_565	Different crop plantation	2		T3-8	Narcisse Uwitonze	Stachys aculeolata		Poaceae	
+T3-8	HumanObservation	ARCOS_ILAM_2017_566	Different crop plantation	2		T3-8	Narcisse Uwitonze	Albizia vescilor		Fabaceae	
+T3-8	HumanObservation	ARCOS_ILAM_2017_567	Different crop plantation	2		T3-8	Narcisse Uwitonze	Ricinus communis		Asteraceae	
+T3-8	HumanObservation	ARCOS_ILAM_2017_568	Different crop plantation	2		T3-8	Narcisse Uwitonze	Cyperus papyrus		Cyperaceae	
+T3-9	HumanObservation	ARCOS_ILAM_2017_569	Different crop plantation	2		T3-9	Narcisse Uwitonze	Albizia vescilor		Fabaceae	
+T3-9	HumanObservation	ARCOS_ILAM_2017_570	Different crop plantation	2		T3-9	Narcisse Uwitonze	Cyperus latifolius		Cyperaceae	
+T3-9	HumanObservation	ARCOS_ILAM_2017_571	Different crop plantation	2		T3-9	Narcisse Uwitonze	Cyperus papyrus		cyperaceae	
+T3-9	HumanObservation	ARCOS_ILAM_2017_572	Different crop plantation	2		T3-9	Narcisse Uwitonze	Ricinus communis		Asteraceae	
+T3-9	HumanObservation	ARCOS_ILAM_2017_573	Different crop plantation	2		T3-9	Narcisse Uwitonze	Cyperus latifolius		Cyperaceae	
+T3-9	HumanObservation	ARCOS_ILAM_2017_574	Different crop plantation	2		T3-9	Narcisse Uwitonze	Albizia vescilor		Fabaceae	
+T3-9	HumanObservation	ARCOS_ILAM_2017_575	Different crop plantation	2		T3-9	Narcisse Uwitonze	Crassocephalum vitellinum		Asteraceae	
+T4-1	HumanObservation	ARCOS_ILAM_2017_576	Agricultural crops	20	Non Flowering	T4-1	Narcisse Uwitonze	Cyperus latifolius			
+T4-1	HumanObservation	ARCOS_ILAM_2017_577	Agricultural crops	6	Flowering	T4-1	Narcisse Uwitonze	Leonitis neputifolia			
+T4-1	HumanObservation	ARCOS_ILAM_2017_578	Agricultural crops	11	Non Flowering	T4-1	Narcisse Uwitonze	Cyperus papyrus			
+T4-1	HumanObservation	ARCOS_ILAM_2017_579	Agricultural crops	10	Non Flowering	T4-1	Narcisse Uwitonze	Phoenix reclinata			
+T4-1	HumanObservation	ARCOS_ILAM_2017_580	Agricultural crops	8	Non Flowering	T4-1	Narcisse Uwitonze	Cyperus latifolius			
+T4-1	HumanObservation	ARCOS_ILAM_2017_581	Agricultural crops	5	Flowering	T4-1	Narcisse Uwitonze	Polygonum senegalens			
+T4-1	HumanObservation	ARCOS_ILAM_2017_582	Agricultural crops	4	Flowering	T4-1	Narcisse Uwitonze	Eicornia crassipes			
+T4-1	HumanObservation	ARCOS_ILAM_2017_583	Agricultural crops	4	Non Flowering	T4-1	Narcisse Uwitonze	Cyperus papyrus			
+T4-1	HumanObservation	ARCOS_ILAM_2017_584	Agricultural crops	3	Non Flowering	T4-1	Narcisse Uwitonze	Cyperus latifolius			
+T4-1	HumanObservation	ARCOS_ILAM_2017_585	Agricultural crops	2	Non Flowering	T4-1	Narcisse Uwitonze	Cyperus papyrus			
+T4-1	HumanObservation	ARCOS_ILAM_2017_586	Agricultural crops	1	Non Flowering	T4-1	Narcisse Uwitonze	Cyperus papyrus			
+T4-1	HumanObservation	ARCOS_ILAM_2017_587	Agricultural crops	3	Non Flowering	T4-1	Narcisse Uwitonze	Cyperus latifolius			
+T4-1	HumanObservation	ARCOS_ILAM_2017_588	Agricultural crops	12	Flowering	T4-1	Narcisse Uwitonze	Stachys aculeolata			
+T4-1	HumanObservation	ARCOS_ILAM_2017_589	Agricultural crops	10	Flowering	T4-1	Narcisse Uwitonze	Polygonum senegalens			
+T4-2	HumanObservation	ARCOS_ILAM_2017_590	Agricultural crops	8	Flowering	T4-2	Narcisse Uwitonze	Polygonum senegalens			
+T4-2	HumanObservation	ARCOS_ILAM_2017_591	Agricultural crops	7	Non Flowering	T4-2	Narcisse Uwitonze	Psidium guajava			
+T4-2	HumanObservation	ARCOS_ILAM_2017_592	signs of domestic animals	10	Flowering	T4-2	Narcisse Uwitonze	Eicornia crassipes			
+T4-2	HumanObservation	ARCOS_ILAM_2017_593	signs of domestic animals	3	Non Flowering	T4-2	Narcisse Uwitonze	Cyperus latifolius			
+T4-2	HumanObservation	ARCOS_ILAM_2017_594	signs of domestic animals	5	Flowering	T4-2	Narcisse Uwitonze	Polygonum senegalens			
+T4-2	HumanObservation	ARCOS_ILAM_2017_595	signs of domestic animals	10	Non Flowering	T4-2	Narcisse Uwitonze	Cyperus papyrus			
+T4-2	HumanObservation	ARCOS_ILAM_2017_596	signs of domestic animals	2	Non Flowering	T4-2	Narcisse Uwitonze	Acacia sieberana			
+T4-2	HumanObservation	ARCOS_ILAM_2017_597	signs of domestic animals	3	Non Flowering	T4-2	Narcisse Uwitonze	Erythrina abyssinica			
+T4-2	HumanObservation	ARCOS_ILAM_2017_598	signs of domestic animals	12	Non Flowering	T4-2	Narcisse Uwitonze	Cyperus latifolius			
+T4-2	HumanObservation	ARCOS_ILAM_2017_599	signs of domestic animals	15	Flowering	T4-2	Narcisse Uwitonze	Stachys aculeolata			
+T4-2	HumanObservation	ARCOS_ILAM_2017_600	signs of domestic animals	10	Non Flowering	T4-2	Narcisse Uwitonze	Cyperus papyrus			
+T4-2	HumanObservation	ARCOS_ILAM_2017_601	signs of domestic animals	12	Non Flowering	T4-2	Narcisse Uwitonze	Cyperus latifolius			
+T4-2	HumanObservation	ARCOS_ILAM_2017_602	signs of domestic animals	14	Flowering	T4-2	Narcisse Uwitonze	Polygonum senegalens			
+T4-2	HumanObservation	ARCOS_ILAM_2017_603	signs of domestic animals	12	Non Flowering	T4-2	Narcisse Uwitonze	Cyperus papyrus			
+T4-3	HumanObservation	ARCOS_ILAM_2017_604	signs of domestic animals	12	Non Flowering	T4-3	Narcisse Uwitonze	Cyperus latifolius			
+T4-3	HumanObservation	ARCOS_ILAM_2017_605	signs of domestic animals	1	With Fruits	T4-3	Narcisse Uwitonze	Eucalyptus sp			
+T4-3	HumanObservation	ARCOS_ILAM_2017_606	signs of domestic animals	15	Non Flowering	T4-3	Narcisse Uwitonze	Cyperus papyrus			
+T4-3	HumanObservation	ARCOS_ILAM_2017_607	signs of domestic animals	1	Non Flowering	T4-3	Narcisse Uwitonze	Acacia sieberana			
+T4-3	HumanObservation	ARCOS_ILAM_2017_608	signs of domestic animals	10	Flowering	T4-3	Narcisse Uwitonze	Eicornia crassipes			
+T4-3	HumanObservation	ARCOS_ILAM_2017_609	signs of domestic animals	18	Non Flowering	T4-3	Narcisse Uwitonze	Cyperus latifolius			
+T4-3	HumanObservation	ARCOS_ILAM_2017_610	signs of domestic animals	10	Non Flowering	T4-3	Narcisse Uwitonze	Cyperus latifolius			
+T4-3	HumanObservation	ARCOS_ILAM_2017_611	signs of domestic animals	8	Flowering	T4-3	Narcisse Uwitonze	Stachys aculeolata			
+T4-3	HumanObservation	ARCOS_ILAM_2017_612	signs of domestic animals	7	Non Flowering	T4-3	Narcisse Uwitonze	Cyperus papyrus			
+T4-3	HumanObservation	ARCOS_ILAM_2017_613	signs of domestic animals	2	Non Flowering	T4-3	Narcisse Uwitonze	Acacia sieberana			
+T4-3	HumanObservation	ARCOS_ILAM_2017_614	signs of domestic animals	15	Flowering	T4-3	Narcisse Uwitonze	Polygonum senegalens			
+T4-4	HumanObservation	ARCOS_ILAM_2017_615	signs of domestic animals	5	Flowering	T4-4	Narcisse Uwitonze	Eicornia crassipes			
+T4-4	HumanObservation	ARCOS_ILAM_2017_616	Plantation of alien species	12	Non Flowering	T4-4	Narcisse Uwitonze	cyperus latifolius			
+T4-4	HumanObservation	ARCOS_ILAM_2017_617	Plantation of alien species	5	Flowering	T4-4	Narcisse Uwitonze	Eicornia crassipes			
+T4-4	HumanObservation	ARCOS_ILAM_2017_618	Plantation of alien species	14	Flowering	T4-4	Narcisse Uwitonze	Polygonum senegalens			
+T4-4	HumanObservation	ARCOS_ILAM_2017_619	Plantation of alien species	12	Non Flowering	T4-4	Narcisse Uwitonze	Cyperus latifolius			
+T4-4	HumanObservation	ARCOS_ILAM_2017_620	Plantation of alien species	12	Non Flowering	T4-4	Narcisse Uwitonze	Cyperus papyrus			
+T4-4	HumanObservation	ARCOS_ILAM_2017_621	Plantation of alien species	18	Non Flowering	T4-4	Narcisse Uwitonze	Cyperus papyrus			
+T4-4	HumanObservation	ARCOS_ILAM_2017_622	Plantation of alien species	12	Non Flowering	T4-4	Narcisse Uwitonze	Cyperus latifolius			
+T4-4	HumanObservation	ARCOS_ILAM_2017_623	Plantation of alien species	2	With Fruits	T4-4	Narcisse Uwitonze	Eucalyptus sp			
+T4-4	HumanObservation	ARCOS_ILAM_2017_624	severe agricultural practices	11	Non Flowering	T4-4	Narcisse Uwitonze	Cyperus latifolius			
+T4-4	HumanObservation	ARCOS_ILAM_2017_625	severe agricultural practices	10	Non Flowering	T4-4	Narcisse Uwitonze	Cyperus papyrus			
+T4-4	HumanObservation	ARCOS_ILAM_2017_626	severe agricultural practices	10	Flowering	T4-4	Narcisse Uwitonze	Polygonum senegalens			
+T4-4	HumanObservation	ARCOS_ILAM_2017_627	severe agricultural practices	10	Non Flowering	T4-4	Narcisse Uwitonze	Cyperus papyrus			
+T4-5	HumanObservation	ARCOS_ILAM_2017_628	severe agricultural practices	11	Non Flowering	T4-5	Narcisse Uwitonze	Cyperus latifolius			
+T4-5	HumanObservation	ARCOS_ILAM_2017_629	severe agricultural practices	10	Non Flowering	T4-5	Narcisse Uwitonze	Cyperus papyrus			
+T4-5	HumanObservation	ARCOS_ILAM_2017_630	severe agricultural practices	11	Non Flowering	T4-5	Narcisse Uwitonze	Cyperus latifolius			
+T4-5	HumanObservation	ARCOS_ILAM_2017_631	severe agricultural practices	10	Flowering	T4-5	Narcisse Uwitonze	Polygonum senegalens			
+T4-5	HumanObservation	ARCOS_ILAM_2017_632	severe agricultural practices	10	Flowering	T4-5	Narcisse Uwitonze	Eicornia crassipes			
+T4-5	HumanObservation	ARCOS_ILAM_2017_633	severe agricultural practices	11	Flowering	T4-5	Narcisse Uwitonze	Polygonum senegalens			
+T4-5	HumanObservation	ARCOS_ILAM_2017_634	severe agricultural practices	10	Flowering	T4-5	Narcisse Uwitonze	Stachys aculeolata			
+T4-5	HumanObservation	ARCOS_ILAM_2017_635	severe agricultural practices	10	Non Flowering	T4-5	Narcisse Uwitonze	Cyperus papyrus			
+T4-5	HumanObservation	ARCOS_ILAM_2017_636	severe agricultural practices	22	Non Flowering	T4-5	Narcisse Uwitonze	Cyperus latifolius			
+T4-5	HumanObservation	ARCOS_ILAM_2017_637	severe agricultural practices	10	Flowering	T4-5	Narcisse Uwitonze	Stachys aculeolata			
+T4-5	HumanObservation	ARCOS_ILAM_2017_638	severe agricultural practices	10	Flowering	T4-5	Narcisse Uwitonze	Polygonum senegalens			
+T4-6	HumanObservation	ARCOS_ILAM_2017_639	severe agricultural practices	22	Non Flowering	T4-6	Narcisse Uwitonze	Cyperus latifolius			
+T4-6	HumanObservation	ARCOS_ILAM_2017_640	severe agricultural practices	10	Flowering	T4-6	Narcisse Uwitonze	Eicorna crassipes			
+T4-6	HumanObservation	ARCOS_ILAM_2017_641	severe agricultural practices	10	Non Flowering	T4-6	Narcisse Uwitonze	Acacia sieberana			
+T4-6	HumanObservation	ARCOS_ILAM_2017_642	severe agricultural practices	22	Flowering	T4-6	Narcisse Uwitonze	Eicornia crassipes			
+T4-6	HumanObservation	ARCOS_ILAM_2017_643	severe agricultural practices	10	Non Flowering	T4-6	Narcisse Uwitonze	Cyperus latifolius			
+T4-6	HumanObservation	ARCOS_ILAM_2017_644	severe agricultural practices	10	With Fruits	T4-6	Narcisse Uwitonze	Polygonum senegalens			
+T4-6	HumanObservation	ARCOS_ILAM_2017_645	severe agricultural practices	22	Non Flowering	T4-6	Narcisse Uwitonze	Acacia sieberana			
+T4-6	HumanObservation	ARCOS_ILAM_2017_646	severe agricultural practices	10	Flowering	T4-6	Narcisse Uwitonze	Stachys aculeolata			
+T4-6	HumanObservation	ARCOS_ILAM_2017_647	severe agricultural practices	10	Non Flowering	T4-6	Narcisse Uwitonze	Cyperus papyrus			
+T4-6	HumanObservation	ARCOS_ILAM_2017_648	severe agricultural practices	22	Flowering	T4-6	Narcisse Uwitonze	Polygonum senegalens			
+T4-6	HumanObservation	ARCOS_ILAM_2017_649	severe agricultural practices	10	Non Flowering	T4-6	Narcisse Uwitonze	Cyperus papyrus			
+T4-7	HumanObservation	ARCOS_ILAM_2017_650	some animals in the wetlands	12	Non Flowering	T4-7	Narcisse Uwitonze	Cyperus papyrus			
+T4-7	HumanObservation	ARCOS_ILAM_2017_651	some animals in the wetlands	10	With Fruits	T4-7	Narcisse Uwitonze	Polygonum senegalens			
+T4-7	HumanObservation	ARCOS_ILAM_2017_652	some animals in the wetlands	15	Non Flowering	T4-7	Narcisse Uwitonze	Cyperus latifolius			
+T4-7	HumanObservation	ARCOS_ILAM_2017_653	some animals in the wetlands	12	Non Flowering	T4-7	Narcisse Uwitonze	cyperus latifolius			
+T4-7	HumanObservation	ARCOS_ILAM_2017_654	some animals in the wetlands	14	Non Flowering	T4-7	Narcisse Uwitonze	Cyperus papyrus			
+T4-7	HumanObservation	ARCOS_ILAM_2017_655	some animals in the wetlands	12	Non Flowering	T4-7	Narcisse Uwitonze	Polygonum senegalens			
+T4-7	HumanObservation	ARCOS_ILAM_2017_656	some animals in the wetlands	10	Flowering	T4-7	Narcisse Uwitonze	Polygonum senegalens			
+T4-7	HumanObservation	ARCOS_ILAM_2017_657	some animals in the wetlands	14	Flowering	T4-7	Narcisse Uwitonze	Stachys aculeolata			
+T4-7	HumanObservation	ARCOS_ILAM_2017_658	some animals in the wetlands	2	Non Flowering	T4-7	Narcisse Uwitonze	Acacia sieberana			
+T4-7	HumanObservation	ARCOS_ILAM_2017_659	some animals in the wetlands	12	Non Flowering	T4-7	Narcisse Uwitonze	Cyperus latifolius			
+T4-7	HumanObservation	ARCOS_ILAM_2017_660	some animals in the wetlands	15	Non Flowering	T4-7	Narcisse Uwitonze	Cyperus papyrus			
+T4-7	HumanObservation	ARCOS_ILAM_2017_661	some animals in the wetlands	1	Non Flowering	T4-7	Narcisse Uwitonze	Acacia sieberana			
+T4-7	HumanObservation	ARCOS_ILAM_2017_662	some animals in the wetlands	15	Non Flowering	T4-7	Narcisse Uwitonze	Cyperus papyrus			
+T4-7	HumanObservation	ARCOS_ILAM_2017_663	some animals in the wetlands	12	Flowering	T4-7	Narcisse Uwitonze	Stachys aculeolata			
+T4-7	HumanObservation	ARCOS_ILAM_2017_664	some animals in the wetlands	13	Non Flowering	T4-7	Narcisse Uwitonze	Cyperus latifolius			
+T4-8	HumanObservation	ARCOS_ILAM_2017_665	some animals in the wetlands	16	Non Flowering	T4-8	Narcisse Uwitonze	Cyperus papyrus			
+T4-8	HumanObservation	ARCOS_ILAM_2017_666	some animals in the wetlands	7	Flowering	T4-8	Narcisse Uwitonze	Ricinus communis			
+T4-8	HumanObservation	ARCOS_ILAM_2017_667	some animals in the wetlands	7	Flowering	T4-8	Narcisse Uwitonze	Leonitis neputifolia			
+T4-8	HumanObservation	ARCOS_ILAM_2017_668	some animals in the wetlands	10	Flowering	T4-8	Narcisse Uwitonze	Eicornia crassipes			
+T4-8	HumanObservation	ARCOS_ILAM_2017_669	some animals in the wetlands	2	Non Flowering	T4-8	Narcisse Uwitonze	Cyperus latifolius			
+T4-8	HumanObservation	ARCOS_ILAM_2017_670	some animals in the wetlands	12	With Fruits	T4-8	Narcisse Uwitonze	Polygonum senegalens			
+T4-8	HumanObservation	ARCOS_ILAM_2017_671	some animals in the wetlands	13	Non Flowering	T4-8	Narcisse Uwitonze	Cyperus latifolius			
+T4-8	HumanObservation	ARCOS_ILAM_2017_672	some animals in the wetlands	12	Flowering	T4-8	Narcisse Uwitonze	Polygonum senegalens			
+T4-8	HumanObservation	ARCOS_ILAM_2017_673	some animals in the wetlands	3	Flowering	T4-8	Narcisse Uwitonze	Eicornia crassipes			
+T4-8	HumanObservation	ARCOS_ILAM_2017_674	some animals in the wetlands	12	Flowering	T4-8	Narcisse Uwitonze	Eicornia crassipes			
+T4-8	HumanObservation	ARCOS_ILAM_2017_675	some animals in the wetlands	10	Flowering	T4-8	Narcisse Uwitonze	Polgonum senegalens			
+T4-8	HumanObservation	ARCOS_ILAM_2017_676	some animals in the wetlands	12	Non Flowering	T4-8	Narcisse Uwitonze	Cyperus latifolius			
+T4-9	HumanObservation	ARCOS_ILAM_2017_677	some animals in the wetlands	6	Flowering	T4-9	Narcisse Uwitonze	Eicornia crassipes			
+T4-9	HumanObservation	ARCOS_ILAM_2017_678	some animals in the wetlands	9	Flowering	T4-9	Narcisse Uwitonze	Polygonum senegalens			
+T4-9	HumanObservation	ARCOS_ILAM_2017_679	some animals in the wetlands	12	Flowering	T4-9	Narcisse Uwitonze	Stachys aculeolata			
+T4-9	HumanObservation	ARCOS_ILAM_2017_680	some animals in the wetlands	9	Flowering	T4-9	Narcisse Uwitonze	Ricinus communis			
+T4-9	HumanObservation	ARCOS_ILAM_2017_681	some animals in the wetlands	1	Non Flowering	T4-9	Narcisse Uwitonze	Acacia sieberana			
+T4-9	HumanObservation	ARCOS_ILAM_2017_682	some animals in the wetlands	10	Flowering	T4-9	Narcisse Uwitonze	Leonitis neputifolia			
+T4-9	HumanObservation	ARCOS_ILAM_2017_683	some animals in the wetlands	18	Non Flowering	T4-9	Narcisse Uwitonze	Cyperus latifolius			
+T4-9	HumanObservation	ARCOS_ILAM_2017_684	some animals in the wetlands	19	Non Flowering	T4-9	Narcisse Uwitonze	Cyperus papyrus			
+T4-9	HumanObservation	ARCOS_ILAM_2017_685	some animals in the wetlands	12	Non Flowering	T4-9	Narcisse Uwitonze	Cyperus latifolius			
+T4-9	HumanObservation	ARCOS_ILAM_2017_686	some animals in the wetlands	6	Flowering	T4-9	Narcisse Uwitonze	Stachys aculeolata			
+T6-1	HumanObservation	ARCOS_ILAM_2017_687	Plant species mixed with crops	15	Flowering	T6-1	Narcisse Uwitonze	Cyperus papyrus			
+T6-1	HumanObservation	ARCOS_ILAM_2017_688	Plant species mixed with crops	3	Non Flowering	T6-1	Narcisse Uwitonze	polygonum senegalens			
+T6-1	HumanObservation	ARCOS_ILAM_2017_689	Plant species mixed with crops	2	Flowering	T6-1	Narcisse Uwitonze	cyperus latifolius			
+T6-2	HumanObservation	ARCOS_ILAM_2017_690	Plant species mixed with crops	12	Non Flowering	T6-2	Narcisse Uwitonze	Plantago palmata			
+T6-2	HumanObservation	ARCOS_ILAM_2017_691	Plant species mixed with crops	10	Non Flowering	T6-2	Narcisse Uwitonze	Cyperus papyrus			
+T6-2	HumanObservation	ARCOS_ILAM_2017_692	Plant species mixed with crops	10	Non Flowering	T6-2	Narcisse Uwitonze	Isovu			
+T6-2	HumanObservation	ARCOS_ILAM_2017_693	Plant species mixed with crops	5	Non Flowering	T6-2	Narcisse Uwitonze	Thelypteris confluns			
+T6-2	HumanObservation	ARCOS_ILAM_2017_694	Plant species mixed with crops	12	Non Flowering	T6-2	Narcisse Uwitonze	Umuberanya			
+T6-2	HumanObservation	ARCOS_ILAM_2017_695	Plant species mixed with crops	3	Non Flowering	T6-2	Narcisse Uwitonze	Cyperus papyrus			
+T6-2	HumanObservation	ARCOS_ILAM_2017_696	Plant species mixed with crops	2	Non Flowering	T6-2	Narcisse Uwitonze	Ficus verruculosa			
+T6-3	HumanObservation	ARCOS_ILAM_2017_697	Plant species mixed with crops	3	Non Flowering	T6-3	Narcisse Uwitonze	Cyperus papyrus			
+T6-3	HumanObservation	ARCOS_ILAM_2017_698	Plant species mixed with crops	3	Flowering	T6-3	Narcisse Uwitonze	Eulophia eminni			
+T6-3	HumanObservation	ARCOS_ILAM_2017_699	Plant species mixed with crops	1	Non Flowering	T6-3	Narcisse Uwitonze	Ficus verruculosa			
+T6-3	HumanObservation	ARCOS_ILAM_2017_700	Plant species mixed with crops	18	Non Flowering	T6-3	Narcisse Uwitonze	Umuberanya			
+T6-3	HumanObservation	ARCOS_ILAM_2017_701	Plant species mixed with crops	1	Non Flowering	T6-3	Narcisse Uwitonze	Thelypteris confluns			
+T6-4	HumanObservation	ARCOS_ILAM_2017_702	Plant species mixed with crops	18		T6-4	Narcisse Uwitonze	Umuberanya			
+T6-4	HumanObservation	ARCOS_ILAM_2017_703	Plant species mixed with crops	2		T6-4	Narcisse Uwitonze	Ficus verruculosa			
+T6-5	HumanObservation	ARCOS_ILAM_2017_704	Plant species mixed with crops	13		T6-5	Narcisse Uwitonze	umuberanya			
+T6-5	HumanObservation	ARCOS_ILAM_2017_705	Plant species mixed with crops	1		T6-5	Narcisse Uwitonze	Thelypteris confluns			
+T6-6	HumanObservation	ARCOS_ILAM_2017_706	Plant species mixed with crops	16		T6-6	Narcisse Uwitonze	Umuberanya			
+T6-6	HumanObservation	ARCOS_ILAM_2017_707	Plant species mixed with crops	3		T6-6	Narcisse Uwitonze	Cyperus papyrus			
+T6-6	HumanObservation	ARCOS_ILAM_2017_708	Plant species mixed with crops	1		T6-6	Narcisse Uwitonze	Thelypteris confluns			
+T6-7	HumanObservation	ARCOS_ILAM_2017_709	Plant species mixed with crops	17		T6-7	Narcisse Uwitonze	Umuberanya			
+T6-7	HumanObservation	ARCOS_ILAM_2017_710	Plant species mixed with crops	2		T6-7	Narcisse Uwitonze	Thelypteris confluns			
+T6-7	HumanObservation	ARCOS_ILAM_2017_711	Plant species mixed with crops	10		T6-7	Narcisse Uwitonze	Ecornia crassipes			
+T6-8	HumanObservation	ARCOS_ILAM_2017_712	Plant species mixed with crops	0		T6-8	Narcisse Uwitonze	No wetlands speciesonly crops			
+T6-9	HumanObservation	ARCOS_ILAM_2017_713	Plant species mixed with crops	2		T6-9	Narcisse Uwitonze	Calliandra			
+T6-9	HumanObservation	ARCOS_ILAM_2017_714	Plant species mixed with crops	1		T6-9	Narcisse Uwitonze	Ficus indica			
+T6-9	HumanObservation	ARCOS_ILAM_2017_715	Plant species mixed with crops	4		T6-9	Narcisse Uwitonze	Grevellea robusta			
+T6-9	HumanObservation	ARCOS_ILAM_2017_716	Plant species mixed with crops	2		T6-9	Narcisse Uwitonze	Acacia sieberana			
+T6-9	HumanObservation	ARCOS_ILAM_2017_717	Plant species mixed with crops	2		T6-9	Narcisse Uwitonze	Eucalyptus sp			
+T6-9	HumanObservation	ARCOS_ILAM_2017_718	Plant species mixed with crops	2		T6-9	Narcisse Uwitonze	Euphorbia trucalli			
+T6-9	HumanObservation	ARCOS_ILAM_2017_719	Plant species mixed with crops	1		T6-9	Narcisse Uwitonze	Euphorbia pulcherrima			
+T6-10	HumanObservation	ARCOS_ILAM_2017_720	Plant species mixed with crops	2		T6-10	Narcisse Uwitonze	Ficus indica			
+T6-10	HumanObservation	ARCOS_ILAM_2017_721	Plant species mixed with crops	3		T6-10	Narcisse Uwitonze	Calliandra			
+T6-10	HumanObservation	ARCOS_ILAM_2017_722	Plant species mixed with crops	1		T6-10	Narcisse Uwitonze	Carica papaya			
+T6-10	HumanObservation	ARCOS_ILAM_2017_723	Plant species mixed with crops	3		T6-10	Narcisse Uwitonze	Grevellea robusta			
+T6-10	HumanObservation	ARCOS_ILAM_2017_724	Plant species mixed with crops	3		T6-10	Narcisse Uwitonze	Vernonia amygdalina			
+T6-10	HumanObservation	ARCOS_ILAM_2017_725	Plant species mixed with crops	2		T6-10	Narcisse Uwitonze	Euphorbia trucalli			
+T7-1	HumanObservation	ARCOS_ILAM_2017_726	Domestic animals	5	Non Flowering	T7-1	Narcisse Uwitonze	Cyperus papyrus			
+T7-1	HumanObservation	ARCOS_ILAM_2017_727	Agricultural crops at om from the lake	10	Flowering	T7-1	Narcisse Uwitonze	Eicornia crassipes			
+T7-2	HumanObservation	ARCOS_ILAM_2017_728	Agricultural crops at om from the lake	3	Non Flowering	T7-2	Narcisse Uwitonze	Cyperus papyrus			
+T7-2	HumanObservation	ARCOS_ILAM_2017_729	Agricultural crops at om from the lake	1	Non Flowering	T7-2	Narcisse Uwitonze	Commifera sp			
+T7-3	HumanObservation	ARCOS_ILAM_2017_730	Agricultural crops at om from the lake	20	Non Flowering	T7-3	Narcisse Uwitonze	Cyperus papyrus			
+T7-3	HumanObservation	ARCOS_ILAM_2017_731	Agricultural crops at om from the lake	1	Non Flowering	T7-3	Narcisse Uwitonze	Commifera sp			
+T7-4	HumanObservation	ARCOS_ILAM_2017_732	Agricultural crops at om from the lake	5	Non Flowering	T7-4	Narcisse Uwitonze	Cyperus papyrus			
+T7-4	HumanObservation	ARCOS_ILAM_2017_733	Agricultural crops at om from the lake	1	Non Flowering	T7-4	Narcisse Uwitonze	Umuberanya			
+T7-5	HumanObservation	ARCOS_ILAM_2017_734	Agricultural crops at om from the lake	1	Non Flowering	T7-5	Narcisse Uwitonze	Cyperus papyrus			
+T7-6	HumanObservation	ARCOS_ILAM_2017_735	Agricultural crops at om from the lake	2	Flowering	T7-6	Narcisse Uwitonze	Eicornia crassipes			
+T7-6	HumanObservation	ARCOS_ILAM_2017_736	Agricultural crops at om from the lake	1	Non Flowering	T7-6	Narcisse Uwitonze	Cyperus papyrus			
+T7-7	HumanObservation	ARCOS_ILAM_2017_737	Agricultural crops at om from the lake	1	Non Flowering	T7-7	Narcisse Uwitonze	Cyperus papyrus			
+T7-7	HumanObservation	ARCOS_ILAM_2017_738	Agricultural crops at om from the lake	2	Non Flowering	T7-7	Narcisse Uwitonze	Umuberanya			
+T7-7	HumanObservation	ARCOS_ILAM_2017_739	Agricultural crops at om from the lake	1	Flowering	T7-7	Narcisse Uwitonze	Erythrina abyssinica			
+T7-8	HumanObservation	ARCOS_ILAM_2017_740	Agricultural crops at om from the lake	10	Non Flowering	T7-8	Narcisse Uwitonze	Cyperus papyrus			
+T7-9	HumanObservation	ARCOS_ILAM_2017_741	Agricultural crops at om from the lake	10	Non Flowering	T7-9	Narcisse Uwitonze	Cyperus papyrus			
+T7-10	HumanObservation	ARCOS_ILAM_2017_742	Agricultural crops at om from the lake	10	Non Flowering	T7-10	Narcisse Uwitonze	Cyperus papyrus			
+T5-1	HumanObservation	ARCOS_ILAM_2017_743		15		T5-1	Narcisse Uwitonze	Grevellea robusta			
+T5-1	HumanObservation	ARCOS_ILAM_2017_744		4		T5-1	Narcisse Uwitonze	Ficus indica			
+T5-1	HumanObservation	ARCOS_ILAM_2017_745		2		T5-1	Narcisse Uwitonze	Euphorbia trucalli			
+T5-2	HumanObservation	ARCOS_ILAM_2017_746		2		T5-2	Narcisse Uwitonze	Cupressus lusitanica			
+T5-2	HumanObservation	ARCOS_ILAM_2017_747		15		T5-2	Narcisse Uwitonze	Eucalyptus Sp			
+T5-2	HumanObservation	ARCOS_ILAM_2017_748		2		T5-2	Narcisse Uwitonze	Persea americana			
+T5-2	HumanObservation	ARCOS_ILAM_2017_749		8		T5-2	Narcisse Uwitonze	Manguifera indica			
+T5-3	HumanObservation	ARCOS_ILAM_2017_750		10		T5-3	Narcisse Uwitonze	Eucalyptus Sp			
+T5-3	HumanObservation	ARCOS_ILAM_2017_751		5		T5-3	Narcisse Uwitonze	Grevellea robusta			
+T5-3	HumanObservation	ARCOS_ILAM_2017_752		1		T5-3	Narcisse Uwitonze	Euphorbia trucalli			
+T5-4	HumanObservation	ARCOS_ILAM_2017_753		1		T5-4	Narcisse Uwitonze	Euphorbia trucalli			
+T5-4	HumanObservation	ARCOS_ILAM_2017_754		2		T5-4	Narcisse Uwitonze	Vernonia amygdalina			
+T5-4	HumanObservation	ARCOS_ILAM_2017_755		2		T5-4	Narcisse Uwitonze	Erythrina abyssinica			
+T5-4	HumanObservation	ARCOS_ILAM_2017_756		1		T5-4	Narcisse Uwitonze	Persea americana			
+T5-4	HumanObservation	ARCOS_ILAM_2017_757		2		T5-4	Narcisse Uwitonze	Grevellea robusta			
+T5-5	HumanObservation	ARCOS_ILAM_2017_758				T5-5	Narcisse Uwitonze				
+T5-6	HumanObservation	ARCOS_ILAM_2017_759		1		T5-6	Narcisse Uwitonze	Grevellea robusta			
+T5-7	HumanObservation	ARCOS_ILAM_2017_760		2		T5-7	Narcisse Uwitonze	Grevellea robusta			
+T5-7	HumanObservation	ARCOS_ILAM_2017_761		2		T5-7	Narcisse Uwitonze	Persea americana			
+T5-7	HumanObservation	ARCOS_ILAM_2017_762		2		T5-7	Narcisse Uwitonze	Manguifera indica			
+T5-8	HumanObservation	ARCOS_ILAM_2017_763		5		T5-8	Narcisse Uwitonze	Grevellea robusta			
+T5-8	HumanObservation	ARCOS_ILAM_2017_764		1		T5-8	Narcisse Uwitonze	Persea americana			
+T5-8	HumanObservation	ARCOS_ILAM_2017_765		1		T5-8	Narcisse Uwitonze	psidium guajava			
+T5-9	HumanObservation	ARCOS_ILAM_2017_766		5		T5-9	Narcisse Uwitonze	Grevellea robusta			
+T5-9	HumanObservation	ARCOS_ILAM_2017_767		1		T5-9	Narcisse Uwitonze	Euphorbia trucalli			
+T5-10	HumanObservation	ARCOS_ILAM_2017_768		2		T5-10	Narcisse Uwitonze	Euphorbia trucalli			
+T5-10	HumanObservation	ARCOS_ILAM_2017_769		1		T5-10	Narcisse Uwitonze	Carica papaya			
+T5-10	HumanObservation	ARCOS_ILAM_2017_770		2		T5-10	Narcisse Uwitonze	Manguifera indica			
+T5-10	HumanObservation	ARCOS_ILAM_2017_771		3		T5-10	Narcisse Uwitonze	Grevellea robusta			
+T5-10	HumanObservation	ARCOS_ILAM_2017_772		1		T5-10	Narcisse Uwitonze	Euphorbiapulcherrima			
+T5-10	HumanObservation	ARCOS_ILAM_2017_773		1		T5-10	Narcisse Uwitonze	Sederella serrata			

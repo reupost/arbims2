@@ -1,0 +1,226 @@
+id	basisOfRecord	occurrenceID	recordedBy	individualCount	eventID	scientificName	order	family	vernacularName
+T1-1	HumanObservation	ARCOS_ILAM_Mukura_2016_1	Martin,Philip,Ignace	1	T1-1	Serinus striolatus			Streaky Seedeater
+T1-1	HumanObservation	ARCOS_ILAM_Mukura_2016_2	Martin,Philip,Ignace	1	T1-1	Pogonocichla stellata			White-starred Robin
+T1-1	HumanObservation	ARCOS_ILAM_Mukura_2016_3	Martin,Philip,Ignace	2	T1-1	Cisticola chubbi			Chubb’s Cisticola
+T1-2	HumanObservation	ARCOS_ILAM_Mukura_2016_4	Martin,Philip,Ignace	2	T1-2	Apalis personata			Mountain Masked Apalis
+T1-2	HumanObservation	ARCOS_ILAM_Mukura_2016_5	Martin,Philip,Ignace	1	T1-2	Buteo oreophilus			Mountain Buzzard
+T1-2	HumanObservation	ARCOS_ILAM_Mukura_2016_6	Martin,Philip,Ignace	2	T1-2	Apalis porphyrolaema			Chestnut-throated Apalis
+T1-2	HumanObservation	ARCOS_ILAM_Mukura_2016_7	Martin,Philip,Ignace	1	T1-2	Cossypha archeri			Archer's Robin-Chat
+T1-2	HumanObservation	ARCOS_ILAM_Mukura_2016_8	Martin,Philip,Ignace	1	T1-2	Apalis porphyrolaema			Chestnut-throated Apalis
+T1-2	HumanObservation	ARCOS_ILAM_Mukura_2016_9	Martin,Philip,Ignace	2	T1-2	Andropadus nigriceps			Mountain Greenbul
+T1-2	HumanObservation	ARCOS_ILAM_Mukura_2016_10	Martin,Philip,Ignace	1	T1-2	Apalis porphyrolaema			Chestnut-throated Apalis
+T1-2	HumanObservation	ARCOS_ILAM_Mukura_2016_11	Martin,Philip,Ignace	2	T1-2	Andropadus nigriceps			Mountain Greenbul
+T1-2	HumanObservation	ARCOS_ILAM_Mukura_2016_12	Martin,Philip,Ignace	1	T1-2	Malaconotus doherty			Doherty's Bush-shrike
+T1-2	HumanObservation	ARCOS_ILAM_Mukura_2016_13	Martin,Philip,Ignace	1	T1-2	Andropadus latirostris			Yellow-whiskered Greenbul
+T1-2	HumanObservation	ARCOS_ILAM_Mukura_2016_14	Martin,Philip,Ignace	2	T1-2	Tauraco johnstoni			Rwenzori Turaco
+T1-2	HumanObservation	ARCOS_ILAM_Mukura_2016_15	Martin,Philip,Ignace	1	T1-2	Turtur tympanistria			Tambourine Dove
+T1-2	HumanObservation	ARCOS_ILAM_Mukura_2016_16	Martin,Philip,Ignace	1	T1-2	Pseudoalcippe abyssinica			African Hill-Babbler
+T1-3	HumanObservation	ARCOS_ILAM_Mukura_2016_17	Martin,Philip,Ignace	1	T1-3	Apalis porphyrolaema			Chestnut-throated Apalis
+T1-3	HumanObservation	ARCOS_ILAM_Mukura_2016_18	Martin,Philip,Ignace	2	T1-3	Illadopsis pyrrhoptera			Mountain Illadopsis
+T1-3	HumanObservation	ARCOS_ILAM_Mukura_2016_19	Martin,Philip,Ignace	2	T1-3	Apalis porphyrolaema			Chestnut-throated Apalis
+T1-3	HumanObservation	ARCOS_ILAM_Mukura_2016_20	Martin,Philip,Ignace	2	T1-3	Pogonocichla stellata			White-starred Robin
+T1-3	HumanObservation	ARCOS_ILAM_Mukura_2016_21	Martin,Philip,Ignace	4	T1-3	Cossypha archeri			Archer's Robin-Chat
+T1-4	HumanObservation	ARCOS_ILAM_Mukura_2016_22	Martin,Philip,Ignace	2	T1-4	Andropadus nigriceps			Mountain Greenbul
+T1-4	HumanObservation	ARCOS_ILAM_Mukura_2016_23	Martin,Philip,Ignace	2	T1-4	Apalis porphyrolaema			Chestnut-throated Apalis
+T1-4	HumanObservation	ARCOS_ILAM_Mukura_2016_24	Martin,Philip,Ignace	1	T1-4	Bradypterus cinnamomeus			Cinnamon Bracken Warbler
+T1-5	HumanObservation	ARCOS_ILAM_Mukura_2016_25	Martin,Philip,Ignace	1	T1-5	Pogonocichla stellata			White-starred Robin
+T1-5	HumanObservation	ARCOS_ILAM_Mukura_2016_26	Martin,Philip,Ignace	1	T1-5	Apalis porphyrolaema			Chestnut-throated Apalis
+T1-5	HumanObservation	ARCOS_ILAM_Mukura_2016_27	Martin,Philip,Ignace	2	T1-5	Andropadus nigriceps			Mountain Greenbul
+T1-5	HumanObservation	ARCOS_ILAM_Mukura_2016_28	Martin,Philip,Ignace	2	T1-5	Cossypha archeri			Archer's Robin-Chat
+T1-5	HumanObservation	ARCOS_ILAM_Mukura_2016_29	Martin,Philip,Ignace	1	T1-5	Buteo oreophilus			Mountain Buzzard
+T1-5	HumanObservation	ARCOS_ILAM_Mukura_2016_30	Martin,Philip,Ignace	1	T1-5	Cisticola chubbi			Chubb’s Cisticola
+T1-6	HumanObservation	ARCOS_ILAM_Mukura_2016_31	Martin,Philip,Ignace	1	T1-6	Apalis porphyrolaema			Chestnut-throated Apalis
+T1-6	HumanObservation	ARCOS_ILAM_Mukura_2016_32	Martin,Philip,Ignace	1	T1-6	Cuculus solitalius			Red-chested Cuckoo
+T1-6	HumanObservation	ARCOS_ILAM_Mukura_2016_33	Martin,Philip,Ignace	1	T1-6	Pogonocichla stellata			White-starred Robin
+T1-6	HumanObservation	ARCOS_ILAM_Mukura_2016_34	Martin,Philip,Ignace	1	T1-6	Tauraco johnstoni			Rwenzori Turaco
+T1-7	HumanObservation	ARCOS_ILAM_Mukura_2016_35	Martin,Philip,Ignace	1	T1-7	Pogonocichla stellata			White-starred Robin
+T1-7	HumanObservation	ARCOS_ILAM_Mukura_2016_36	Martin,Philip,Ignace	1	T1-7	Apalis personata			Mountain Masked Apalis
+T1-7	HumanObservation	ARCOS_ILAM_Mukura_2016_37	Martin,Philip,Ignace	1	T1-7	Cuculus solitalius			Red-chested Cuckoo
+T1-7	HumanObservation	ARCOS_ILAM_Mukura_2016_38	Martin,Philip,Ignace	1	T1-7	Laniarius poensis			Mountain Black Boubou
+T1-7	HumanObservation	ARCOS_ILAM_Mukura_2016_39	Martin,Philip,Ignace	2	T1-7	Andropadus nigriceps			Mountain Greenbul
+T1-7	HumanObservation	ARCOS_ILAM_Mukura_2016_40	Martin,Philip,Ignace	1	T1-7	Buteo oreophilus			Mountain Buzzard
+T1-7	HumanObservation	ARCOS_ILAM_Mukura_2016_41	Martin,Philip,Ignace	1	T1-7	Andropadus latirostris			Yellow-whiskered Greenbul
+T1-8	HumanObservation	ARCOS_ILAM_Mukura_2016_42	Martin,Philip,Ignace	1	T1-8	Pseudoalcippe abyssinica			African Hill-Babbler
+T1-8	HumanObservation	ARCOS_ILAM_Mukura_2016_43	Martin,Philip,Ignace	2	T1-8	Apalis personata			Mountain Masked Apalis
+T1-8	HumanObservation	ARCOS_ILAM_Mukura_2016_44	Martin,Philip,Ignace	3	T1-8	Andropadus nigriceps			Mountain Greenbul
+T1-8	HumanObservation	ARCOS_ILAM_Mukura_2016_45	Martin,Philip,Ignace	2	T1-8	Apalis ruwenzorii			Collared Apalis
+T1-8	HumanObservation	ARCOS_ILAM_Mukura_2016_46	Martin,Philip,Ignace	1	T1-8	Turdus olivaceus			Olive Thrush
+T1-9	HumanObservation	ARCOS_ILAM_Mukura_2016_47	Martin,Philip,Ignace	1	T1-9	Turdus olivaceus			Olive Thrush
+T1-9	HumanObservation	ARCOS_ILAM_Mukura_2016_48	Martin,Philip,Ignace	3	T1-9	Apalis porphyrolaema			Chestnut-throated Apalis
+T1-9	HumanObservation	ARCOS_ILAM_Mukura_2016_49	Martin,Philip,Ignace	1	T1-9	Dendropicos griseocephalus			Olive Woodpecker
+T1-9	HumanObservation	ARCOS_ILAM_Mukura_2016_50	Martin,Philip,Ignace	1	T1-9	Andropadus nigriceps			Mountain Greenbul
+T1-9	HumanObservation	ARCOS_ILAM_Mukura_2016_51	Martin,Philip,Ignace	2	T1-9	Apalis ruwenzorii			Collared Apalis
+T1-9	HumanObservation	ARCOS_ILAM_Mukura_2016_52	Martin,Philip,Ignace	1	T1-9	Batis diops			Rwenzori Batis
+T1-10	HumanObservation	ARCOS_ILAM_Mukura_2016_53	Martin,Philip,Ignace	2	T1-10	Andropadus nigriceps			Mountain Greenbul
+T1-10	HumanObservation	ARCOS_ILAM_Mukura_2016_54	Martin,Philip,Ignace	1	T1-10	Pseudoalcippe abyssinica			African Hill-Babbler
+T1-10	HumanObservation	ARCOS_ILAM_Mukura_2016_55	Martin,Philip,Ignace	2	T1-10	Apalis porphyrolaema			Chestnut-throated Apalis
+T1-10	HumanObservation	ARCOS_ILAM_Mukura_2016_56	Martin,Philip,Ignace	2	T1-10	Batis diops			Rwenzori Batis
+T1-10	HumanObservation	ARCOS_ILAM_Mukura_2016_57	Martin,Philip,Ignace	2	T1-10	Parus fasciiventer			Stripe-breasted Tit
+T1-10	HumanObservation	ARCOS_ILAM_Mukura_2016_58	Martin,Philip,Ignace	1	T1-10	Apalis porphyrolaema			Chestnut-throated Apalis
+T1-10	HumanObservation	ARCOS_ILAM_Mukura_2016_59	Martin,Philip,Ignace	1	T1-10	Cinnyris stuhlmanni			Rwenzori Double-collared Sunbird
+T1-10	HumanObservation	ARCOS_ILAM_Mukura_2016_60	Martin,Philip,Ignace	1	T1-10	Laniarius poensis			Mountain Black Boubou
+T1-10	HumanObservation	ARCOS_ILAM_Mukura_2016_61	Martin,Philip,Ignace	1	T1-10	Dryoscopus gambensis			Northern Puffback
+T2-1	HumanObservation	ARCOS_ILAM_Mukura_2016_62	Martin,Philip,Ignace	3	T2-1	Corvus albus			Pied Crow
+T2-1	HumanObservation	ARCOS_ILAM_Mukura_2016_63	Martin,Philip,Ignace	1	T2-1	Milvus migrans			Black Kite
+T2-1	HumanObservation	ARCOS_ILAM_Mukura_2016_64	Martin,Philip,Ignace	1	T2-1	Estrilda atricapilla			Black-headed Waxbill
+T2-1	HumanObservation	ARCOS_ILAM_Mukura_2016_65	Martin,Philip,Ignace	2	T2-1	Cisticola chubbi			Chubb’s Cisticola
+T2-1	HumanObservation	ARCOS_ILAM_Mukura_2016_66	Martin,Philip,Ignace	1	T2-1	Bostrychia hagedash			Hadada ibis
+T2-2	HumanObservation	ARCOS_ILAM_Mukura_2016_67	Martin,Philip,Ignace	1	T2-2	Cuculus cupreus			African Emerald Cuckoo
+T2-2	HumanObservation	ARCOS_ILAM_Mukura_2016_68	Martin,Philip,Ignace	2	T2-2	Milvus migrans			Black Kite
+T2-2	HumanObservation	ARCOS_ILAM_Mukura_2016_69	Martin,Philip,Ignace	4	T2-2	Ploceus baglafecht			Baglafecht Weaver
+T2-2	HumanObservation	ARCOS_ILAM_Mukura_2016_70	Martin,Philip,Ignace	2	T2-2	Cisticola chubbi			Chubb’s Cisticola
+T2-2	HumanObservation	ARCOS_ILAM_Mukura_2016_71	Martin,Philip,Ignace	2	T2-2	Nectarinia kilimensis			Bronze Sunbird
+T2-2	HumanObservation	ARCOS_ILAM_Mukura_2016_72	Martin,Philip,Ignace	2	T2-2	Estrilda atricapilla			Black-headed Waxbill
+T2-3	HumanObservation	ARCOS_ILAM_Mukura_2016_73	Martin,Philip,Ignace	2	T2-3	Cisticola chubbi			Chubb’s Cisticola
+T2-3	HumanObservation	ARCOS_ILAM_Mukura_2016_74	Martin,Philip,Ignace	1	T2-3	Cinnyris venusta			Variable Sunbird
+T2-3	HumanObservation	ARCOS_ILAM_Mukura_2016_75	Martin,Philip,Ignace	3	T2-3	Quelea quelea			Red-billed Quelea
+T2-3	HumanObservation	ARCOS_ILAM_Mukura_2016_76	Martin,Philip,Ignace	5	T2-3	Estrilda nonnula			Black-crowned Waxbill
+T2-3	HumanObservation	ARCOS_ILAM_Mukura_2016_77	Martin,Philip,Ignace	1	T2-3	Serinus striolatus			Streaky Seedeater
+T2-3	HumanObservation	ARCOS_ILAM_Mukura_2016_78	Martin,Philip,Ignace	5	T2-3	Estrilda astrild			Common Waxbill
+T2-3	HumanObservation	ARCOS_ILAM_Mukura_2016_79	Martin,Philip,Ignace	1	T2-3	Pycnonotus barbatus			Common Bulbul
+T2-3	HumanObservation	ARCOS_ILAM_Mukura_2016_80	Martin,Philip,Ignace	3	T2-3	Estrilda quartinia			yellow-billed Waxbill
+T2-3	HumanObservation	ARCOS_ILAM_Mukura_2016_81	Martin,Philip,Ignace	1	T2-3	Cuculus cupreus			African Emerald Cuckoo
+T2-3	HumanObservation	ARCOS_ILAM_Mukura_2016_82	Martin,Philip,Ignace	1	T2-3	Milvus migrans			Black Kite
+T2-4	HumanObservation	ARCOS_ILAM_Mukura_2016_83	Martin,Philip,Ignace	1	T2-4	Cuculus cupreus			African Emerald Cuckoo
+T2-4	HumanObservation	ARCOS_ILAM_Mukura_2016_84	Martin,Philip,Ignace	1	T2-4	Milvus migrans			Black Kite
+T2-4	HumanObservation	ARCOS_ILAM_Mukura_2016_85	Martin,Philip,Ignace	1	T2-4	Buteo oreophilus			Mountain Buzzard
+T2-4	HumanObservation	ARCOS_ILAM_Mukura_2016_86	Martin,Philip,Ignace	2	T2-4	corvus albicollis			White-naped Raven
+T2-4	HumanObservation	ARCOS_ILAM_Mukura_2016_87	Martin,Philip,Ignace	2	T2-4	Bradypterus cinnamomeus			Cinnamon Bracken Warbler
+T2-5	HumanObservation	ARCOS_ILAM_Mukura_2016_88	Martin,Philip,Ignace	1	T2-5	Psalidoprocne pristoptera			Black Saw-wing
+T2-5	HumanObservation	ARCOS_ILAM_Mukura_2016_89	Martin,Philip,Ignace	2	T2-5	Melaenornis fisheri			White-eyed Slaty Flycatcher
+T2-5	HumanObservation	ARCOS_ILAM_Mukura_2016_90	Martin,Philip,Ignace	2	T2-5	Zestrepsis senegalensis			Yellow white-eye
+T2-5	HumanObservation	ARCOS_ILAM_Mukura_2016_91	Martin,Philip,Ignace	3	T2-5	Pycnonotus barbatus			Common Bulbul
+T2-5	HumanObservation	ARCOS_ILAM_Mukura_2016_92	Martin,Philip,Ignace	2	T2-5	Serinus striolatus			Streaky Seedeater
+T2-5	HumanObservation	ARCOS_ILAM_Mukura_2016_93	Martin,Philip,Ignace	3	T2-5	Ploceus baglafecht			Baglafecht Weaver
+T2-5	HumanObservation	ARCOS_ILAM_Mukura_2016_94	Martin,Philip,Ignace	1	T2-5	Corvus albus			Pied Crow
+T2-6	HumanObservation	ARCOS_ILAM_Mukura_2016_95	Martin,Philip,Ignace	2	T2-6	Corvus albus			Pied Crow
+T2-7	HumanObservation	ARCOS_ILAM_Mukura_2016_96	Martin,Philip,Ignace	4	T2-7	Cinnyris venusta			Variable Sunbird
+T2-7	HumanObservation	ARCOS_ILAM_Mukura_2016_97	Martin,Philip,Ignace	27	T2-7	Buteo buteo			Common buzzard
+T2-8	HumanObservation	ARCOS_ILAM_Mukura_2016_98	Martin,Philip,Ignace	2	T2-8	Corvus albus			Pied Crow
+T2-8	HumanObservation	ARCOS_ILAM_Mukura_2016_99	Martin,Philip,Ignace	1	T2-8	Cinnyris venusta			Variable Sunbird
+T2-8	HumanObservation	ARCOS_ILAM_Mukura_2016_100	Martin,Philip,Ignace	2	T2-8	Psalidoprocne pristoptera			Black Saw-wing
+T2-9	HumanObservation	ARCOS_ILAM_Mukura_2016_101	Martin,Philip,Ignace	1	T2-9	Cinnyris venusta			Variable Sunbird
+T2-9	HumanObservation	ARCOS_ILAM_Mukura_2016_102	Martin,Philip,Ignace	1	T2-9	Buteo buteo			Common buzzard
+T2-10	HumanObservation	ARCOS_ILAM_Mukura_2016_103	Martin,Philip,Ignace	1	T2-10	Bradypterus cinnamomeus			Cinnamon Bracken Warbler
+T2-10	HumanObservation	ARCOS_ILAM_Mukura_2016_104	Martin,Philip,Ignace	1	T2-10	Cinnyris venusta			Variable Sunbird
+T2-10	HumanObservation	ARCOS_ILAM_Mukura_2016_105	Martin,Philip,Ignace	2	T2-10	Saxicola torquata			Common Stonechat
+T2-10	HumanObservation	ARCOS_ILAM_Mukura_2016_106	Martin,Philip,Ignace	1	T2-10	Cisticola chubbi			Chubb’s Cisticola
+T3-1	HumanObservation	ARCOS_ILAM_Mukura_2016_107	Martin,Philip,Ignace	2	T3-1	Cinnyris venusta			Variable Sunbird
+T3-1	HumanObservation	ARCOS_ILAM_Mukura_2016_108	Martin,Philip,Ignace	1	T3-1	Apalis porphyrolaema			Chestnut-throated Apalis
+T3-1	HumanObservation	ARCOS_ILAM_Mukura_2016_109	Martin,Philip,Ignace	2	T3-1	Chloropeta similis			Mountain Yellow Warbler
+T3-1	HumanObservation	ARCOS_ILAM_Mukura_2016_110	Martin,Philip,Ignace	1	T3-1	POgonocichla stellata			White-starred Robin
+T3-1	HumanObservation	ARCOS_ILAM_Mukura_2016_111	Martin,Philip,Ignace	1	T3-1	Cisticola chubbi			Chubb’s Cisticola
+T3-1	HumanObservation	ARCOS_ILAM_Mukura_2016_112	Martin,Philip,Ignace	1	T3-1	Cinnyris regia			Regal sunbird
+T3-2	HumanObservation	ARCOS_ILAM_Mukura_2016_113	Martin,Philip,Ignace	1	T3-2	Apalis porphyrolaema			Chestnut-throated Apalis
+T3-2	HumanObservation	ARCOS_ILAM_Mukura_2016_114	Martin,Philip,Ignace	6	T3-2	Merops apiaster			European Bee-eater
+T3-2	HumanObservation	ARCOS_ILAM_Mukura_2016_115	Martin,Philip,Ignace	1	T3-2	Cisticola chubbi			Chubb’s Cisticola
+T3-2	HumanObservation	ARCOS_ILAM_Mukura_2016_116	Martin,Philip,Ignace	1	T3-2	Bradypterus cinnamomeus			Cinnamon Bracken Warbler
+T3-2	HumanObservation	ARCOS_ILAM_Mukura_2016_117	Martin,Philip,Ignace	1	T3-2	Serinus striolatus			Streaky Seedeater
+T3-3	HumanObservation	ARCOS_ILAM_Mukura_2016_118	Martin,Philip,Ignace		T3-3	Bradypterus cinnamomeus			Cinnamon Bracken Warbler
+T3-3	HumanObservation	ARCOS_ILAM_Mukura_2016_119	Martin,Philip,Ignace	1	T3-3	Milvus migrans			Black Kite
+T3-3	HumanObservation	ARCOS_ILAM_Mukura_2016_120	Martin,Philip,Ignace	1	T3-3	Pycnonotus barbatus			Common Bulbul
+T3-3	HumanObservation	ARCOS_ILAM_Mukura_2016_121	Martin,Philip,Ignace	3	T3-3	Zestrepsis senegalensis			Yellow white-eye
+T3-3	HumanObservation	ARCOS_ILAM_Mukura_2016_122	Martin,Philip,Ignace	25	T3-3	Apalis personata			Mountain Masked Apalis
+T3-4	HumanObservation	ARCOS_ILAM_Mukura_2016_123	Martin,Philip,Ignace	1	T3-4	Apalis porphyrolaema			Chestnut-throated Apalis
+T3-4	HumanObservation	ARCOS_ILAM_Mukura_2016_124	Martin,Philip,Ignace	1	T3-4	Andropadus nigriceps			Mountain Greenbul
+T3-4	HumanObservation	ARCOS_ILAM_Mukura_2016_125	Martin,Philip,Ignace	1	T3-4	Cisticola chubbi			Chubb’s Cisticola
+T3-4	HumanObservation	ARCOS_ILAM_Mukura_2016_126	Martin,Philip,Ignace	2	T3-4	Bostrychia hagedash			Hadada ibis
+T3-4	HumanObservation	ARCOS_ILAM_Mukura_2016_127	Martin,Philip,Ignace	1	T3-4	Pseudoalcippe abyssinica			African Hill-Babbler
+T3-4	HumanObservation	ARCOS_ILAM_Mukura_2016_128	Martin,Philip,Ignace	1	T3-4	Laniarius poensis			Mountain Black Boubou
+T3-5	HumanObservation	ARCOS_ILAM_Mukura_2016_129	Martin,Philip,Ignace	1	T3-5	Buteo oreophilus			Mountain Buzzard
+T3-5	HumanObservation	ARCOS_ILAM_Mukura_2016_130	Martin,Philip,Ignace	2	T3-5	corvus albicollis			White-naped Raven
+T3-5	HumanObservation	ARCOS_ILAM_Mukura_2016_131	Martin,Philip,Ignace	4	T3-5	Pernis apivorus			European Honey-Buzzard
+T3-5	HumanObservation	ARCOS_ILAM_Mukura_2016_132	Martin,Philip,Ignace	1	T3-5	Malaconotus doherty			Doherty's Bush-shrike
+T3-6	HumanObservation	ARCOS_ILAM_Mukura_2016_133	Martin,Philip,Ignace	9	T3-6	corvus albicollis			White-naped Raven
+T3-6	HumanObservation	ARCOS_ILAM_Mukura_2016_134	Martin,Philip,Ignace	1	T3-6	Andropadus nigriceps			Mountain Greenbul
+T3-6	HumanObservation	ARCOS_ILAM_Mukura_2016_135	Martin,Philip,Ignace	1	T3-6	Bradypterus cinnamomeus			Cinnamon Bracken Warbler
+T3-6	HumanObservation	ARCOS_ILAM_Mukura_2016_136	Martin,Philip,Ignace	1	T3-6	Cisticola chubbi			Chubb’s Cisticola
+T3-6	HumanObservation	ARCOS_ILAM_Mukura_2016_137	Martin,Philip,Ignace	2	T3-6	Cinnyris venusta			Variable Sunbird
+T3-7	HumanObservation	ARCOS_ILAM_Mukura_2016_138	Martin,Philip,Ignace	2	T3-7	corvus albicollis			White-naped Raven
+T3-7	HumanObservation	ARCOS_ILAM_Mukura_2016_139	Martin,Philip,Ignace	1	T3-7	Bradypterus cinnamomeus			Cinnamon Bracken Warbler
+T3-7	HumanObservation	ARCOS_ILAM_Mukura_2016_140	Martin,Philip,Ignace	1	T3-7	Cinnyris venusta			Variable Sunbird
+T3-7	HumanObservation	ARCOS_ILAM_Mukura_2016_141	Martin,Philip,Ignace	2	T3-7	Chloropeta similis			Mountain Yellow Warbler
+T3-7	HumanObservation	ARCOS_ILAM_Mukura_2016_142	Martin,Philip,Ignace	1	T3-7	Malaconotus doherty			Doherty's Bush-shrike
+T3-7	HumanObservation	ARCOS_ILAM_Mukura_2016_143	Martin,Philip,Ignace	2	T3-7	Bradypterus cinnamomeus			Cinnamon Bracken Warbler
+T3-7	HumanObservation	ARCOS_ILAM_Mukura_2016_144	Martin,Philip,Ignace	1	T3-7	Andropadus nigriceps			Mountain Greenbul
+T3-8	HumanObservation	ARCOS_ILAM_Mukura_2016_145	Martin,Philip,Ignace	2	T3-8	Bradypterus cinnamomeus			Cinnamon Bracken Warbler
+T3-8	HumanObservation	ARCOS_ILAM_Mukura_2016_146	Martin,Philip,Ignace	1	T3-8	Malaconotus doherty			Doherty's Bush-shrike
+T3-8	HumanObservation	ARCOS_ILAM_Mukura_2016_147	Martin,Philip,Ignace	1	T3-8	corvus albicollis			White-naped Raven
+T3-8	HumanObservation	ARCOS_ILAM_Mukura_2016_148	Martin,Philip,Ignace	1	T3-8	Cinnyris regia			Regal sunbird
+T3-8	HumanObservation	ARCOS_ILAM_Mukura_2016_149	Martin,Philip,Ignace	2	T3-8	Cinnyris venusta			Variable Sunbird
+T3-9	HumanObservation	ARCOS_ILAM_Mukura_2016_150	Martin,Philip,Ignace	3	T3-9	Chloropeta similis			Mountain Yellow Warbler
+T3-9	HumanObservation	ARCOS_ILAM_Mukura_2016_151	Martin,Philip,Ignace	1	T3-9	Cisticola chubbi			Chubb’s Cisticola
+T3-9	HumanObservation	ARCOS_ILAM_Mukura_2016_152	Martin,Philip,Ignace	1	T3-9	Pycnonotus barbatus			Common Bulbul
+T3-10	HumanObservation	ARCOS_ILAM_Mukura_2016_153	Martin,Philip,Ignace	1	T3-10	Apalis porphyrolaema			Chestnut-throated Apalis
+T3-10	HumanObservation	ARCOS_ILAM_Mukura_2016_154	Martin,Philip,Ignace	1	T3-10	Andropadus nigriceps			Mountain Greenbul
+T3-10	HumanObservation	ARCOS_ILAM_Mukura_2016_155	Martin,Philip,Ignace	1	T3-10	Apalis ruwenzorii			Collared Apalis
+T3-10	HumanObservation	ARCOS_ILAM_Mukura_2016_156	Martin,Philip,Ignace	1	T3-10	Apalis porphyrolaema			Chestnut-throated Apalis
+T3-10	HumanObservation	ARCOS_ILAM_Mukura_2016_157	Martin,Philip,Ignace	1	T3-10	Pseudoalcippe abyssinica			African Hill-Babbler
+T3-10	HumanObservation	ARCOS_ILAM_Mukura_2016_158	Martin,Philip,Ignace	1	T3-10	Illadopsis pyrrhoptera			Mountain Illadopsis
+T1-1	HumanObservation	ARCOS_ILAM_Mukura_2016_159	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T1-1	Eurema brigitta	Lepidoptera	Pieridae	
+T1-1	HumanObservation	ARCOS_ILAM_Mukura_2016_160	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T1-1	Bicyclus safitza	Lepidoptera	Nymphalidae	
+T1-1	HumanObservation	ARCOS_ILAM_Mukura_2016_161	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T1-1	Taracus thespis	Lepidoptera	Lycaenidae	
+T1-1	HumanObservation	ARCOS_ILAM_Mukura_2016_162	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T1-1	Leucochitonea levubu	Lepidoptera	Hesperiidae	
+T1-1	HumanObservation	ARCOS_ILAM_Mukura_2016_163	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T1-1	Papilio constantinus	Lepidoptera	Papilionidae	
+T1-1	HumanObservation	ARCOS_ILAM_Mukura_2016_164	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	6	T1-1	Colias electo	Lepidoptera	Pieridae	
+T1-1	HumanObservation	ARCOS_ILAM_Mukura_2016_165	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	2	T1-1	Eurema brigitta	Lepidoptera	Pieridae	
+T1-1	HumanObservation	ARCOS_ILAM_Mukura_2016_166	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	2	T1-1	Colias electo	Lepidoptera	Pieridae	
+T1-2	HumanObservation	ARCOS_ILAM_Mukura_2016_167	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T1-2	Colias electo	Lepidoptera	Pieridae	
+T1-2	HumanObservation	ARCOS_ILAM_Mukura_2016_168	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T1-2	Anthene definita	Lepidoptera	Lycaenidae	
+T1-3	HumanObservation	ARCOS_ILAM_Mukura_2016_169	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	2	T1-3	Colias electo	Lepidoptera	Pieridae	
+T1-3	HumanObservation	ARCOS_ILAM_Mukura_2016_170	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T1-3	Catopsilia florella	Lepidoptera	Pieridae	
+T1-3	HumanObservation	ARCOS_ILAM_Mukura_2016_171	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T1-3	Mylothris agathina	Lepidoptera	Pieridae	
+T1-3	HumanObservation	ARCOS_ILAM_Mukura_2016_172	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	2	T1-3	Colias electo	Lepidoptera	Pieridae	
+T1-4	HumanObservation	ARCOS_ILAM_Mukura_2016_173	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	4	T1-4	Eurema brigitta	Lepidoptera	Pieridae	
+T1-4	HumanObservation	ARCOS_ILAM_Mukura_2016_174	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T1-4	Eurema brigitta	Lepidoptera	Pieridae	
+T1-5	HumanObservation	ARCOS_ILAM_Mukura_2016_175	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T1-5	Hyalites eponina	Lepidoptera	Nymphalidae	
+T1-5	HumanObservation	ARCOS_ILAM_Mukura_2016_176	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T1-5	Phalanta phalantha	Lepidoptera	Nymphalidae	
+T1-6	HumanObservation	ARCOS_ILAM_Mukura_2016_177	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	2	T1-6	Orthetrum angustiventre	Odonata	Libellulidae	
+T1-7	HumanObservation	ARCOS_ILAM_Mukura_2016_178	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	20	T1-7	Eurema brigitta	Lepidoptera	Pieridae	
+T1-8	HumanObservation	ARCOS_ILAM_Mukura_2016_179	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T1-8	Junonia aenone	Lepidoptera	Nymphalidae	
+T2-1	HumanObservation	ARCOS_ILAM_Mukura_2016_180	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T2-1	Hyalites natalica	Lepidoptera	Nymphalidae	
+T2-1	HumanObservation	ARCOS_ILAM_Mukura_2016_181	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T2-1	Belenois aurata	Lepidoptera	Pieridae	
+T2-1	HumanObservation	ARCOS_ILAM_Mukura_2016_182	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T2-1	Acrea trimeni	Lepidoptera	Nymphalidae	
+T2-1	HumanObservation	ARCOS_ILAM_Mukura_2016_183	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	2	T2-1		Lepidoptera	Lycaenidae	
+T2-1	HumanObservation	ARCOS_ILAM_Mukura_2016_184	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T2-1	Amauris niavius	Lepidoptera	Nymphalidae	
+T2-1	HumanObservation	ARCOS_ILAM_Mukura_2016_185	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	2	T2-1	Hyalites eponina	Lepidoptera	Nymphalidae	
+T2-2	HumanObservation	ARCOS_ILAM_Mukura_2016_186	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T2-2	Eurema brigitta	Lepidoptera	Pieridae	
+T2-3	HumanObservation	ARCOS_ILAM_Mukura_2016_187	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	3	T2-3	Palpopleura albifrons	Odonata	Libellulidae	
+T2-4	HumanObservation	ARCOS_ILAM_Mukura_2016_188	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	4	T2-4	Palpopleura lucia	Odonata	Libellulidae	
+T2-4	HumanObservation	ARCOS_ILAM_Mukura_2016_189	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	2	T2-4	Orthetrum icteromelas	Odonata	Libellulidae	
+T2-4	HumanObservation	ARCOS_ILAM_Mukura_2016_190	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	6	T2-4	Africallagma pseudelongatum	Odonata	Coenagrionidae	
+T2-4	HumanObservation	ARCOS_ILAM_Mukura_2016_191	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T2-4	Pardopsis punctatissima	Lepidoptera	Nymphalidae	
+T2-4	HumanObservation	ARCOS_ILAM_Mukura_2016_192	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	2	T2-4	Colias electo	Lepidoptera	Pieridae	
+T2-4	HumanObservation	ARCOS_ILAM_Mukura_2016_193	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	3	T2-4	Eurema brigitta	Lepidoptera	Pieridae	
+T2-4	HumanObservation	ARCOS_ILAM_Mukura_2016_194	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	8	T2-4	Cacyreus marshalli	Lepidoptera	Lycaenidae	
+T2-4	HumanObservation	ARCOS_ILAM_Mukura_2016_195	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	2	T2-4	Hadrothemis scabrifrons	Odonata	Libellulidae	
+T2-5	HumanObservation	ARCOS_ILAM_Mukura_2016_196	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T2-5	Hypolimnas misippus	Lepidoptera	Nymphalidae	
+T2-5	HumanObservation	ARCOS_ILAM_Mukura_2016_197	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T2-5	Eurema brigitta	Lepidoptera	Pieridae	
+T2-5	HumanObservation	ARCOS_ILAM_Mukura_2016_198	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	2	T2-5	Cacyreus marshalli	Lepidoptera	Lycaenidae	
+T2-5	HumanObservation	ARCOS_ILAM_Mukura_2016_199	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T2-5	Orthetrum icteromelas	Odonata	Libellulidae	
+T2-5	HumanObservation	ARCOS_ILAM_Mukura_2016_200	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T2-5	Hyalites esebria	Lepidoptera	Nymphalidae	
+T2-6	HumanObservation	ARCOS_ILAM_Mukura_2016_201	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T2-6	Orthetrum icteromelas	Odonata	Libellulidae	
+T2-7	HumanObservation	ARCOS_ILAM_Mukura_2016_202	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	10	T2-7	Orthetrum icteromelas	Odonata	Libellulidae	
+T2-7	HumanObservation	ARCOS_ILAM_Mukura_2016_203	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	2	T2-7	Hyalites eponina	Lepidoptera	Nymphalidae	
+T2-8	HumanObservation	ARCOS_ILAM_Mukura_2016_204	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	2	T2-8	Orthetrum angustiventre	Odonata	Libellulidae	
+T2-9	HumanObservation	ARCOS_ILAM_Mukura_2016_205	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T2-9	Orthetrum angustiventre	Odonata	Libellulidae	
+T2-9	HumanObservation	ARCOS_ILAM_Mukura_2016_206	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T2-9	Eurema brigitta	Lepidoptera	Pieridae	
+T2-9	HumanObservation	ARCOS_ILAM_Mukura_2016_207	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T2-9	Chrysoritis sp.	Lepidoptera	Nymphalidae	
+T2-9	HumanObservation	ARCOS_ILAM_Mukura_2016_208	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T2-9	Cynthia cardui	Lepidoptera	Nymphalidae	
+T2-10	HumanObservation	ARCOS_ILAM_Mukura_2016_209	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T2-10	Orthetrum icteromelas	Odonata	Libellulidae	
+T3-1	HumanObservation	ARCOS_ILAM_Mukura_2016_210	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T3-1	Palpopleura jucunda	Odonata	Libellulidae	
+T3-1	HumanObservation	ARCOS_ILAM_Mukura_2016_211	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	2	T3-1	Africallagma pseudelongatum	Odonata	Coenagrionidae	
+T3-1	HumanObservation	ARCOS_ILAM_Mukura_2016_212	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T3-1	Palpopleura albifrons	Odonata	Libellulidae	
+T3-4	HumanObservation	ARCOS_ILAM_Mukura_2016_213	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T3-4	Orthetrum angustiventre	Odonata	Libellulidae	
+T3-4	HumanObservation	ARCOS_ILAM_Mukura_2016_214	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T3-4	Iolaus nasisii	Lepidoptera	Lycaenidae	
+T3-5	HumanObservation	ARCOS_ILAM_Mukura_2016_215	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T3-5	Palpopleura jucunda	Odonata	Libellulidae	
+T3-7	HumanObservation	ARCOS_ILAM_Mukura_2016_216	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T3-7	Eurema brigitta	Lepidoptera	Pieridae	
+T3-8	HumanObservation	ARCOS_ILAM_Mukura_2016_217	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	2	T3-8	Eurema brigitta	Lepidoptera	Pieridae	
+T3-8	HumanObservation	ARCOS_ILAM_Mukura_2016_218	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T3-8	Chrysoritis sp.	Lepidoptera	Nymphalidae	
+T3-8	HumanObservation	ARCOS_ILAM_Mukura_2016_219	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T3-8	Anthene definita	Lepidoptera	Lycaenidae	
+T3-9	HumanObservation	ARCOS_ILAM_Mukura_2016_220	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T3-9	Hyalites sp.	Lepidoptera	Nymphalidae	
+T3-9	HumanObservation	ARCOS_ILAM_Mukura_2016_221	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	3	T3-9	Eurema brigitta	Lepidoptera	Pieridae	
+T3-9	HumanObservation	ARCOS_ILAM_Mukura_2016_222	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T3-9	Anthene definita	Lepidoptera	Lycaenidae	
+T3-10	HumanObservation	ARCOS_ILAM_Mukura_2016_223	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	2	T3-10	Eurema brigitta	Lepidoptera	Pieridae	
+T3-10	HumanObservation	ARCOS_ILAM_Mukura_2016_224	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	5	T3-10	Colias electo	Lepidoptera	Pieridae	
+T3-10	HumanObservation	ARCOS_ILAM_Mukura_2016_225	Jean Paul Kubwimana, Jean de Dieu Uwizerimana	1	T3-10	Palpopleura jucunda	Odonata	Libellulidae	

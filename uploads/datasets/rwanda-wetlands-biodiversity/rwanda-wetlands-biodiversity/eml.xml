@@ -1,0 +1,169 @@
+<eml:eml xmlns:eml="eml://ecoinformatics.org/eml-2.1.1"
+         xmlns:dc="http://purl.org/dc/terms/"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="eml://ecoinformatics.org/eml-2.1.1 http://rs.gbif.org/schema/eml-gbif-profile/1.1/eml.xsd"
+         packageId="http://arbmis.arcosnetwork.org/ipt/resource?id=rwanda-wetlands-biodiversity/v1.2" system="http://gbif.org" scope="system"
+         xml:lang="eng">
+
+<dataset>
+  <alternateIdentifier>http://arbmis.arcosnetwork.org/ipt/resource?r=rwanda-wetlands-biodiversity</alternateIdentifier>
+  <title xml:lang="eng">Rwanda&apos;s wetlands biodiversity data from different inventories that were conducted between year 2008 and 2017</title>
+      <creator>
+    <individualName>
+        <givenName>Yvette</givenName>
+      <surName>Umurungi</surName>
+    </individualName>
+    <organizationName>Centre of Excellence in Biodiversity and Natural Resources Management (CoEB)</organizationName>
+    <positionName>Research Associate</positionName>
+    <address>
+        <deliveryPoint>Butare</deliveryPoint>
+        <city>Huye</city>
+        <country>RW</country>
+    </address>
+    <electronicMailAddress>umurungiyvette@gmail.com</electronicMailAddress>
+      </creator>
+      <metadataProvider>
+    <individualName>
+        <givenName>Faustin</givenName>
+      <surName>Gashakamba</surName>
+    </individualName>
+    <organizationName>ARCOS</organizationName>
+    <positionName>Node Manager</positionName>
+    <address>
+        <deliveryPoint>Gasabo</deliveryPoint>
+        <city>Kigali</city>
+        <postalCode>1735, Kigali, Rwanda</postalCode>
+        <country>RW</country>
+    </address>
+    <phone>+250783023303</phone>
+    <electronicMailAddress>fgashakamba@arcosnetwork.org</electronicMailAddress>
+    <onlineUrl>http://arcosnetwork.org</onlineUrl>
+      </metadataProvider>
+      <associatedParty>
+    <individualName>
+        <givenName>Yvette</givenName>
+      <surName>Umurungi</surName>
+    </individualName>
+    <electronicMailAddress>umurungiyvette@gmail.com</electronicMailAddress>
+    <role>pointOfContact</role>
+      </associatedParty>
+      <associatedParty>
+    <individualName>
+        <givenName>Faustin</givenName>
+      <surName>Gashakamba</surName>
+    </individualName>
+    <organizationName>ARCOS</organizationName>
+    <positionName>Node Manager</positionName>
+    <address>
+        <deliveryPoint>Gasabo</deliveryPoint>
+        <city>Kigali</city>
+        <postalCode>1735</postalCode>
+        <country>RW</country>
+    </address>
+    <phone>+250783023303</phone>
+    <electronicMailAddress>fgashakamba@arcosnetwork.org</electronicMailAddress>
+    <onlineUrl>http://arcosnetwork.org</onlineUrl>
+    <role>publisher</role>
+      </associatedParty>
+  <pubDate>
+      2018-11-06
+  </pubDate>
+  <language>eng</language>
+  <abstract>
+    <para>This data was compiled from different reports of the biodiversity inventories conducted in wetlands by the Rwanda Environment Management Authority (REMA) and its partners.</para>
+    <para>The compilation was facilitated by the Centre of Excellence in Biodiversity and Natural Resources Management (CoEB) with technical support from the Albertine Rift Conservation Society (ARCOS)</para>
+  </abstract>
+      <keywordSet>
+            <keyword>Occurrence</keyword>
+        <keywordThesaurus>GBIF Dataset Type Vocabulary: http://rs.gbif.org/vocabulary/gbif/dataset_type.xml</keywordThesaurus>
+      </keywordSet>
+  <intellectualRights>
+    <para>To the extent possible under law, the publisher has waived all rights to these data and has dedicated them to the <ulink url="http://creativecommons.org/publicdomain/zero/1.0/legalcode"><citetitle>Public Domain (CC0 1.0)</citetitle></ulink>. Users may copy, modify, distribute and use the work, including for commercial purposes, without restriction.</para>
+  </intellectualRights>
+  <coverage>
+      <geographicCoverage>
+          <geographicDescription>Rwanda&apos;s wetlands ecosystems</geographicDescription>
+        <boundingCoordinates>
+          <westBoundingCoordinate>-180</westBoundingCoordinate>
+          <eastBoundingCoordinate>-180</eastBoundingCoordinate>
+          <northBoundingCoordinate>90</northBoundingCoordinate>
+          <southBoundingCoordinate>-90</southBoundingCoordinate>
+        </boundingCoordinates>
+      </geographicCoverage>
+          <temporalCoverage>
+              <rangeOfDates>
+                  <beginDate>
+                    <calendarDate>2008-01-01</calendarDate>
+                  </beginDate>
+                <endDate>
+                  <calendarDate>2017-12-31</calendarDate>
+                </endDate>
+              </rangeOfDates>
+          </temporalCoverage>
+  </coverage>
+  <purpose>
+    <para>The compilation of this data is part of the effort of CoEB to create a repository of Rwanda&apos;s biodiversity to fulfill its mandate to guide policy making and planning in environment and natural resources management.</para>
+  </purpose>
+  <maintenance>
+    <description>
+      <para>This dataset will continually be updated as the staff from CoEB get access to new reports of additional biodiversity studies in Rwanda&apos;s wetlands.</para>
+    </description>
+    <maintenanceUpdateFrequency>asNeeded</maintenanceUpdateFrequency>
+  </maintenance>
+
+      <contact>
+    <individualName>
+        <givenName>Yvette</givenName>
+      <surName>Umurungi</surName>
+    </individualName>
+    <organizationName>Centre of Excellence in Biodiversity and Natural Resources Management (CoEB)</organizationName>
+    <positionName>Research Associate</positionName>
+    <address>
+        <deliveryPoint>Butare</deliveryPoint>
+        <city>Huye</city>
+        <country>RW</country>
+    </address>
+    <electronicMailAddress>umurungiyvette@gmail.com</electronicMailAddress>
+      </contact>
+  <project >
+    <title>Africa Biodiversity Challenge</title>
+      <personnel>
+        <individualName>
+            <givenName>Yvette</givenName>
+          <surName>Umurungi</surName>
+        </individualName>
+        <role>pointOfContact</role>
+      </personnel>
+      <abstract>
+        <para>The Africa Biodiversity Challenge (ABC) is a project funded by the JRS Biodiversity Foundation and coordinated by the South African Institute of Biodiversity (SANBI). The project has the object to enhance the capacity of African countries to develop and sustain national biodiversity informatics networks by building data management skills and communities of practice and to facilitate south-south cooperation to ensure data mobilization efforts address regional sustainable development agendas.
+Rwanda is one of the 3 run-ups in the competition that was initiated as part of this project and as such, the country participant organization (ARCOS and CoEB) and their partners have been mobilizing biodiversity data to facilitate informed decision making around issues related to environment management and development.
+</para>
+      </abstract>
+      <funding>
+        <para>The data mobilization component of this project has  been funded by the participant organizations (ARCOS and CoEB in the case of Rwanda). At the closing date of the competition, the winners will be awarded prizes ranging from $30,000 to $10,000 depending on performance.</para>
+      </funding>
+      <studyAreaDescription>
+        <descriptor name="generic"
+                    citableClassificationSystem="false">
+          <descriptorValue>Rwanda&apos;s Wetlands ecosystems.</descriptorValue>
+        </descriptor>
+      </studyAreaDescription>
+      <designDescription>
+        <description>
+          <para>The data in this dataset has been collected using methods described in the reports of the inventories. To access these reports, please get in touch with the point of contact.</para>
+        </description>
+      </designDescription>
+  </project>
+</dataset>
+  <additionalMetadata>
+    <metadata>
+      <gbif>
+          <dateStamp>2018-11-06T11:14:50.247+01:00</dateStamp>
+          <hierarchyLevel>dataset</hierarchyLevel>
+            <citation>Umurungi Y (2018): Rwanda&apos;s wetlands biodiversity data from different inventories that were conducted between year 2008 and 2017. v1.2. Centre of Excellence in Biodiversity and Natural Resources Management. Dataset/Occurrence. http://arbmis.arcosnetwork.org/ipt/resource?r=rwanda-wetlands-biodiversity&amp;v=1.2</citation>
+          <resourceLogoUrl>http://arbmis.arcosnetwork.org/ipt/logo.do?r=rwanda-wetlands-biodiversity</resourceLogoUrl>
+          <dc:replaces>http://arbmis.arcosnetwork.org/ipt/resource?id=rwanda-wetlands-biodiversity/v1.2.xml</dc:replaces>
+      </gbif>
+    </metadata>
+  </additionalMetadata>
+</eml:eml>

@@ -1,0 +1,44 @@
+id	eventID	year	month	day	verbatimEventDate	eventRemarks	higherGeography	locality	verbatimLocality	verbatimElevation	verbatimSRS	decimalLatitude	decimalLongitude
+1	1	2019	6	22	2019-06-22		Akanyaru Wetlands	Bugesera	Amasangano	1283m	WGS-1984	-2.07536	30.01953
+2	2	2019	6	24	2019-06-24	No threat identified as RAMSAR Site, Plantation of agroforestry trees to buffer the wetland	Rugezi-Burera-Ruhondo	Burera	Burera Lake	1977m	WGS-1984	-1.38711	29.79735
+3	3	2019	6	24	2019-06-24	Local communities pathway just below the buffer zone, Plantation of agroforestry trees to buffer the wetland	Rugezi-Burera-Ruhondo	Burera	Butaro	2046m	WGS-1984	-1.42443	29.83608
+4	4	2019	6	7	2019-06-07		Kigali wetlands	Kicukiro	Gahanga-Mugendo	1349m	WGS-1984	-2.05186	30.08413
+5	5	2019	6	8	2019-06-08		Rweru-MUGESERA Complex wetlands	Bugesera	Gaharwa Lake	1328m	WGS-1984	-2.2825	30.26004
+6	6	2019	6	15	2019-06-15		Eastern Kirehe Wetlands	Kirehe	Gasenyi	1255m	WGS-1984	-2.217	30.41526
+7	7	2019	6	15	15/6/2019		Eastern Kirehe Wetlands	Akagera	Gashonga Wetlands	1321m	WGS-1984	-2.18713	30.84955
+8	8	2019	6	8	8/6/2019		Rweru-Mugesera Wetlands	Nyabarongo	Gashora-Kanonyomba wetlands	1333m	WGS-1984	-2.20806	30.25627
+9	9	2019	6	8	2019-06-08	Encroachment, Peat soil in the wetland	Rweru-Mugesera	Bugesera	ICRAF plot	1328m	WGS-1984	-2.2825	30.26004
+10	10	2019	6	6	2019-06-06		Kigali wetlands	Kicukiro	Inyange-Lake	1346m	WGS-1984	-1.98531	30.18596
+11	11	2019	6	28	28/6/2019		Muvumba Wetlands	Kahi	Kakamba	1384m	WGS-1984	-1.49204	30.23455
+12	12	2019	6	26	2019-06-26		Rusizi Wetlands	NNP	Kamiranzovu	1851m	WGS-1984	-2.48769	29.15248
+13	13	2019	6	25	2019-06-25		Rusizi Wetlands	Nyamasheke	Kamiranzovu Estuary	1438m	WGS-1984	-2.34151	29.12012
+14	14	2019	6	28	2019-06-28		Muvumba Wetlands	Gatsibo	Karangazi	1356m	WGS-1984	-1.54439	30.35379
+15	15	2019	6	14	14/6/2019		Southern Kirehe Wetlands	Akagera	Kigarama-Gasenyi	1255m	WGS-1984	-2.36166	30.69211
+16	16	2019	6	27	27/6/2019		Kigali wetlands	Rwezamenyo	Kinamba	1359m	WGS-1984	-1.93575	30.05121
+17	17	2019	6	14	2019-06-14		Southern Kirehe Wetlands	Kirehe	Kirehe Downstream	1287m	WGS-1984	-2.01755	30.83418
+18	18	2019	6	14	2019-06-14		Southern Kirehe Wetlands	Kirehe	Kirehe Upstream	1321m	WGS-1984	-2.22814	30.37129
+19	19	2019	6	15	2019-06-15	Encroachment, Some crops mixed with wetland plant species	Eastern  Kirehe	Kirehe	Mahama	1262m	WGS-1984	-2.21451	30.83266
+20	20	2019	6	8	2019-06-08		Rweru-MUGESERA Complex wetlands	Bugesera	Milayi Lake	1341m	WGS-1984	-2.20707	30.26181
+21	21	2019	6	14	2019-06-14		Southern Kirehe Wetlands	Kirehe	Mpanga	1287m	WGS-1984	-2.01755	36.50051
+22	22	2019	6	21	2019-06-21		Akanyaru Wetlands	Bugesera	Murago wetlands-Cyohoha	1288m	WGS-1984	-2.22623	30.06683
+23	23	2019	6	14	2019-06-14		Southern Kirehe Wetlands	Kirehe	Musaza1	1321m	WGS-1984	-2.22814	30.61906
+24	24	2019	6	14	2019-06-14	Encroachment, Small area under natural regeneration	Southern Kirehe	Kirehe	Musaza2	1322m	WGS-1984	-2.22671	30.37144
+25	25	2019	6	28	2019-06-28		Muvumba Wetlands	Nyagatare	Muvumba	1338m	WGS-1984	-1.29251	30.31924
+26	26	2019	6	28	2019-06-28	Encroachment, Different crops in the wetlands	Muvumba	Gatsibo	Ngarama	1385m	WGS-1984	-1.49204	30.23455
+27	27	2019	6	27	2019-06-27		Kigali wetlands	Nyarugenge	Nyabugogo	1359m	WGS-1984	-1.93572	30.04673
+28	28	2019	6	27	27/6/2019		Kigali wetlands	Nyabugogo	Nyabugogo Mid -Upstream	1364m	WGS-1984	-1.93281	30.04673
+29	29	2019	6	27	2019-06-27		Kigali wetlands	Nyabugogo	Nyandungu	1400m	WGS-1984	-1.95541	30.13479
+30	30	2019	6	14	2019-06-14		Southern Kirehe Wetlands	Kirehe	Nyankurazo	1322m	WGS-1984	-2.22671	30.37144
+31	31	2019	6	27	2019-06-27		Kigali wetlands	Gasabo	Nyarutarama	1424m	WGS-1984	-1.94062	30.10007
+32	32	2019	6	27	2019-06-27		Kigali wetlands	Nyabarongo	Nzove- Nyabugogo-Nyabarongo Confluent	1220m	WGS-1984	-1.94485	30.00351
+33	33	2019	6	24	2019-06-24		Rugezi Wetlands	Burera	Rugezi	2055m	WGS-1984	-1.47823	29.79735
+34	34	2019	6	24	2019-06-24	No threat identified as RAMSAR Site, Plantation of agroforestry trees to buffer the wetland	Rugezi-Burera-Ruhondo	Burera	Rugezi (Kivuye)	2055m	WGS-1984	-1.47823	29.89661
+35	35	2019	6	24	24/6/2019		Rugezi Wetlands	Rugezi	Rugezi (Rubaya)	1977m	WGS-1984	-1.56601	29.97235
+36	36	2019	6	24	24/6/2019		Rugezi Wetlands	Rugezi	Rugezi (Rusumo)	2051m	WGS-1984	-1.42241	29.83377
+37	37	2019	6	24	2019-06-24	No threat identified as RAMSAR Site, Plantation of agroforestry trees to buffer the wetland	Rugezi-Burera-Ruhondo	Burera	Ruhondo Lake	1858m	WGS-1984	-1.38711	29.79735
+38	38	2019	6	6	2019-06-06		Kigali wetlands	Nyabarongo	Ruriba	1224m	WGS-1984	-1.97109	30.00793
+39	39	2019	6	14	2019-06-14		Southern Kirehe Wetlands	Kirehe	Rusumo	1320m	WGS-1984	-2.2294	30.45997
+40	40	2019	6	14	14/6/2019		Southern Kirehe Wetlands	Akagera	Rusumo Upstream	1321m	WGS-1984	-2.38476	30.76843
+41	41	2019	6	21	2019-06-21		Akanyaru Wetlands	Bugesera/Nyanza	Rwabusoro	1367m	WGS-1984	-2.28538	29.96706
+42	42	2019	6	7	2019-06-07	Encroachment, Some crops mixed with wetland plant species	Rweru-Mugesera	Bugesera	Rweru	1319m	WGS-1984	-2.4126	30.43009
+43	43	2019	6	7	2019-06-07		Rweru-MUGESERA Complex wetlands	Bugesera	Rweru lake	1319m	WGS-1984	-2.4126	30.43009

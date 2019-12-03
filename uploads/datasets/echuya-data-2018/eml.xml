@@ -1,0 +1,180 @@
+<eml:eml xmlns:eml="eml://ecoinformatics.org/eml-2.1.1"
+         xmlns:dc="http://purl.org/dc/terms/"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="eml://ecoinformatics.org/eml-2.1.1 http://rs.gbif.org/schema/eml-gbif-profile/1.1/eml.xsd"
+         packageId="http://arbmis.arcosnetwork.org/ipt/resource?id=echuya-data-2018/v1.0" system="http://gbif.org" scope="system"
+         xml:lang="eng">
+
+<dataset>
+  <alternateIdentifier>http://arbmis.arcosnetwork.org/ipt/resource?r=echuya-data-2018</alternateIdentifier>
+  <title xml:lang="eng">Echuya Bird Species Survey 2018</title>
+      <creator>
+    <individualName>
+        <givenName>Simonas</givenName>
+      <surName>Vainauskas</surName>
+    </individualName>
+    <organizationName>ARCOS</organizationName>
+    <positionName>Volunteer</positionName>
+    <electronicMailAddress>svainauskas@arcosnetwork.org</electronicMailAddress>
+      </creator>
+      <creator>
+    <individualName>
+        <givenName>Martin</givenName>
+      <surName>Sindikubwabo</surName>
+    </individualName>
+    <organizationName>ARCOS</organizationName>
+    <positionName>Biodiversity Monitoring Officer</positionName>
+    <electronicMailAddress>msindikubwabo@arcosnetwork.org</electronicMailAddress>
+      </creator>
+      <metadataProvider>
+    <individualName>
+        <givenName>Simonas</givenName>
+      <surName>Vainauskas</surName>
+    </individualName>
+    <organizationName>ARCOS</organizationName>
+    <positionName>Volunteer</positionName>
+    <electronicMailAddress>svainauskas@arcosnetwork.org</electronicMailAddress>
+      </metadataProvider>
+      <associatedParty>
+    <individualName>
+        <givenName>Faustin</givenName>
+      <surName>Gashakamba</surName>
+    </individualName>
+    <organizationName>ARCOS</organizationName>
+    <positionName> Contact</positionName>
+    <electronicMailAddress>gashakamba@gmail.com</electronicMailAddress>
+    <role>user</role>
+      </associatedParty>
+  <pubDate>
+      2018-11-19
+  </pubDate>
+  <language>eng</language>
+  <abstract>
+    <para>Bird species surveys carried out in different habitats of Echuya montane forest in Kabale and Kisoro districts on November 9 - 10. </para>
+  </abstract>
+      <keywordSet>
+            <keyword>Echuya community forest reserve biodiversity birds monitoring survey 2018 point count along transect natural resources threats ILAM pressure state response</keyword>
+        <keywordThesaurus>GBIF Dataset Type Vocabulary: http://rs.gbif.org/vocabulary/gbif/dataset_type.xml</keywordThesaurus>
+      </keywordSet>
+  <intellectualRights>
+    <para>To the extent possible under law, the publisher has waived all rights to these data and has dedicated them to the <ulink url="http://creativecommons.org/publicdomain/zero/1.0/legalcode"><citetitle>Public Domain (CC0 1.0)</citetitle></ulink>. Users may copy, modify, distribute and use the work, including for commercial purposes, without restriction.</para>
+  </intellectualRights>
+  <coverage>
+      <geographicCoverage>
+          <geographicDescription>Echuya community forest reserve in the districts of Kisoro and Kabale</geographicDescription>
+        <boundingCoordinates>
+          <westBoundingCoordinate>29.465</westBoundingCoordinate>
+          <eastBoundingCoordinate>30.63</eastBoundingCoordinate>
+          <northBoundingCoordinate>-0.461</northBoundingCoordinate>
+          <southBoundingCoordinate>-1.208</southBoundingCoordinate>
+        </boundingCoordinates>
+      </geographicCoverage>
+          <temporalCoverage>
+              <rangeOfDates>
+                  <beginDate>
+                    <calendarDate>2018-11-09</calendarDate>
+                  </beginDate>
+                <endDate>
+                  <calendarDate>2018-11-10</calendarDate>
+                </endDate>
+              </rangeOfDates>
+          </temporalCoverage>
+  </coverage>
+  <maintenance>
+    <description>
+      <para></para>
+    </description>
+    <maintenanceUpdateFrequency>continually</maintenanceUpdateFrequency>
+  </maintenance>
+
+      <contact>
+    <individualName>
+        <givenName>Simonas</givenName>
+      <surName>Vainauskas</surName>
+    </individualName>
+    <organizationName>ARCOS</organizationName>
+    <positionName>Volunteer</positionName>
+    <electronicMailAddress>svainauskas@arcosnetwork.org</electronicMailAddress>
+      </contact>
+      <contact>
+    <individualName>
+        <givenName>Martin</givenName>
+      <surName>Sindikubwabo</surName>
+    </individualName>
+    <organizationName>ARCOS</organizationName>
+    <positionName>Biodiversity Monitoring Officer</positionName>
+    <electronicMailAddress>msindikubwabo@arcosnetwork.org</electronicMailAddress>
+      </contact>
+  <methods>
+        <methodStep>
+          <description>
+            <para>Existing transects were located and visited using GPS coordinates.
+The timeframe of the research was in the morning and afternoon when the birds are the most active in order to maximise the number of species recorded.
+
+Each point along transect was observed for 10 minutes. All species seen or heard were recorded, including the habitat and estimated distance. Binoculars and a field guide were used to aid in identifying the species when needed. Furthermore, opportunistic sampling was used to record species when moving between transects and during the day when birds were less active.
+
+Before continuing to the next point, any visible threats to species (tree cutting, trespassing into the forest, traces of cattle) were recorded. 
+
+Lastly, comments provided by the forest ranger were noted in regards to actions taken by authorities (in this case the NGO NatureUganda) to address these threats to species in Echuya.
+
+The data was then entered into Microsoft Excel and common names of birds were used and grouped by date, transect name, etc.</para>
+          </description>
+        </methodStep>
+      <sampling>
+        <studyExtent>
+          <description>
+            <para>The data collection took place in Echuya CFR located in southwest Uganda, Kisoro and Kabale districts. The temporal boundaries were two days, mornings and evenings November 9 - 10.</para>
+          </description>
+        </studyExtent>
+        <samplingDescription>
+          <para>Existing transects were visited using GPS coordinates in order to locate them. Within transects, each point was observed for 10 minutes and all bird species seen or heard were recorded in data sheets as well as the habitat and estimated distance.
+ Binoculars and a field guide were used to aid in identifying the species when needed. Furthermore, opportunistic sampling was used to record species when moving between transects and during the day when birds were less active.
+
+Additionally, any visible threats were recorded and ranked 1 - 4 on the scale of their impact and comments provided in regards to authorities addressing these threats.</para>
+        </samplingDescription>
+      </sampling>
+  </methods>
+  <project >
+    <title>Echuya Bird Species Survey 2018</title>
+      <personnel>
+        <individualName>
+            <givenName>Simonas</givenName>
+          <surName>Vainauskas</surName>
+        </individualName>
+        <role>author</role>
+      </personnel>
+      <personnel>
+        <individualName>
+            <givenName>Martin</givenName>
+          <surName>Sindikubwabo</surName>
+        </individualName>
+        <role>author</role>
+      </personnel>
+      <abstract>
+        <para>The compiled results of bird species recorded in Echuya on November 9 - 10 and analysed using the Pressure-State-Response model.</para>
+      </abstract>
+      <studyAreaDescription>
+        <descriptor name="generic"
+                    citableClassificationSystem="false">
+          <descriptorValue>Echuya CFR located in Kisoro and Kabale districts of southwestern Uganda. Habitats covered include: montane bamboo forest, wetlands, closed broadleaf tree and pine forests.</descriptorValue>
+        </descriptor>
+      </studyAreaDescription>
+      <designDescription>
+        <description>
+          <para>Surveying was carried out in point counts along existing transects using GPS system to navigate. Each point was observed for 10 minutes and all species seen and heard were recorded, indicating species richness (State). The transects were visited twice when the birds are the most active - in the morning and in the evening. 
+The transects covered several different habitats, mostly open bamboo forest and swamp.
+Any visible threats in each point count were recorded and assessed on a scale of 1 - 4 (Pressure), in addition to comments about efforts undertaken by the authorities to combat or monitor those threats (Response).</para>
+        </description>
+      </designDescription>
+  </project>
+</dataset>
+  <additionalMetadata>
+    <metadata>
+      <gbif>
+          <dateStamp>2018-11-15T09:59:43.042+01:00</dateStamp>
+          <hierarchyLevel>dataset</hierarchyLevel>
+            <citation>Vainauskas S, Sindikubwabo M (2018): Echuya Bird Species Survey 2018. v1.0. Albertine Rift Conservation Society (ARCOS). Dataset/Occurrence. http://arbmis.arcosnetwork.org/ipt/resource?r=echuya-data-2018&amp;v=1.0</citation>
+      </gbif>
+    </metadata>
+  </additionalMetadata>
+</eml:eml>

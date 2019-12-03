@@ -1,0 +1,6 @@
+'mandatory_reviewer'
+'mandatory_approver'
+added to langs up to FR
+'rating' added to FR + EN
+'rate' added to FR + EN
+'rated_already'

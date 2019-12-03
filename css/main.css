@@ -1,0 +1,117 @@
+.pagelist {
+ width: 100%;
+ margin: 0 auto;
+ border-collapse:separate;
+ /* border-spacing: 20px 0px; */
+}
+
+.pagelist th {
+    text-align: left;
+}
+
+.pagelist tr.even {
+  background-color: #F0F8FF;
+}
+
+.pagelist tr.odd {
+	background-color: #d9edf7;
+}
+
+.pagelist tr:hover {
+  background-color: #fff;
+}
+
+.pagelist td {
+    padding-right:10px;
+}
+
+/*
+.collapsedcolumn {
+    max-width: 2em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+} */
+
+.pagelist_more {
+  text-align: right;
+  text-transform: uppercase;
+  font-size: 85%;
+  margin: 5px 15px 15px;
+  clear: both;
+}
+
+.pagelist_more a {
+  color: #176f94;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 130%;
+}
+
+.pagelist_more a:hover {
+  color: #176f94;
+  text-decoration: underline;
+}
+
+.pagination_desc {
+  margin-left: 15px;
+  margin-top: 10px;
+  font-style: italic;
+  color: #828f95;
+}
+
+.pagination_desc strong {
+  color: #176f94;
+}
+
+.pagination {
+  margin-top: 10px;
+  float: right;
+  width: 70px;
+  margin-right: 10px;
+  color: #176f94;
+  font-size: 110%;
+  font-weight: bold;
+}
+
+.pagination a {
+  margin: 0 1px;
+  text-decoration: none;
+  color: #828f95;
+  font-size: 75%;
+  vertical-align: 1px;
+  font-weight: normal;
+}
+
+.pagination a:hover {
+  text-decoration: underline;
+}
+
+.pagination img {
+  vertical-align: -2px;
+  border: 0px; 
+}
+
+.page_other_functionality {
+  float: right;
+  margin-right: 10px;  
+  font-size: 110%;
+  font-weight: bold;
+}
+
+.page_adv_search {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.message {
+    color: red;
+    font-style: italic;
+}
+
+.help_prompt {
+    font-style: italic;
+    font-weight: bold;
+    padding-top: 5px;
+    padding-bottom: 10px;
+}

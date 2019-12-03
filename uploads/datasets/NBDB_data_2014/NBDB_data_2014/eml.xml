@@ -1,0 +1,154 @@
+<eml:eml xmlns:eml="eml://ecoinformatics.org/eml-2.1.1"
+         xmlns:dc="http://purl.org/dc/terms/"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="eml://ecoinformatics.org/eml-2.1.1 http://rs.gbif.org/schema/eml-gbif-profile/1.1/eml.xsd"
+         packageId="026af01f-d227-476f-9e81-d5273eca6a2b/v1.2" system="http://gbif.org" scope="system"
+         xml:lang="eng">
+
+<dataset>
+  <alternateIdentifier>026af01f-d227-476f-9e81-d5273eca6a2b</alternateIdentifier>
+  <alternateIdentifier>http://arbmis.arcosnetwork.org/ipt/resource?r=NBDB_data_2014</alternateIdentifier>
+  <title xml:lang="eng">National Biodiversity Data Bank. Observation records, 1900-2014</title>
+      <creator>
+    <individualName>
+        <givenName>Herbert</givenName>
+      <surName>Tushabe</surName>
+    </individualName>
+    <organizationName>The National Biodiversity Data Bank</organizationName>
+    <positionName>Data Manager</positionName>
+    <address>
+        <deliveryPoint>DEM, PO Box 7298, Kampala.</deliveryPoint>
+        <city>Kampala</city>
+        <country>UG</country>
+    </address>
+    <electronicMailAddress>htushabe@gmail.com</electronicMailAddress>
+      </creator>
+      <metadataProvider>
+    <individualName>
+        <givenName>Herbert</givenName>
+      <surName>Tushabe</surName>
+    </individualName>
+    <organizationName>The National Biodiversity Data Bank</organizationName>
+    <positionName>Data Manager</positionName>
+    <address>
+        <deliveryPoint>DEM, PO Box 7298, Kampala.</deliveryPoint>
+        <city>Kampala</city>
+        <country>UG</country>
+    </address>
+    <electronicMailAddress>htushabe@gmail.com</electronicMailAddress>
+      </metadataProvider>
+      <associatedParty>
+    <individualName>
+        <givenName>Faustin</givenName>
+      <surName>Gashakamba</surName>
+    </individualName>
+    <organizationName>Albertine Rift Conservation Society</organizationName>
+    <positionName>Researcher</positionName>
+    <address>
+        <city>Kampala</city>
+        <country>RW</country>
+    </address>
+    <electronicMailAddress>fgashakamba@arcosnetwork.org</electronicMailAddress>
+    <onlineUrl>http://arcosnetwork.org</onlineUrl>
+    <role>pointOfContact</role>
+      </associatedParty>
+  <pubDate>
+      2018-04-08
+  </pubDate>
+  <language>eng</language>
+  <abstract>
+    <para>The data in this resource consist of biodiversity occurrence records drawn from the National Biodiversity Data Bank&apos;s database. The data was clipped using the Albertine Rift boundaries and mapped to Darwin Core terms by the NBDB&apos;s manager, Dr Herbert Tushabe.</para>
+  </abstract>
+      <keywordSet>
+            <keyword>Other</keyword>
+        <keywordThesaurus>GBIF Dataset Type Vocabulary: http://rs.gbif.org/vocabulary/gbif/dataset_type.xml</keywordThesaurus>
+      </keywordSet>
+  <intellectualRights>
+    <para>To the extent possible under law, the publisher has waived all rights to these data and has dedicated them to the <ulink url="http://creativecommons.org/publicdomain/zero/1.0/legalcode"><citetitle>Public Domain (CC0 1.0)</citetitle></ulink>. Users may copy, modify, distribute and use the work, including for commercial purposes, without restriction.</para>
+  </intellectualRights>
+  <distribution scope="document">
+    <online>
+      <url function="information">http://nbdb.mak.ac.ug</url>
+    </online>
+  </distribution>
+  <coverage>
+      <geographicCoverage>
+          <geographicDescription>Uganda. National scale data.</geographicDescription>
+        <boundingCoordinates>
+          <westBoundingCoordinate>29.333</westBoundingCoordinate>
+          <eastBoundingCoordinate>35.112</eastBoundingCoordinate>
+          <northBoundingCoordinate>4.6</northBoundingCoordinate>
+          <southBoundingCoordinate>-1.582</southBoundingCoordinate>
+        </boundingCoordinates>
+      </geographicCoverage>
+          <temporalCoverage>
+              <rangeOfDates>
+                  <beginDate>
+                    <calendarDate>1900-01-01</calendarDate>
+                  </beginDate>
+                <endDate>
+                  <calendarDate>2014-12-20</calendarDate>
+                </endDate>
+              </rangeOfDates>
+          </temporalCoverage>
+  </coverage>
+  <maintenance>
+    <description>
+      <para></para>
+    </description>
+    <maintenanceUpdateFrequency>asNeeded</maintenanceUpdateFrequency>
+  </maintenance>
+
+      <contact>
+    <individualName>
+        <givenName>Herbert</givenName>
+      <surName>Tushabe</surName>
+    </individualName>
+    <organizationName>The National Biodiversity Data Bank</organizationName>
+    <positionName>Data Manager</positionName>
+    <address>
+        <deliveryPoint>DEM, PO Box 7298, Kampala.</deliveryPoint>
+        <city>Kampala</city>
+        <country>UG</country>
+    </address>
+    <electronicMailAddress>htushabe@gmail.com</electronicMailAddress>
+      </contact>
+  <methods>
+        <methodStep>
+          <description>
+            <para>Direct human observations</para>
+          </description>
+        </methodStep>
+      <sampling>
+        <studyExtent>
+          <description>
+            <para>Uganda, countrywide.</para>
+          </description>
+        </studyExtent>
+        <samplingDescription>
+          <para>Direct human observations</para>
+        </samplingDescription>
+      </sampling>
+  </methods>
+  <project >
+    <title>Data Manager</title>
+      <personnel>
+        <individualName>
+            <givenName>Herbert</givenName>
+          <surName>Tushabe</surName>
+        </individualName>
+        <role>contentProvider</role>
+      </personnel>
+  </project>
+</dataset>
+  <additionalMetadata>
+    <metadata>
+      <gbif>
+          <dateStamp>2014-12-20T11:34:57.664+01:00</dateStamp>
+          <hierarchyLevel>dataset</hierarchyLevel>
+            <citation>The National Biodiveristy Data Bank, data published in the ARCOS Biodiversity portal, 2014</citation>
+          <dc:replaces>026af01f-d227-476f-9e81-d5273eca6a2b/v1.2.xml</dc:replaces>
+      </gbif>
+    </metadata>
+  </additionalMetadata>
+</eml:eml>
