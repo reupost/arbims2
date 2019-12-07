@@ -2,11 +2,11 @@
          xmlns:dc="http://purl.org/dc/terms/"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="eml://ecoinformatics.org/eml-2.1.1 http://rs.gbif.org/schema/eml-gbif-profile/1.1/eml.xsd"
-         packageId="http://arbmis.arcosnetwork.org/ipt/resource?id=jrs_wetands_data_rwanda_2019/v1.0" system="http://gbif.org" scope="system"
+         packageId="http://localhost:8080/ipt/resource?id=jrs_wetands_data_rwanda_2019/v1.1" system="http://gbif.org" scope="system"
          xml:lang="eng">
 
 <dataset>
-  <alternateIdentifier>http://arbmis.arcosnetwork.org/ipt/resource?r=jrs_wetands_data_rwanda_2019</alternateIdentifier>
+  <alternateIdentifier>http://localhost:8080/ipt/resource?r=jrs_wetands_data_rwanda_2019</alternateIdentifier>
   <title xml:lang="eng">JRS Wetands data Rwanda, 2019</title>
       <creator>
     <individualName>
@@ -53,7 +53,7 @@
     <role>user</role>
       </associatedParty>
   <pubDate>
-      2019-08-15
+      2019-12-04
   </pubDate>
   <language>eng</language>
   <abstract>
@@ -95,8 +95,9 @@
   <additionalMetadata>
     <metadata>
       <gbif>
-          <dateStamp>2019-08-15T03:52:48.181+02:00</dateStamp>
+          <dateStamp>2019-08-15T02:52:48.181+01:00</dateStamp>
           <hierarchyLevel>dataset</hierarchyLevel>
+          <dc:replaces>http://localhost:8080/ipt/resource?id=jrs_wetands_data_rwanda_2019/v1.1.xml</dc:replaces>
       </gbif>
     </metadata>
   </additionalMetadata>

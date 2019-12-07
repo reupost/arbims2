@@ -2,11 +2,11 @@
          xmlns:dc="http://purl.org/dc/terms/"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="eml://ecoinformatics.org/eml-2.1.1 http://rs.gbif.org/schema/eml-gbif-profile/1.1/eml.xsd"
-         packageId="http://arbmis.arcosnetwork.org/ipt/resource?id=rwanda-wetlands-biodiversity/v1.2" system="http://gbif.org" scope="system"
+         packageId="http://localhost:8080/ipt/resource?id=rwanda-wetlands-biodiversity/v1.3" system="http://gbif.org" scope="system"
          xml:lang="eng">
 
 <dataset>
-  <alternateIdentifier>http://arbmis.arcosnetwork.org/ipt/resource?r=rwanda-wetlands-biodiversity</alternateIdentifier>
+  <alternateIdentifier>http://localhost:8080/ipt/resource?r=rwanda-wetlands-biodiversity</alternateIdentifier>
   <title xml:lang="eng">Rwanda&apos;s wetlands biodiversity data from different inventories that were conducted between year 2008 and 2017</title>
       <creator>
     <individualName>
@@ -66,7 +66,7 @@
     <role>publisher</role>
       </associatedParty>
   <pubDate>
-      2018-11-06
+      2019-12-04
   </pubDate>
   <language>eng</language>
   <abstract>
@@ -136,8 +136,7 @@
       </personnel>
       <abstract>
         <para>The Africa Biodiversity Challenge (ABC) is a project funded by the JRS Biodiversity Foundation and coordinated by the South African Institute of Biodiversity (SANBI). The project has the object to enhance the capacity of African countries to develop and sustain national biodiversity informatics networks by building data management skills and communities of practice and to facilitate south-south cooperation to ensure data mobilization efforts address regional sustainable development agendas.
-Rwanda is one of the 3 run-ups in the competition that was initiated as part of this project and as such, the country participant organization (ARCOS and CoEB) and their partners have been mobilizing biodiversity data to facilitate informed decision making around issues related to environment management and development.
-</para>
+Rwanda is one of the 3 run-ups in the competition that was initiated as part of this project and as such, the country participant organization (ARCOS and CoEB) and their partners have been mobilizing biodiversity data to facilitate informed decision making around issues related to environment management and development.</para>
       </abstract>
       <funding>
         <para>The data mobilization component of this project has  been funded by the participant organizations (ARCOS and CoEB in the case of Rwanda). At the closing date of the competition, the winners will be awarded prizes ranging from $30,000 to $10,000 depending on performance.</para>
@@ -158,11 +157,11 @@ Rwanda is one of the 3 run-ups in the competition that was initiated as part of 
   <additionalMetadata>
     <metadata>
       <gbif>
-          <dateStamp>2018-11-06T11:14:50.247+01:00</dateStamp>
+          <dateStamp>2018-11-06T10:14:50.247+00:00</dateStamp>
           <hierarchyLevel>dataset</hierarchyLevel>
             <citation>Umurungi Y (2018): Rwanda&apos;s wetlands biodiversity data from different inventories that were conducted between year 2008 and 2017. v1.2. Centre of Excellence in Biodiversity and Natural Resources Management. Dataset/Occurrence. http://arbmis.arcosnetwork.org/ipt/resource?r=rwanda-wetlands-biodiversity&amp;v=1.2</citation>
           <resourceLogoUrl>http://arbmis.arcosnetwork.org/ipt/logo.do?r=rwanda-wetlands-biodiversity</resourceLogoUrl>
-          <dc:replaces>http://arbmis.arcosnetwork.org/ipt/resource?id=rwanda-wetlands-biodiversity/v1.2.xml</dc:replaces>
+          <dc:replaces>http://localhost:8080/ipt/resource?id=rwanda-wetlands-biodiversity/v1.3.xml</dc:replaces>
       </gbif>
     </metadata>
   </additionalMetadata>

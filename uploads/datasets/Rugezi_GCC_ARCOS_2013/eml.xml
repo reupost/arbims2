@@ -2,12 +2,12 @@
          xmlns:dc="http://purl.org/dc/terms/"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="eml://ecoinformatics.org/eml-2.1.1 http://rs.gbif.org/schema/eml-gbif-profile/1.1/eml.xsd"
-         packageId="55e3ccc2-3530-4c10-8476-346acac24741/v1.1" system="http://gbif.org" scope="system"
+         packageId="http://localhost:8080/ipt/resource?id=rugezi_gcc_arcos_2013/v1.2" system="http://gbif.org" scope="system"
          xml:lang="eng">
 
 <dataset>
   <alternateIdentifier>55e3ccc2-3530-4c10-8476-346acac24741</alternateIdentifier>
-  <alternateIdentifier>http://arbmis.arcosnetwork.org/ipt/resource?r=Rugezi_GCC_ARCOS_2013</alternateIdentifier>
+  <alternateIdentifier>http://localhost:8080/ipt/resource?r=rugezi_gcc_arcos_2013</alternateIdentifier>
   <title xml:lang="eng">Biodiversity survey of Rugezi wetland, Year 2013</title>
       <creator>
     <individualName>
@@ -49,7 +49,7 @@
     <role>user</role>
       </associatedParty>
   <pubDate>
-      2018-04-24
+      2019-12-04
   </pubDate>
   <language>eng</language>
   <abstract>
@@ -109,10 +109,10 @@ Its objective was to reduce pressure (encroachment and overharvesting of plants)
   <additionalMetadata>
     <metadata>
       <gbif>
-          <dateStamp>2014-09-10T11:07:18.368+02:00</dateStamp>
+          <dateStamp>2014-09-10T10:07:18.368+01:00</dateStamp>
           <hierarchyLevel>dataset</hierarchyLevel>
             <citation>Gashakamba F (2014): Biodiversity survey of Rugezi wetland, Year 2013. v1.1. Albertine Rift Conservation Society (ARCOS). Dataset/Occurrence. http://arbmis.arcosnetwork.org/ipt/resource?r=Rugezi_GCC_ARCOS_2013&amp;v=1.1</citation>
-          <dc:replaces>55e3ccc2-3530-4c10-8476-346acac24741/v1.1.xml</dc:replaces>
+          <dc:replaces>http://localhost:8080/ipt/resource?id=rugezi_gcc_arcos_2013/v1.2.xml</dc:replaces>
       </gbif>
     </metadata>
   </additionalMetadata>

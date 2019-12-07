@@ -29,7 +29,7 @@ function Library_SynchUserToLibrary($username, $email, $password) {
     foreach ($siteconfig['media_dbs'] as $theme => $dbname) {
         @mysqli_select_db($conn, $dbname) or die( "<p><b>DATABASE ERROR: </b>Unable to open database</p>");
         //first check if alreay there
-        $sql = "SELECT * from tblUsers WHERE login = '" . mysql_real_escape_string($username) . "'";
+        $sql = "SELECT * from tblUsers WHERE login = '" . mysqli_real_escape_string($conn,$username) . "'";
         $res = mysqli_query($conn,$sql);
         if (mysqli_fetch_row($res)) continue; //already in library user list
     
@@ -40,7 +40,7 @@ function Library_SynchUserToLibrary($username, $email, $password) {
         $language = $USER_SESSION['language'];
         $sql = "INSERT INTO tblusers (login, pwd, fullName, email, `language`, theme, comment, role, disabled, linkedaccount) ";
         $sql .= "VALUES (";
-        $sql .= "'" . mysqli_real_escape_string($conn,$username) . "','" . md5($password) . "','" . mysql_real_escape_string($username) . "',";
+        $sql .= "'" . mysqli_real_escape_string($conn,$username) . "','" . md5($password) . "','" . mysqli_real_escape_string($conn,$username) . "',";
         $sql .= "'" . mysqli_real_escape_string($conn,$email) . "','" . $language . "','" . $theme . "','" . $comment . "',";
         $sql .= $role . "," . $disabled . ", 1)";    
         $allok = mysqli_query($conn,$sql) && $allok;
@@ -54,7 +54,7 @@ function Library_DeleteUser($username) {
     global $conn;
     foreach ($siteconfig['media_dbs'] as $theme => $dbname) {
         @mysqli_select_db($conn,$dbname) or die( "<p><b>DATABASE ERROR: </b>Unable to open database</p>");
-        $sql = "DELETE FROM tblusers WHERE login = '" . mysql_real_escape_string($username) . "'";
+        $sql = "DELETE FROM tblusers WHERE login = '" . mysqli_real_escape_string($conn,$username) . "'";
         mysqli_query($conn,$sql);
     }
     return -1;
@@ -65,7 +65,7 @@ function Library_ActivateUser($username) {
     global $conn;
     foreach ($siteconfig['media_dbs'] as $theme => $dbname) {
         @mysqli_select_db($conn,$dbname) or die( "<p><b>DATABASE ERROR: </b>Unable to open database</p>");
-        $sql = "UPDATE tblusers SET disabled = 0 WHERE login = '" . mysql_real_escape_string($username) . "'";
+        $sql = "UPDATE tblusers SET disabled = 0 WHERE login = '" . mysqli_real_escape_string($conn,$username) . "'";
         mysqli_query($conn,$sql);
     }
     return -1;

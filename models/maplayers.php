@@ -198,8 +198,8 @@ class MapLayers extends Table_Base {
                 $sql .= "VALUES (";
                 $sql .= $fromrow['id'] . ",";
                 $sql .= $fromrow['layer_order'] . ",";
-                $sql .= "'" . mysql_real_escape_string($fromrow['displayname']) . "',";
-                $sql .= "'" . mysql_real_escape_string($fromrow['geoserver_name']) . "',";
+                $sql .= "'" . mysqli_real_escape_string($conn,$fromrow['displayname']) . "',";
+                $sql .= "'" . mysqli_real_escape_string($conn,$fromrow['geoserver_name']) . "',";
                 $sql .= ($fromrow['allow_display_albertine'] == 't'? 'true' : 'false') . ",";
                 $sql .= ($fromrow['allow_display_mountains'] == 't'? 'true' : 'false') . ",";
                 $sql .= ($fromrow['allow_display_lakes'] == 't'? 'true' : 'false') . ",";

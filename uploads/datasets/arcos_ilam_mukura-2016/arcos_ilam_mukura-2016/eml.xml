@@ -2,11 +2,11 @@
          xmlns:dc="http://purl.org/dc/terms/"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="eml://ecoinformatics.org/eml-2.1.1 http://rs.gbif.org/schema/eml-gbif-profile/1.1/eml.xsd"
-         packageId="http://arbmis.arcosnetwork.org/ipt/resource?id=arcos_ilam_mukura-2016/v1.0" system="http://gbif.org" scope="system"
+         packageId="http://localhost:8080/ipt/resource?id=arcos_ilam_mukura-2016/v1.4" system="http://gbif.org" scope="system"
          xml:lang="eng">
 
 <dataset>
-  <alternateIdentifier>http://arbmis.arcosnetwork.org/ipt/resource?r=arcos_ilam_mukura-2016</alternateIdentifier>
+  <alternateIdentifier>http://localhost:8080/ipt/resource?r=arcos_ilam_mukura-2016</alternateIdentifier>
   <title xml:lang="eng">Data from ILAM surveys conducted by ARCOS in Mukura landscape for year 2016</title>
       <creator>
     <individualName>
@@ -60,11 +60,11 @@
     <role>user</role>
       </associatedParty>
   <pubDate>
-      2018-04-24
+      2019-12-04
   </pubDate>
   <language>eng</language>
   <abstract>
-    <para>In the effort to promote informed policy and decision making and planning at different levels of the government, ARCOS conducts regular surveys in key landscapes in Rwanda. These studies follow a framework termed Integrated Landscape Assessment and Monitoring (ILAM) where biodiversity, ecosystem services and socio-economic aspects are looked at using indicators classified through the OECD&apos;s Pressure-State-Response model. This dataset therefore contains data generated through an ILAM study that was conducted by ARCOS in Mukura landscape (Rutsiro District) in the upstream part of Akagera river. The survey was conducted with funding support from the Rwanda’s Fund for Environment and Climate Change (FONERWA)under a project a project entitled &quot;Using Water_Energy_Food Security Nexus to Promote Climate Resilient Decisions and Model Actions in selected Landscapes along Akagera Basin&quot; </para>
+    <para>In the effort to promote informed policy and decision making and planning at different levels of the government, ARCOS conducts regular surveys in key landscapes in Rwanda. These studies follow a framework termed Integrated Landscape Assessment and Monitoring (ILAM) where biodiversity, ecosystem services and socio-economic aspects are looked at using indicators classified through the OECD&apos;s Pressure-State-Response model. This dataset therefore contains data generated through an ILAM study that was conducted by ARCOS in Mukura landscape (Rutsiro District) in the upstream part of Akagera river. The survey was conducted with funding support from the Rwanda’s Fund for Environment and Climate Change (FONERWA)under a project a project entitled &quot;Using Water_Energy_Food Security Nexus to Promote Climate Resilient Decisions and Model Actions in selected Landscapes along Akagera Basin&quot;</para>
   </abstract>
       <keywordSet>
             <keyword>Samplingevent</keyword>
@@ -121,7 +121,7 @@ The forest is know for its high degree of endemism both in its fauna and flora t
     <onlineUrl>http://arcosnetwork.org</onlineUrl>
       </contact>
   <project id="BID-AF2015-0115-REG">
-    <title>The Albertine Rift Biodiversity Data Mobilization Project </title>
+    <title>The Albertine Rift Biodiversity Data Mobilization Project</title>
       <personnel>
         <individualName>
             <givenName>Dr Sam</givenName>
@@ -146,7 +146,7 @@ Biodiversity Information for Development (BID)</para>
       <studyAreaDescription>
         <descriptor name="generic"
                     citableClassificationSystem="false">
-          <descriptorValue>Mukura landscape corresponds to Mukura forest catchment that covers parts of Rutsiro and Ngororero districts in Western Rwanda. Due to administrative and budgetary constraints, the project only focused on the parts of the landscape located in Rutsiro district. Mukura landscape features many tourism attractions including the shores of Lake Kivu, with several Islands, tea and coffee plantations, and Gishwati and Mukura natural forests where a habitat corridor has been planned to be established between the two forests. The landscape comprises of two major sub-basins that make part of Akagera basin namely Satinsyi and Secoko sub-basins; that cover an area of 50,193 ha. Rutsiro side of the landscape comprises Musogoro and Muregeya sub-basin that makes part of Kivu basin and covers a total area of 23,518 ha. Apart from Mukura natural forest, much of Mukura landscape consists of agro-ecosystems characterized by subsistence agriculture of various crops coupled with extensive cattle farming systems near Mukura forest. </descriptorValue>
+          <descriptorValue>Mukura landscape corresponds to Mukura forest catchment that covers parts of Rutsiro and Ngororero districts in Western Rwanda. Due to administrative and budgetary constraints, the project only focused on the parts of the landscape located in Rutsiro district. Mukura landscape features many tourism attractions including the shores of Lake Kivu, with several Islands, tea and coffee plantations, and Gishwati and Mukura natural forests where a habitat corridor has been planned to be established between the two forests. The landscape comprises of two major sub-basins that make part of Akagera basin namely Satinsyi and Secoko sub-basins; that cover an area of 50,193 ha. Rutsiro side of the landscape comprises Musogoro and Muregeya sub-basin that makes part of Kivu basin and covers a total area of 23,518 ha. Apart from Mukura natural forest, much of Mukura landscape consists of agro-ecosystems characterized by subsistence agriculture of various crops coupled with extensive cattle farming systems near Mukura forest.</descriptorValue>
         </descriptor>
       </studyAreaDescription>
       <designDescription>
@@ -190,9 +190,10 @@ Biodiversity Professional software (Lambshead at al. 1977) was used to plot the 
   <additionalMetadata>
     <metadata>
       <gbif>
-          <dateStamp>2018-04-24T10:00:00.079+02:00</dateStamp>
+          <dateStamp>2018-04-24T09:00:00.079+01:00</dateStamp>
           <hierarchyLevel>dataset</hierarchyLevel>
             <citation>Gashakamba F (2018): Data from ILAM surveys conducted by ARCOS in Mukura landscape for year 2016. v1.0. Albertine Rift Conservation Society (ARCOS). Dataset/Samplingevent. http://arbmis.arcosnetwork.org/ipt/resource?r=arcos_ilam_mukura-2016&amp;v=1.0</citation>
+          <dc:replaces>http://localhost:8080/ipt/resource?id=arcos_ilam_mukura-2016/v1.4.xml</dc:replaces>
       </gbif>
     </metadata>
   </additionalMetadata>

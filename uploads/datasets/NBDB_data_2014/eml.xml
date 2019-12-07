@@ -2,12 +2,12 @@
          xmlns:dc="http://purl.org/dc/terms/"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="eml://ecoinformatics.org/eml-2.1.1 http://rs.gbif.org/schema/eml-gbif-profile/1.1/eml.xsd"
-         packageId="026af01f-d227-476f-9e81-d5273eca6a2b/v1.2" system="http://gbif.org" scope="system"
+         packageId="http://localhost:8080/ipt/resource?id=nbdb_data_2014/v1.3" system="http://gbif.org" scope="system"
          xml:lang="eng">
 
 <dataset>
   <alternateIdentifier>026af01f-d227-476f-9e81-d5273eca6a2b</alternateIdentifier>
-  <alternateIdentifier>http://arbmis.arcosnetwork.org/ipt/resource?r=NBDB_data_2014</alternateIdentifier>
+  <alternateIdentifier>http://localhost:8080/ipt/resource?r=nbdb_data_2014</alternateIdentifier>
   <title xml:lang="eng">National Biodiversity Data Bank. Observation records, 1900-2014</title>
       <creator>
     <individualName>
@@ -53,7 +53,7 @@
     <role>pointOfContact</role>
       </associatedParty>
   <pubDate>
-      2018-04-08
+      2019-12-04
   </pubDate>
   <language>eng</language>
   <abstract>
@@ -144,10 +144,10 @@
   <additionalMetadata>
     <metadata>
       <gbif>
-          <dateStamp>2014-12-20T11:34:57.664+01:00</dateStamp>
+          <dateStamp>2014-12-20T10:34:57.664+00:00</dateStamp>
           <hierarchyLevel>dataset</hierarchyLevel>
             <citation>The National Biodiveristy Data Bank, data published in the ARCOS Biodiversity portal, 2014</citation>
-          <dc:replaces>026af01f-d227-476f-9e81-d5273eca6a2b/v1.2.xml</dc:replaces>
+          <dc:replaces>http://localhost:8080/ipt/resource?id=nbdb_data_2014/v1.3.xml</dc:replaces>
       </gbif>
     </metadata>
   </additionalMetadata>

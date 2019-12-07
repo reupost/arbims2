@@ -19,7 +19,15 @@ if (isset($argv)) {
 $key = (isset($_GET['key'])? $_GET['key'] : '');
 if ($key != 'ArbMisbuLLetiN') exit;
 
-mysql_connect($siteconfig['media_server'], $siteconfig['media_user'], $siteconfig['media_password']) OR DIE("<p><b>DATABASE ERROR: </b>Unable to connect to database server</p>");
+// Create connection
+$conn = new mysqli($siteconfig['media_server'], $siteconfig['media_user'], $siteconfig['media_password']);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+//mysql_connect($siteconfig['media_server'], $siteconfig['media_user'], $siteconfig['media_password']) OR DIE("<p><b>DATABASE ERROR: </b>Unable to connect to database server</p>");
 
 //generates the HTML bulletin for the active MySQL library DB
 //generates two copies, one in english, one in french;
@@ -32,7 +40,8 @@ function GenerateLibraryBulletins($library) {
     
     $bulletins = array();
     foreach ($langs as $lang) {
-        
+        global $conn;
+
         $bulletin = "";        
         $bulletin .= "<h2>" . htmlspecialchars(getMLtext($library, null, null, $lang)) . "</h2>";
         $bulletin .= "<p>" . htmlspecialchars(getMLtext("bulletin_intro", null, null, $lang)) . "</p>";
@@ -58,11 +67,11 @@ function GenerateLibraryBulletins($library) {
         $sql .= "ON d.id = lsdoc.documentid ";
         $sql .= "WHERE (lsdoc.`status` = 2 AND datediff(now(), FROM_UNIXTIME(d.`date`)) < " . $DOCS_TO_INCLUDE_AGE_MAX . ") ";
         $sql .= "ORDER BY d.`name` ASC;";
-        $res = mysql_query($sql);
+        $res = mysqli_query($conn,$sql);
         if (!$res) return 0; //SQL error
 
         $doccount = 0;
-        while ($doc = mysql_fetch_array($res)) {
+        while ($doc = mysqli_fetch_array($res)) {
             $doccount++;
             $bulletin .= "<tr>";
             $bulletin .= "<td>" . $doc['date_formatted'] . "</td>";
@@ -92,14 +101,15 @@ function GenerateLibraryBulletins($library) {
 function SendLibraryBulletin($library, $bulletin_en, $bulletin_fr, $log = true) {     
     global $siteconfig;
     global $mail;
-    
+    global $conn;
+
     $sql = "SELECT id, fullName, email, login, language FROM tblusers WHERE (disabled = 0 AND bulletin = 1 AND IFNULL(email,'') > '')";
-    $res = mysql_query($sql);
+    $res = mysqli_query($conn,$sql);
     if (!$res) return 0; //SQL error
     
     $mailcount = 0;
     $failcount = 0;
-    while ($usr = mysql_fetch_array($res)) {
+    while ($usr = mysqli_fetch_array($res)) {
         $mail->addAddress($usr['email'], $usr['fullName']);
         $mail->Subject = getMLtext('bulletin_title', null, null, $usr['language']);
         switch ($usr['language']) {
@@ -140,7 +150,7 @@ $mail->setFrom('no-reply@arbims.arcosnetwork.org', 'ARBIMS bulletin');
 $mail->addReplyTo('bounce@arbims.arcosnetwork.org', 'Bounce');
 
 foreach ($siteconfig['media_dbs'] as $theme => $dbname) {            
-    @mysql_select_db($dbname) or die( "<p><b>DATABASE ERROR: </b>Unable to open database</p>");
+    @mysqli_select_db($conn,$dbname) or die( "<p><b>DATABASE ERROR: </b>Unable to open database</p>");
     $bulletins = GenerateLibraryBulletins($dbname);
     if (is_array($bulletins)) { //are documents in bulletin        
         $bulletinresults = SendLibraryBulletin($dbname, $bulletins[0], $bulletins[1]);        

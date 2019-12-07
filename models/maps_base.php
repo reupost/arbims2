@@ -150,7 +150,7 @@ class MapController {
             <script type='text/javascript' src='js/jquery-ui/jquery-ui.min.js'></script>
             <link rel='stylesheet' type='text/css' media='screen' href='js/jquery-ui/jquery-ui.css' />
             <script type='text/javascript' src='lib/openlayers/OpenLayers.js'></script>
-            <script type='text/javascript' src='http://maps.google.com/maps/api/js?v=3&amp;sensor=false'></script>");
+            <script type='text/javascript' src='https://maps.googleapis.com/maps/api/js?key=" . $siteconfig['google_maps_api_key'] . "'></script>");
         $tpl->set('site_user', $USER_SESSION);
         $tpl->set('region', $this->region);
 

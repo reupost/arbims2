@@ -2,12 +2,12 @@
          xmlns:dc="http://purl.org/dc/terms/"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="eml://ecoinformatics.org/eml-2.1.1 http://rs.gbif.org/schema/eml-gbif-profile/1.1/eml.xsd"
-         packageId="4a7f53e7-3835-4f02-ad40-cf6e5219d910/v1.1" system="http://gbif.org" scope="system"
+         packageId="http://localhost:8080/ipt/resource?id=coeb-ur-abc-2018/v1.2" system="http://gbif.org" scope="system"
          xml:lang="eng">
 
 <dataset>
   <alternateIdentifier>4a7f53e7-3835-4f02-ad40-cf6e5219d910</alternateIdentifier>
-  <alternateIdentifier>http://arbmis.arcosnetwork.org/ipt/resource?r=coeb-ur-abc-2018</alternateIdentifier>
+  <alternateIdentifier>http://localhost:8080/ipt/resource?r=coeb-ur-abc-2018</alternateIdentifier>
   <title xml:lang="eng">Freshwater biodiversity of Rwanda, data recorded from theses of students of University of Rwanda (UR)</title>
       <creator>
     <individualName>
@@ -62,7 +62,7 @@
     <role>user</role>
       </associatedParty>
   <pubDate>
-      2018-07-26
+      2019-12-04
   </pubDate>
   <language>eng</language>
   <abstract>
@@ -72,10 +72,6 @@ The data was digitized from memoirs and theses of graduates from the university 
       <keywordSet>
             <keyword>Occurrence</keyword>
         <keywordThesaurus>GBIF Dataset Type Vocabulary: http://rs.gbif.org/vocabulary/gbif/dataset_type.xml</keywordThesaurus>
-      </keywordSet>
-      <keywordSet>
-            <keyword>Observation</keyword>
-        <keywordThesaurus>GBIF Dataset Subtype Vocabulary: http://rs.gbif.org/vocabulary/gbif/dataset_subtype.xml</keywordThesaurus>
       </keywordSet>
   <intellectualRights>
     <para>This work is licensed under a <ulink url="http://creativecommons.org/licenses/by/4.0/legalcode"><citetitle>Creative Commons Attribution (CC-BY) 4.0 License</citetitle></ulink>.</para>
@@ -144,9 +140,9 @@ The data was digitized from memoirs and theses of graduates from the university 
   <additionalMetadata>
     <metadata>
       <gbif>
-          <dateStamp>2018-05-08T05:42:37.282+02:00</dateStamp>
+          <dateStamp>2018-05-08T04:42:37.282+01:00</dateStamp>
           <hierarchyLevel>dataset</hierarchyLevel>
-          <dc:replaces>4a7f53e7-3835-4f02-ad40-cf6e5219d910/v1.1.xml</dc:replaces>
+          <dc:replaces>http://localhost:8080/ipt/resource?id=coeb-ur-abc-2018/v1.2.xml</dc:replaces>
       </gbif>
     </metadata>
   </additionalMetadata>

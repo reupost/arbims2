@@ -2,11 +2,11 @@
          xmlns:dc="http://purl.org/dc/terms/"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="eml://ecoinformatics.org/eml-2.1.1 http://rs.gbif.org/schema/eml-gbif-profile/1.1/eml.xsd"
-         packageId="http://arbmis.arcosnetwork.org/ipt/resource?id=echuya-data-2018/v1.0" system="http://gbif.org" scope="system"
+         packageId="http://localhost:8080/ipt/resource?id=echuya-data-2018/v1.1" system="http://gbif.org" scope="system"
          xml:lang="eng">
 
 <dataset>
-  <alternateIdentifier>http://arbmis.arcosnetwork.org/ipt/resource?r=echuya-data-2018</alternateIdentifier>
+  <alternateIdentifier>http://localhost:8080/ipt/resource?r=echuya-data-2018</alternateIdentifier>
   <title xml:lang="eng">Echuya Bird Species Survey 2018</title>
       <creator>
     <individualName>
@@ -41,16 +41,16 @@
       <surName>Gashakamba</surName>
     </individualName>
     <organizationName>ARCOS</organizationName>
-    <positionName> Contact</positionName>
+    <positionName>Contact</positionName>
     <electronicMailAddress>gashakamba@gmail.com</electronicMailAddress>
     <role>user</role>
       </associatedParty>
   <pubDate>
-      2018-11-19
+      2019-12-04
   </pubDate>
   <language>eng</language>
   <abstract>
-    <para>Bird species surveys carried out in different habitats of Echuya montane forest in Kabale and Kisoro districts on November 9 - 10. </para>
+    <para>Bird species surveys carried out in different habitats of Echuya montane forest in Kabale and Kisoro districts on November 9 - 10.</para>
   </abstract>
       <keywordSet>
             <keyword>Echuya community forest reserve biodiversity birds monitoring survey 2018 point count along transect natural resources threats ILAM pressure state response</keyword>
@@ -171,9 +171,10 @@ Any visible threats in each point count were recorded and assessed on a scale of
   <additionalMetadata>
     <metadata>
       <gbif>
-          <dateStamp>2018-11-15T09:59:43.042+01:00</dateStamp>
+          <dateStamp>2018-11-15T08:59:43.042+00:00</dateStamp>
           <hierarchyLevel>dataset</hierarchyLevel>
             <citation>Vainauskas S, Sindikubwabo M (2018): Echuya Bird Species Survey 2018. v1.0. Albertine Rift Conservation Society (ARCOS). Dataset/Occurrence. http://arbmis.arcosnetwork.org/ipt/resource?r=echuya-data-2018&amp;v=1.0</citation>
+          <dc:replaces>http://localhost:8080/ipt/resource?id=echuya-data-2018/v1.1.xml</dc:replaces>
       </gbif>
     </metadata>
   </additionalMetadata>

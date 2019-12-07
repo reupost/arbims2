@@ -2,11 +2,11 @@
          xmlns:dc="http://purl.org/dc/terms/"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="eml://ecoinformatics.org/eml-2.1.1 http://rs.gbif.org/schema/eml-gbif-profile/1.1/eml.xsd"
-         packageId="http://arbmis.arcosnetwork.org/ipt/resource?id=bugesera_ilam_data_2017/v1.1" system="http://gbif.org" scope="system"
+         packageId="http://localhost:8080/ipt/resource?id=bugesera_ilam_data_2017/v1.2" system="http://gbif.org" scope="system"
          xml:lang="eng">
 
 <dataset>
-  <alternateIdentifier>http://arbmis.arcosnetwork.org/ipt/resource?r=bugesera_ilam_data_2017</alternateIdentifier>
+  <alternateIdentifier>http://localhost:8080/ipt/resource?r=bugesera_ilam_data_2017</alternateIdentifier>
   <title xml:lang="eng">Data from ILAM surveys conducted by ARCOS in Bugesera landscape for year 2017</title>
       <creator>
     <individualName>
@@ -63,7 +63,7 @@
     <role>pointOfContact</role>
       </associatedParty>
   <pubDate>
-      2018-11-12
+      2019-12-04
   </pubDate>
   <language>eng</language>
   <abstract>
@@ -174,11 +174,11 @@ In that regard, a set of 25 indicators have been identified to cover biodiversit
   <additionalMetadata>
     <metadata>
       <gbif>
-          <dateStamp>2018-11-12T07:40:25.174+01:00</dateStamp>
+          <dateStamp>2018-11-12T06:40:25.174+00:00</dateStamp>
           <hierarchyLevel>dataset</hierarchyLevel>
             <citation>Kubwimana J P (2018): Data from ILAM surveys conducted by ARCOS in Bugesera landscape for year 2017. v1.1. Albertine Rift Conservation Society (ARCOS). Dataset/Samplingevent. http://arbmis.arcosnetwork.org/ipt/resource?r=bugesera_ilam_data_2017&amp;v=1.1</citation>
           <resourceLogoUrl>http://arbmis.arcosnetwork.org/ipt/logo.do?r=bugesera_ilam_data_2017</resourceLogoUrl>
-          <dc:replaces>http://arbmis.arcosnetwork.org/ipt/resource?id=bugesera_ilam_data_2017/v1.1.xml</dc:replaces>
+          <dc:replaces>http://localhost:8080/ipt/resource?id=bugesera_ilam_data_2017/v1.2.xml</dc:replaces>
       </gbif>
     </metadata>
   </additionalMetadata>

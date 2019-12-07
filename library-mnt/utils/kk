@@ -1,1 +1,0 @@
-php -f importfs.php -- --config /home/www-data/netfm/www/conf/settings.xml -d /tmp/test -F 1

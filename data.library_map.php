@@ -45,32 +45,39 @@ function GetLibraryDocsForMapFeature ($arrlibraries, $fid) {
     $doclinks = array();
     
     if (sizeof($arrlibraries) == 0) return $doclinks; //no libraries
-        
-    mysql_connect($siteconfig['media_server'], $siteconfig['media_user'], $siteconfig['media_password']) OR DIE("<p><b>DATABASE ERROR: </b>Unable to connect to database server</p>");
+
+    // Create connection
+    $conn = new mysqli($siteconfig['media_server'], $siteconfig['media_user'], $siteconfig['media_password']);
+
+// Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+    //mysql_connect($siteconfig['media_server'], $siteconfig['media_user'], $siteconfig['media_password']) OR DIE("<p><b>DATABASE ERROR: </b>Unable to connect to database server</p>");
     
     //get layer geoserver name from fid
     $layerid = 0;
             
     foreach ($arrlibraries as $librarydb) {
     
-        @mysql_select_db($librarydb) or die( "<p><b>DATABASE ERROR: </b>Unable to open database</p>");
+        @mysqli_select_db($conn,$librarydb) or die( "<p><b>DATABASE ERROR: </b>Unable to open database</p>");
     
         $libraryURL = str_replace("_","-",$librarydb); //note: this relies on the DB and the URL being simply related
     
         if ($layerid == 0) { //haven't found layer id - should be same in all dbs so jsut use first
             $fidbits = explode('.',$fid);
             $sql = "SELECT id FROM tblgislayer WHERE geoserver_name = CONCAT('cite:','" . $fidbits[0] . "')";    
-            $res = mysql_query($sql);
+            $res = mysqli_query($conn,$sql);
             if (!$res) return "SQL error";
-            while ($row = mysql_fetch_array($res)) { //should only be one
+            while ($row = mysqli_fetch_array($res)) { //should only be one
                 $layerid = $row['id'];
             }
         }
         //linked to actual feature
-        $sql = "SELECT * FROM tbldocuments WHERE linkedgisfeature = '" . mysql_real_escape_string($fid) . "' ORDER BY `name` ASC ";    
-        $res = mysql_query($sql);
+        $sql = "SELECT * FROM tbldocuments WHERE linkedgisfeature = '" . mysqli_real_escape_string($conn,$fid) . "' ORDER BY `name` ASC ";
+        $res = mysqli_query($conn,$sql);
         if (!$res) return "SQL error";
-        while ($row = mysql_fetch_array($res)) {        
+        while ($row = mysqli_fetch_array($res)) {
             $doclink = array();
             $doclink['library'] = $librarydb;
             $doclink['type'] = getMLtext('map_feature');
@@ -81,9 +88,9 @@ function GetLibraryDocsForMapFeature ($arrlibraries, $fid) {
     
         //linked to parent layer
         $sql = "SELECT * FROM tbldocuments WHERE ((IFNULL(linkedgisfeature,'')='' OR linkedgisfeature='0') AND linkedgislayer = " . $layerid . ") ORDER BY `name` ASC";    
-        $res = mysql_query($sql);
+        $res = mysqli_query($conn,$sql);
         if (!$res) return "SQL error";
-        while ($row = mysql_fetch_array($res)) {
+        while ($row = mysqli_fetch_array($res)) {
             $doclink = array();
             $doclink['library'] = $librarydb;
             $doclink['type'] = getMLtext('map_layer');
