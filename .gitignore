@@ -4,5 +4,5 @@ library-eia*
 library-lake*
 library-mnt*
 library-land*
-tmp*
-uploads*
+tmp/*
+uploads/*
