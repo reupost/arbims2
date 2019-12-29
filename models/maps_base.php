@@ -160,6 +160,7 @@ class MapController {
         $bdy->set('params', $params);
         $bdy->set('occ_legend', $occ_legend);
         $bdy->set('adv_criteria', $adv_criteria);
+        $bdy->set('display_occurrence_selected', $siteconfig['display_occurrence_selected']);
 
         /* link everything together */
         $tpl->set('sf_content', $bdy);

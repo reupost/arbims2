@@ -49,15 +49,19 @@
     outline:0 none
 }
 
-#spp_acc a.trigger {display:block; padding-left:20px; background-image: url(images/plus.gif); background-repeat: no-repeat; background-position: 1px 50%;  font-weight:700}
+#spp_acc a.trigger {display:block; padding-left:20px; background-image: url('../images/plus.gif'); background-repeat: no-repeat; background-position: 1px 50%;  font-weight:700}
 
-#spp_acc a.trigger.open {background-image: url(images/minus.gif)}
+#spp_acc a.trigger.open {
+    background-image: url('../images/minus.gif');
+    color: #f72;
+    border-color:#dadada;
+    background-color:#e7e7e7
+}
 
 #spp_acc .last-child #species_accordion a.trigger{padding-left:1px; background-image:none; font-weight:normal}
 
 #spp_acc a.trigger {background-color:#f0f0f0}
 
-#spp_acc a.trigger.open {border-color:#dadada; background-color:#e7e7e7}
 
 #spp_acc a:hover.trigger.open, #spp_acc a:focus.trigger.open, #spp_acc a:active.trigger.open {
     border-color:#bcd

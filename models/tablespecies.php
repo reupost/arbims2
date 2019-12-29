@@ -87,12 +87,12 @@ class TableSpecies extends Table_Base {
                 }
                 
             } elseif ($fieldalias == "taxon") {
-                $taxon_epithet = ucfirst(strtolower($value[0]));
+                $taxon_epithet = $value[0]; //ucfirst(strtolower($value[0]));
                 $parent_epithet = ucfirst(strtolower($value[2]));
                 $rank = strtolower($value[1]);
                 $rankpos = array_search($rank, $siteconfig['taxonranks']);
                 if (!$rankpos) return; //invalid OR *root*
-                if ($rank == 'species') $taxon_epithet = strtolower($taxon_epithet);
+                //if ($rank == 'species') $taxon_epithet = strtolower($taxon_epithet);
                 if ($rank == 'kingdom') { //no higher rank to search
                     $this->whereclause[] = "\"" . $rank . "\" = '" . $taxon_epithet . "'";
                 } else {
@@ -116,13 +116,13 @@ class TableSpecies extends Table_Base {
         
     //return a dataset of the child elements for a particular taxon, and its eventual number of species and related occurrence records
     //can select from the taxonomic backbone, other taxon datasets, or both
-    //because of case-sensistive joins, taxon and occurrence tables are assumed to be preprocessed to standardise to initial capitals
+    //because of case-sensitive joins, taxon and occurrence tables are assumed to be preprocessed to standardise to initial capitals
     //includeOccTaxa = the dataset may also contain occurrence-derived taxa (taxa mentioned in the occurrence table that
     //are not present in the taxon table): these are listed at the end with NULL values for numspecies
     //region: region (to only get species from datasets applicable to the region) or '' for aggregate list
     private function GetChildrenOf($region, $taxon_epithet, $rank, $taxonomicBackbone = true, $otherTaxonData = false, $includeOccTaxa = false) {
         global $siteconfig;
-        $taxon_epithet = ucfirst(strtolower($taxon_epithet));
+        //$taxon_epithet = ucfirst(strtolower($taxon_epithet));
         $rank = strtolower($rank);
         if (!($taxonomicBackbone || $otherTaxonData))
             return array(); //bad call: no datasets selected
@@ -170,7 +170,7 @@ class TableSpecies extends Table_Base {
             }
             $sql .= "GROUP BY (_datasetid = '" . self::TAXON_BACKBONE . "'), ";
             if ($rank != '*root*') $sql .= "\"" . $rank . "\", ";
-            $sql .= $childrank . "\" HAVING ";
+            $sql .= $childrank . " HAVING ";
             if ($taxonomicBackbone) 
                 $sql .= "(_datasetid = '" . self::TAXON_BACKBONE . "') = true ";
             if ($otherTaxonData) 
@@ -202,7 +202,7 @@ class TableSpecies extends Table_Base {
         if ($rank != '*root*') $sql .= "tax.\"" . $rank . "\" = occ._" . $rank . " AND ";
         $sql .= "tax.\"" . $siteconfig['taxonranks'][$rankpos + 1] . "\" = occ._" . $siteconfig['taxonranks'][$rankpos + 1] . " ";
         $sql .= "ORDER BY tax." . $childrank . ", occ._" . $siteconfig['taxonranks'][$rankpos + 1] . " ASC";
-        //if ($rank=='genus' && $taxon_epithet=='Cercopithecus') echo $sql;
+        //if ($rank=='kingdom' ) echo $sql;
         $res = pg_query_params($sql, array());
         if (!$res) return array(); //error
         $resarr = array();
@@ -264,13 +264,13 @@ class TableSpecies extends Table_Base {
         }
         return $numspecies;
     }
-    //decide:
-    //use ajax or load everything up-front
-    //cache totals (update whenever dataset changes), or calc on the fly
+
+    //can now use ajax or load everything up-front
+    //decide: cache totals (update whenever dataset changes), or calc on the fly
     //recursive function to get accordion text for all entries below a particular entry
-    function GetAccordionBelow($region = '', $taxon_epithet = '', $rank = '*root*', $taxonomicBackbone = true, $otherTaxonData = false, $includeOccTaxa = false, $current_link='') {
+    function GetAccordionBelow($region = '', $taxon_epithet = '', $rank = '*root*', $taxonomicBackbone = true, $otherTaxonData = false, $includeOccTaxa = false, $ajax = false, $current_link='') {
         global $siteconfig;
-        $taxon_epithet = ucfirst(strtolower($taxon_epithet));
+        //$taxon_epithet = ucfirst(strtolower($taxon_epithet));
         $rank = strtolower($rank);
         if (!($taxonomicBackbone || $otherTaxonData))
             return ''; //bad call: no datasets allowed
@@ -280,12 +280,12 @@ class TableSpecies extends Table_Base {
 
         $child_count = 0;
         $accordion = '';
-        $rankpos = array_search($rank, $siteconfig['taxonranks']);
         $childrank = $siteconfig['taxonranks'][$rankpos + 1];
         $res = $this->GetChildrenOf($region, $taxon_epithet, $rank, $taxonomicBackbone, $otherTaxonData, $includeOccTaxa);
         foreach ($res as $row) {        
             $child_count++;
             $child_link = $current_link . '_' . $child_count; //for navigation
+            if (substr($child_link,0,4) != 'link') $child_link = 'link' . $child_link;
             $child = (empty($row[3]) ? $row[1] : $row[3]);
             if ($childrank == 'species') {
                 //extra field returned for synonym of                
@@ -305,9 +305,9 @@ class TableSpecies extends Table_Base {
                     $taxondatasetparam .= "&x_datasetid=" . self::TAXON_BACKBONE;       
             }
             $numspecies = $this->GetSpeciesTreeCount($region, $child, $siteconfig['taxonranks'][$rankpos + 1], $taxonomicBackbone, $otherTaxonData, $includeOccTaxa);
-            if ($rank != '*root*') $accordion .= "<ul>"; // "<div class='inner'><ul>";
+            if ($rank != '*root*') $accordion .= "<ul style='display:block'>"; // "<div class='inner'><ul>";
             //$accordion .= "<li><h5>" . ucfirst(getMLtext('taxon_' . $siteconfig['taxonranks'][$rankpos + 1])) . ": " . $displayname;
-            $accordion .= "<li><a href='out.speciestree." . $region . ".php#link" . $child_link . "'>" . ucfirst(getMLtext('taxon_' . $siteconfig['taxonranks'][$rankpos + 1])) . ": " . $displayname . "</a>";
+            $accordion .= "<li><a href='out.speciestree." . $region . ".php#" . $child_link . "' class='trigger'>" . ucfirst(getMLtext('taxon_' . $siteconfig['taxonranks'][$rankpos + 1])) . ": " . $displayname . "</a>";
             $accordion .= "<span class='species_links'>";
             if ($siteconfig['taxonranks'][$rankpos + 1] == 'species') {
                 $accordion .= " &nbsp; ";
@@ -322,7 +322,9 @@ class TableSpecies extends Table_Base {
             } 
             //$accordion .= "</span></h5>";
             $accordion .= "</span>";
-            $accordion .= $this->GetAccordionBelow($region, $child, $siteconfig['taxonranks'][$rankpos + 1], $taxonomicBackbone, $otherTaxonData, $includeOccTaxa, $child_link);
+            if (!$ajax) {
+                $accordion .= $this->GetAccordionBelow($region, $child, $siteconfig['taxonranks'][$rankpos + 1], $taxonomicBackbone, $otherTaxonData, $includeOccTaxa, $child_link);
+            }
             $accordion .= "</li>";
             if ($rank != '*root*') $accordion .= "</ul>"; //"</ul></div>";
         }

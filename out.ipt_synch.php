@@ -11,10 +11,17 @@ define('TAXONOMIC_BACKBONE','taxonomicbackbone');
 
 $OUTPUT = "";
 
+$DEBUGGING = true;
+$VERBOSE = true;
+
 //flatten metadata xml and put into db as <attrib><value> pairs
 //return -1 on success, 0 on failure
 function ProcessDwCMetadata($metadatafile, $datasetid) {
-    
+	global $DEBUGGING;
+	if ($DEBUGGING) {
+		echo date("h:i:sa") . ": ProcessDwCMetadata - Enter - [" . $metadatafile . ", " . $datasetid . "]<br/>";
+		myFlush();
+	}
     $filename = GetFileWithoutExtFromPath($metadatafile);
     //clear any existing metadata for the dataset
     pg_query_params("DELETE FROM datasetmetadata WHERE (datasetid = $1 AND strfile = $2)", array($datasetid, $filename));
@@ -35,12 +42,21 @@ function ProcessDwCMetadata($metadatafile, $datasetid) {
     foreach ($meta_flat as $key=>$value) {
         pg_query_params("INSERT INTO datasetmetadata (datasetid, strfile, strattribute, strvalue) VALUES ($1, $2, $3, $4)", array($datasetid, $filename, $key, $value));
     }
+	if ($DEBUGGING) {
+		echo date("h:i:sa") . ": ProcessDwCMetadata - Leave<br/>";
+		myFlush();
+	}
     return -1;
 }
 
 //create SQL file from archive; run the SQL file (loading it into the limbo schema)
 //return 0 on error or -1 on success (if error then $errormsg is set to aggregated command output
 function ProcessDwCRecords($archive, $datasetid, &$errormsg) {
+	global $DEBUGGING;
+	if ($DEBUGGING) {
+		echo date("h:i:sa") . ": ProcessDwCRecords - Enter - [" . $datasetid . "]<br/>";
+		myFlush();
+	}
     global $siteconfig;
     
     $sqlfile = $archive . ".sql";
@@ -73,7 +89,9 @@ function ProcessDwCRecords($archive, $datasetid, &$errormsg) {
     //import SQL into 'limbo' schema as a single transaction
     //NOTE: user for this command only has rights to limbo schema
     $output2 = array();
-	echo "\"" . $siteconfig['path_psql_exe'] . "\" -U " . $siteconfig['limbo_user'] . " -d " . $siteconfig['dwc_db'] . " -1 -f \"" . $sqlfile . "\" -p " . $siteconfig['dwc_port'];
+	if ($DEBUGGING) {
+		echo "\"" . $siteconfig['path_psql_exe'] . "\" -U " . $siteconfig['limbo_user'] . " -d " . $siteconfig['dwc_db'] . " -1 -f \"" . $sqlfile . "\" -p " . $siteconfig['dwc_port'] . "<br/>";
+	}
 	
     exec("\"" . $siteconfig['path_psql_exe'] . "\" -U " . $siteconfig['limbo_user'] . " -d " . $siteconfig['dwc_db'] . " -1 -f \"" . $sqlfile . "\" -p " . $siteconfig['dwc_port'], $output2);
     if (isset($output2[0])) {
@@ -86,6 +104,10 @@ function ProcessDwCRecords($archive, $datasetid, &$errormsg) {
         return 0;
     }
     
+	if ($DEBUGGING) {
+		echo date("h:i:sa") . ": ProcessDwCRecords - Leave<br/>";
+		myFlush();
+	}
     return -1; //success
 }
 
@@ -93,6 +115,11 @@ function ProcessDwCRecords($archive, $datasetid, &$errormsg) {
 //unzip an archive file, and then update the db with the metadata and the DwC records
 //returns -1 on success, 0 on failure
 function ProcessDwCArchive($datasetid, $archive) {
+	global $DEBUGGING;
+	if ($DEBUGGING) {
+		echo date("h:i:sa") . ": ProcessDwCArchive - Enter - [" . $datasetid . "]<br/>";
+		myFlush();
+	}
     global $OUTPUT;
     $folderto = pathinfo(realpath($archive), PATHINFO_DIRNAME);
     $thefile = strtolower(GetFileFromPath($archive));    
@@ -112,6 +139,10 @@ function ProcessDwCArchive($datasetid, $archive) {
         $res3 = ProcessDwCRecords($archive, $datasetid, $errormsg);        
         if ($errormsg != "") $OUTPUT .= getMLtext("ipt_sync_import_dataset_error") . ": " . $errormsg . "<br/>";
     }
+	if ($DEBUGGING) {
+		echo date("h:i:sa") . ": ProcessDwCArchive - Leave<br/>";
+		myFlush();
+	}
     return (($res1 || $res2) && $res3); //need at least one metadata file and main dataset to pass
 }
 
@@ -121,17 +152,32 @@ function ProcessDwCArchive($datasetid, $archive) {
  * returns 99 if error
  */
 function GetIPTResourceStatus($link, $newtimestamp) {
+	global $DEBUGGING;
+	if ($DEBUGGING) {
+		echo date("h:i:sa") . ": GetIPTResourceStatus - Enter - [" . $link . "]<br/>";
+		myFlush();
+	}
     global $OUTPUT;
     $result = pg_query_params("SELECT * FROM dataset WHERE (link = $1)", array($link));    
     $row = pg_fetch_array($result); //should only be one (at most)
     if (!$row) return 1; //resource is not in DB    
     if ($row["date_timestamp"] >= $newtimestamp) return -1; //already up to date
+	if ($DEBUGGING) {
+		echo date("h:i:sa") . ": GetIPTResourceStatus - Leave<br/>";
+		myFlush();
+	}
     return 0; //out of date
 }
 
 //updates the list of datasets from the IPT RSS feed.
 //returns -1 on success, 0 on failure
 function UpdateIPTResourcesStatus($iptRSS = "") {
+	global $DEBUGGING;
+	if ($DEBUGGING) {
+		echo date("h:i:sa") . ": UpdateIPTResourcesStatus - Enter - [" . $iptRSS . "]<br/>";
+		myFlush();
+	}
+	
     global $siteconfig;
     global $OUTPUT;
     if ($iptRSS == "") $iptRSS = $siteconfig['path_ipt'] . "/rss.do";
@@ -174,12 +220,21 @@ function UpdateIPTResourcesStatus($iptRSS = "") {
     } else {
         $res = pg_query_params("UPDATE dataset SET toremove = true", array()); //all gone
     }
+	if ($DEBUGGING) {
+		echo date("h:i:sa") . ": UpdateIPTResourcesStatus - Leave<br/>";
+		myFlush();
+	}
     return -1;
 }
 
 //downloads the IPT archive from the IPT server
 //side-effect: updated localfilepath in dataset table, returns this path or "" if failure
 function DownloadIPTArchive($dwcaURL, $emlURL) {
+	global $DEBUGGING;
+	if ($DEBUGGING) {
+		echo date("h:i:sa") . ": DownloadIPTArchive - Enter - [" . $dwcaURL . ", " . $emlURL . "]<br/>";
+		myFlush();
+	}
     global $siteconfig;
     
     if ($dwcaURL > '') {
@@ -212,7 +267,11 @@ function DownloadIPTArchive($dwcaURL, $emlURL) {
         $res = file_put_contents($filenamewithpath, fopen($emlURL, 'r'));
         if ($res === FALSE) return ""; //error
         pg_query_params("UPDATE dataset SET localfilepath = $1 WHERE (eml = $2)", array($filenamewithpath, $emlURL));
-    }
+    }	
+	if ($DEBUGGING) {
+		echo date("h:i:sa") . ": DownloadIPTArchive - Leave<br/>";
+		myFlush();
+	}
     return $filenamewithpath;
 }
 
@@ -231,6 +290,11 @@ function GetFieldNameArray($table) {
 //compares two tables and returns an array of fields from $table that are present in $tablefilter and of the same type
 //reserved fields in tablefilter are prefixed with '_' and are not available to be copied from table
 function GetValidFieldNameArrayUsingTypeMatch($table, $tablefilter) {
+	global $DEBUGGING;
+	if ($DEBUGGING) {
+		echo date("h:i:sa") . ": GetValidFieldNameArrayUsingTypeMatch - Enter - [" . $table . ", " . $tablefilter . "]<br/>";
+		myFlush();
+	}
     global $OUTPUT;
     $templatefields = array();
     $acceptablefields = array();
@@ -264,12 +328,21 @@ function GetValidFieldNameArrayUsingTypeMatch($table, $tablefilter) {
         }
         $i++;
     }
+	if ($DEBUGGING) {
+		echo date("h:i:sa") . ": GetValidFieldNameArrayUsingTypeMatch - Leave<br/>";
+		myFlush();
+	}
     return $acceptablefields;
 }
 
 //compares two tables and returns an array of fields from $table that are present in $tablefilter and ignoring type (destination table uses text fields only)
 //reserved fields in tablefilter are prefixed with '_' and are not available to be copied from table
 function GetValidFieldNameArrayWithoutTypeMatch($table, $tablefilter) {
+	global $DEBUGGING;
+	if ($DEBUGGING) {
+		echo date("h:i:sa") . ": GetValidFieldNameArrayWithoutTypeMatch - Enter - [" . $table . ", " . $tablefilter . "]<br/>";
+		myFlush();
+	}
     $templatefields = array();
     $acceptablefields = array();
     
@@ -297,6 +370,10 @@ function GetValidFieldNameArrayWithoutTypeMatch($table, $tablefilter) {
         }
         $i++;
     }
+	if ($DEBUGGING) {
+		echo date("h:i:sa") . ": GetValidFieldNameArrayWithoutTypeMatch - Leave<br/>";
+		myFlush();
+	}
     return $acceptablefields;
 }
 
@@ -325,6 +402,11 @@ function GetPrimaryKeyFirstField($table) {
 //populate metadata coordinate info for a dataset, or all occurrence records
 //returns -1 on success, 0 on failure
 function PopulateCoordinates($datasetid = "") {
+	global $DEBUGGING;
+	if ($DEBUGGING) {
+		echo date("h:i:sa") . ": PopulateCoordinates - Enter [" . $datasetid . "]<br/>";
+		myFlush();
+	}
     $overallres = -1;
     if ($datasetid != "") {
         $res = pg_query_params("SELECT UpdateOccurrence_Coordinates($1)", array($datasetid));
@@ -332,13 +414,21 @@ function PopulateCoordinates($datasetid = "") {
         $res = pg_query_params("SELECT UpdateOccurrence_Coordinates()", array());
     }
     if ($res === false) $overallres = 0; //problem updating lat/long    
-    
+    if ($DEBUGGING) {
+		echo date("h:i:sa") . ": PopulateCoordinates - Leave<br/>";
+		myFlush();
+	}
     return $overallres;
 }
 
 //rebuild the summary occurrence_grid coverage    
 //Aug 2014: now populates all summary grid tables
 function PopulateCoordinateGrid() {    
+    global $DEBUGGING;
+	if ($DEBUGGING) {
+		echo date("h:i:sa") . ": PopulateCoordinateGrid - Enter<br/>";
+		myFlush();
+	}
     $overallres = -1;    
     //reason for subtracting 0.5 is because grid is otherwise shifted 'right' and 'up' due to rounding.
     $res = pg_query_params("SELECT UpdateOccurrence_Grid_Albertine()", array());
@@ -347,6 +437,11 @@ function PopulateCoordinateGrid() {
     if ($res === false) $overallres = 0; //problem updating occurrence_grid 
     $res = pg_query_params("SELECT UpdateOccurrence_Grid_Lakes()", array());
     if ($res === false) $overallres = 0; //problem updating occurrence_grid 
+	global $DEBUGGING;
+	if ($DEBUGGING) {
+		echo date("h:i:sa") . ": PopulateCoordinateGrid - Leave<br/>";
+		myFlush();
+	}
     return $overallres;
 }
 
@@ -354,19 +449,19 @@ function PopulateCoordinateGrid() {
 function GetSetSpeciesSQL() {    
 	$sql = "CASE WHEN coalesce(specificepithet,'') = '' THEN ";
 	$sql .= "	CASE WHEN coalesce(scientificname,'') != '' AND lower(taxonrank) IN ('species','subspecies','subsp.','variety','var.') THEN ";
-	$sql .= "		lower(SUBSTRING(scientificname FROM POSITION(' ' IN scientificname)+1)) ";
+	$sql .= "		SUBSTRING(scientificname FROM POSITION(' ' IN scientificname)+1) ";
 	$sql .= "	ELSE ";
     $sql .= "       CASE WHEN coalesce(acceptednameusage,'') != '' THEN ";
-	$sql .= "		    lower(SUBSTRING(acceptednameusage FROM POSITION(' ' IN acceptednameusage)+1)) ";
+	$sql .= "		    SUBSTRING(acceptednameusage FROM POSITION(' ' IN acceptednameusage)+1) ";
     $sql .= "	    ELSE ";
 	$sql .= "           NULL ";
     $sql .= "       END ";
 	$sql .= "	END ";
 	$sql .= "ELSE ";
 	$sql .= "	CASE WHEN coalesce(infraspecificepithet,'') = '' THEN ";
-	$sql .= "		lower(specificepithet) ";
+	$sql .= "		specificepithet ";
 	$sql .= "	ELSE ";
-	$sql .= "		lower(concat(specificepithet, ' ', taxonrank, ' ', infraspecificepithet)) ";
+	$sql .= "		concat(specificepithet, ' ', taxonrank, ' ', infraspecificepithet) ";
 	$sql .= "	END ";
 	$sql .= "END ";    
     return $sql;
@@ -375,6 +470,11 @@ function GetSetSpeciesSQL() {
 //populate metadata taxonomic info for a dataset, or all occurrence records
 //returns -1 on success, 0 on failure
 function PopulateHigherTaxonomy($datasetid = "") {
+	global $DEBUGGING;
+	if ($DEBUGGING) {
+		echo date("h:i:sa") . ": PopulateHigherTaxonomy - Enter [" . $datasetid . "]<br/>";
+		myFlush();
+	}
     $overallres = -1;
         
     //work up the scale from genus->family->order->class->phylum->kingdom, using whatever got on previous level to populate next level
@@ -384,12 +484,21 @@ function PopulateHigherTaxonomy($datasetid = "") {
     pg_query_params("ALTER TABLE occurrence_processed SET ( autovacuum_enabled = FALSE, toast.autovacuum_enabled = FALSE )", array());
     
     //add temporary indexes to source fields (note: ignore 'species' since this is a synthetic field not in DwC)
+
+	if ($DEBUGGING) {
+		echo date("h:i:sa") . ": PopulateHigherTaxonomy - Adding taxon indexes to occurrence<br/>";
+		myFlush();
+	}
     for ($tax = 1; $tax < count($taxon_hierarchy); $tax++) {
-        $sql = "CREATE INDEX idx_occurrence_" . $taxon_hierarchy[$tax] . " ON occurrence (\"" . $taxon_hierarchy[$tax] . "\")";  
+        $sql = "CREATE INDEX IF NOT EXISTS idx_occurrence_" . $taxon_hierarchy[$tax] . " ON occurrence (\"" . $taxon_hierarchy[$tax] . "\")";
         $res = pg_query_params($sql, array());
     }
     
     //first blank any existing taxonomic metadata
+	if ($DEBUGGING) {
+		echo date("h:i:sa") . ": PopulateHigherTaxonomy - Removing taxon indexes on occurrence processed<br/>";
+		myFlush();
+	}
     if ($datasetid != "") {
         //remove indexes on fields which will be updated, these indexes will be added again at the end
         for ($tax = 0; $tax < count($taxon_hierarchy); $tax++) {
@@ -397,6 +506,11 @@ function PopulateHigherTaxonomy($datasetid = "") {
             $res = pg_query_params($sql, array());
         }
         $res = pg_query_params("UPDATE occurrence_processed SET _species = NULL, _genus = NULL, _family = NULL, _order = NULL, _class = NULL, _phylum = NULL, _kingdom = NULL WHERE (_datasetid = $1)", array($datasetid));
+
+		if ($DEBUGGING) {
+			echo date("h:i:sa") . ": PopulateHigherTaxonomy - Removed taxon indexes and cleared taxon fields<br/>";
+			myFlush();
+		}
     } else {
         //quickest to drop and recreate fields - this automatically drops the indexes as well
         for ($tax = 0; $tax < count($taxon_hierarchy); $tax++) {
@@ -405,6 +519,10 @@ function PopulateHigherTaxonomy($datasetid = "") {
             $sql = "ALTER TABLE occurrence_processed ADD COLUMN _" . $taxon_hierarchy[$tax] . " text";
             $res = pg_query_params($sql, array());
         }
+		if ($DEBUGGING) {
+			echo date("h:i:sa") . ": PopulateHigherTaxonomy - Dropped and readded taxon fields<br/>";
+			myFlush();
+		}
     }
     if ($res === false) $overallres = 0; //problem blanking data
     
@@ -424,10 +542,23 @@ function PopulateHigherTaxonomy($datasetid = "") {
     if ($datasetid != "") {
         $sql .= "AND o._datasetid = '" . pg_escape_string($datasetid) . "'";
     }
-    //echo $sql;
+	if ($DEBUGGING) {
+		echo date("h:i:sa") . ": PopulateHigherTaxonomy - about to fill occurrence processed taxonomy<br/>";
+		echo $sql . "<br/>";
+		myFlush();
+	}
+
     $res = pg_query_params($sql, array());
+	if ($DEBUGGING) {
+		echo date("h:i:sa") . ": PopulateHigherTaxonomy - filled occurrence processed taxonomy<br/>";
+		myFlush();
+	}
     
     //genus: special case - extract from scientificName OR acceptedNameUsage if there was no explicit genus set
+	if ($DEBUGGING) {
+		echo date("h:i:sa") . ": PopulateHigherTaxonomy - fixing occurrence processed genus<br/>";
+		myFlush();
+	}
     if ($datasetid != "") {
         //process entries with no genus explicitly set
         $res = pg_query_params("UPDATE occurrence_processed op SET _genus = initcap(substr(o.scientificname, 0, strpos(o.scientificname,' '))) FROM occurrence o WHERE (strpos(o.scientificname,' ')>0 AND (o.genus IS NULL OR o.genus='') AND o._datasetid = $1 AND op._id = o._id)", array($datasetid));
@@ -442,8 +573,12 @@ function PopulateHigherTaxonomy($datasetid = "") {
     }
     
     //add output indexes again to assist with table join to taxon table
+	if ($DEBUGGING) {
+		echo date("h:i:sa") . ": PopulateHigherTaxonomy - adding occurrence processed taxonomy indexes<br/>";
+		myFlush();
+	}
     for ($tax = 0; $tax < count($taxon_hierarchy); $tax++) {
-        $sql = "CREATE INDEX idx_occurrence_processed__" . $taxon_hierarchy[$tax] . " ON occurrence_processed (_" . $taxon_hierarchy[$tax] . ")";  
+        $sql = "CREATE INDEX IF NOT EXISTS idx_occurrence_processed__" . $taxon_hierarchy[$tax] . " ON occurrence_processed (_" . $taxon_hierarchy[$tax] . ")";
         $res = pg_query_params($sql, array());
     }
     
@@ -457,6 +592,10 @@ function PopulateHigherTaxonomy($datasetid = "") {
     // if occurrence record with genus = z is found, cannot simply assign family to it without considering if it has order information
     // to distringuish between y/b family option
     //   x     ?      z
+	if ($DEBUGGING) {
+		echo date("h:i:sa") . ": PopulateHigherTaxonomy - processing remaining occurrence processed taxonomic hierarchy<br/>";
+		myFlush();
+	}
     for ($tax = 2; $tax < count($taxon_hierarchy); $tax++) {
         $sql = "UPDATE occurrence_processed op SET _" . $taxon_hierarchy[$tax] . " = t.\"" . $taxon_hierarchy[$tax] . "\" FROM taxon t WHERE (op._" . $taxon_hierarchy[$tax-1] . " = t.\"" . $taxon_hierarchy[$tax-1] . "\" AND (op._" . $taxon_hierarchy[$tax] . " IS NULL) AND t._datasetid = '" . pg_escape_string(TAXONOMIC_BACKBONE) . "'";
         if ($datasetid != "") {
@@ -464,24 +603,44 @@ function PopulateHigherTaxonomy($datasetid = "") {
         } else {
             $sql .= ")";
         }
+		if ($DEBUGGING) {
+			echo $tax-1 . " of " . count($taxon_hierarchy)-1 . " (" . $taxon_hierarchy[$tax-1] . "): " . $sql . "<br/>";
+			myFlush();
+		}
         $res = pg_query_params($sql, array());
         if ($res === false) $overallres = 0;
     }
     
     //remove temporary indexes
+	if ($DEBUGGING) {
+		echo date("h:i:sa") . ": PopulateHigherTaxonomy - dropping temporary indexes<br/>";
+		myFlush();
+	}
     for ($tax = 1; $tax < count($taxon_hierarchy); $tax++) {
         $sql = "DROP INDEX IF EXISTS idx_occurrence_" . $taxon_hierarchy[$tax];
         $res = pg_query_params($sql, array());
     }
     //re-enable autovacuum
     pg_query_params("ALTER TABLE occurrence_processed SET ( autovacuum_enabled = TRUE, toast.autovacuum_enabled = TRUE )", array());
-    
+    if ($DEBUGGING) {
+		echo date("h:i:sa") . ": PopulateHigherTaxonomy - Leave<br/>";
+		myFlush();
+	}
     return $overallres;
 }
 
 //create placeholder records in one-to-one table occurrence_processed
 function CreateOccurrenceProcessed($datasetid) {
+	global $DEBUGGING;
+	if ($DEBUGGING) {
+		echo date("h:i:sa") . ": CreateOccurrenceProcessed - Enter [" . $datasetid . "]<br/>";
+		myFlush();
+	}
     $res = pg_query_params("INSERT INTO occurrence_processed (_id, _datasetid) SELECT _id, _datasetid FROM occurrence o WHERE (o._datasetid = $1)", array($datasetid));
+	if ($DEBUGGING) {
+		echo date("h:i:sa") . ": CreateOccurrenceProcessed - Leave<br/>";
+		myFlush();
+	}
     if ($res === false) return 0; //problem
     return -1;
 }
@@ -489,6 +648,11 @@ function CreateOccurrenceProcessed($datasetid) {
 //migrate valid content from limbo dataset into main db and do post-processing
 //return -1 on success, 0 on any failures 
 function ImportDwCData($filename) {
+	global $DEBUGGING;
+	if ($DEBUGGING) {
+		echo date("h:i:sa") . ": ImportDwCData - Enter [" . $filename . "]<br/>";
+		myFlush();
+	}
     global $siteconfig;
     
     $overallres = -1;
@@ -570,6 +734,10 @@ function ImportDwCData($filename) {
             if ($datasetid == TAXONOMIC_BACKBONE) PopulateHigherTaxonomy();
         }
     }
+	if ($DEBUGGING) {
+		echo date("h:i:sa") . ": ImportDwCData - Leave<br/>";
+		myFlush();
+	}
     return $overallres;
 }
 
@@ -600,8 +768,17 @@ function UnsetSemaphor() {
 //(in which case grid summaries need to be rebuilt, 
 //if it removes the taxon backbone, best to leave data in occurrence records until a new taxon backbone is loaded
 function RemoveObsoleteResources() {
+	global $DEBUGGING;
+	if ($DEBUGGING) {
+		echo date("h:i:sa") . ": RemoveObsoleteResources - Enter<br/>";
+		myFlush();
+	}
     $result = pg_query_params("DELETE FROM dataset WHERE toremove = true", array());
     //this cascade deletes in occurrence, taxon and datasetmetadata tables
+	if ($DEBUGGING) {
+		echo date("h:i:sa") . ": RemoveObsoleteResources - Leave<br/>";
+		myFlush();
+	}
     if (pg_affected_rows($result)) return -1; //fix up summary coordinate grid if anything done
     return 0;
 }
@@ -617,28 +794,61 @@ function PopulateDatasetCleanMetadata($datasetid = "") {
     //_contact_org    
     //_keywords
     //_citation
-    
+    global $DEBUGGING;
+	if ($DEBUGGING) {
+		echo date("h:i:sa") . ": PopulateDatasetCleanMetadata - Enter [" . $datasetid . "]<br/>";
+		myFlush();
+	}
     $res = pg_query_params("SELECT UpdateDataset_CleanMetadata()", array());
+	if ($DEBUGGING) {
+		echo date("h:i:sa") . ": PopulateDatasetCleanMetadata - Leave<br/>";
+		myFlush();
+	}
     return -1; //assume success
 }
 
 function UpdateSummaryViewTables() {
+	global $DEBUGGING;
+	if ($DEBUGGING) {
+		echo date("h:i:sa") . ": UpdateSummaryViewTables - Enter<br/>";
+		myFlush();
+	}
     //The functions below do the following:
     //drop indexes
     //truncate tables
     //reinsert into tables
     //recreate indexes
     
+	if ($DEBUGGING) {
+		echo date("h:i:sa") . ": UpdateSummaryViewTables - species summary<br/>";
+		myFlush();
+	}
     $res_spp = pg_query_params("SELECT UpdateSummary_Spp()", array());    
+	if ($DEBUGGING) {
+		echo date("h:i:sa") . ": UpdateSummaryViewTables - occurrence list<br/>";
+		myFlush();
+	}
     $res_occ_list = pg_query_params("SELECT UpdateSummary_OccList()", array());
+	if ($DEBUGGING) {
+		echo date("h:i:sa") . ": UpdateSummaryViewTables - occurrence summary<br/>";
+		myFlush();
+	}
     $res_occ_sum = pg_query_params("SELECT UpdateSummary_OccSum()", array());
     
     //check if any are zero? but that is not necessarily wrong
-    
+    if ($DEBUGGING) {
+		echo date("h:i:sa") . ": UpdateSummaryViewTables - Leave<br/>";
+		myFlush();
+	}
     return -1;
 }
 
 function UpdateIPTResources($iptRSS = "") {
+	global $DEBUGGING;
+	if ($DEBUGGING) {
+		echo date("h:i:sa") . ": UpdateIPTResources - Enter [" . $iptRSS . "]<br/>";
+		myFlush();
+	}
     global $siteconfig;
     global $OUTPUT;
     if ($iptRSS == "") $iptRSS = $siteconfig['path_ipt'] . "/rss.do";
@@ -689,8 +899,24 @@ function UpdateIPTResources($iptRSS = "") {
     }
     $OUTPUT .= getMLtext("ipt_sync_finished_checking") . "<br/>";
     UnsetSemaphor();
+	if ($DEBUGGING) {
+		echo date("h:i:sa") . ": UpdateIPTResources - Leave<br/>";
+		myFlush();
+	}
     return -1;
 }
+
+/**
+ * Flush output buffer
+ */
+function myFlush() {
+    echo(str_repeat(' ', 256));
+    if (@ob_get_contents()) {
+        @ob_end_flush();
+    }
+    flush();
+}
+
 
 global $siteconfig;
 global $USER_SESSION;

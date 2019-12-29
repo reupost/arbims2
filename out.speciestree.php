@@ -30,7 +30,7 @@ $tpl->set('page_specific_head_content', "<link rel='stylesheet' type='text/css' 
     <script src='js/datepicker/js/bootstrap-datepicker.js'></script>    
     <script type='text/javascript' src='js/jqtree/tree.jquery.js'></script>
 	<script type='text/javascript' src='js/jquery.nestedAccordion.js'></script>
-    <script type='text/javascript' src='js/speciesaccordion.js'></script>");
+    <script type='text/javascript' src='js/speciesaccordion.js?v=1.0'></script>");
 $tpl->set('site_user', $USER_SESSION);
 
 /* page template body - pass page options to this as well */

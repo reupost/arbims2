@@ -461,6 +461,7 @@ $text = array(
 "select_occurrence_records" => "Select occurrence records",
 "select_occurrence_records_by_feature" => "Select by feature",
 "selected_occurrence_records" => "Selected occurrence records",
+"selected_occurrence_records_too_many" => "Showing first [max_recs]",
 "set_a_new_password" => "Set a new password for your account below.",
 "sign_in" => "Sign in",
 "sign_in_successful" => "You have signed in successfully!",

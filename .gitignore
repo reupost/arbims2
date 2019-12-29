@@ -1,7 +1,8 @@
 .idea*
 includes/config.php
-includes/config.php
 library-eia*
 library-lake*
 library-mnt*
 library-land*
+tmp*
+uploads*

@@ -7,7 +7,7 @@ class SpeciesTreeController {
         $this->region = $reg;
     }
     //returns the page HTML
-    public function GetSpeciesTree() {        
+    public function GetSpeciesTree($ajax = false) {
         global $USER_SESSION;
         
         /* page options */
@@ -19,16 +19,16 @@ class SpeciesTreeController {
         $pageform = '';
         $pageopts = '';        
 
-        $txt = $tblspecies->GetAccordionBelow($this->region, '', '*root*', true, true, false);
+        $txt = $tblspecies->GetAccordionBelow($this->region, '', '*root*', true, true, false, $ajax);
 
         /* page template main */
         $tpl = new MasterTemplate();
         $tpl->set('site_head_title', getMLText('species_explorer'));
-        $tpl->set('page_specific_head_content', "<link rel='stylesheet' type='text/css' media='screen' href='css/species.css?version=1.0' />
+        $tpl->set('page_specific_head_content', "<link rel='stylesheet' type='text/css' media='screen' href='css/species.css?random=" . filemtime($_SERVER["DOCUMENT_ROOT"].'/css/species.css') . "'/>
             <script src='js/datepicker/js/bootstrap-datepicker.js'></script>    
             <script type='text/javascript' src='js/jqtree/tree.jquery.js'></script>
             <script type='text/javascript' src='js/jquery.nestedAccordion.js'></script>
-            <script type='text/javascript' src='js/speciesaccordion.js'></script>");
+            <script type='text/javascript' src='js/speciesaccordion.js?random=" . filemtime($_SERVER["DOCUMENT_ROOT"].'/js/speciesaccordion.js') . "'></script>");
         $tpl->set('site_user', $USER_SESSION);
         $tpl->set('region', $this->region);
 

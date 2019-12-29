@@ -461,6 +461,7 @@ $text = array(
 "select_occurrence_records" => "Sélectionner des enregistrements d’occurrence",
 "select_occurrence_records_by_feature" => "Sélectionner par entité cartographique",
 "selected_occurrence_records" => "Sélectionner les enregistrement d’occurrence",
+"selected_occurrence_records_too_many" => "Affichage uniquement [max_recs]",
 "set_a_new_password" => "Définir un nouveau mot de passe pour votre compte ci-dessous.",
 "sign_in" => "Se connecter",
 "sign_in_successful" => "Vous êtes maintenant connecté!",

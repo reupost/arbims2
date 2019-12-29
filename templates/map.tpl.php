@@ -74,6 +74,8 @@
     var selbox_active = false;
     var selectOccurrence;
 
+    var occListHTML = "";
+
     // OpenLayers.ProxyHost = "/cgi-bin/proxy.cgi?url=";
     // pink tile avoidance
     OpenLayers.IMAGE_RELOAD_ATTEMPTS = 3;
@@ -248,7 +250,8 @@
 <?php if (isset($params['occ_kml'])): ?>
                         layer_occ_kml,
 <?php endif; ?>
-                        layer_identify, layer_occ_select]);
+                        layer_identify,
+                        layer_occ_select]);
 
         // build up all controls
         map.addControl(new OpenLayers.Control.LayerSwitcher());
@@ -290,9 +293,10 @@
                 projection: mapProj
             }), 
         };
-        togglecontrols.box_occ.events.register("featureselected", this, function(e) {
+        /* togglecontrols.box_occ.events.register("featureselected", this, function(e) {
+            console.log('registered event');
             addFeatureToList(e.feature);
-        });
+        }); */
         togglecontrols.box_occ.events.register("featureunselected", this, function(e) {
             selbox_active = false;
             layer_occ_select.removeFeatures([e.feature]);
@@ -300,15 +304,20 @@
         });
         togglecontrols.box_occ.events.register("beforefeaturesselected", this, function(e) {
             //about to select features
+            console.log("before selecting = " + e.features.length);
             if (e.features.length) {
                 layer_occ_select.removeAllFeatures();
                 document.getElementById("map-boxSelect").innerHTML = "";
+                var max_to_sel = e.features.length;
+                for(var i = 0; i < max_to_sel; i++) {
+                    addFeatureToList(e.features[i], i);
+                }
             }
         });	
         togglecontrols.box_occ.events.register("featuresselected", this, function(e) {
             //finished selecting features
             if (e.features.length) {
-                finaliseFeatureList(false);
+                finaliseFeatureList(false, e.features.length);
             }
         });
         for (var key in togglecontrols) {
@@ -362,6 +371,8 @@
             $('#layertabs').append(listTabs); 
         
             layer_identify.destroyFeatures();
+
+            window.alert(evt.features.length + " features selected");
 
             for (i = 0; i < evt.features.length; i++) { //all identified shapes
                 //geoserver 2.5.0 returns incorrect geometry so don't use this version                
@@ -438,12 +449,14 @@
             }
         }                
     }
-    
+
+    //this seems very inefficient, making a WS call for each record in the list
     function writeLinkedDocs_makecall(fidName) {
+        console.log('writeLinkedDocs_makecall');
         $.ajax({
             type: 'GET',
             url: 'data.library_map.php',
-            /* data: { region: "<?php  echo $region ?>", fid : curFeat.fid.toString()}, */
+            /* data: { region: "< ? php  echo $region ?>", fid : curFeat.fid.toString()}, */
             data: { fid : fidName},                
             dataType: 'json',                    
             cache: false,
@@ -462,7 +475,7 @@
         }
     }
     
-    function addFeatureToList(feature) {
+    function addFeatureToList(feature, feature_num) {
         var arrLayers = map.getLayersByName("<?php printMLtext('occurrence_records') ?>");
         if (arrLayers.length) { //only if occ data layer is there
             if (arrLayers[0].visibility) { //only if occ data layer is showing
@@ -480,23 +493,26 @@
                     if (parseFloat(attrs['_decimallongitude']) < selbox_lon_min) selbox_lon_min = parseFloat(attrs['_decimallongitude']);
                     if (parseFloat(attrs['_decimallongitude']) > selbox_lon_max) selbox_lon_max = parseFloat(attrs['_decimallongitude']);
                 }
-                textarea = document.getElementById("map-boxSelect");
-                if (typeof textarea !== 'undefined') 
-                        textarea.innerHTML += 
-                        "<a href='out.occurrence.php?id=" + attrs['_id'] + "' " +
+                if (feature_num == 0) occListHTML = "";
+                if (feature_num < <?php echo $display_occurrence_selected ?>) {
+                    occListHTML +=  "<a href='out.occurrence.php?id=" + attrs['_id'] + "' " +
                         "alt=\"<?php echo htmlspecialchars(getMLtext('occurrence_record')) ?>\" " +
-                        "title=\"<?php echo htmlspecialchars(getMLtext('occurrence_record')) ?>\" " + 
-                        "target='_new'>" + attrs['_id'] + "</a>: " + attrs['display_taxon'] + 
+                        "title=\"<?php echo htmlspecialchars(getMLtext('occurrence_record')) ?>\" " +
+                        "target='_new'>" + attrs['_id'] + "</a>: " + attrs['display_taxon'] +
                         " (" + attrs['dataset_title'] + ")" + "<br>";
+                }
             }
         }
     }
     
-    function finaliseFeatureList(basedOnFID) {        
+    function finaliseFeatureList(basedOnFID, total_occ_records_sel) {
+        console.log('finaliseFeatureList');
         textarea = document.getElementById("map-boxSelect");
         if (textarea) {
+            var showing_subset_only = (total_occ_records_sel > <?php echo $display_occurrence_selected ?>? true : false);
             var showlink =             
-                "<h5><?php printMLtext('selected_occurrence_records') ?>:</h5>" +
+                "<h5>" + (total_occ_records_sel === undefined? "" : total_occ_records_sel + " ") + "<?php printMLtext('selected_occurrence_records') ?>:</h5>" +
+                (showing_subset_only? "<?php printMLtext('selected_occurrence_records_too_many',array("max_recs"=>$display_occurrence_selected)) ?> " : "") +
                 "<b><a href='out.listoccurrence.<?php echo $region ?>.php?";
             if (!basedOnFID) {
                 showlink +=
@@ -506,7 +522,7 @@
                 showlink += "occlist=1";
             }
             showlink += "' " + "alt=\"<?php printMLtext('view_occurrences') ?>\" title=\"<?php printMLtext('view_occurrences') ?>\" target='_new'><?php printMLtext('view_all') ?></a></b><br/><br/>";
-            textarea.innerHTML = showlink + textarea.innerHTML; 
+            textarea.innerHTML = showlink + textarea.innerHTML + occListHTML;
         }
     }
     
@@ -522,7 +538,7 @@
             var gmlParser = new OpenLayers.Format.GML.v3();
             gmlParser.extractAttributes = true;            
             var features = gmlParser.read(request.responseText);
-
+            console.log('showFilteredOccs');
             if (features) {                
                 var projFrom = new OpenLayers.Projection("EPSG:4326");
                 var projTo = new OpenLayers.Projection("EPSG:3857");
@@ -536,9 +552,10 @@
                 selectOccurrence.activate();
                 textarea = document.getElementById("map-boxSelect");
                 if (textarea) textarea.innerHTML = "";
-                for (i = 0; i < features.length; i++) {                    
+                console.log("add features = " + features.length.toString());
+                for (var i = 0; i < features.length; i++) {
                     selectOccurrence.select(layer_occ_select.features[i]);
-                    addFeatureToList(features[i])
+                    addFeatureToList(features[i], i)
                 }
                 finaliseFeatureList(true); //true = basedOnFID
             }
@@ -550,7 +567,7 @@
     function listOccsFor(fid) {
         layer_occ_select.removeAllFeatures();
         arr = fid.split(".");
-        layer_id = 'cite:' + arr[0];        
+        layer_id = 'cite:' + arr[0];
         var oXml = OpenLayers.Request.GET({
             url: "data.fid_occs.php?fid=" + fid.toString(),
             callback: showFilteredOccs

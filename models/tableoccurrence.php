@@ -269,14 +269,14 @@ class TableOccurrence extends Table_Base {
                 }
             } elseif ($fieldalias == "taxon") {
                 $taxonranks = array('*root*', 'kingdom', 'phylum', 'class', 'order', 'family', 'genus', 'species');
-                $taxon_epithet = ucfirst(strtolower(pg_escape_string($value[0])));
+                $taxon_epithet = $value[0]; //ucfirst(strtolower(pg_escape_string($value[0])));
                 $parent_epithet = ucfirst(strtolower(pg_escape_string($value[2])));
                 $rank = strtolower(pg_escape_string($value[1]));
                 $rankpos = array_search($rank, $taxonranks);
                 if (!$rankpos)
                     return; //invalid OR *root*
-                if ($rank == 'species')
-                    $taxon_epithet = strtolower($taxon_epithet);
+                //if ($rank == 'species')
+                    //$taxon_epithet = strtolower($taxon_epithet);
                 if ($rank == 'kingdom') { //no higher rank to search
                     $this->whereclause[] = "_" . $rank . " = '" . $taxon_epithet . "'";
                 } else {

@@ -8,6 +8,6 @@ require_once("includes/inc.language.php");
 require_once("models/speciestree_base.php");
 
 $spptree = new SpeciesTreeController('lakes');
-$page = $spptree->GetSpeciesTree();
+$page = $spptree->GetSpeciesTree(true);
 echo $page;
 ?>
