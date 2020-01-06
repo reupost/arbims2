@@ -15,7 +15,9 @@
                 &nbsp;&nbsp;
                 <input type="radio" name="control" value="box_occ" id="boxToggle" onclick="toggleControl(this);">
                 <label for="boxToggle" style="display: inline"><?php printMLtext('select_occurrence_records') ?></label>                
-                &nbsp;
+                &nbsp;&nbsp;
+                <input type="radio" name="control" value="polygon" id="polygonToggle" onclick="toggleControl(this);">
+                <label for="polygonToggle" style="display: inline">Draw polygon</label>
                 <div id="map-size-notice"><?php printMLtext('map_size_notice') ?></div>
             </div>
             <div id="map" class="map_pane map_normalsize">        
@@ -24,16 +26,31 @@
                 <input id="btn-partial-screen" style="z-index:9999;display:none" title="<?php printMLtext('map_size_normal')?>" class="btn-partial-screen" type="image" src="images/minimise.png" onclick="javascript:normalMap()"/>
             </div>
             <div id="map-selectwrapper">
-                <div id='layerlink'>
-                    <?php printMLtext('map_layer_details') ?>:&nbsp;
-                    <a href='out.listgislayers.php' alt="<?php printMLtext('map_layers') ?>" title="<?php printMLtext('map_layers') ?>"><?php printMLtext('map_layers') ?></a>
+                <button class="accordion"><?php printMLtext('map_layer_legend') ?>:</button>
+                <div class="panel">
+                    <div id="layerlegends">
+                    </div>
+                    <div id='layerlink'>
+                        <?php printMLtext('map_layer_details') ?>:&nbsp;
+                        <a href='out.listgislayers.php' alt="<?php printMLtext('map_layers') ?>" title="<?php printMLtext('map_layers') ?>"><?php printMLtext('map_layers') ?></a>
+                    </div>
+
                 </div>
-                <div id="dataset_key">
-                    <h5><?php printMLtext('dataset_occurrence_key') ?>:</h5>
-                    <?php echo $occ_legend; ?>
+                <button class="accordion"><?php printMLtext('selected_raster_stats') ?>:</button>
+                <div class="panel">
+                    <div id="map-rasterStats">
+                    </div>
                 </div>
-                <div id="map-boxSelect">
-                    <h5><?php printMLtext('selected_occurrence_records') ?>:</h5>
+                <button class="accordion"><?php printMLtext('dataset_occurrence_key') ?>:</button>
+                <div class="panel">
+                    <div id="dataset_key">
+                        <?php echo $occ_legend; ?>
+                    </div>
+                </div>
+                <button class="accordion"><?php printMLtext('selected_occurrence_records') ?>:</button>
+                <div class="panel">
+                    <div id="map-boxSelect">
+                    </div>
                 </div>
             </div>
         </div>
@@ -65,7 +82,9 @@
     var map;
     <?php echo $params['js_layer_objs'] ?>
         
-    var layer_occurrence, layer_occurrence_overview, layer_identify, layer_occ_select;
+    var layer_occurrence, layer_occurrence_overview, layer_identify, layer_occ_select, layer_polygon;
+    var polygonGeometry, polygonWKT;
+
 <?php if (isset($params['occ_kml'])): ?>
         var layer_occ_kml;
 <?php endif; ?>
@@ -76,6 +95,9 @@
 
     var occListHTML = "";
 
+    var geogProj; //display coords etc as this
+    var mapProj; //map projection
+
     // OpenLayers.ProxyHost = "/cgi-bin/proxy.cgi?url=";
     // pink tile avoidance
     OpenLayers.IMAGE_RELOAD_ATTEMPTS = 3;
@@ -85,8 +107,8 @@
 
     function init() {
         format = 'image/png';
-        var geogProj = new OpenLayers.Projection('EPSG:4326'); //display coords etc as this
-        var mapProj = new OpenLayers.Projection('EPSG:3857'); //map projection
+        geogProj = new OpenLayers.Projection('EPSG:4326'); //display coords etc as this
+        mapProj = new OpenLayers.Projection('EPSG:3857'); //map projection
 
         var options = {
             controls: [],
@@ -243,6 +265,8 @@
                 }
         );
 
+        layer_polygon = new OpenLayers.Layer.Vector("Polygon Layer");
+
         // start with occurrence overview but not detailed occurrence data on map because of initial zoom level
         map.addLayers([gterrain, gstreet, ghybrid, gsatellite, 
         <?php echo $params['js_layer_list'] . (strlen($params['js_layer_list'])>0? ", " : "") ?>                        
@@ -251,7 +275,8 @@
                         layer_occ_kml,
 <?php endif; ?>
                         layer_identify,
-                        layer_occ_select]);
+                        layer_occ_select,
+                        layer_polygon]);
 
         // build up all controls
         map.addControl(new OpenLayers.Control.LayerSwitcher());
@@ -263,6 +288,22 @@
         }));
         selectOccurrence = new OpenLayers.Control.SelectFeature(layer_occ_select);
         map.addControl(selectOccurrence);
+
+        drawControls = {
+            polygon: new OpenLayers.Control.DrawFeature(layer_polygon,
+                OpenLayers.Handler.Polygon)
+        };
+
+        for(var key in drawControls) {
+            map.addControl(drawControls[key]);
+            drawControls[key].handler.stopDown = false; //allow panning
+            drawControls[key].handler.stopUp = false;
+        }
+
+        //allow modification of existing polygon?
+        //http://dev.openlayers.org/examples/modify-feature.html
+
+        //TODO: when start drawing polygon, remove any existing polygons (and selection they created)
 
         // support GetFeatureInfo    
         <?php if (strlen($params['js_layer_list'])>0): ?>
@@ -291,7 +332,18 @@
                 }),
                 box: true,
                 projection: mapProj
-            }), 
+            }),
+            /*polygon: new OpenLayers.Control.DrawFeature(layer_polygon,
+                OpenLayers.Handler.Polygon), */
+            polygon: new OpenLayers.Control.DrawFeature(layer_polygon,
+                OpenLayers.Handler.Polygon/*, {
+                callbacks: {
+                    "done": doneHandler
+                },
+                    handlerOptions: {
+
+                    }
+                }*/),
         };
         /* togglecontrols.box_occ.events.register("featureselected", this, function(e) {
             console.log('registered event');
@@ -300,16 +352,20 @@
         togglecontrols.box_occ.events.register("featureunselected", this, function(e) {
             selbox_active = false;
             layer_occ_select.removeFeatures([e.feature]);
-            document.getElementById("map-boxSelect").innerHTML = "<h5><?php printMLtext('selected_occurrence_records') ?>:</h5>";
+            document.getElementById("map-boxSelect").innerHTML = "";
         });
         togglecontrols.box_occ.events.register("beforefeaturesselected", this, function(e) {
             //about to select features
             console.log("before selecting = " + e.features.length);
             if (e.features.length) {
+                var max_to_sel = <?php echo $map_occurrence_selected ?>;
+                if (e.features.length > max_to_sel) {
+                    window.alert("<?php printMLtext('selected_occurrence_records_too_many_to_map',array("max_recs"=>$map_occurrence_selected)) ?>");
+                }
                 layer_occ_select.removeAllFeatures();
                 document.getElementById("map-boxSelect").innerHTML = "";
-                var max_to_sel = e.features.length;
-                for(var i = 0; i < max_to_sel; i++) {
+
+                for (var i = 0; i < max_to_sel; i++) {
                     addFeatureToList(e.features[i], i);
                 }
             }
@@ -320,6 +376,43 @@
                 finaliseFeatureList(false, e.features.length);
             }
         });
+
+        layer_polygon.events.register("beforefeatureadded", this, function(e) {
+            if( layer_polygon.features[0] ) {
+                //only allow one drawn shape on map
+                layer_polygon.removeAllFeatures();
+            }
+        });
+
+
+        //TODO: select using polygon? http://dev.openlayers.org/docs/files/OpenLayers/Filter/Spatial-js.html DWITHIN?
+        togglecontrols.polygon.events.register("featureadded", this, function(e) {
+            extractShape();
+
+            //now make ajax call to get raster stats
+            $.ajax({
+                type: "POST",
+                method: "POST",
+                url: "data.map_polygon.php",
+                data: {map: '<?php echo $region ?>', polygon: polygonWKT },
+                dataType: "json", //returned data, not submitted data
+                success: function (response) {
+                    document.getElementById('map-rasterStats').innerHTML = '';
+                    $.each( response, function( key, layerstats ) {
+                        document.getElementById('map-rasterStats').innerHTML += "<h5>" + layerstats.displayname + "</h5>";
+                        document.getElementById('map-rasterStats').innerHTML += "<ul>";
+                        $.each( layerstats.stats, function( key, val ) {
+                            document.getElementById('map-rasterStats').innerHTML += "<li>" + val.label + " (" + val.value + ") = " + Math.round(val.percentage * 100) / 100 + "%</li>";
+                        });
+                        document.getElementById('map-rasterStats').innerHTML += '</ul>';
+                    });
+                },
+                error: function (xhr, ajaxOptions, thrownError) {
+                    console.log("Error getting raster layer statistics: " + thrownError);
+                }
+            });
+        });
+
         for (var key in togglecontrols) {
             map.addControl(togglecontrols[key]);
         }
@@ -349,6 +442,13 @@
 }
 ?>        
 
+        var legendHTML = "<br/>";
+        $.each(user_layers, function( index, value ) {
+            legendHTML += "<b>" + value.ml_name + ":</b><br/>";
+            legendHTML += "<img src = \"<?php echo $params['geoserver'] ?>/ows?service=wms&REQUEST=GetLegendGraphic&VERSION=1.0.0&FORMAT=image/png&WIDTH=20&HEIGHT=20&LAYER=" + value.geoserver_name + "\">";
+            legendHTML += "<br/><br/>";
+        });
+        document.getElementById("layerlegends").innerHTML = legendHTML;
     }
 
     function GetLayerNameFromFID(fid) {
@@ -612,7 +712,7 @@
         } else {
             document.getElementById("btn-print").disabled = false;
         }
-        if (zoom < 11) {
+        if (zoom < 8) {
             arrLayers = map.getLayersByName("<?php printMLtext('occurrence_overview') ?>");
             if (!arrLayers.length) {
                 map.addLayer(layer_occurrence_overview);
@@ -747,4 +847,47 @@
     }
     
     window.onload = init();
+
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            /* Toggle between adding and removing the "active" class,
+            to highlight the button that controls the panel */
+            this.classList.toggle("active");
+
+            /* Toggle between hiding and showing the active panel */
+            var panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+                panel.style.display = "none";
+            } else {
+                panel.style.display = "block";
+            }
+        });
+    }
+
+    function extractShape() {
+        if( layer_polygon.features[0] ) {
+            //console.log(layer_polygon.features[0]);
+            polygonGeometry = [];
+            polygonWKT = "POLYGON((";
+            var vertices = layer_polygon.features[0].geometry.getVertices();
+            for( var i = 0; i < vertices.length; i++ ) {
+                var point = vertices[i];
+                var newLonLat = new OpenLayers.LonLat(point.x, point.y).transform(mapProj , geogProj);;
+                polygonGeometry.push( [ newLonLat.lon, newLonLat.lat ] );
+                polygonWKT += newLonLat.lon.toString() + " " + newLonLat.lat.toString() + ",";
+            }
+            polygonGeometry.push( polygonGeometry[0] );
+            polygonWKT += polygonGeometry[0][0].toString() + " " + polygonGeometry[0][1].toString() + "))";
+            return true;
+        }
+        return false;
+    }
+    // polygonLayer.getSource().getFeatures()[0].getGeometry().getCoordinates()[0]
+    /*function doneHandler(drawnGeom) {
+        alert('doneHandler');
+        console.log(drawnGeom);
+    } */
 </script>

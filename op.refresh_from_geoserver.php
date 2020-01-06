@@ -22,7 +22,6 @@ $map = new MapLayers();
 
 $new_layers = $map->UpdateLayersFromGeoserver();
 
-
 if ($new_layers) {
     $msg = getMLtext('map_layers_changed');
 } else {
@@ -34,6 +33,9 @@ $sess_data = array("session_id" => $USER_SESSION['id'], "data_type" => "message"
 $session->SetSessionMsg($sess_data);
 
 //Forward to GIS layers page
-header("Location: out.listgislayers.php");
- 
+if (headers_sent()) {
+    die("<br/><br/>Finished processing layers. Please click <a href='out.listgislayers.php'>here</a> to continue.");
+} else {
+    header("Location: out.listgislayers.php");
+}
 ?>

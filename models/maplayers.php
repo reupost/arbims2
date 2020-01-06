@@ -4,6 +4,8 @@ require_once("models/table_base.php");
 
 const GEOSERVER_WORKSPACE = "cite:";
 
+$DEBUGGING = true;
+
 class MapLayers extends Table_Base {
 
     var $sql_listing = "SELECT *, EXTRACT(EPOCH FROM CURRENT_TIMESTAMP-whenadded )/3600 AS layer_age_hours, CASE WHEN EXTRACT(EPOCH FROM CURRENT_TIMESTAMP-whenadded )/3600 < 24.0 THEN 'new_layer' ELSE 'no' END AS layer_is_new FROM gislayer"; 
@@ -23,6 +25,7 @@ class MapLayers extends Table_Base {
         "allow_download" => "allow_download", 
         "allow_identify" => "allow_identify",
         "disabled" => "disabled",
+        "layer_type" => "layer_type",
         "allow_display_albertine" => "allow_display_albertine",
         "allow_display_mountains" => "allow_display_mountains",
         "allow_display_lakes" => "allow_display_lakes",
@@ -180,6 +183,7 @@ class MapLayers extends Table_Base {
     //push revised gislayer and gislayer_feature tables to libraries
     public function SynchGISLayerDataToLibraries() {
         global $siteconfig;
+        global $DEBUGGING;
 		// Create connection
 		$conn = new mysqli($siteconfig['media_server'], $siteconfig['media_user'], $siteconfig['media_password']);
 
@@ -192,6 +196,10 @@ class MapLayers extends Table_Base {
             @mysqli_select_db($conn, $dbname) or die( "<p><b>DATABASE ERROR: </b>Unable to open database $dbname</p>");
             mysqli_query($conn,"DELETE FROM tblgislayer");
             $from = pg_query_params("SELECT * FROM gislayer WHERE disabled = false AND allow_identify = true", array());
+            if ($DEBUGGING) {
+                echo date("h:i:sa") . ": SynchGISLayerDataToLibraries - " . $dbname . "<br/>";
+                myFlush();
+            }
             while ($fromrow = pg_fetch_array($from)) {
                 $sql = "INSERT INTO tblgislayer (id, layer_order, displayname, geoserver_name, ";
                 $sql .= "allow_display_albertine, allow_display_mountains, allow_display_lakes, disabled) ";
@@ -219,7 +227,6 @@ class MapLayers extends Table_Base {
                 //echo $sql;
                 $res = mysqli_query($conn,$sql); //TODO: error-checks
             }
-            
         }
     }
     
@@ -232,9 +239,17 @@ class MapLayers extends Table_Base {
         $wms_server_ows             = $wms_server."/ows?";
         $wms_server_getcapabilities = $wms_server_ows."service=wms&version=1.1.1&request=GetCapabilities";
 
-        $gestor     = fopen($wms_server_getcapabilities, "r");
-        $contenido  = stream_get_contents($gestor);
-        fclose($gestor);
+        //$gestor     = fopen($wms_server_getcapabilities, "r");
+        //$contenido  = stream_get_contents($gestor);
+        //fclose($gestor);
+
+        $curl_handle=curl_init();
+        curl_setopt($curl_handle, CURLOPT_URL,$wms_server_getcapabilities);
+        curl_setopt($curl_handle, CURLOPT_CONNECTTIMEOUT, 2);
+        curl_setopt($curl_handle, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($curl_handle, CURLOPT_USERAGENT, 'ARBIMS');
+        $contenido = curl_exec($curl_handle);
+        curl_close($curl_handle);
 
         $caps = new CapabilitiesParser();
         $caps->parse($contenido);
@@ -242,13 +257,57 @@ class MapLayers extends Table_Base {
         
         return $caps;
     }
+
+    //returns geoserver WCS XML
+    private function GetGeoserverWCS() {
+        global $siteconfig;
+
+        $wms_server                 = $siteconfig['path_geoserver'];
+        $wms_server_ows             = $wms_server."/ows?";
+        $wms_server_getcapabilities = $wms_server_ows."service=wcs&version=1.1.1&request=GetCapabilities";
+
+        //$gestor     = fopen($wms_server_getcapabilities, "r");
+        //$contenido  = stream_get_contents($gestor);
+        //fclose($gestor);
+
+        $curl_handle=curl_init();
+        curl_setopt($curl_handle, CURLOPT_URL,$wms_server_getcapabilities);
+        curl_setopt($curl_handle, CURLOPT_CONNECTTIMEOUT, 2);
+        curl_setopt($curl_handle, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($curl_handle, CURLOPT_USERAGENT, 'ARBIMS');
+        $contenido = curl_exec($curl_handle);
+        curl_close($curl_handle);
+
+        return $contenido;
+    }
+
+    //returns 'raster' (if found in WCS XML) or otherwise 'vector'
+    private function GetLayerType($wcsXML, $layer) {
+        $inXML = stripos($wcsXML, "<wcs:Identifier>" . $layer . "</wcs:Identifier>");
+        if ($inXML) return 'raster';
+        return 'vector';
+    }
     
     //synchronises gislayer table with geoserver layers
     //returns false if no new layers, true if at least one layer which needs to be configured
     public function UpdateLayersFromGeoserver() {
         global $siteconfig;
-        
+        global $DEBUGGING;
+
+        if ($DEBUGGING) {
+            echo date("h:i:sa") . ": UpdateLayersFromGeoserver - Start<br/>";
+            myFlush();
+        }
         $glayers = $this->GetGeoserverLayers();
+        if ($DEBUGGING) {
+            echo date("h:i:sa") . ": UpdateLayersFromGeoserver - retrieved layers from geoserver<br/>";
+            myFlush();
+        }
+        $rasterlayersWCS = $this->GetGeoserverWCS();
+        if ($DEBUGGING) {
+            echo date("h:i:sa") . ": UpdateLayersFromGeoserver - retrieved WCS from geoserver<br/>";
+            myFlush();
+        }
 
         $new_layers = false;
 
@@ -258,15 +317,20 @@ class MapLayers extends Table_Base {
         pg_query_params("UPDATE gislayer SET in_geoserver = false", array());
         
         foreach ($glayers->layers as $d) {
+            if ($DEBUGGING) {
+                echo date("h:i:sa") . ": UpdateLayersFromGeoserver - processing " . $d['Name'] . "<br/>";
+                myFlush();
+            }
             if (isset($d['queryable']) && $d['queryable']) {    
                 if (substr(($d['Name']), 0, $select_workspace_length) == GEOSERVER_WORKSPACE) {
                     if (in_array($d['Name'], $siteconfig['special_layers'])) continue; //skip this one
-                    
-                    pg_query_params("UPDATE gislayer SET in_geoserver = true WHERE geoserver_name = $1", array($d['Name']));
+
+                    $layer_type = $this->GetLayerType($rasterlayersWCS, $d['Name']);
+                    pg_query_params("UPDATE gislayer SET in_geoserver = true, layer_type = $2 WHERE geoserver_name = $1", array($d['Name'], $layer_type));
                     $res = pg_query_params("SELECT id FROM gislayer WHERE geoserver_name = $1", array($d['Name']));
                     if (!$res) { echo "Error in UpdateLayersFromGeoserver - selecting layer"; exit; }
                     if (!($row = pg_fetch_array($res))) { //need to add to DB
-                        $res = pg_query_params("INSERT INTO gislayer (geoserver_name) SELECT $1", array($d['Name']));
+                        $res = pg_query_params("INSERT INTO gislayer (geoserver_name, layer_type) SELECT $1, $2", array($d['Name'], $layer_type));
                         if (!$res) { echo "Error in UpdateLayersFromGeoserver - adding layer"; exit; }
                         $new_layers = true;
                     }
@@ -277,7 +341,15 @@ class MapLayers extends Table_Base {
         }
         
         pg_query_params("UPDATE gislayer SET disabled = true WHERE in_geoserver = false", array());
+        if ($DEBUGGING) {
+            echo date("h:i:sa") . ": UpdateLayersFromGeoserver - now synch GIS layer data to libraries<br/>";
+            myFlush();
+        }
         $this->SynchGISLayerDataToLibraries();
+        if ($DEBUGGING) {
+            echo date("h:i:sa") . ": UpdateLayersFromGeoserver - End<br/>";
+            myFlush();
+        }
         return $new_layers;
     }
     
@@ -295,6 +367,31 @@ class MapLayers extends Table_Base {
         }
         return array(); //not found        
     }
+
+    public function GetLayersForMap($map = '', $layer_type = '') {
+        $this->AddWhere('layer_type','=',$layer_type);
+        $this->AddWhere('disabled','=',false);
+        switch (strtolower($map)) {
+            case 'albertine':
+                case 'lakes':
+                    case 'mountains':
+                        $this->AddWhere('allow_display_' . strtolower($map), '=', true);
+                        break;
+        }
+        $layers_arr = $this->GetRecords();
+        return $layers_arr;
+    }
+}
+
+/**
+ * Flush output buffer
+ */
+function myFlush() {
+    echo(str_repeat(' ', 256));
+    if (@ob_get_contents()) {
+        @ob_end_flush();
+    }
+    flush();
 }
 
 ?>

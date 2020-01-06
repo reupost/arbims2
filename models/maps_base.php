@@ -145,8 +145,8 @@ class MapController {
         $tpl = new MasterTemplate();
         $tpl->set('site_head_title', getMLText('map'));
         $tpl->set('page_specific_head_content', 
-           "<link rel='stylesheet' type='text/css' media='screen' href='css/map.css?version=1.0' />
-            <script type='text/javascript' src='js/map.js?version=1.0'></script>
+           "<link rel='stylesheet' type='text/css' media='screen' href='css/map.css?random=" . filemtime($_SERVER["DOCUMENT_ROOT"].'/css/map.css') . "' />
+            <script type='text/javascript' src='js/map.js?random=" . filemtime($_SERVER["DOCUMENT_ROOT"].'/css/map.css') . "'></script>
             <script type='text/javascript' src='js/jquery-ui/jquery-ui.min.js'></script>
             <link rel='stylesheet' type='text/css' media='screen' href='js/jquery-ui/jquery-ui.css' />
             <script type='text/javascript' src='lib/openlayers/OpenLayers.js'></script>
@@ -161,6 +161,7 @@ class MapController {
         $bdy->set('occ_legend', $occ_legend);
         $bdy->set('adv_criteria', $adv_criteria);
         $bdy->set('display_occurrence_selected', $siteconfig['display_occurrence_selected']);
+        $bdy->set('map_occurrence_selected', $siteconfig['map_occurrence_selected']);
 
         /* link everything together */
         $tpl->set('sf_content', $bdy);

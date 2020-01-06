@@ -346,7 +346,7 @@ class TableOccurrence extends Table_Base {
             } else {
                 $descr .= getMLtext('scientific_name');                
             } 
-            $descr .= ":</b>" . $row['display_taxon'] . "<br/>";
+            $descr .= ":</b> " . $row['display_taxon'] . "<br/>";
             
             $descr .= '<b>' . getMLtext('dataset') . ':</b> ' . $row['dataset_title'] . '<br>';
             $descr .= '<b>' . getMLtext('date') . ':</b> ' . $row['year'] . '-' . $row['month'] . '-' . $row['day'];
