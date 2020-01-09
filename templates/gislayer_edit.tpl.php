@@ -43,6 +43,10 @@
                         <td> <?php echo $layerdata['gislayer']['dateadded'] ?></td>
                     </tr>
                     <tr>
+                        <td><?php printMLtext('layer_type') ?></td>
+                        <td><?php echo $layerdata['gislayer']['layer_type'] ?></td>
+                    </tr>
+                    <tr>
                         <td><?php printMLtext('layer_order') ?></td>
                         <td>
                             <select name='layer_order' style='width:110px'>
@@ -51,7 +55,19 @@
                                 } ?>
                             </select>
                         </td>
-                    </tr>                    
+                    </tr>
+                    <?php if ($layerdata['gislayer']['layer_type'] == 'raster'): ?>
+                    <tr>
+                        <td><?php printMLtext('datafile_path') ?></td>
+                        <td>
+                            <input type="text" name='datafile_path' id="datafile_path" style='width:440px' value="<?php echo $layerdata['datafile_path'] ?>"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><?php printMLtext('datafile_path_warning') ?></td>
+                    </tr>
+                    <?php endif; ?>
                     <tr>
                         <td><?php printMLtext('display_albertine') ?>?</td>
                         <td>

@@ -78,7 +78,9 @@ class SingleMapLayer {
     }
     
     //assumes all allow_display values will be submitted
-    public function SetAttributes($data, &$save_msg) {        
+    public function SetAttributes($data, &$save_msg) {
+        global $siteconfig;
+
         $res = pg_query_params("SELECT * FROM gislayer WHERE id = $1", array($data['id']));
         if (!$res) { $save_msg = getMLtext('sql_error'); return 0; }
         $row = pg_fetch_array($res, null, PGSQL_ASSOC);
@@ -90,12 +92,28 @@ class SingleMapLayer {
         if ($data['allow_identify'] != 't' && $data['allow_identify'] != 'f') { $save_msg = getMLtext('save_layer_invalid_value'); return 0; } 
         if ($data['allow_download'] != 't' && $data['allow_download'] != 'f') { $save_msg = getMLtext('save_layer_invalid_value'); return 0; } 
         if (getMLtext($data['displayname'], null, "***") == "***") { $save_msg = getMLtext('save_layer_invalid_name', array("displayname" => $data['displayname'])); return 0; } //displayname not found in dictionary
-        
+
+        $geoserver_name_arr = explode(':', $row['geoserver_name']);
+        $geoserver_name_no_workspace = end($geoserver_name_arr);
+        if ($row['layer_type'] == 'raster' && $data['datafile_path'] ==  NULL && $row['datafile_path'] ==  NULL) {
+            $data['datafile_path'] = $siteconfig['path_geoserver_data_dir'] . '/data/' . $geoserver_name_no_workspace  . '/' . $geoserver_name_no_workspace  . '.tif'; //default - TODO: need to verify that this is intuitive
+        }
+        $data['db_table_name'] = $this->GetValidTableOrColumnName('raster_' . $geoserver_name_no_workspace);
+
         $save_msg = getMLtext('sql_error');
-        $res = pg_query_params("UPDATE gislayer SET (displayname, allow_display_albertine, allow_display_mountains, allow_display_lakes, allow_identify, allow_download, disabled, layer_order) = ($1, $2::bool, $3::bool, $4::bool, $5::bool, $6::bool, $7::bool, $8) WHERE id = $9", array($data['displayname'], $data['allow_display_albertine'], $data['allow_display_mountains'], $data['allow_display_lakes'], $data['allow_identify'], $data['allow_download'], $data['disabled'], $data['layer_order'], $data['id']));
+        $res = pg_query_params("UPDATE gislayer SET (displayname, allow_display_albertine, allow_display_mountains, allow_display_lakes, allow_identify, allow_download, disabled, layer_order, datafile_path, db_table_name) = ($1, $2::bool, $3::bool, $4::bool, $5::bool, $6::bool, $7::bool, $8, $9, $10) WHERE id = $11", array($data['displayname'], $data['allow_display_albertine'], $data['allow_display_mountains'], $data['allow_display_lakes'], $data['allow_identify'], $data['allow_download'], $data['disabled'], $data['layer_order'], $data['datafile_path'], $data['db_table_name'], $data['id']));
         if (!$res) return 0;
         $save_msg = getMLtext('save_layer_saved');
         return -1;
+    }
+
+    public function GetValidTableOrColumnName($str) {
+        $cleanstr = trim($str);
+        $cleanstr = preg_replace('/[^a-zA-Z0-9_]/i', '_', $str);
+        $firstchar = substr($cleanstr, 0, 1);
+        if ($firstchar >= '0' && $firstchar <= '9') $cleanstr = "_" . substr($cleanstr,1); //cannot start with number
+        $cleanstr = strtolower(substr($cleanstr, 0, 31));
+        return $cleanstr;
     }
 }
 ?>

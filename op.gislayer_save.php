@@ -25,6 +25,7 @@ $data = array();
 $data['id'] = GetCleanInteger(isset($_CLEANPOST['id'])? $_CLEANPOST['id'] : '0');
 $data['displayname'] = (isset($_CLEANPOST['displayname'])? $_CLEANPOST['displayname'] : '');
 $data['layer_order'] = GetCleanInteger(isset($_CLEANPOST['layer_order'])? $_CLEANPOST['layer_order'] : '0');
+$data['datafile_path'] = (isset($_CLEANPOST['datafile_path'])? $_CLEANPOST['datafile_path'] : '');
 $data['allow_display_albertine'] = (isset($_CLEANPOST['allow_display_albertine'])? $_CLEANPOST['allow_display_albertine'] : '');
 $data['allow_display_mountains'] = (isset($_CLEANPOST['allow_display_mountains'])? $_CLEANPOST['allow_display_mountains'] : '');
 $data['allow_display_lakes'] = (isset($_CLEANPOST['allow_display_lakes'])? $_CLEANPOST['allow_display_lakes'] : '');

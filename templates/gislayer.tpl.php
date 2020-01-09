@@ -25,6 +25,14 @@
                     <td><?php echo $layerdata['gislayer']['dateadded'] ?></td>
                 </tr>
                 <tr>
+                    <td><?php echo "<b>" . getMLtext('layer_type') . "</b>" ?></td>
+                    <td><?php echo $layerdata['gislayer']['layer_type'] ?></td>
+                </tr>
+                <tr>
+                    <td><?php echo "<b>" . getMLtext('datafile_path') . "</b>" ?></td>
+                    <td><?php echo $layerdata['gislayer']['datafile_path'] ?></td>
+                </tr>
+                <tr>
                     <td><?php echo "<b>" . getMLtext('layer_order') . "</b>" ?></td>
                     <td><?php echo $layerdata['gislayer']['layer_order'] ?></td>
                 </tr>                

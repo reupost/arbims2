@@ -159,8 +159,14 @@ class MapLayers extends Table_Base {
     
    
     public function WriteNonGeomLayerFeaturesToDB($layername) {
-        
-        $res = pg_query_params("SELECT id FROM gislayer WHERE geoserver_name = $1", array($layername));
+        global $siteconfig;
+        global $DEBUGGING;
+
+        if ($DEBUGGING) {
+            echo date("h:i:sa") . ": WriteNonGeomLayerFeaturesToDB - " . $layername . "<br/>";
+            myFlush();
+        }
+        $res = pg_query_params("SELECT id, layer_type, datafile_path, db_table_name FROM gislayer WHERE geoserver_name = $1", array($layername));
         if (!$res) return 0; //sql error
         if (!($row = pg_fetch_array($res))) return 0; //layer not found
         
@@ -176,6 +182,30 @@ class MapLayers extends Table_Base {
                 $concat_attribs .= ($concat_attribs > ''? "; " : "") . $attrib . ": " . $value;                
             }
             pg_query_params("INSERT INTO gislayer_feature (fid, gislayer_id, attributes_concat, description_text) VALUES ($1, $2, $3, $4)", array($feat['fid'], $row['id'], $concat_attribs, $descr));
+        }
+
+        if ($row['layer_type'] == 'raster') {
+            if ($DEBUGGING) {
+                echo date("h:i:sa") . ": WriteNonGeomLayerFeaturesToDB: processing raster - " . $layername . "<br/>";
+                myFlush();
+            }
+            if ($row['datafile_path'] > '') {
+                $output = array();
+                $outputlastline = exec("\"" . $siteconfig['path_raster2pgsql_exe'] . "\" -d -s 4326 -I -C -M -t 100x100 " . "\"" . $row['datafile_path'] . "\" public." . $row['db_table_name'] . " > " . $siteconfig['path_tmp'] . "/rast.sql", $output);
+                //TODO: check for errors
+                $output = array();
+                $outputlastline = exec("\"" . $siteconfig['path_psql_exe'] . "\"-d arbims -f " . $siteconfig['path_tmp'] . "/rast.sql -U root", $output);
+                //TODO: check for errors
+            } else {
+                if ($DEBUGGING) {
+                    echo date("h:i:sa") . ": WriteNonGeomLayerFeaturesToDB: processing raster - " . $layername . " - no datafile specified!<br/>";
+                    myFlush();
+                }
+            }
+            if ($DEBUGGING) {
+                echo date("h:i:sa") . ": WriteNonGeomLayerFeaturesToDB: processing raster - " . $layername . " - finished<br/>";
+                myFlush();
+            }
         }
         return -1;  
     }

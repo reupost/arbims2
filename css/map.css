@@ -6,7 +6,7 @@
     float: left;
     clear: both;
     position: relative;
-    height: 700px;
+    height: 600px;
     border: 1px solid black;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -64,7 +64,7 @@
 
 #map-selectwrapper {
     margin-left: 720px;
-    height: 700px;
+    height: 600px;
     overflow: auto;
 }
 

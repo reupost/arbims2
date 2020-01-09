@@ -3,6 +3,7 @@ require_once("includes/config.php");
 require_once("models/singlemaplayer.php");
 require_once("models/maplayers.php");
 require_once("includes/inc.language.php");
+require_once("models/searchpolygon.php");
 
 $polygon = (isset($_CLEAN['polygon'])? $_CLEAN['polygon'] : '');
 $map = (isset($_CLEAN['map'])? $_CLEAN['map'] : '');
@@ -133,10 +134,28 @@ ST_GeomFromText('" . $polygon . "',4326) AS geom
     return $resArray;
 }
 
+function SavePolygon($polygonToSave) {
+    $save_msg = "";
+    $searchPoly = new SearchPolygon();
+    $polyID = $searchPoly->WriteSearchPolygonToDB($polygonToSave, $save_msg);
+    if ($save_msg != '') { //error TODO: this is a bit messy
+        echo 'Error: ' . $save_msg;
+        return -1;
+    }
+    return $polyID;
+}
+
 $arr = array();
-//$layer = new SingleMapLayer($id);
-//$layerdata = $layer->GetAttributes();
-//$layer_name = strtolower("LULC_RW_W4GR"); //TODO
+
+$polygonId = SavePolygon($polygon);
+$layerStats = array();
+$statsArr = array();
+$statsArr['label'] = 'The polygon ID';
+$statsArr['value'] = $polygonId;
+$layerStats['displayname'] = '__polygonID';
+$layerStats['stats'] = array();
+$layerStats['stats'][] = $statsArr;
+$arr[] = $layerStats;
 
 if (count($layers_to_query) != 0 && $polygon != '') {
     foreach($layers_to_query as $layer) {
