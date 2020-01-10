@@ -364,7 +364,7 @@
         });
         togglecontrols.box_occ.events.register("beforefeaturesselected", this, function(e) {
             //about to select features
-            console.log("before selecting = " + e.features.length);
+            //console.log("before selecting = " + e.features.length);
             if (e.features.length) {
                 var max_to_sel = <?php echo $map_occurrence_selected ?>;
                 if (e.features.length > max_to_sel) {
@@ -399,7 +399,8 @@
         togglecontrols.polygon.events.register("featureadded", this, function(e) {
             var did_draw = extractShape();
             if (did_draw) {
-
+                layer_occ_select.removeAllFeatures(); //TODO: selecting empty polygon leaves e.features in add
+                occListHTML = "";
                 var pfilter = new OpenLayers.Filter.Spatial({
                     type: OpenLayers.Filter.Spatial.INTERSECTS,
                     value: e.feature.geometry
@@ -425,9 +426,8 @@
                         $.each(response, function (key, layerstats) {
                             if (layerstats.displayname == '__polygonID') {
                                 $.each(layerstats.stats, function (key, val) {
-                                    console.log(val);
+                                    //console.log(val);
                                     polygonID = val.value;
-                                    console.log("PolygonID = " + polygonID);
                                 });
                                 //don't set numFeaturesSelected since that is set separately and if not set now then a later finaliseFeatureList will be run after the features are added
                                 finaliseFeatureList(false);
@@ -497,7 +497,7 @@
         return '(unknown layer)';        
     }
     
-    function showInfo(evt) {                               
+    function showInfo(evt) {
         if (evt.features && evt.features.length) {
             //reset the popup div
             $("#layertabs").tabs("destroy");
@@ -587,7 +587,7 @@
 
     //this seems very inefficient, making a WS call for each record in the list
     function writeLinkedDocs_makecall(fidName) {
-        console.log('writeLinkedDocs_makecall');
+        //console.log('writeLinkedDocs_makecall');
         $.ajax({
             type: 'GET',
             url: 'data.library_map.php',
@@ -619,7 +619,6 @@
             if (e.features.length > max_to_sel) {
                 window.alert("<?php printMLtext('selected_occurrence_records_too_many_to_map',array("max_recs"=>$map_occurrence_selected)) ?>");
             }
-            layer_occ_select.removeAllFeatures();
             document.getElementById("map-boxSelect").innerHTML = "";
             for (var i = 0; i < max_to_sel && i < e.features.length; i++) {
                 addFeatureToList(e.features[i], i);
@@ -660,7 +659,7 @@
     }
     
     function finaliseFeatureList(basedOnFID) {
-        console.log('finaliseFeatureList');
+        //console.log('finaliseFeatureList');
         textarea = document.getElementById("map-boxSelect");
         if (textarea) {
             var showing_subset_only = (numFeaturesSelected > <?php echo $display_occurrence_selected ?>? true : false);
@@ -669,7 +668,7 @@
                 (showing_subset_only? "<?php printMLtext('selected_occurrence_records_too_many',array("max_recs"=>$display_occurrence_selected)) ?> " : "") +
                 "<b><a href='out.listoccurrence.<?php echo $region ?>.php?";
             if (!basedOnFID) {
-                showlink += "polygonID=" + polygonID;
+                showlink += "polygonid=" + polygonID;
                 /* showlink +=
                     "x1=" + selbox_lon_min.toString() + "&x2=" + selbox_lon_max.toString() +
                     "&y1=" + selbox_lat_min.toString() + "&y2=" + selbox_lat_max.toString(); */
@@ -677,6 +676,7 @@
                 showlink += "occlist=1";
             }
             showlink += "' " + "alt=\"<?php printMLtext('view_occurrences') ?>\" title=\"<?php printMLtext('view_occurrences') ?>\" target='_new'><?php printMLtext('view_all') ?></a></b><br/><br/>";
+            if (!basedOnFID && numFeaturesSelected == 0) showlink = "";
             textarea.innerHTML = showlink + occListHTML;
         }
     }
@@ -693,7 +693,6 @@
             var gmlParser = new OpenLayers.Format.GML.v3();
             gmlParser.extractAttributes = true;            
             var features = gmlParser.read(request.responseText);
-            console.log('showFilteredOccs');
             if (features) {                
                 var projFrom = new OpenLayers.Projection("EPSG:4326");
                 var projTo = new OpenLayers.Projection("EPSG:3857");
@@ -707,7 +706,7 @@
                 selectOccurrence.activate();
                 textarea = document.getElementById("map-boxSelect");
                 if (textarea) textarea.innerHTML = "";
-                console.log("add features = " + features.length.toString());
+                //console.log("add features = " + features.length.toString());
                 for (var i = 0; i < features.length; i++) {
                     selectOccurrence.select(layer_occ_select.features[i]);
                     addFeatureToList(features[i], i)
@@ -844,7 +843,7 @@
                 //get a string of visible layers
                 vislayer = map.layers[i];                
                 if (vislayer.isBaseLayer) continue; //cannot print any google layers                      
-                console.log(vislayer);                
+                //console.log(vislayer);
                 if ('params' in vislayer) {
                     if ('LAYERS' in vislayer.params) {
                         layers = layers + '"' + vislayer.params['LAYERS'] + '",'; //name + '",'

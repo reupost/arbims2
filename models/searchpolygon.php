@@ -26,7 +26,12 @@ class SearchPolygon extends Table_Base {
 
     public function GetSearchPolygon($id) {
         $this->AddWhere('id','=',$id);
-        return $this->GetRecords();
+        $res = $this->GetRecords();
+        if ($res) {
+            return $res[0]['polygon'];
+        } else {
+            return ''; //not found
+        }
     }
 }
 

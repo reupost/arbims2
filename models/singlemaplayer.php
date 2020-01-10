@@ -95,8 +95,8 @@ class SingleMapLayer {
 
         $geoserver_name_arr = explode(':', $row['geoserver_name']);
         $geoserver_name_no_workspace = end($geoserver_name_arr);
-        if ($row['layer_type'] == 'raster' && $data['datafile_path'] ==  NULL && $row['datafile_path'] ==  NULL) {
-            $data['datafile_path'] = $siteconfig['path_geoserver_data_dir'] . '/data/' . $geoserver_name_no_workspace  . '/' . $geoserver_name_no_workspace  . '.tif'; //default - TODO: need to verify that this is intuitive
+        if ($row['layer_type'] == 'raster' && $data['datafile_path'] ==  NULL && $row['datafile_path'] ==  NULL) { //TODO: sort out path here with data or not
+            $data['datafile_path'] = $siteconfig['path_geoserver_data_dir'] . '/' . $geoserver_name_no_workspace  . '/' . $geoserver_name_no_workspace  . '.tif'; //default - TODO: need to verify that this is intuitive
         }
         $data['db_table_name'] = $this->GetValidTableOrColumnName('raster_' . $geoserver_name_no_workspace);
 

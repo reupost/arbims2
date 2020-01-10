@@ -8,6 +8,7 @@ require_once("includes/config.php");
 require_once("includes/tools.php");
 require_once("models/table_base.php");
 require_once("includes/inc.language.php");
+require_once("models/searchpolygon.php");
 
 class TableOccurrence extends Table_Base {
 
@@ -33,6 +34,7 @@ class TableOccurrence extends Table_Base {
         "region:lakes" => "_regions[3]",
         "taxon" => "", //special case    
         "occlist" => "", //special case
+        "_geom" => "", //special case
         "filtercontent" => "to_tsvector('english', lower(coalesce(_kingdom,'') || ' ' || coalesce(_phylum,'') || ' ' || coalesce(_class,'') || ' ' || coalesce(_order,'') || ' ' || coalesce(_family,'') || ' ' || coalesce(_genus,'') || ' ' || coalesce(_species,'') || ' ' || coalesce(scientificname,'') || ' ' || coalesce(institutioncode,'') || ' ' || coalesce(collectioncode,'') || ' ' || coalesce(recordedby,'') || ' ' || coalesce(country,'') || ' ' || coalesce(stateprovince,'') || ' ' || coalesce(localitystart,'') || ' ' || coalesce(dataset_title,''))) @@ plainto_tsquery('***')",
         //advanced search options are passed directly as fields
     );
@@ -285,6 +287,10 @@ class TableOccurrence extends Table_Base {
             } elseif ($fieldalias == "occlist") {
                 $this->whereclause[] = "sd.sessionid = '" . $value . "'";
                 $this->use_occlist = true;
+            } elseif ($fieldalias == "_geom") {
+                $polygonsearch = new SearchPolygon();
+                $polygon = $polygonsearch->GetSearchPolygon($value);
+                $this->whereclause[] = "ST_Contains(ST_GeomFromText('" . $polygon . "', 4326), _geom)";
             } else {
                 //table contextualised fields, and array fields, need special treatment
                 if ((strpos($field, ".") > 0) || (strpos($field, "[") > 0)) {                    

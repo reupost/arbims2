@@ -21,6 +21,7 @@ class OccurrenceController {
         $this->params['datasetid'] = (isset($_CLEAN['datasetid']) ? $_CLEAN['datasetid'] : '');
         $this->params['occlist'] = (isset($_CLEAN['occlist']) ? $_CLEAN['occlist'] : 0);
         if ($this->params['occlist'] != 1) $this->params['occlist'] = 0; //boolean
+        $this->params['polygonid'] = GetCleanInteger(isset($_CLEAN['polygonid']) ? $_CLEAN['polygonid'] : '0');
 
         foreach (array('x1','x2','y1','y2') as $numeric_param) {
             $this->params[$numeric_param] = (isset($_CLEAN[$numeric_param])? $_CLEAN[$numeric_param] : '');
@@ -118,6 +119,10 @@ class OccurrenceController {
             if ($this->params['y2'] == '') $this->params['bounding_box'] .= ', ' . getMLtext('latitude') . ' < ' . $this->params['y2'];
         }
         if ($this->params['bounding_box'] > '') $this->params['bounding_box'] = substr($this->params['bounding_box'], strlen(', '));
+
+        if ($this->params['polygonid'] > 0) {
+            $tbloccurrence->AddWhere('_geom', 'within', $this->params['polygonid']);
+        }
 
         //must be specified, do not rely on DB since there might be residual session data from another query
         //if ($tbloccurrence->IsDbOccList(session_id())) {

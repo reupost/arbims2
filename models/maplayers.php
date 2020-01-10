@@ -191,10 +191,18 @@ class MapLayers extends Table_Base {
             }
             if ($row['datafile_path'] > '') {
                 $output = array();
+                if ($DEBUGGING) {
+                    echo "\"" . $siteconfig['path_raster2pgsql_exe'] . "\" -d -s 4326 -I -C -M -t 100x100 " . "\"" . $row['datafile_path'] . "\" public." . $row['db_table_name'] . " > " . $siteconfig['path_tmp'] . "/rast.sql" . "<br/>";
+                    myFlush();
+                }
                 $outputlastline = exec("\"" . $siteconfig['path_raster2pgsql_exe'] . "\" -d -s 4326 -I -C -M -t 100x100 " . "\"" . $row['datafile_path'] . "\" public." . $row['db_table_name'] . " > " . $siteconfig['path_tmp'] . "/rast.sql", $output);
                 //TODO: check for errors
                 $output = array();
-                $outputlastline = exec("\"" . $siteconfig['path_psql_exe'] . "\"-d arbims -f " . $siteconfig['path_tmp'] . "/rast.sql -U root", $output);
+                if ($DEBUGGING) {
+                    echo "\"" . $siteconfig['path_psql_exe'] . "\" -d arbims -f " . $siteconfig['path_tmp'] . "/rast.sql -U root" . "<br/>";
+                    myFlush();
+                }
+                $outputlastline = exec("\"" . $siteconfig['path_psql_exe'] . "\" -d arbims -f " . $siteconfig['path_tmp'] . "/rast.sql -U root", $output);
                 //TODO: check for errors
             } else {
                 if ($DEBUGGING) {
