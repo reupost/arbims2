@@ -216,6 +216,7 @@ class OccurrenceController {
         foreach (array('x1','x2','y1','y2') as $numeric_param) {
             if ($this->params[$numeric_param] > '' && is_numeric($this->params[$numeric_param])) $setcriteria[$numeric_param] = $this->params[$numeric_param];
         }
+        if ($this->params['polygonid']) $setcriteria['polygonid'] = $this->params['polygonid'];
         $setcriteria['download'] = 0; //once download has happened, reset the download switch
 
         $pageform = $pager->ShowControlForm(url_for('out.listoccurrence.' . $this->region . '.php'), '', $this->params['page'], '', 'listanchor', $setcriteria, $this->params['filterlistby']);
