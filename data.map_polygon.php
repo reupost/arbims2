@@ -20,6 +20,8 @@ if (isset($_CLEANPOST['map'])) {
 $mapLayers = new MapLayers();
 $layers_to_query = $mapLayers->GetLayersForMap($map, 'raster');
 
+$polygon_occ_recs_count = -1;
+
 function GetSLDfileAsXML($layer_name) {
     global $siteconfig;
 
@@ -135,6 +137,8 @@ ST_GeomFromText('" . $polygon . "',4326) AS geom
 }
 
 function SavePolygon($polygonToSave) {
+    global $polygon_occ_recs_count;
+
     $save_msg = "";
     $searchPoly = new SearchPolygon();
     $polyID = $searchPoly->WriteSearchPolygonToDB($polygonToSave, $save_msg);
@@ -142,19 +146,28 @@ function SavePolygon($polygonToSave) {
         echo 'Error: ' . $save_msg;
         return -1;
     }
+    $polygon_occ_recs_count = $searchPoly->GetOccRecordCount($polyID); //side-effect
     return $polyID;
 }
 
 $arr = array();
 
 $polygonId = SavePolygon($polygon);
+
 $layerStats = array();
-$statsArr = array();
-$statsArr['label'] = 'The polygon ID';
-$statsArr['value'] = $polygonId;
-$layerStats['displayname'] = '__polygonID';
+$layerStats['displayname'] = '__polygon_details';
 $layerStats['stats'] = array();
+
+$statsArr = array();
+$statsArr['label'] = 'Polygon ID';
+$statsArr['value'] = $polygonId;
 $layerStats['stats'][] = $statsArr;
+
+$statsArr = array();
+$statsArr['label'] = 'Occurrence record count';
+$statsArr['value'] = $polygon_occ_recs_count;
+$layerStats['stats'][] = $statsArr;
+
 $arr[] = $layerStats;
 
 if (count($layers_to_query) != 0 && $polygon != '') {

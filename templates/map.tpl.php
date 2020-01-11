@@ -83,8 +83,7 @@
     <?php echo $params['js_layer_objs'] ?>
         
     var layer_occurrence, layer_occurrence_overview, layer_identify, layer_occ_select, layer_polygon;
-    var polygonGeometry, polygonWKT, polygonID;
-    var numFeaturesSelected;
+    var polygonGeometry, polygonWKT, polygonID, polygonOccRecordCount;
 
 <?php if (isset($params['occ_kml'])): ?>
         var layer_occ_kml;
@@ -401,19 +400,10 @@
             if (did_draw) {
                 layer_occ_select.removeAllFeatures(); //TODO: selecting empty polygon leaves e.features in add
                 occListHTML = "";
-                var pfilter = new OpenLayers.Filter.Spatial({
-                    type: OpenLayers.Filter.Spatial.INTERSECTS,
-                    value: e.feature.geometry
-                });
-                wfsProtocol.read({
-                    filter:  pfilter,
-                    callback: processSpatialQuery,
-                    scope: new OpenLayers.Strategy.BBOX()
-                });
 
                 //now make ajax call to get raster stats and to save polygon to DB to use in subsequent occurrence searches
                 polygonID = 0;
-                numFeaturesSelected = 0;
+                polygonOccRecordCount = 0;
                 document.getElementById("map-boxSelect").innerHTML = ""; //invalidate any existing link
                 $.ajax({
                     type: "POST",
@@ -424,13 +414,26 @@
                     success: function (response) {
                         document.getElementById('map-rasterStats').innerHTML = '';
                         $.each(response, function (key, layerstats) {
-                            if (layerstats.displayname == '__polygonID') {
+                            if (layerstats.displayname == '__polygon_details') {
                                 $.each(layerstats.stats, function (key, val) {
-                                    //console.log(val);
-                                    polygonID = val.value;
+                                    if (val.label == 'Polygon ID') polygonID = val.value;
+                                    if (val.label == 'Occurrence record count') polygonOccRecordCount = val.value;
                                 });
-                                //don't set numFeaturesSelected since that is set separately and if not set now then a later finaliseFeatureList will be run after the features are added
-                                finaliseFeatureList(false);
+                                var max_to_sel = <?php echo $map_occurrence_selected ?>;
+                                if (polygonOccRecordCount > max_to_sel) {
+                                    window.alert("<?php printMLtext('selected_occurrence_records',array())?>: " + polygonOccRecordCount + "\n\n" + "<?php printMLtext('selected_occurrence_records_too_many_to_map',array("max_recs"=>$map_occurrence_selected)) ?>");
+                                    finaliseFeatureList(false);
+                                } else {
+                                    var pfilter = new OpenLayers.Filter.Spatial({
+                                        type: OpenLayers.Filter.Spatial.INTERSECTS,
+                                        value: e.feature.geometry
+                                    });
+                                    wfsProtocol.read({
+                                        filter:  pfilter,
+                                        callback: processSpatialQuery,
+                                        scope: new OpenLayers.Strategy.BBOX()
+                                    });
+                                }
                             } else {
                                 document.getElementById('map-rasterStats').innerHTML += "<h5>" + layerstats.displayname + "</h5>";
                                 document.getElementById('map-rasterStats').innerHTML += "<ul>";
@@ -623,7 +626,6 @@
             for (var i = 0; i < max_to_sel && i < e.features.length; i++) {
                 addFeatureToList(e.features[i], i);
             }
-            numFeaturesSelected = e.features.length;
             finaliseFeatureList(false);
         }
     }
@@ -662,11 +664,12 @@
         //console.log('finaliseFeatureList');
         textarea = document.getElementById("map-boxSelect");
         if (textarea) {
-            var showing_subset_only = (numFeaturesSelected > <?php echo $display_occurrence_selected ?>? true : false);
+            var showing_subset_only = (polygonOccRecordCount > <?php echo $display_occurrence_selected ?>? true : false);
+            var too_many_to_map = (polygonOccRecordCount > <?php echo $map_occurrence_selected ?>? true : false);
             var showlink =             
-                "<h5>" + (numFeaturesSelected === undefined? "" : numFeaturesSelected + " ") + "<?php printMLtext('selected_occurrence_records') ?>:</h5>" +
-                (showing_subset_only? "<?php printMLtext('selected_occurrence_records_too_many',array("max_recs"=>$display_occurrence_selected)) ?> " : "") +
-                "<b><a href='out.listoccurrence.<?php echo $region ?>.php?";
+                "<h5>" + (polygonOccRecordCount === undefined? "" : polygonOccRecordCount + " ") + "<?php printMLtext('selected_occurrence_records') ?>:</h5>" +
+                (showing_subset_only? (too_many_to_map? "" : "<?php printMLtext('selected_occurrence_records_too_many',array("max_recs"=>$display_occurrence_selected)) ?>") : "") +
+                " <b><a href='out.listoccurrence.<?php echo $region ?>.php?";
             if (!basedOnFID) {
                 showlink += "polygonid=" + polygonID;
                 /* showlink +=
@@ -675,8 +678,8 @@
             } else {
                 showlink += "occlist=1";
             }
-            showlink += "' " + "alt=\"<?php printMLtext('view_occurrences') ?>\" title=\"<?php printMLtext('view_occurrences') ?>\" target='_new'><?php printMLtext('view_all') ?></a></b><br/><br/>";
-            if (!basedOnFID && numFeaturesSelected == 0) showlink = "";
+            showlink += "' " + "alt=\"<?php printMLtext('view_occurrences') ?>\" title=\"<?php printMLtext('view_occurrences') ?>\" target='_new'><?php printMLtext('view_occurrences') ?></a></b><br/><br/>";
+            if (!basedOnFID && polygonOccRecordCount < 1) showlink = "";
             textarea.innerHTML = showlink + occListHTML;
         }
     }
@@ -711,7 +714,7 @@
                     selectOccurrence.select(layer_occ_select.features[i]);
                     addFeatureToList(features[i], i)
                 }
-                numFeaturesSelected = features.length;
+                polygonOccRecordCount = features.length;
                 finaliseFeatureList(true); //true = basedOnFID
             }
         } catch(e) {

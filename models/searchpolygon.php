@@ -33,6 +33,17 @@ class SearchPolygon extends Table_Base {
             return ''; //not found
         }
     }
+
+    public function GetOccRecordCount($id) {
+        $polygon = $this->GetSearchPolygon($id);
+        $res = pg_query_params("select count(*) AS num_occs from vw_occ_list1 WHERE ST_Contains(ST_GeomFromText($1, 4326), _geom)", array($polygon));
+        if (!$res) return -1;
+        $num_occs = 0;
+        while ($row = pg_fetch_array($res)) {
+            $num_occs = $row['num_occs'];
+        }
+        return $num_occs;
+    }
 }
 
 
