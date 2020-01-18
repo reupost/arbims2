@@ -26,6 +26,7 @@ class MapController {
         foreach (array('x1','x2','y1','y2') as $numeric_param) {
             if (!is_numeric($params[$numeric_param]) && $params[$numeric_param]>'') $params[$numeric_param] = $params[$numeric_param] . ' [' . htmlspecialchars(getMLtext('invalid')) . ']';
         }
+        $params['polygonid'] = GetCleanInteger(isset($_CLEAN['polygonid']) ? $_CLEAN['polygonid'] : '0');
 
         /* get model for page content */
         $tbloccurrence = new TableOccurrence();
@@ -79,6 +80,11 @@ class MapController {
         }
         if ($params['mapocc'] > '') {
             $showing_some_occs = true; //even if no other criteria
+        }
+
+        if ($params['polygonid'] > 0) {
+            $showing_some_occs = true;
+            $tbloccurrence->AddWhere('_geom', 'within', $params['polygonid']);
         }
 
         $params['bounding_box'] = '';

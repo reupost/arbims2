@@ -116,6 +116,12 @@ ST_GeomFromText('" . $polygon . "',4326) AS geom
     $result = @pg_query_params($siteconfig['dwc_db_conn'], $query, array());
     $resArray = array();
     if (!$result) {
+        $resErr = array();
+        $resErr['value'] = 0;
+        $resErr['label'] = pg_last_error($siteconfig['dwc_db_conn']);
+        $resErr['tot_pix'] = 0;
+        $resErr['percentage'] = 0;
+        $resArray[] = $resErr;
         return $resArray; //SQL error
     } else {
         $total_pix = 0;
