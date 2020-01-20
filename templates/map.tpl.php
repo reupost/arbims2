@@ -18,8 +18,10 @@
                 &nbsp;&nbsp;
                 <input type="radio" name="control" value="polygon" id="polygonToggle" onclick="toggleControl(this);">
                 <label for="polygonToggle" style="display: inline"><?php printMLtext('select_map_area') ?></label>
+                &nbsp;&nbsp;
                 <input type="radio" name="control" value="load" id="loadToggle" onclick="toggleControl(this);">
                 <label for="loadToggle" style="display: inline"><?php printMLtext('load_map_shape') ?></label>
+                &nbsp;&nbsp;
                 <div id="map-size-notice"><?php printMLtext('map_size_notice') ?></div>
             </div>
             <div id="map" class="map_pane map_normalsize">        
@@ -29,26 +31,28 @@
             </div>
             <div id="map-selectwrapper">
                 <div id="map-load-area-controls">
-                    <button class="accordion" id="map-load-area-controls-show"><?php printMLtext('load_map_shape') ?>:</button>
+                    <button class="accordion" style="background-color: #CCCCCC " id="map-load-area-controls-show"><?php printMLtext('load_map_shape') ?>:</button>
                     <div class="panel">
-                        <p>Paste your WKT text below and click '<?php printMLtext('load_map_shape_process_wkt') ?>'
-                            or click '<?php printMLtext('load_map_shape_load_shp') ?>' to load a zipped shapefile.</p>
+                        <p>Paste your WKT text below and click '<?php printMLtext('load_map_shape_process_wkt') ?>'.
+                            The WKT must contain longitude/latitude values in decimal degrees (in geographic WGS84 projection).</p>
                         <textarea rows="5" id="shape-wkt" placeholder="<?php printMLtext('load_map_shape_paste_wkt') ?>"
                                   style="width:100%"></textarea>
-                        <div >
-                            <button id="map-load-area-wkt"><?php printMLtext('load_map_shape_process_wkt') ?></button>
-                            <span id="map-load-area-wkt-error" style="color:red"></span>
-                        </div>
                         <div style="margin-top:5px">
-                            <form id="map-load-area-shp-form" action="data.map_shapefile.php" method="post" enctype="multipart/form-data">
-                                <label for="map-load-area-shp"><?php printMLtext('load_map_shape_load_shp') ?></label>
-
-                                <input type="file" id="map-load-area-shp" name="map-load-area-shp" accept="application/zip">
-                                <span id="map-load-area-shp-error" style="color:red"></span>
-                                <br/>
-                                <input class="btn btn-success" type="submit" value="Load TODO">
-                            </form>
+                            <button id="map-load-area-wkt" class="btn btn-success"><?php printMLtext('load_map_shape_process_wkt') ?></button>
+                            <span id="map-load-area-wkt-error" style="color:red; margin-left: 10px"></span>
+                            <span id="map-load-area-wkt-success" style="color:green; margin-left: 10px"></span>
                         </div>
+                        <br/>
+                        <p>Or click 'Choose file' to load a zipped shapefile.
+                            If the shapefile contains more than one shape, only the first will be used.</p>
+
+                            <form id="map-load-area-shp-form" action="data.map_shapefile.php" method="post" enctype="multipart/form-data">
+                                <input type="file" id="map-load-area-shp" style="margin-top:5px" name="map-load-area-shp" accept="application/zip"><br/>
+                                <input class="btn btn-success" style="margin-top:5px" type="submit" value="Load shapefile to map">
+                                <span id="map-load-area-shp-error" style="color:red; margin-left:10px"></span>
+                                <span id="map-load-area-shp-success" style="color:green; margin-left:10px"></span>
+                            </form>
+
                     </div>
                 </div>
                 <button class="accordion"><?php printMLtext('map_layer_legend') ?>:</button>
@@ -791,7 +795,6 @@
             },
             success: function(data)
             {
-
                 if(data.substr(0,6) == 'Error:')
                 {
                     // invalid file format.
@@ -805,7 +808,7 @@
 
                     polygonWKT = data;
                     showWKT();
-                } 
+                }
             },
             error: function(e)
             {

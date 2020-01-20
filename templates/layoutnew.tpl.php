@@ -11,13 +11,13 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         
-        <link href="css/bootstrap.css?version=1.1" rel="stylesheet" />
+        <link href="css/bootstrap.css?version=1.2" rel="stylesheet" />
         <link href="css/application.css?version=1.0" rel="stylesheet"/>
         <link href="css/bootstrap-responsive.css" rel="stylesheet"/>
         <link href="css/font-awesome/css/font-awesome.css" rel="stylesheet"/>        
         <link href="js/chosen/css/chosen.css" rel="stylesheet"/>
         <link href="js/jqtree/jqtree.css" rel="stylesheet"/>
-        <link href="css/main.css" rel="stylesheet"/>
+        <link href="css/main.css?v=1.0" rel="stylesheet"/>
         
         <script type="text/javascript" src="js/jquery/jquery.min.js"></script>        
         <script type="text/javascript" src="js/jquery.passwordstrength.js"></script>
