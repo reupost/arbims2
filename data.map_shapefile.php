@@ -6,14 +6,14 @@ $valid_extensions = array('zip'); // valid extensions
 $path = $siteconfig['path_user_shapefiles']; // upload directory
 
 if (!$_FILES['map-load-area-shp']) {
-    echo "Error: no valid file uploaded";
+    printMLtext('load_map_shape_load_shp_error_invalid_file');
     exit;
 }
 $file_name = $_FILES['map-load-area-shp']['name'];
 $ext = strtolower(pathinfo($file_name, PATHINFO_EXTENSION));
 if ($ext != 'zip') {
     // printMLtext('dataset_occurrence_key')
-    echo "Error: shapefile must be uploaded as .zip file";
+    printMLtext("load_map_shape_load_shp_error_not_zip");
     exit;
 }
 
@@ -26,14 +26,14 @@ mkdir($path . '/' . $random_digit, 0777, true);
 $path_full = $path . '/' . $random_digit . '/' . $new_file_name;
 
 if (!move_uploaded_file($tmp, $path_full)) {
-    echo "Error: could not copy file";
+    printMLtext("load_map_shape_load_shp_error_copy");
     exit;
 }
 
 $zip = new ZipArchive;
 $res = $zip->open($path_full);
 if ($res !== TRUE) {
-    echo 'Error: ZIP file extraction error';
+    printMLtext("load_map_shape_load_shp_error_bad_zip");
     exit;
 }
 
@@ -44,7 +44,7 @@ foreach (glob($path . '/' . $random_digit . '/*.shp') as $file_shp) {
     $files_shp[] = $file_shp;
 }
 if (count($files_shp) == 0) {
-    echo "Error: no .shp file found";
+    printMLtext("load_map_shape_load_shp_error_no_shp");
     exit;
 }
 $files_prj = array();
@@ -52,7 +52,7 @@ foreach (glob($path . '/' . $random_digit . '/*.prj') as $file_prj) {
     $files_prj[] = $file_prj;
 }
 if (count($files_prj) == 0) {
-    echo "Error: no .prj file found";
+    printMLtext("load_map_shape_load_shp_error_no_prj");
     exit;
 }
 
@@ -69,7 +69,7 @@ foreach (glob($wgs84_folder . '/*.shp') as $file_shp) {
     $files_shp_wgs84[] = $file_shp;
 }
 if (count($files_shp_wgs84) == 0) {
-    echo "Error: could not reproject shapefile to WGS84";
+    printMLtext("load_map_shape_load_shp_error_bad_prj");
     exit;
 }
 //save as WKT
@@ -80,14 +80,14 @@ $output_csv = $wkt_folder . '/' . basename($files_shp[0], '.shp') . '.csv';
 
 $row = 1;
 if (($handle = fopen($output_csv, "r")) === FALSE) {
-    echo 'Error: failed to convert shapefile to WKT';
+    printMLText("load_map_shape_load_shp_error_wkt_convert");
     exit;
 }
 while ((($data = fgetcsv($handle, 0, ",")) !== FALSE) && ($row < 3)) { //only interested in first real row (i.e. line 2)
     if ($row == 2) {
         $num = count($data);
         if ($num != 3) {
-            echo "Error: invalid WKT (not a polygon)";
+            printMLText("load_map_shape_load_shp_error_bad_wkt");
             exit;
         }
         echo $data[0]; //WKT is first column

@@ -4,7 +4,7 @@ require_once("includes/config.php");
 require_once("includes/tools.php");
 require_once("includes/template.php");
 require_once("includes/pager.php");
-require_once("models/tableusers.php");
+require_once("models/tabledownloads.php");
 require_once("includes/inc.language.php");
 require_once("includes/sessionmsghandler.php");
 
@@ -25,49 +25,47 @@ if ($USER_SESSION['siterole'] != 'admin') {
 }
 
 /* get model for page content */
-$tblusers = new TableUsers();
+$tbldownloads = new TableDownloads();
 
-if ($params['filterlistby'] > '') $tblusers->AddWhere('filtercontent','***', $params['filterlistby']); //special case - no comparison operator
+if ($params['filterlistby'] > '') $tbldownloads->AddWhere('filtercontent','***', $params['filterlistby']); //special case - no comparison operator
 
-$norecords = $tblusers->GetRecordsCount();
-$startrecord = GetPageRecordOffset($siteconfig['display_users_per_page'], $norecords, $params['page']);
-$result = $tblusers->GetRecords($params['sortlistby'], $startrecord, $siteconfig['display_users_per_page']);
+$norecords = $tbldownloads->GetRecordsCount();
+$startrecord = GetPageRecordOffset($siteconfig['display_downloads_per_page'], $norecords, $params['page']);
+$result = $tbldownloads->GetRecords($params['sortlistby'], $startrecord, $siteconfig['display_downloads_per_page']);
 
 /* put results into pager control */
 $arrSorts = array();
-$arrSorts['username'] = getMLtext('username');
-$arrSorts['email'] = getMLtext('email');
-$arrSorts['siterole'] = getMLText('role');
-$arrSorts['last_login'] = getMLText('user_login_most_recent');
-$arrSorts['activated'] = getMLText('user_activated');
+$arrSorts['download'] = getMLtext('download');
+$arrSorts['download_date'] = getMLtext('date');
+$arrSorts['username'] = getMLText('username');
+$arrSorts['email'] = getMLText('email');
+$arrSorts['numrecords'] = getMLText('occurrence_records');
+$arrSorts['region'] = getMLText('region');
 
 $arrListCols = array();
+$arrListCols['id'] = array();
+$arrListCols['id']['heading'] = getMLtext('download');
+$arrListCols['download_date'] = array();
+$arrListCols['download_date']['heading'] = getMLtext('date');
 $arrListCols['username'] = array();
 $arrListCols['username']['heading'] = getMLText('username');
-$arrListCols['username']['link'] = 'out.user_edit.php'; 
-$arrListCols['username']['linkparams'] = array('id' => 'id');
+$arrListCols['username']['link'] = 'out.user_edit.php';
+$arrListCols['username']['linkparams'] = array('id' => 'user_id');
 $arrListCols['email'] = array();
 $arrListCols['email']['heading'] = getMLText('email');
-$arrListCols['siterole'] = array();
-$arrListCols['siterole']['heading'] = getMLText('role');
-$arrListCols['last_login'] = array();
-$arrListCols['last_login']['heading'] = getMLText('user_login_most_recent');
-$arrListCols['numlogins'] = array();
-$arrListCols['numlogins']['heading'] = getMLText('user_login_count');
-$arrListCols['activated'] = array();
-$arrListCols['activated']['heading'] = getMLText('user_activated');
+$arrListCols['numrecords'] = array();
+$arrListCols['numrecords']['heading'] = getMLText('occurrence_records');
+$arrListCols['numrecords']['linkfromfield'] = 'url_full';
 
-$pager = new Pager($norecords, $siteconfig['display_users_per_page'], $params['page']);
-$pageform = '';	
+
+$pager = new Pager($norecords, $siteconfig['display_downloads_per_page'], $params['page']);
+$pageform = '';
 $pageopts = '';
 
 $pager->Setentries($result);
 $pager->SetEntriesDisplay($arrListCols);
 
-$pager->SetEntryTranslate('siterole'); //display translated value of lookup 
-$pager->SetEntryBoolean('activated');
-
-$pageform = $pager->ShowControlForm(url_for('out.listusers.php'), '', $params['page'], '', 'listanchor');
+$pageform = $pager->ShowControlForm(url_for('out.listdownloads.php'), '', $params['page'], '', 'listanchor');
 $pageopts = $pager->ShowPageOptions($params['filterlistby'], $arrSorts, $params['sortlistby']);
 
 $session = new SessionMsgHandler();
@@ -75,15 +73,15 @@ $session_msg = $session->GetSessionMsgMerged($USER_SESSION['id'], "message", tru
 
 /* page template main */
 $tpl = new MasterTemplate();
-$tpl->set('site_head_title', getMLText('user_list')); 
-$tpl->set('page_specific_head_content', 
-	"<link rel='stylesheet' type='text/css' media='screen' href='css/listusers.css' />
+$tpl->set('site_head_title', getMLText('download_list'));
+$tpl->set('page_specific_head_content',
+    "<link rel='stylesheet' type='text/css' media='screen' href='css/listdownloads.css' />
 	<script type='text/javascript' src='js/pageload.js'></script>");
 $tpl->set('site_user', $USER_SESSION);
 $tpl->set('session_msg', $session_msg);
 
 /* page template body - pass page options to this as well */
-$bdy = new MasterTemplate('templates/listusers.tpl.php');
+$bdy = new MasterTemplate('templates/listdownloads.tpl.php');
 $bdy->set('params',$params);
 $bdy->set('pager',$pager);
 $bdy->set('pageform',$pageform);

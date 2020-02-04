@@ -111,7 +111,16 @@ class Pager {
         return $urlparams;
     }
     //link will be either a straight URL or, if not like '*.*' then a url_for the passed value
-    //linkparams will be key-value pairs of url parameters (e.g. 'id' or 'user_id') if applicable    
+    //linkparams will be key-value pairs of url parameters (e.g. 'id' or 'user_id') if applicable
+
+    private function GetURLfromField($entry, $rowdata) {
+        $url ='';
+        if (isset($entry['linkfromfield'])) {
+            $url = str_replace("'","&quot;", $rowdata[$entry['linkfromfield']]);
+        }
+        return $url;
+    }
+
     public function SetEntriesDisplay($arrCols) {
         unset($this->entries_display);
         $this->entries_display = array();
@@ -125,7 +134,10 @@ class Pager {
                 foreach ($col['linkparams'] as $key=>$val) {
                     $this->entries_display[$field]['linkparams'][$key] = $val;
                 }
-            } 
+            }
+            if (isset($col['linkfromfield'])) {
+                $this->entries_display[$field]['linkfromfield'] = $col['linkfromfield'];
+            }
         }
     }
 
@@ -317,6 +329,10 @@ class Pager {
                         $html .= $opts['link'] . ".php";
                     }
                     $html .= $this->GetURLparams($opts, $row);                        
+                    $html .= "'>";
+                } elseif ($opts['linkfromfield'] > '') {
+                    $html .= "<a href='";
+                    $html .= $this->GetURLfromField($opts, $row);
                     $html .= "'>";
                 }
                 if (isset($this->entries_transform[$field])) 

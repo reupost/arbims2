@@ -1,3 +1,4 @@
+
 <legend><?php printMLtext('register') ?></legend>
 <div class="row-fluid">
     <div class="span12">
@@ -45,7 +46,14 @@
                     <td>
                     </td>
                     <td>
-            <input type="button" value="<?php printMLtext('save') ?>" onclick='javascript:SubmitMatchingPasswords("<?php printMLtext('passwords_do_not_match') ?>","<?php printMLtext('username_not_valid') ?>")'/>
+                    <div id="captcha" class="g-recaptcha"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                    </td>
+                    <td>
+            <input type="button" value="<?php printMLtext('save') ?>" onclick='javascript:SubmitMatchingPasswords()'/>
                     </td>
                 </tr>
             </table>

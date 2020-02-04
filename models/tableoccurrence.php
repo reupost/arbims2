@@ -404,10 +404,12 @@ class TableOccurrence extends Table_Base {
         return $this->AdvancedSearchFields;
     }
     
-    public function Download() {
+    public function Download($region) {
         global $siteconfig;
-        
-        //download is of original DwC data, not the summary view        
+        global $USER_SESSION;
+        $num_recs = 0;
+
+            //download is of original DwC data, not the summary view
         $sql = str_replace("***", $this->GetSQLlisting(), $this->sql_listing_download);
         $res = pg_query_params($sql, array());
         if (!$res) return 0; //SQL error
@@ -431,6 +433,7 @@ class TableOccurrence extends Table_Base {
         echo "\r\n";
         //print data
         while ($row = pg_fetch_array($res)) {
+            $num_recs++;
             foreach($this->DwCFieldOrdering as $field) {
                 if ($field != '_datasetid') {
                     echo $row[$field] . "\t";
@@ -441,9 +444,43 @@ class TableOccurrence extends Table_Base {
             }
             echo "\r\n";
         }
+        $page_params = $_SERVER['QUERY_STRING'];
+        $page_params_arr = explode('&',$_SERVER['QUERY_STRING']);
+        $clean_params = "";
+        foreach ($page_params_arr as $page_param) {
+            if ((strtolower(substr($page_param,0,strlen("download="))) == "download=") ||
+                (strtolower(substr($page_param,0,strlen("page="))) == "page=") ||
+                (strtolower(substr($page_param,0,strlen("sortlistby="))) == "sortlistby=") ||
+                (strtolower(substr($page_param,0,strlen("scrollto="))) == "scrollto=")) {
+                //omit
+            } else {
+                $clean_params .= (strlen($clean_params)>0? "&" : "") . $page_param;
+            }
+        }
+        $actual_link = $siteconfig['path_baseurl'] . '/' . 'out.listoccurrence.' . $region . '.php' . (strlen($clean_params)>0? "?" : "") . $clean_params;
+            //remove download=1, page=x, sortlistby=x from $_SERVER[REQUEST_URI];
+            //(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+        $ok = $this->LogDownload($USER_SESSION['id'], $sql, $num_recs, $clean_params, $actual_link, $region);
+        if (!$ok) {
+            //generate error log entry, but do not raise to user?
+        }
         return -1;
     }
-    
+
+    private function LogDownload($user_id, $sql, $num_recs, $url_params, $url_full, $region) {
+        $timestamp = date('Y-m-d H:i:s');
+        $downloadArr = array($user_id,
+            $timestamp,
+            $num_recs,
+            $sql,
+            $url_params,
+            $url_full,
+            $region);
+        $res = pg_query_params("INSERT INTO log_downloads (user_id, downloaddate, numrecords, strquery, url_params, url_full, region) VALUES ($1, $2, $3, $4, $5, $6, $7)", $downloadArr);
+        if (!$res) return 0;
+        return -1;
+    }
+
     public function IsDbOccList($session) {
         $res = pg_query_params("SELECT count(*) from session_searchdata WHERE sessionid = $1", array($session));
         if (!$res) return 0;

@@ -143,7 +143,7 @@ class OccurrenceController {
                 $session_msg["msg"] .= getMLtext('logged_in_users_only');
                 $session_msg["state"] = "error";
             } else {
-                $download_ok = $tbloccurrence->Download();
+                $download_ok = $tbloccurrence->Download($this->region);
                 if (!$download_ok) {
                     $session_msg["msg"] .= getMLtext('download_error');
                     $session_msg["state"] = "error";

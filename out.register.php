@@ -20,7 +20,12 @@ $session_msg = $session->GetSessionMsgMerged($USER_SESSION['id'], "message", tru
 $tpl = new MasterTemplate();
 $tpl->set('site_head_title', getMLText('register'));
 $tpl->set('page_specific_head_content', '<link rel="stylesheet" type="text/css" media="screen" href="css/register.css" />
-        <script type="text/javascript" src="js/password.js"></script> ');
+        <script type="text/javascript" src="js/password.js?v=1.8"></script> 
+        <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
+        <script type="text/javascript">var captcha_public_key ="' . $siteconfig['recaptcha_public_key'] . '";
+        var passwords_do_not_match = "' . getMLtext('passwords_do_not_match'). '";
+        var username_not_valid = "' . getMLtext('username_not_valid') . '";
+        var bad_captcha = "' . getMLtext('complete_captcha') . '";</script>');
 $tpl->set('site_user', $USER_SESSION);
 $tpl->set('session_msg', $session_msg);
 
