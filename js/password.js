@@ -33,7 +33,6 @@ function SubmitMatchingPasswords(allow_blank) {
         },
         success: function(response) {
             if (response != 'ok') {
-                window.alert(response);
                 window.alert(bad_captcha);
             } else {
                 if (ValidatePassword(allow_blank)) {
