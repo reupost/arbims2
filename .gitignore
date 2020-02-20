@@ -6,3 +6,6 @@ library-mnt*
 library-land*
 tmp/*
 uploads/*
+gbif/*
+logs/*
+*.old

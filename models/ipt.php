@@ -134,10 +134,10 @@ class IPT
             if (!$ok) return 0; //failure
         }
         $res1 = -1;
-        if (file_exists($folderto . "/eml.xml")) $res1 = ProcessDwCMetadata($folderto . "/eml.xml", $datasetid);
+        if (file_exists($folderto . "/eml.xml")) $res1 = $this->ProcessDwCMetadata($folderto . "/eml.xml", $datasetid);
 
         $res2 = -1;
-        if (file_exists($folderto . "/meta.xml")) $res2 = ProcessDwCMetadata($folderto . "/meta.xml", $datasetid);
+        if (file_exists($folderto . "/meta.xml")) $res2 = $this->ProcessDwCMetadata($folderto . "/meta.xml", $datasetid);
 
         $errormsg = "";
         $res3 = -1;
@@ -619,7 +619,7 @@ class IPT
             myFlush();
         }
         for ($tax = 2; $tax < count($taxon_hierarchy); $tax++) {
-            $sql = "UPDATE occurrence_processed op SET _" . $taxon_hierarchy[$tax] . " = t.\"" . $taxon_hierarchy[$tax] . "\" FROM taxon t WHERE (op._" . $taxon_hierarchy[$tax - 1] . " = t.\"" . $taxon_hierarchy[$tax - 1] . "\" AND (op._" . $taxon_hierarchy[$tax] . " IS NULL) AND t._datasetid = '" . pg_escape_string(TAXONOMIC_BACKBONE) . "'";
+            $sql = "UPDATE occurrence_processed op SET _" . $taxon_hierarchy[$tax] . " = t.\"" . $taxon_hierarchy[$tax] . "\" FROM taxon t WHERE (op._" . $taxon_hierarchy[$tax - 1] . " = t.\"" . $taxon_hierarchy[$tax - 1] . "\" AND t.taxonrank  = '" .  strtoupper($taxon_hierarchy[$tax - 1])  . "' AND (op._" . $taxon_hierarchy[$tax] . " IS NULL) AND t._datasetid = '" . pg_escape_string(TAXONOMIC_BACKBONE) . "'";
             if ($datasetid != "") {
                 $sql .= " AND op._datasetid = '" . pg_escape_string($datasetid) . "')";
             } else {
@@ -818,7 +818,7 @@ class IPT
     }
 
 //populates dataset-level metadata fields from the datasetmetadata dump table
-//returns -1 on success, 0 on faiulre
+//returns -1 on success, 0 on failure
     function PopulateDatasetCleanMetadata($datasetid = "")
     {
         //_has_occurrence, _has_taxon - these are set when importing the data

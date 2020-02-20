@@ -95,6 +95,18 @@
 
                 </td>
                 <td class='well'>
+                    <table border='0'>
+                        <tr>
+                            <td colspan='2'><h4><?php printMLtext('gbif') ?></h4></td>
+                        </tr>
+                        <tr>
+                            <td style='padding-right:15px'><img src='images/GBIF-2015.png' height='128px' width='193px' border='0' alt='pic'/></td>
+                            <td>
+                                <p><?php printMLtext('arbmis_admin_gbif') ?></p>
+                                <a href='out.gbif_synch.php' alt="<?php printMLtext('synchronise_with_gbif') ?>" title="<?php printMLtext('synchronise_with_gbif') ?>"><?php printMLtext('synchronise_with_gbif') ?></a>
+                            </td>
+                        </tr>
+                    </table>
                 </td>
             </tr>
 
