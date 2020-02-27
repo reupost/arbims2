@@ -73,7 +73,7 @@ class MapController {
                 $params['taxon_title'] = getMLtext('taxon_species') . ': <i>' . $params['taxonparent'] . ' ' . $params['taxon'] . '</i>';
             } else {
                 $rankpos = array_search($params['rank'], $siteconfig['taxonranks']);
-                $params['taxon_title'] = getMLtext('taxon_' . $params['rank']) . ': ' . $params['taxon'];
+                $params['taxon_title'] = getMLtext('taxon_' . strtolower($params['rank'])) . ': ' . $params['taxon'];
                 if ($rankpos > 1)
                     $params['taxon_title'] .= ' (' . getMLtext('taxon_' . $siteconfig['taxonranks'][$rankpos - 1]) . ' ' . $params['taxonparent'] . ')';
             }

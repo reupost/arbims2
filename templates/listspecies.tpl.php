@@ -1,5 +1,4 @@
 <legend><?php echo getMLtext('species_list') . ': ' . getMLtext('region_' . $region) ?></legend>
-<?php if (isset($params['dataset_title'])) echo "<h5>" . $params['dataset_title'] . "</h5>" ?>
 <?php if (isset($params['taxon_title'])) echo "<h5>" . $params['taxon_title'] . "</h5>" ?>
 <div class="row-fluid">
     <div class="span12">

@@ -17,9 +17,9 @@ class SpeciesTreeController {
         $tblspecies = new TableSpecies();
 
         $pageform = '';
-        $pageopts = '';        
+        $pageopts = '';
 
-        $txt = $tblspecies->GetAccordionBelow($this->region, '', '*root*', true, true, false, $ajax);
+        $txt = $tblspecies->GetAccordionBelow($this->region, '', '*root*', $ajax);
 
         /* page template main */
         $tpl = new MasterTemplate();

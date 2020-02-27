@@ -16,8 +16,7 @@ class SingleOccurrence {
         'bibliographiccitation',
         'references',
         'institutionid',
-        'collectionid',  
-        'datasetid',
+        'collectionid',
         'institutioncode',
         'collectioncode',
         'datasetname',
@@ -184,7 +183,7 @@ class SingleOccurrence {
     function GetAttributes($include_empty_fields = false) {
         $sql = "SELECT o.*, op.*, d.datasetid, d.link FROM ";
         $sql .= "occurrence o JOIN occurrence_processed op ON o._id = op._id ";
-        $sql.= "JOIN dataset d ON op._datasetid = d.datasetid ";
+        $sql.= "JOIN dataset d ON op.datasetkey = d.datasetkey ";
         $sql .= "WHERE o._id = $1";
         
         $res = pg_query_params($sql, array($this->id));

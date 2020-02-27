@@ -89,7 +89,7 @@ class OccurrenceController {
                 $this->params['taxon_title'] = getMLtext('taxon_species') . ': <i>' . $this->params['taxonparent'] . ' ' . $this->params['taxon'] . '</i>';
             } else {
                 $rankpos = array_search($this->params['rank'], $siteconfig['taxonranks']);
-                $this->params['taxon_title'] = getMLtext('taxon_' . $this->params['rank']) . ': ' . $this->params['taxon'];
+                $this->params['taxon_title'] = getMLtext('taxon_' . strtolower($this->params['rank'])) . ': ' . $this->params['taxon'];
                 if ($rankpos>1) $this->params['taxon_title'] .= ' (' .  getMLtext('taxon_' . $siteconfig['taxonranks'][$rankpos-1]) . ' ' . $this->params['taxonparent'] . ')';
             }
         }
@@ -154,6 +154,7 @@ class OccurrenceController {
         }
 
 
+        //echo $tbloccurrence->GetSQLlisting();
 
         $norecords = $tbloccurrence->GetRecordsCount();
         $startrecord = GetPageRecordOffset($siteconfig['display_occurrence_per_page'], $norecords, $this->params['page']);

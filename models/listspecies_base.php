@@ -14,7 +14,8 @@ class SpeciesController {
 
         /* page options */
         $params = array();
-        $params['sortlistby'] = (isset($_CLEAN['sortlistby']) ? $_CLEAN['sortlistby'] : 'dataset_title');
+        //TODO: need to consider acceptedscientificname since this defines genus
+        $params['sortlistby'] = (isset($_CLEAN['sortlistby']) ? $_CLEAN['sortlistby'] : 'scientificname');
         $params['filterlistby'] = (isset($_CLEAN['filterlistby']) ? $_CLEAN['filterlistby'] : '');
         $params['taxon'] = (isset($_CLEAN['taxon']) ? $_CLEAN['taxon'] : '');
         $params['rank'] = (isset($_CLEAN['rank']) ? $_CLEAN['rank'] : '');
@@ -25,8 +26,6 @@ class SpeciesController {
         //whereas what will be listed here will include all taxa (potentially from multiple datasets), so there may be apparently
         //duplication of names (either different datasets or different higher taxonomy).  There is no 'distinct' aggregation on
         ///this listing.
-        $params['datasetid'] = (isset($_CLEAN['datasetid']) ? $_CLEAN['datasetid'] : '');
-        $params['x_datasetid'] = (isset($_CLEAN['x_datasetid']) ? $_CLEAN['x_datasetid'] : '');
 
         $params['page'] = GetCleanInteger(isset($_CLEAN['page']) ? $_CLEAN['page'] : '1');
         $params['scrollto'] = (isset($_CLEAN['scrollto']) ? $_CLEAN['scrollto'] : '');
@@ -46,10 +45,6 @@ class SpeciesController {
 
         if ($params['filterlistby'] > '')
             $tbldata->AddWhere('filtercontent', '***', $params['filterlistby']);
-        if ($params['datasetid'] > '')
-            $tbldata->AddWhere('datasetid', '=', $params['datasetid']);
-        if ($params['x_datasetid'] > '')
-            $tbldata->AddWhere('datasetid', '<>', $params['x_datasetid']); //note this refers to datasetid - the 'x_' prefix is a hack to allow the usual URL param x=y variable assignment since there is no x<>y pattern
         //if ($params['taxon'] > '' && $params['rank'] > '' && $params['taxonparent'] > '') { //all must be present to filter like this
         if ($params['rank'] > '') { //all must be present to filter like this
             $tbldata->AddWhere('taxon', '=', array($params['taxon'], $params['rank'], $params['taxonparent']));
@@ -77,16 +72,11 @@ class SpeciesController {
 
         /* put results into pager control */
         $arrSorts = array();
-        $arrSorts['dataset'] = getMLtext('dataset');
         $arrSorts['scientificname'] = getMLText('scientific_name');
         $arrSorts['fulltaxonomy'] = getMLText('full_taxonomy');
         $arrSorts['vernacularname'] = getMLText('vernacular_name');
 
         $arrListCols = array();
-        $arrListCols['dataset_title'] = array();
-        $arrListCols['dataset_title']['heading'] = getMLText('dataset');
-        $arrListCols['dataset_title']['link'] = 'out.dataset.php'; 
-        $arrListCols['dataset_title']['linkparams'] = array('datasetid' => 'datasetid', 'region' => "'" . $this->region . "'");        
         $arrListCols['highertaxonomy'] = array();
         $arrListCols['highertaxonomy']['heading'] = getMLText('higher_taxonomy');
         $arrListCols['highertaxonomy']['link'] = '';
@@ -142,13 +132,9 @@ class SpeciesController {
                 $params['taxon_title'] = getMLtext('taxon_species') . ': <i>' . $params['taxonparent'] . ' ' . $params['taxon'] . '</i>';
             } else {
                 $rankpos = array_search($params['rank'], $siteconfig['taxonranks']);
-                $params['taxon_title'] = getMLtext('taxon_' . $params['rank']) . ': ' . $params['taxon'];
+                $params['taxon_title'] = getMLtext('taxon_' . strtolower($params['rank'])) . ': ' . $params['taxon'];
                 if ($rankpos>1) $params['taxon_title'] .= ' (' .  getMLtext('taxon_' . $siteconfig['taxonranks'][$rankpos-1]) . ' ' . $params['taxonparent'] . ')';
             }
-        }
-        if ($params['datasetid'] > '') {
-            $setcriteria['datasetid'] = $params['datasetid'];
-            $params['dataset_title'] = getMLtext('dataset') . ': ' . $tbldataset->GetDatasetTitle($params['datasetid']);
         }
         $setcriteria['download'] = 0; //once download has happened, reset the download switch
 

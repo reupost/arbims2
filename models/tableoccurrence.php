@@ -17,7 +17,7 @@ class TableOccurrence extends Table_Base {
     var $use_occlist = false;
     
     var $fieldmap_orderby = array(
-        "dataset" => "dataset_title, _genus, _species, catalognumber",
+        "dataset" => "dataset_title, _genus, _species, catalognumber", //TODO: look out for _genus, _species issues
         "scientificname" => "_genus, _species, scientificname, catalognumber",
         "fulltaxonomy" => "_kingdom, _phylum, _class, _order, _family, _genus, _species, catalognumber",
         "institution" => "institutioncode, collectioncode, dataset_title, datasetname, catalognumber",
@@ -227,7 +227,7 @@ class TableOccurrence extends Table_Base {
     );
     
     //override default because of choice between occlist / normal filtering
-    protected function GetSQLlisting($orderby = '', $start = 0, $num = 0) {
+    public function GetSQLlisting($orderby = '', $start = 0, $num = 0) {
         if ($this->use_occlist) {
             $sql = $this->sql_listing_occlist;
         } else {

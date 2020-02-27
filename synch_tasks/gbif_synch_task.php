@@ -41,21 +41,23 @@ class GBIF {
 }
 } ';
 
-    private function AddGBIFDownloadToQueue($gbif_id, $gbif_metadata) {
+    private function AddGBIFDownloadToQueue($gbif_id, $gbif_metadata, $downloadtype) {
         $timestamp = date('Y-m-d H:i:s');
-        $sql = "INSERT INTO log_gbif_requests (gbif_id, gbif_response, startdate, status, statusdate, downloadlink) VALUES ($1, $2, $3, $4, $5, $6)";
-        //TODO: extract status and downloadlink
+        $sql = "INSERT INTO log_gbif_requests (gbif_id, gbif_response, startdate, status, statusdate, downloadlink, downloadtype) VALUES ($1, $2, $3, $4, $5, $6, $7)";
+
         $metadata_json = json_decode($gbif_metadata, true);
         if (array_key_exists("status", $metadata_json) && array_key_exists("downloadLink", $metadata_json)) {
-            $res = pg_query_params($sql, array($gbif_id, $gbif_metadata, $timestamp, $metadata_json['status'], $timestamp, $metadata_json['downloadLink']));
+            $res = pg_query_params($sql, array($gbif_id, $gbif_metadata, $timestamp, $metadata_json['status'], $timestamp, $metadata_json['downloadLink'], $downloadtype));
             if (!$res) {
-                $this->log("Error inserting download " . $gbif_id . " into queue");
+                $this->log("Error inserting download (" . $downloadtype . ") " . $gbif_id . " into queue");
             } else {
-                $this->log("Download " . $gbif_id . " added to queue");
+                $this->log("Download (" . $downloadtype . ") " . $gbif_id . " added to queue");
+                return -1;
             }
         } else {
-           $this->log("Error inserting download " . $gbif_id . " into queue - bad GBIF metadata");
+           $this->log("Error inserting download (" . $downloadtype . ") " . $gbif_id . " into queue - bad GBIF metadata");
         }
+        return 0;
     }
 
     private function UpdateDownloadQueueStatus() {
@@ -138,16 +140,18 @@ class GBIF {
         $still_busy = false;
         $active_downloads = $this->CountActiveDownloads();
         if ($active_downloads > 0) $still_busy = true;
-        //$still_busy = true; //*** debugging
 
+        //$still_busy = true;
         if (!$still_busy) {
             $this->log("Starting downloads from GBIF");
             $this->loading = true;
             $query_json = str_replace("***POLYGON***", $siteconfig['gbif_query'], $this->query_template);
-            /*$saved_query = file_put_contents('gbif/query.json', $query_json);
-            if ($saved_query === false) {
-                return "Error: could not save query json to gbif directory";
-            } */
+            $query_spplist_json = str_replace('"format": "DWCA",', '"format": "SPECIES_LIST",', $query_json);
+            //$saved_query = file_put_contents('gbif/query.json', $query_json);
+            //$saved_query_spplist = file_put_contents('gbif/query_spplist.json', $query_spplist_json);
+            //if ($saved_query === false) {
+            //    return "Error: could not save query json to gbif directory";
+            //}
 
             $curl_handle=curl_init();
             curl_setopt($curl_handle, CURLOPT_URL,"http://api.gbif.org/v1/occurrence/download/request");
@@ -156,55 +160,86 @@ class GBIF {
             curl_setopt($curl_handle, CURLOPT_USERAGENT, 'ARBIMS');
             curl_setopt($curl_handle, CURLOPT_USERPWD, $siteconfig['gbif_username'] . ":" . $siteconfig['gbif_password']);
             curl_setopt($curl_handle, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
+            curl_setopt($curl_handle, CURLOPT_CUSTOMREQUEST, "POST");
+
             curl_setopt($curl_handle, CURLOPT_HTTPHEADER, array(
                 'Content-Type: application/json',
                 'Content-Length: ' . strlen($query_json)));
-            curl_setopt($curl_handle, CURLOPT_CUSTOMREQUEST, "POST");
             curl_setopt($curl_handle, CURLOPT_POSTFIELDS, $query_json);
-
             $gbif_download_id = curl_exec($curl_handle);
-            //$info = curl_getinfo($curl_handle);
+
+            curl_setopt($curl_handle, CURLOPT_HTTPHEADER, array(
+                'Content-Type: application/json',
+                'Content-Length: ' . strlen($query_spplist_json)));
+            curl_setopt($curl_handle, CURLOPT_POSTFIELDS, $query_spplist_json);
+            $gbif_download_spplist_id = curl_exec($curl_handle);
+
             curl_close($curl_handle);
 
             $curl_handle=curl_init();
-            curl_setopt($curl_handle, CURLOPT_URL,"http://api.gbif.org/v1/occurrence/download/" . $gbif_download_id);
+
             curl_setopt($curl_handle, CURLOPT_CONNECTTIMEOUT, 2);
             curl_setopt($curl_handle, CURLOPT_RETURNTRANSFER, 1);
             curl_setopt($curl_handle, CURLOPT_USERAGENT, 'ARBIMS');
+            curl_setopt($curl_handle, CURLOPT_URL,"http://api.gbif.org/v1/occurrence/download/" . $gbif_download_id);
             $gbif_metadata = curl_exec($curl_handle);
+            curl_setopt($curl_handle, CURLOPT_URL,"http://api.gbif.org/v1/occurrence/download/" . $gbif_download_spplist_id);
+            $gbif_spplist_metadata = curl_exec($curl_handle);
+            //$this->log("GBIF species list metadata # " . $gbif_download_spplist_id . " : " . $gbif_spplist_metadata);
             curl_close($curl_handle);
-            $db_res = $this->AddGBIFDownloadToQueue($gbif_download_id, $gbif_metadata);
-            return $db_res;
-        } else {
-            $download_id = -1;
-            try {
-                $download_id = $this->RetrieveCompleteDownloads();
-            } catch (Exception $e) {
-                $this->log('Error retrieving download: ',  $e->getMessage(), "\n");
-            }
-
-            if ($download_id > 0) {
-                $this->log('Download #' . $download_id . ' successfully retrieved');
-            } elseif ($download_id == 0) {
-                $this->log('Nothing to download right now');
-            } else {
-                return "Active downloads in the queue already";
-            }
+            $db_res = $this->AddGBIFDownloadToQueue($gbif_download_id, $gbif_metadata, 'occurrences');
+            $db_spplist_res = $this->AddGBIFDownloadToQueue($gbif_download_spplist_id, $gbif_spplist_metadata, 'species list');
+            $this->log("Occurrence download added to queue: result " . $db_res);
+            $this->log("Species list download added to queue: result " . $db_spplist_res);
         }
+        $download_id = -1;
+        $download_spplist_id = -1;
+        try {
+            //$this->UpdateDownloadQueueStatus();
+            $download_id = $this->RetrieveCompleteDownloads('occurrences');
+            $download_spplist_id = $this->RetrieveCompleteDownloads('species list');
+        } catch (Exception $e) {
+            $this->log('Error retrieving download: ', $e->getMessage(), "\n");
+        }
+
+        if ($download_id > 0) {
+            $this->log('Download #' . $download_id . ' (' . 'occurrence' . ') successfully retrieved');
+        } elseif ($download_id == 0) {
+            $this->log('No (' . 'occurrence' . ') to download right now');
+        } else {
+            $this->log('Active (' . 'occurrence' . ') downloads in the queue already');
+        }
+        if ($download_spplist_id > 0) {
+            $this->log('Download #' . $download_spplist_id . ' (' . 'species list' . ') successfully retrieved');
+        } elseif ($download_spplist_id == 0) {
+            $this->log('No (' . 'species list' . ') to download right now');
+        } else {
+            $this->log('Active (' . 'species list' . ') downloads in the queue already');
+        }
+
     }
 
-    public function RetrieveCompleteDownloads() {
+    public function RetrieveCompleteDownloads($downloadtype) {
         global $siteconfig;
-        $this->UpdateDownloadQueueStatus();
-        $sql = "SELECT * FROM log_gbif_requests WHERE status='SUCCEEDED' AND downloaddate IS NULL ORDER BY startdate DESC"; //get most recent first, if more than one
-        $res = pg_query_params($sql, array());
+
+        if ($downloadtype == 'occurrences') {
+            $filename = 'gbif_data';
+        } elseif ($downloadtype == 'species list') {
+            $filename = 'gbif_taxon';
+        } else {
+            $this->log("RetrieveCompleteDownloads - invalid downloadtype: " . $downloadtype);
+            return 0;
+        }
+        $sql = "SELECT * FROM log_gbif_requests WHERE status='SUCCEEDED' AND downloaddate IS NULL AND downloadtype = $1 ORDER BY startdate DESC"; //get most recent first, if more than one
+        $res = pg_query_params($sql, array($downloadtype));
         $download_id = 0;
         set_time_limit(0);
-        $zip_file = "gbif_data.zip"; //"download.zip";
+        $zip_file = $filename . ".zip";
+
         while (($row = pg_fetch_array($res)) && !$download_id) {
 
-            $fp = fopen (/* dirname(__FILE__) . '/' */ $zip_file, 'w+');
-            echo $row['downloadlink'];
+            $fp = fopen ($zip_file, 'w+');
+
             $ch = curl_init($row['downloadlink']);
             curl_setopt($ch, CURLOPT_TIMEOUT, 400);
             curl_setopt($ch, CURLOPT_FILE, $fp);
@@ -228,8 +263,17 @@ class GBIF {
             $zip = new ZipArchive;
             $res = $zip->open($zip_file);
             if ($res === TRUE) {
-                $zip->extractTo($path . '/gbif_data');
+                $zip->extractTo($path . '/' . $filename);
                 $zip->close();
+
+                if ($downloadtype == 'species list') {
+                    $directory = $filename . '/';
+                    @unlink($directory . $filename . ".csv"); //any old version, suppress warning
+                    foreach (glob($directory . "*.csv") as $filenamenew) {
+                        $file = realpath($filenamenew);
+                        rename($file, $directory . $filename . '.csv');
+                    }
+                }
 
                 $download_id = $row['id'];
 
@@ -239,8 +283,8 @@ class GBIF {
                     $timestamp = date("Y-m-d h:i:sa");
                     $res = pg_query_params($sql_update, array($timestamp, $row['id']));
                     //cancel any others that are ready in the queue since we've got the most up-to-date one
-                    $sql_update = "UPDATE log_gbif_requests SET status = 'SUPERCEDED', statusdate = $1 WHERE status='SUCCEEDED' AND downloaddate IS NULL";
-                    $res = pg_query_params($sql_update, array($timestamp));
+                    $sql_update = "UPDATE log_gbif_requests SET status = 'SUPERCEDED', statusdate = $1 WHERE status='SUCCEEDED' AND downloaddate IS NULL ANd downloadtype = $2";
+                    $res = pg_query_params($sql_update, array($timestamp, $downloadtype));
                 }
             } else {
                 throw new Exception("Could not unzip file, it may be corrupt");
@@ -253,5 +297,5 @@ class GBIF {
 }
 
 $gbif = new GBIF();
-echo $gbif->InitiateGBIFDownload();
+$gbif->InitiateGBIFDownload();
 ?>

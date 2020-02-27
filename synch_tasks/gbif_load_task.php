@@ -125,15 +125,15 @@ class GBIF_load {
     }
 
     //create placeholder records in one-to-one table occurrence_processed
-    function CreateOccurrenceProcessed($datasetid)
+    function CreateOccurrenceProcessed()
     {
-        $this->log("CreateOccurrenceProcessed - Enter [" . $datasetid . "]");
+        $this->log("CreateOccurrenceProcessed - Enter");
 
         $this->log("GBIF data: truncating occurrence_processed");
         pg_query_params("TRUNCATE occurrence_processed", array());
 
         $this->log("Creating occurrence record stubs in occurrence_processed");
-        $res = pg_query_params("INSERT INTO occurrence_processed (_id, _datasetid) SELECT _id, _datasetid FROM occurrence o", array());
+        $res = pg_query_params("INSERT INTO occurrence_processed (_id, datasetkey) SELECT _id, datasetkey FROM occurrence o", array());
         $this->log("CreateOccurrenceProcessed - Leave");
 
         if ($res === false) return 0; //problem
@@ -142,9 +142,9 @@ class GBIF_load {
 
     //populate metadata coordinate info for a dataset, or all occurrence records
 //returns -1 on success, 0 on failure
-    function PopulateCoordinates($datasetid = "")
+    function PopulateCoordinates()
     {
-        $this->log("PopulateCoordinates - Enter [" . $datasetid . "]");
+        $this->log("PopulateCoordinates - Enter");
 
         $overallres = -1;
         $this->log("Temporarily dropping spatial indexes from occurrence_processed");
@@ -154,11 +154,9 @@ class GBIF_load {
             $sql = "DROP INDEX IF EXISTS idx_occurrence_processed_" . $spatial_idx;
             $res = pg_query_params($sql, array());
         }
-        /* if ($datasetid != "" && $datasetid != "gbif_data") {
-            $res = pg_query_params("SELECT UpdateOccurrence_Coordinates($1)", array($datasetid));
-        } else { */
-            $res = pg_query_params("SELECT UpdateOccurrence_Coordinates()", array());
-        //}
+
+        $res = pg_query_params("SELECT UpdateOccurrence_Coordinates()", array());
+
         if ($res === false) $overallres = 0; //problem updating lat/long
         $this->log("Recreating spatial indexes on occurrence_processed");
         foreach ($spatial_idxs as $spatial_idx) {
@@ -172,20 +170,20 @@ class GBIF_load {
     function GetSetSpeciesSQL()
     {
         $sql = "CASE WHEN coalesce(specificepithet,'') = '' THEN ";
-        $sql .= "	CASE WHEN coalesce(scientificname,'') != '' AND lower(taxonrank) IN ('species','subspecies','subsp.','variety','var.') THEN ";
-        $sql .= "		SUBSTRING(scientificname FROM POSITION(' ' IN scientificname)+1) ";
+        $sql .= "	CASE WHEN coalesce(scientificname,'') != '' AND taxonrank IN ('SPECIES','SUBSPECIES','VARIETY','FORM') THEN ";
+        $sql .= "		scientificname ";
         $sql .= "	ELSE ";
         $sql .= "       CASE WHEN coalesce(acceptednameusage,'') != '' THEN ";
-        $sql .= "		    SUBSTRING(acceptednameusage FROM POSITION(' ' IN acceptednameusage)+1) ";
+        $sql .= "		    acceptednameusage ";
         $sql .= "	    ELSE ";
         $sql .= "           NULL ";
         $sql .= "       END ";
         $sql .= "	END ";
         $sql .= "ELSE ";
         $sql .= "	CASE WHEN coalesce(infraspecificepithet,'') = '' THEN ";
-        $sql .= "		specificepithet ";
+        $sql .= "		concat(genus, ' ', specificepithet) ";
         $sql .= "	ELSE ";
-        $sql .= "		concat(specificepithet, ' ', taxonrank, ' ', infraspecificepithet) ";
+        $sql .= "		concat(genus, ' ' , specificepithet, ' ', taxonrank, ' ', infraspecificepithet) ";
         $sql .= "	END ";
         $sql .= "END ";
         return $sql;
@@ -193,9 +191,9 @@ class GBIF_load {
 
     //populate metadata taxonomic info for a dataset, or all occurrence records
 //returns -1 on success, 0 on failure
-    function PopulateHigherTaxonomy($datasetid = "")
+    function PopulateHigherTaxonomy()
     {
-        $this->log("PopulateHigherTaxonomy - Enter [" . $datasetid . "]");
+        $this->log("PopulateHigherTaxonomy - Enter");
 
         $overallres = -1;
 
@@ -207,38 +205,21 @@ class GBIF_load {
 
         //add temporary indexes to source fields (note: ignore 'species' since this is a synthetic field not in DwC)
 
-        $this->log("PopulateHigherTaxonomy - Adding temporary taxon indexes to occurrence");
-
-        for ($tax = 1; $tax < count($taxon_hierarchy); $tax++) {
-            $sql = "CREATE INDEX IF NOT EXISTS idx_occurrence_" . $taxon_hierarchy[$tax] . " ON occurrence (\"" . $taxon_hierarchy[$tax] . "\")";
-            $res = pg_query_params($sql, array());
-        }
+        //$this->log("PopulateHigherTaxonomy - Adding temporary taxon indexes to occurrence");
+        //for ($tax = 1; $tax < count($taxon_hierarchy); $tax++) {
+        //    $sql = "CREATE INDEX IF NOT EXISTS idx_occurrence_" . $taxon_hierarchy[$tax] . " ON occurrence (\"" . $taxon_hierarchy[$tax] . "\")";
+        //    $res = pg_query_params($sql, array());
+        //}
 
         //first blank any existing taxonomic metadata
-        $this->log("PopulateHigherTaxonomy - Removing taxon indexes on occurrence processed");
-
-        if ($datasetid != "" && $datasetid != "gbif_data") {
-            //remove indexes on fields which will be updated, these indexes will be added again at the end
-            for ($tax = 0; $tax < count($taxon_hierarchy); $tax++) {
-                $sql = "DROP INDEX IF EXISTS idx_occurrence_processed__" . $taxon_hierarchy[$tax];
-                $res = pg_query_params($sql, array());
-            }
-            $res = pg_query_params("UPDATE occurrence_processed SET _species = NULL, _genus = NULL, _family = NULL, _order = NULL, _class = NULL, _phylum = NULL, _kingdom = NULL WHERE (_datasetid = $1)", array($datasetid));
-
-            $this->log("PopulateHigherTaxonomy - Removed taxon indexes and cleared taxon fields");
-
-        } else {
-            $this->log("Dropping higher taxonomy fields and recreating them (quicker than deleting indexes)");
-            //quickest to drop and recreate fields - this automatically drops the indexes as well
-            for ($tax = 0; $tax < count($taxon_hierarchy); $tax++) {
-                $sql = "ALTER TABLE occurrence_processed DROP IF EXISTS _" . $taxon_hierarchy[$tax];
-                $res = pg_query_params($sql, array());
-                $sql = "ALTER TABLE occurrence_processed ADD COLUMN _" . $taxon_hierarchy[$tax] . " text";
-                $res = pg_query_params($sql, array());
-            }
-            $this->log("PopulateHigherTaxonomy - Dropped and re-added taxon fields");
+        $this->log("PopulateHigherTaxonomy - dropping higher taxonomy fields and recreating them (quicker than deleting indexes)");
+        //quickest to drop and recreate fields - this automatically drops the indexes as well
+        for ($tax = 0; $tax < count($taxon_hierarchy); $tax++) {
+            $sql = "ALTER TABLE occurrence_processed DROP IF EXISTS _" . $taxon_hierarchy[$tax];
+            $res = pg_query_params($sql, array());
+            $sql = "ALTER TABLE occurrence_processed ADD COLUMN _" . $taxon_hierarchy[$tax] . " text";
+            $res = pg_query_params($sql, array());
         }
-
         if ($res === false) $overallres = 0; //problem blanking data
 
         //overwrite if data exists in occ table (i.e. only prescribe according to taxon backbone if occ data not specified)
@@ -254,35 +235,26 @@ class GBIF_load {
         $sql .= "_phylum = CASE WHEN o.\"phylum\" = '' THEN NULL ELSE initcap(o.\"phylum\") END, ";
         $sql .= "_kingdom = CASE WHEN o.\"kingdom\" = '' THEN NULL ELSE initcap(o.\"kingdom\") END ";
         $sql .= "FROM occurrence o WHERE op._id = o._id ";
-        if ($datasetid != "" && $datasetid != "gbif_data") {
-            $sql .= "AND o._datasetid = '" . pg_escape_string($datasetid) . "'";
-        }
-        $this->log("PopulateHigherTaxonomy - about to fill occurrence processed taxonomy with " . $sql);
 
+        $this->log("PopulateHigherTaxonomy - about to fill occurrence processed taxonomy with " . $sql);
         $res = pg_query_params($sql, array());
         $this->log("PopulateHigherTaxonomy - filled occurrence processed taxonomy");
 
 
         //genus: special case - extract from scientificName OR acceptedNameUsage if there was no explicit genus set
-        $this->log("PopulateHigherTaxonomy - fixing occurrence processed genus");
+        //$this->log("PopulateHigherTaxonomy - fixing occurrence processed genus");
 
-        if ($datasetid != "" && $datasetid != "gbif_data") {
-            //process entries with no genus explicitly set
-            $res = pg_query_params("UPDATE occurrence_processed op SET _genus = initcap(substr(o.scientificname, 0, strpos(o.scientificname,' '))) FROM occurrence o WHERE (strpos(o.scientificname,' ')>0 AND (o.genus IS NULL OR o.genus='') AND o._datasetid = $1 AND op._id = o._id)", array($datasetid));
-            if ($res === false) $overallres = 0;
-            $res = pg_query_params("UPDATE occurrence_processed op SET _genus = initcap(substr(o.acceptednameusage, 0, strpos(o.acceptednameusage,' '))) FROM occurrence o WHERE (strpos(o.acceptednameusage,' ')>0 AND (o.genus IS NULL OR o.genus='') AND o._datasetid = $1 AND op._id = o._id)", array($datasetid));
-            if ($res === false) $overallres = 0;
-        } else {
-            $res = pg_query_params("UPDATE occurrence_processed op SET _genus = initcap(substr(o.scientificname, 0, strpos(o.scientificname,' '))) FROM occurrence o WHERE (strpos(o.scientificname,' ')>0 AND (o.genus IS NULL OR o.genus='') AND op._id = o._id)", array());
-            if ($res === false) $overallres = 0;
-            $res = pg_query_params("UPDATE occurrence_processed op SET _genus = initcap(substr(o.acceptednameusage, 0, strpos(o.acceptednameusage,' '))) FROM occurrence o WHERE (strpos(o.acceptednameusage,' ')>0 AND (o.genus IS NULL OR o.genus='') AND op._id = o._id)", array());
-            if ($res === false) $overallres = 0;
-        }
+        //$res = pg_query_params("UPDATE occurrence_processed op SET _genus = initcap(substr(o.scientificname, 0, strpos(o.scientificname,' '))) FROM occurrence o WHERE (strpos(o.scientificname,' ')>0 AND (o.genus IS NULL OR o.genus='') AND op._id = o._id)", array());
+        //if ($res === false) $overallres = 0;
+        //$res = pg_query_params("UPDATE occurrence_processed op SET _genus = initcap(substr(o.acceptednameusage, 0, strpos(o.acceptednameusage,' '))) FROM occurrence o WHERE (strpos(o.acceptednameusage,' ')>0 AND (o.genus IS NULL OR o.genus='') AND op._id = o._id)", array());
+        //if ($res === false) $overallres = 0;
+
 
         //add output indexes again to assist with table join to taxon table
         $this->log("PopulateHigherTaxonomy - adding occurrence processed taxonomy indexes");
 
         for ($tax = 0; $tax < count($taxon_hierarchy); $tax++) {
+            $this->log("Adding index - " . $taxon_hierarchy[$tax]);
             $sql = "CREATE INDEX IF NOT EXISTS idx_occurrence_processed__" . $taxon_hierarchy[$tax] . " ON occurrence_processed (_" . $taxon_hierarchy[$tax] . ")";
             $res = pg_query_params($sql, array());
         }
@@ -295,10 +267,10 @@ class GBIF_load {
         //   x     y      z
         //   a     b      z
         // if occurrence record with genus = z is found, cannot simply assign family to it without considering if it has order information
-        // to distringuish between y/b family option
+        // to distinguish between y/b family option
         //   x     ?      z
+        /*
         $this->log("PopulateHigherTaxonomy - processing remaining occurrence processed taxonomic hierarchy");
-
         for ($tax = 2; $tax < count($taxon_hierarchy); $tax++) {
             $sql = "UPDATE occurrence_processed op SET _" . $taxon_hierarchy[$tax] . " = t.\"" . $taxon_hierarchy[$tax] . "\" FROM taxon t WHERE (op._" . $taxon_hierarchy[$tax - 1] . " = t.\"" . $taxon_hierarchy[$tax - 1] . "\" AND t.taxonrank  = '" .  strtoupper($taxon_hierarchy[$tax - 1])  . "' AND (op._" . $taxon_hierarchy[$tax] . " IS NULL) AND t._datasetid = '" . pg_escape_string(TAXONOMIC_BACKBONE) . "'";
             if ($datasetid != "" && $datasetid != "gbif_data") {
@@ -311,14 +283,15 @@ class GBIF_load {
             $res = pg_query_params($sql, array());
             if ($res === false) $overallres = 0;
         }
+        */
 
         //remove temporary indexes
-        $this->log("PopulateHigherTaxonomy - dropping temporary indexes on occurrence table");
+        //$this->log("PopulateHigherTaxonomy - dropping temporary indexes on occurrence table");
 
-        for ($tax = 1; $tax < count($taxon_hierarchy); $tax++) {
-            $sql = "DROP INDEX IF EXISTS idx_occurrence_" . $taxon_hierarchy[$tax];
-            $res = pg_query_params($sql, array());
-        }
+        //for ($tax = 1; $tax < count($taxon_hierarchy); $tax++) {
+        //    $sql = "DROP INDEX IF EXISTS idx_occurrence_" . $taxon_hierarchy[$tax];
+        //    $res = pg_query_params($sql, array());
+        //}
         //re-enable autovacuum
         pg_query_params("ALTER TABLE occurrence_processed SET ( autovacuum_enabled = TRUE, toast.autovacuum_enabled = TRUE )", array());
         $this->log("PopulateHigherTaxonomy - Leave");
@@ -329,81 +302,68 @@ class GBIF_load {
 
     //migrate valid content from limbo dataset into main db and do post-processing
 //return -1 on success, 0 on any failures
-    function ImportDwCData($filename)
+    function ImportDwCData($filename, $data_type, $skip_occurrence_higher_taxonomy)
     {
-        $this->log("ImportDwCData - Enter [" . $filename . "]");
         global $siteconfig;
+        $this->log("ImportDwCData - Enter [" . $filename . "]");
 
-        $idx_fields = array("_datasetid","_id", "scientificname");
+        $idx_fields = array("_id", "scientificname", "taxonrank", "taxonkey", "acceptedtaxonkey", "datasetkey");
         $overallres = -1;
         $datasetid = $this->GetFileWithoutExtFromPath($filename);
 
         $this->log("Importing DWCdata from " . $datasetid);
         //scan limbo schema for any tables prefixed with the datasetid
-        $cleandatasetid = strtolower(str_replace("-", "_", $datasetid));
-        $result = pg_query_params("SELECT table_name FROM information_schema.tables WHERE (table_schema=$1 AND table_name LIKE $2 || '_%')", array($siteconfig['schema_limbo'], $cleandatasetid));
-        if (!$result) {
-            $this->log("SQL error in ImportDwCData");
-            return 0;
-        } //error
-        while ($table = pg_fetch_array($result)) {
-            $source_id_field = $this->GetPrimaryKeyFirstField($table['table_name']); // "" if none
-            //make sure limbo table fields are in the main db table, and [current not checking] fieldtypes are compatible.
-            //occurrence tables must be compared to the main schema occurrence table
-            if ($table['table_name'] == $cleandatasetid . "_occurrence") {
-                pg_query_params("UPDATE dataset SET _has_occurrence = true WHERE (datasetid = $1)", array($datasetid)); //TODO: fix with new dataset model
 
-                $this->log("Deleting old occurrence records where _datasetid = " . $datasetid);
-                if ($datasetid == "gbif_data") {
-                    $this->log("GBIF data: truncating entire occurrence table");
-                    pg_query_params("TRUNCATE occurrence", array());
-                } else {
-                    pg_query_params("DELETE FROM occurrence WHERE (_datasetid = $1)", array($datasetid));
-                }
-                $this->log("Temporarily removing occurrence table indexes");
-                foreach($idx_fields as $idx_field) {
-                    $sql = "DROP INDEX IF EXISTS idx_occurrence_" . $idx_field;
-                    $res = pg_query_params($sql, array());
-                }
-                $sql = "INSERT INTO occurrence (";
-                $fieldnamearray = $this->GetValidFieldNameArrayWithoutTypeMatch($table['table_name'], 'occurrence');
-                foreach ($fieldnamearray as $field) {
-                    $sql .= "\"" . strtolower($field) . "\", "; //my simpledwc table has lowercase field names to simplify use in postgreSQL
-                }
-                $sql .= " _datasetid";
-                if ($source_id_field != "") $sql .= ", _sourcerecordid";
-                $sql .= ") SELECT ";
-                foreach ($fieldnamearray as $field) {
-                    $sql .= "\"" . $field . "\", "; //source table might have mixed case field names
-                }
-                //$sql .= "'" . pg_escape_string($datasetid) . "' as _datasetid";
-                $sql .= "\"" . "datasetName" . "\" as _datasetid";
-                if ($source_id_field != "") $sql .= ", \"" . $source_id_field . "\" as _sourcerecordid";
-                $sql .= " FROM " . $table['table_name'];
-                $this->log("Copying across to main database using: " . $sql);
-                $res = pg_query_params($sql, array()); //copy valid fields from dataset across
-                $this->log("Recreating occurrence table indexes");
-                foreach($idx_fields as $idx_field) {
-                    $sql = "CREATE INDEX IF NOT EXISTS idx_occurrence_" . $idx_field . " ON occurrence (" . $idx_field . ")";
-                    $res = pg_query_params($sql, array());
-                }
-                if ($res === false) {
-                    //problem inserting into main occurrence table
-                    $this->log("SQL copy to main database failed!");
-                    $overallres = 0;
-                }
-                // now create occurrence_processed records
-                $res = $this->CreateOccurrenceProcessed($datasetid);
+
+        if ($data_type == "occurrence") {
+            $source_id_field = $this->GetPrimaryKeyFirstField('gbif_data_occurrence'); // "" if none
+            $this->log("GBIF data: truncating entire occurrence table");
+            pg_query_params("TRUNCATE occurrence", array());
+
+            $this->log("Temporarily removing occurrence table indexes");
+            foreach ($idx_fields as $idx_field) {
+                $sql = "DROP INDEX IF EXISTS idx_occurrence_" . $idx_field;
+                $res = pg_query_params($sql, array());
+            }
+            $sql = "INSERT INTO occurrence (";
+            $fieldnamearray = $this->GetValidFieldNameArrayWithoutTypeMatch('gbif_data_occurrence', 'occurrence');
+            foreach ($fieldnamearray as $field) {
+                $sql .= "\"" . strtolower($field) . "\", "; //my simpledwc table has lowercase field names to simplify use in postgreSQL
+            }
+            $sql .= " _datasetid";
+            if ($source_id_field != "") $sql .= ", _sourcerecordid";
+            $sql .= ") SELECT ";
+            foreach ($fieldnamearray as $field) {
+                $sql .= "\"" . $field . "\", "; //source table might have mixed case field names
+            }
+            $sql .= "\"" . "datasetName" . "\" as _datasetid";
+            if ($source_id_field != "") $sql .= ", \"" . $source_id_field . "\" as _sourcerecordid";
+            $sql .= " FROM " . 'gbif_data_occurrence';
+            $this->log("Copying across to main database using: " . $sql);
+            $res = pg_query_params($sql, array()); //copy valid fields from dataset across
+            $this->log("Recreating occurrence table indexes");
+            foreach ($idx_fields as $idx_field) {
+                $sql = "CREATE INDEX IF NOT EXISTS idx_occurrence_" . $idx_field . " ON occurrence (" . $idx_field . ")";
+                $res = pg_query_params($sql, array());
+            }
+            if ($res === false) {
+                //problem inserting into main occurrence table
+                $this->log("SQL copy to main database failed!");
+                $overallres = 0;
+            }
+            // now create occurrence_processed records
+            $res = $this->CreateOccurrenceProcessed();
+            if (!$res) {
+                $this->log("Process occurrences failed!");
+                $overallres = 0;
+            } else {
+                //now process lat/long fields
+                $res = $this->PopulateCoordinates();
                 if (!$res) {
-                    $this->log("Process occurrences failed!");
+                    $this->log("Populate coordinates and spatial geometries failed!");
                     $overallres = 0;
-                } else {
-                    //now process lat/long fields
-                    $res = $this->PopulateCoordinates($datasetid);
-                    if (!$res) {
-                        $this->log("Populate coordinates and spatial geometries failed!");
-                        $overallres = 0;
-                    }
+                }
+                if (!$skip_occurrence_higher_taxonomy) {
                     //now process taxon information
                     $res = $this->PopulateHigherTaxonomy($datasetid);
                     if (!$res) {
@@ -412,47 +372,60 @@ class GBIF_load {
                     }
                 }
             }
-            //TODO: need to look at this ***
-            if ($table['table_name'] == $cleandatasetid . "_taxon") {
-                pg_query_params("UPDATE dataset SET _has_taxon = true WHERE (datasetid = $1)", array($datasetid));
-                pg_query_params("DELETE FROM taxon WHERE (_datasetid = $1)", array($datasetid));
-                $sql = "INSERT INTO taxon (";
-                $fieldnamearray = $this->GetValidFieldNameArrayWithoutTypeMatch($table['table_name'], 'taxon');
-                foreach ($fieldnamearray as $field) {
-                    $sql .= "\"" . strtolower($field) . "\", "; //my table has lowercase field names to simplify use in postgreSQL
-                }
-                $sql .= " _datasetid";
-                if ($source_id_field != "") $sql .= ", _sourcerecordid";
-                $sql .= ") SELECT ";
-                foreach ($fieldnamearray as $field) {
-                    $sql .= "\"" . $field . "\", "; //source table might have mixed case field names
-                }
-                $sql .= "'" . pg_escape_string($datasetid) . "' as _datasetid";
-
-                if ($source_id_field != "") $sql .= ", \"" . $source_id_field . "\" as _sourcerecordid";
-                $sql .= " FROM " . $table['table_name'];
-                $res = pg_query_params($sql, array()); //copy valid fields from dataset across
-                if ($res === false) $overallres = 0; //problem inserting into main taxon table
-
-                //now fix capitalisation
-                pg_query_params("UPDATE taxon SET kingdom = initcap(coalesce(kingdom,'')), phylum = initcap(coalesce(phylum,'')), \"class\" = initcap(coalesce(\"class\",'')), \"order\" = initcap(coalesce(\"order\",'')), family = initcap(coalesce(family,'')), genus = initcap(coalesce(genus,'')), species = " . GetSetSpeciesSQL() . " WHERE _datasetid = $1", array($datasetid));
-                //populate scientificname where possible
-                pg_query_params("UPDATE taxon SET scientificname = trim(both from (concat(genus,' ',specificepithet,' ',(trim(both from (concat(infraspecificepithet,' ',scientificnameauthorship))))))) WHERE (_datasetid = $1 AND coalesce(scientificname,'') = '' AND genus > '' AND specificepithet > '')", array($datasetid));
-                //now add _species_wth_synof data
-                pg_query_params("UPDATE taxon SET _species_with_synof = concat(species,' = ',tax_syns.currentname) FROM (SELECT t1._id, t2.scientificname as currentname from taxon t1 JOIN taxon t2 ON t1.acceptednameusageid = t2.taxonid AND t1._datasetid = t2._datasetid) tax_syns WHERE tax_syns._id = taxon._id AND _datasetid = $1", array($datasetid));
-                //set taxon regional affiliation.  This needs to be updated when a dataset is updated.
-                pg_query_params("UPDATE taxon t SET _regions = d._regions FROM dataset d WHERE t._datasetid = d.datasetid AND t._datasetid = $1", array($datasetid));
-                //now rebuild occurrence data taxonomic details if the dataset is the master backbone dataset
-                if ($datasetid == TAXONOMIC_BACKBONE) $this->PopulateHigherTaxonomy();
-            }
         }
+
+        if ($data_type == "taxon") {
+
+            pg_query_params("TRUNCATE limbo.gbif_taxon", array());
+            $sql = "COPY limbo.gbif_taxon FROM '" . $siteconfig['path_basetasksfolder'] . "/gbif_taxon/gbif_taxon.csv' DELIMITER '\t' CSV HEADER";
+
+            $res = pg_query_params($sql, array());
+            if ($res === false) {
+                $this->log("Error loading taxon CSV file into limbo schema");
+                $this->log("ImportDwCData - Leave");
+                return 0;
+            }
+            $this->log("GBIF data: truncating entire taxon table");
+            pg_query_params("TRUNCATE taxon", array());
+            $sql = "INSERT INTO taxon (";
+            $fieldnamearray = $this->GetValidFieldNameArrayWithoutTypeMatch('gbif_taxon', 'taxon');
+            foreach ($fieldnamearray as $field) {
+                $sql .= "\"" . strtolower($field) . "\", "; //my table has lowercase field names to simplify use in postgreSQL
+            }
+            $regions = "'{true,true,true}'";
+            $sql .= " _regions";
+            if ($source_id_field != "") $sql .= ", _sourcerecordid";
+            $sql .= ") SELECT ";
+            foreach ($fieldnamearray as $field) {
+                $sql .= "\"" . $field . "\", "; //source table might have mixed case field names
+            }
+            $sql .= $regions;
+            if ($source_id_field != "") $sql .= ", \"" . $source_id_field . "\" as _sourcerecordid";
+            $sql .= " FROM " . 'gbif_taxon';
+            $res = pg_query_params($sql, array()); //copy valid fields from dataset across
+            if ($res === false) {
+                $this->log("Error copying gbif_taxon to main schema");
+                $this->log("ImportDwCData - Leave");
+                return 0;
+            }
+
+            //now add _species_with_synof data
+            pg_query_params("UPDATE taxon SET _species_with_synof = species WHERE taxonomicstatus='ACCEPTED' AND taxonrank IN ('SPECIES','SUBSPECIES','VARIETY','FORM')", array());
+            pg_query_params("UPDATE taxon SET _species_with_synof = concat(species,' = ',acceptedscientificname) WHERE taxonomicstatus!='ACCEPTED' AND taxonrank IN ('SPECIES','SUBSPECIES','VARIETY','FORM')", array());
+            //set taxon regional affiliation.  This needs to be updated when a dataset is updated.
+
+            //pg_query_params("UPDATE taxon t SET _regions = $1", array($regions)); //TODO: rework this. Taxa do not belong to specific 'master' datasets now, with only one GBIF master dataset (and might be found in many of the contained datasets)
+            //now rebuild occurrence data taxonomic details
+            $this->PopulateHigherTaxonomy();
+        }
+
         $this->log("ImportDwCData - Leave");
         return $overallres;
     }
 
     //populates dataset-level metadata fields from the datasetmetadata dump table
 //returns -1 on success, 0 on faiulre
-    function PopulateDatasetCleanMetadata($datasetid = "")
+    function PopulateDatasetCleanMetadata()
     {
         //_has_occurrence, _has_taxon - these are set when importing the data
         //following functions sets the follwing in the main dataset table from the datasetmetadata table
@@ -462,16 +435,16 @@ class GBIF_load {
         //_contact_org
         //_keywords
         //_citation
-        $this->log("PopulateDatasetCleanMetadata - Enter [" . $datasetid . "]");
+        $this->log("PopulateDatasetCleanMetadata - Enter");
 
         $res = pg_query_params("SELECT UpdateDataset_CleanMetadata()", array());
         $this->log("PopulateDatasetCleanMetadata - Leave");
         return -1; //assume success
     }
 
-    function ProcessDwCMetadata($metadatafile, $datasetid = "")
+    function ProcessDwCMetadata($metadatafile)
     {
-        $this->log("ProcessDwCMetadata - Enter - [" . $metadatafile . ", " . ($datasetid == ""? "(dataset from file)" : $datasetid) . "]");
+        //$this->log("ProcessDwCMetadata - Enter - [" . $metadatafile . ", " . ($datasetid == ""? "(dataset from file)" : $datasetid) . "]");
 
         $metadata = simplexml_load_file($metadatafile);
         if (!$metadata) return 0; //invalid xml or some other error
@@ -484,7 +457,8 @@ class GBIF_load {
         //empty elements are not included in the array
         //ready to be inserted into DB with each array element recorded as <dataset_id><attribute><value>
 
-        if ($datasetid == "") $datasetid = $meta_flat['dataset.title'];
+        $datasetid = $meta_flat['dataset.title'];
+        $datasetkey = $this->GetFileWithoutExtFromPath($metadatafile);
 
         //clear any existing metadata for the dataset
         pg_query_params("DELETE FROM datasetmetadata WHERE datasetid = $1", array($datasetid));
@@ -502,12 +476,18 @@ class GBIF_load {
                 $this->log("Error adding dataset with: " . implode("; ", $vals));
             }
         }
+        $sql = "UPDATE dataset SET datasetkey = $1 WHERE datasetid = $2";
+        $vals = array($datasetkey, $datasetid);
+        $res = pg_query_params($sql, $vals);
+        if ($res === false) {
+            $this->log("Error adding dataset key with: " . implode("; ", $vals));
+        }
 
         //var_dump($meta_flat);
         foreach ($meta_flat as $key => $value) {
             $res = pg_query_params("INSERT INTO datasetmetadata (datasetid, strattribute, strvalue, strfile) VALUES ($1, $2, $3, $4)", array($datasetid, $key, substr($value,0,2000), "eml"));
         }
-        $this->log("ProcessDwCMetadata - Leave");
+        //$this->log("ProcessDwCMetadata - Leave");
 
         return -1;
     }
@@ -559,18 +539,18 @@ class GBIF_load {
         return $numparts;
     }
 
-    function ProcessDwCRecords($archive, $datasetid, $skip_sql_creation = false)
+    function ProcessDwCRecords($skip_sql_creation = false)
     {
-        $this->log("ProcessDwCRecords - Enter - [" . $datasetid . "]");
+        $this->log("ProcessDwCRecords - Enter");
 
         global $siteconfig;
         $insert_bulk_rows = 100;
 
-        $sqlfile = $archive . ".sql";
+        $sqlfile = "gbif_data.sql";
         $output = array();
-        $cleandatasetid = str_replace("-", "_", $datasetid); //otherwise the SQL table name is invalid
+
         if (!$skip_sql_creation) {
-            $dwca2sql = "\"" . $siteconfig['path_java_exe'] . "\"  -jar \"" . $siteconfig['path_basefolder'] . "/lib/dwca_import/dwca2sql.jar\" -ci -s " . $archive . " -o " . $sqlfile . " -p " . $cleandatasetid . " -f true --max-row-per-insert " . $insert_bulk_rows;
+            $dwca2sql = "\"" . $siteconfig['path_java_exe'] . "\"  -jar \"" . $siteconfig['path_basefolder'] . "/lib/dwca_import/dwca2sql.jar\" -ci -s " . "gbif_data" . " -o " . "gbif_data.sql" . " -p " . "gbif_data" . " -f true --max-row-per-insert " . $insert_bulk_rows;
             $this->log("Processing DWCA to SQL with: " . $dwca2sql);
 
             exec($dwca2sql, $output);
@@ -592,12 +572,9 @@ class GBIF_load {
         $output2 = array();
         $this->log("Loading data to limbo schema with: " . "\"" . $siteconfig['path_psql_exe'] . "\" -U " . $siteconfig['limbo_user'] . " -d " . $siteconfig['dwc_db'] . " -1 -f \"" . $sqlfile . "\" -p " . $siteconfig['dwc_port'] );
 
-        //if ($cleandatasetid == 'gbif_data') { //TODO: when loading taxonomic backbone need to not do this
-        //    pg_query_params("TRUNCATE " . $cleandatasetid . "_occurrence", array());
-        //}
         //debugging
         //$numparts = $this->SplitFile($sqlfile);
-        
+
         exec("\"" . $siteconfig['path_psql_exe'] . "\" -U " . $siteconfig['limbo_user'] . " -d " . $siteconfig['dwc_db'] . " -1 -f \"" . $sqlfile . "\" -p " . $siteconfig['dwc_port'], $output2);
         if (isset($output2[0])) {
             if (stripos(implode(" ", $output2), "Error") !== false) {
@@ -646,11 +623,11 @@ class GBIF_load {
         //recreate indexes
 
         $this->log("UpdateSummaryViewTables - species summary");
-        $res_spp = pg_query_params("SELECT UpdateSummary_Spp()", array());
+        $res_spp = pg_query_params("SELECT updatesummary_spp()", array());
         $this->log("UpdateSummaryViewTables - occurrence list");
-        $res_occ_list = pg_query_params("SELECT UpdateSummary_OccList()", array());
+        $res_occ_list = pg_query_params("SELECT updatesummary_occlist()", array());
         $this->log("UpdateSummaryViewTables - occurrence summary");
-        $res_occ_sum = pg_query_params("SELECT UpdateSummary_OccSum()", array());
+        $res_occ_sum = pg_query_params("SELECT updatesummary_occsum()", array());
         $this->log("UpdateSummaryViewTables - Leave");
 
         return -1;
@@ -658,8 +635,7 @@ class GBIF_load {
 
     // update the db with the metadata and load the DwC records into limbo schema
 //returns -1 on success, 0 on failure
-    function ProcessDwC($datasetid, $dwcpath, $skip_sql_creation = false)
-    {
+    function ProcessDwC($datasetid, $dwcpath, $skip_sql_creation = false) {
         $this->log("ProcessDwC - Enter - [" . $datasetid . "]");
         pg_query_params("TRUNCATE dataset CASCADE", array());
         if (file_exists($dwcpath . "/rights.txt")) {
@@ -704,7 +680,7 @@ class GBIF_load {
             $files = glob($dwcpath . '/dataset/*.{xml}', GLOB_BRACE);
             foreach ($files as $file) {
                 $this->log("Processing metadata in " . $file);
-                $res1 = $this->ProcessDwCMetadata($file, ""); //determine dataset from file contents
+                $res1 = $this->ProcessDwCMetadata($file); //determine dataset from file contents
             }
         }
 
@@ -717,7 +693,7 @@ class GBIF_load {
         //could now check to make sure we have all fields and amend schema if needs be, which would be slow
         //maybe better to simply load from the text file in that case?
 
-        $res3 = $this->ProcessDwCRecords($dwcpath, $datasetid, $skip_sql_creation);
+        $res3 = $this->ProcessDwCRecords($skip_sql_creation);
         if (!$res3) $this->log("Error processing DWCA");
         $this->log("ProcessDwC - Leave");
 
@@ -727,11 +703,8 @@ class GBIF_load {
 
 
     //can skip process DWC when testing (after already loading DWC into limbo table once)
-    public function LoadGBIF($skip_processDwC = false, $skip_sql_creation = false)
-    {
-        $this->log("LoadGBIF - Enter");
-
-        global $siteconfig;
+    public function LoadGBIF_data($skip_occurrence_higher_taxonomy = false, $skip_processDwC = false, $skip_sql_creation = false) {
+        $this->log("LoadGBIF_data - Enter");
 
         $already_running = $this->IsSemaphorSet();
         if ($already_running) {
@@ -740,9 +713,9 @@ class GBIF_load {
             //return 0;
         }
         $this->SetSemaphor();
-        $this->log("Starting GBIF load");
-        $dwcpath = "gbif_data"; //TODO
-        $datasetid = "gbif_data"; //TODO
+        $this->log("Starting GBIF load: gbif_data");
+        $dwcpath = 'gbif_data';
+        $datasetid = 'gbif_data';
         $res = true;
         if (!$skip_processDwC) {
             $res = $this->ProcessDwC($datasetid, $dwcpath, $skip_sql_creation); //unpack file, put metadata into datasetmetadata table, put dwc table(s) into limbo schema
@@ -750,25 +723,68 @@ class GBIF_load {
         if (!$res) {
             $this->log("Process DWC error - aborting remaining process, database will be left unchanged");
         } else {
-            $this->PopulateDatasetCleanMetadata($datasetid);
-            $res = $this->ImportDwCData($dwcpath); //now parse across into main DB and fix up geometry
+            $this->PopulateDatasetCleanMetadata();
+            $res = $this->ImportDwCData($dwcpath, "occurrence", $skip_occurrence_higher_taxonomy); //now parse across into main DB and fix up geometry
             if (!$res) {
                 $this->log("Failed to import data");
             } else {
                 $this->log("GBIF records transferred to main database, now updating summaries");
                 $this->PopulateCoordinateGrid();
-                $this->UpdateSummaryViewTables();
+                if (!$skip_occurrence_higher_taxonomy) {
+                    $this->UpdateSummaryViewTables();
+                }
             }
 
         }
 
         $this->UnsetSemaphor();
-        $this->log("LoadGBIF - Leave");
+        $this->log("LoadGBIF_data - Leave");
+        return 0;
+    }
+
+    public function LoadGBIF_taxon() {
+        $this->log("LoadGBIF_taxon - Enter");
+
+        $already_running = $this->IsSemaphorSet();
+        if ($already_running) {
+            $this->log("GBIF load already running (or failed unexpectedly). Restarting...");
+        }
+        $this->SetSemaphor();
+        $this->log("Starting GBIF load: gbif_taxon");
+        $dwcpath = 'gbif_taxon';
+        $datasetid = 'gbif_taxon';
+        $res = true;
+        //$res = $this->ProcessDwCRecords($dwcpath, $datasetid, $skip_sql_creation = false);
+        if (!$res) {
+            $this->log("Process DWC error - aborting remaining process, database will be left unchanged");
+        } else {
+            $res = $this->ImportDwCData($dwcpath, "taxon", false); //now parse across into main DB and fix up geometry
+            if (!$res) {
+                $this->log("Failed to import data");
+            }
+        }
+        $this->UpdateSummaryViewTables();
+        $this->UnsetSemaphor();
+        $this->log("LoadGBIF_taxon - Leave");
         return 0;
     }
 }
+$load_type = "";
+if (isset($argc) && $argc > 1) {
+    $load_type = $argv[1];
+}
+
+if ($load_type != "gbif_data" && $load_type != "gbif_taxon" && $load_type != 'both') {
+    echo "Pass parameter 'gbif_data' (occurrence data) or 'gbif_taxon' (taxonomic backbone) or 'both'";
+    exit;
+}
 $gbif = new GBIF_load();
-$gbif->LoadGBIF(false, true);
+if ($load_type == 'gbif_data' || $load_type == 'both') {
+    $gbif->LoadGBIF_data($load_type == 'both'); //, false, true);
+}
+if ($load_type == 'gbif_taxon' || $load_type == 'both') {
+    $gbif->LoadGBIF_taxon();
+}
 //$gbif->ProcessDwC('gbif_data', 'gbif_data');
 //$gbif->ImportDwCData("gbif_data");
 //$this->PopulateCoordinateGrid();

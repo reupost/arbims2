@@ -21,7 +21,7 @@ $pageform = '';
 $pageopts = '';
 $rows = array();
 
-$txt = $tblspecies->GetAccordionBelow('', '*root*', true, true, false);
+$txt = $tblspecies->GetAccordionBelow('', '*root*', true, true, '');
 
 /* page template main */
 $tpl = new MasterTemplate();
