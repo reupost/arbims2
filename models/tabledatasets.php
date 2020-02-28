@@ -8,18 +8,15 @@ require_once("models/table_base.php");
 
 class TableDatasets extends Table_Base {
     var $region = '';
-    var $sql_listing = "SELECT d.*, d._regions[1] AS region_albertine, d._regions[2] AS region_mountains, d._regions[3] AS region_lakes, CASE WHEN d._has_occurrence THEN concat('<div class=\"color_show\" style=\"background-color:', d.color, '\"></div>') ELSE '' END as color_box, to_char(to_timestamp(d.date_timestamp),'DD Mon YYYY') pubdisplaydate, numrecs_occ.rcount occrecs, numrecs_occ_latlon.rcount occrecs_latlon, numrecs_tax.rcount taxrecs
+    var $sql_listing = "SELECT d.*, d._regions[1] AS region_albertine, d._regions[2] AS region_mountains, d._regions[3] AS region_lakes, CASE WHEN d._has_occurrence THEN concat('<div class=\"color_show\" style=\"background-color:', d.color, '\"></div>') ELSE '' END as color_box, to_char(to_timestamp(d.date_timestamp),'DD Mon YYYY') pubdisplaydate, numrecs_occ.rcount occrecs, numrecs_occ_latlon.rcount occrecs_latlon
 FROM dataset d 
 LEFT JOIN 
-(#DATASETOCC#) numrecs_occ ON d.datasetid = numrecs_occ._datasetid
+(#DATASETOCC#) numrecs_occ ON d.datasetkey = numrecs_occ.datasetkey
 LEFT JOIN
-(#DATASETOCC_LATLON#) numrecs_occ_latlon ON d.datasetid = numrecs_occ_latlon._datasetid
-LEFT JOIN
-(#DATASETTAX#) numrecs_tax ON d.datasetid = numrecs_tax._datasetid
+(#DATASETOCC_LATLON#) numrecs_occ_latlon ON d.datasetkey = numrecs_occ_latlon.datasetkey
 ";
-    var $sql_datasetocc = "SELECT op._datasetid, count(*) rcount FROM occurrence_processed op JOIN dataset d ON op._datasetid = d.datasetid #REGION# GROUP BY op._datasetid"; /* to be inserted into SQL above with any dataset-specific where-clause */
-    var $sql_datasetocc_latlon = "SELECT op._datasetid, count(*) rcount FROM occurrence_processed op JOIN dataset d ON op._datasetid = d.datasetid WHERE (op._decimallatitude IS NOT NULL AND op._decimallongitude IS NOT NULL #REGION#) GROUP BY op._datasetid";
-    var $sql_datasettax = "SELECT _datasetid, count(*) rcount FROM taxon #REGION# GROUP BY _datasetid";
+    var $sql_datasetocc = "SELECT op.datasetkey, count(*) rcount FROM occurrence_processed op JOIN dataset d ON op.datasetkey = d.datasetkey #REGION# GROUP BY op.datasetkey"; /* to be inserted into SQL above with any dataset-specific where-clause */
+    var $sql_datasetocc_latlon = "SELECT op.datasetkey, count(*) rcount FROM occurrence_processed op JOIN dataset d ON op.datasetkey = d.datasetkey WHERE (op._decimallatitude IS NOT NULL AND op._decimallongitude IS NOT NULL #REGION#) GROUP BY op.datasetkey";
     var $fieldmap_orderby = array(
         "title" => "d.title",
         "date" => "d.date_timestamp",
@@ -29,12 +26,10 @@ LEFT JOIN
         "region:mountains" => "d._regions[2]",
         "region:lakes" => "d._regions[3]",
         "records_occ" => "occrecs",
-        "records_occ_latlon" => "occrecs_latlon",
-        "records_tax" => "taxrecs"
+        "records_occ_latlon" => "occrecs_latlon"
     );
     var $fieldmap_filterby = array(
         "has_occurrence" => "d._has_occurrence", //not used
-        "has_taxon" => "d._has_taxon", //not used
         "creator" => "d._creator", //not used
         "region:albertine" => "d._regions[1]",  
         "region:mountains" => "d._regions[2]",  
@@ -80,7 +75,6 @@ LEFT JOIN
             case "lakes"    : $sql2 = str_replace('#REGION#', "WHERE _regions[3] = true" , $sql2); break;
             default         : $sql2 = str_replace('#REGION#', "" , $sql2); break;
         }
-		$sql = str_replace('#DATASETTAX#', $sql2, $sql);
         //echo $sql;
         return $sql;
     }

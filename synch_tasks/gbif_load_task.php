@@ -316,7 +316,7 @@ class GBIF_load {
 
 
         if ($data_type == "occurrence") {
-            $source_id_field = $this->GetPrimaryKeyFirstField('gbif_data_occurrence'); // "" if none
+            $source_id_field = $this->GetPrimaryKeyFirstField('limbo.gbif_data_occurrence'); // "" if none
             $this->log("GBIF data: truncating entire occurrence table");
             pg_query_params("TRUNCATE occurrence", array());
 
@@ -326,7 +326,7 @@ class GBIF_load {
                 $res = pg_query_params($sql, array());
             }
             $sql = "INSERT INTO occurrence (";
-            $fieldnamearray = $this->GetValidFieldNameArrayWithoutTypeMatch('gbif_data_occurrence', 'occurrence');
+            $fieldnamearray = $this->GetValidFieldNameArrayWithoutTypeMatch('limbo.gbif_data_occurrence', 'occurrence');
             foreach ($fieldnamearray as $field) {
                 $sql .= "\"" . strtolower($field) . "\", "; //my simpledwc table has lowercase field names to simplify use in postgreSQL
             }
@@ -338,7 +338,7 @@ class GBIF_load {
             }
             $sql .= "\"" . "datasetName" . "\" as _datasetid";
             if ($source_id_field != "") $sql .= ", \"" . $source_id_field . "\" as _sourcerecordid";
-            $sql .= " FROM " . 'gbif_data_occurrence';
+            $sql .= " FROM " . 'limbo.gbif_data_occurrence';
             $this->log("Copying across to main database using: " . $sql);
             $res = pg_query_params($sql, array()); //copy valid fields from dataset across
             $this->log("Recreating occurrence table indexes");
@@ -388,7 +388,7 @@ class GBIF_load {
             $this->log("GBIF data: truncating entire taxon table");
             pg_query_params("TRUNCATE taxon", array());
             $sql = "INSERT INTO taxon (";
-            $fieldnamearray = $this->GetValidFieldNameArrayWithoutTypeMatch('gbif_taxon', 'taxon');
+            $fieldnamearray = $this->GetValidFieldNameArrayWithoutTypeMatch('limbo.gbif_taxon', 'taxon');
             foreach ($fieldnamearray as $field) {
                 $sql .= "\"" . strtolower($field) . "\", "; //my table has lowercase field names to simplify use in postgreSQL
             }
@@ -401,7 +401,7 @@ class GBIF_load {
             }
             $sql .= $regions;
             if ($source_id_field != "") $sql .= ", \"" . $source_id_field . "\" as _sourcerecordid";
-            $sql .= " FROM " . 'gbif_taxon';
+            $sql .= " FROM " . 'limbo.gbif_taxon';
             $res = pg_query_params($sql, array()); //copy valid fields from dataset across
             if ($res === false) {
                 $this->log("Error copying gbif_taxon to main schema");

@@ -7,8 +7,6 @@ require_once("includes/template.php");
 require_once("includes/inc.language.php");
 require_once("includes/sessionmsghandler.php");
 
-require_once("models/gbif.php");
-
 
 global $siteconfig;
 global $USER_SESSION;
@@ -32,9 +30,9 @@ $tpl->set('session_msg', $session_msg);
 /* page template body - pass page options to this as well */
 $bdy = new MasterTemplate('templates/gbif_synch.tpl.php');
 
-$gbif = new GBIF();
-$output = $gbif->InitiateGBIFDownload();
-
+$files = scandir('logs', SCANDIR_SORT_DESCENDING);
+$output = file_get_contents('logs/' . $files[0]);
+$output = nl2br($output);
 $bdy->set('output', $output);
 
 /* link everything together */

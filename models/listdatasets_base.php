@@ -41,7 +41,6 @@ class DatasetsController {
         $arrSorts['contact'] = getMLText('contact');
         $arrSorts['records_occ'] = getMLText('occurrence_records');
         $arrSorts['records_occ_latlon'] = getMLText('occurrence_records_georeferenced');
-        $arrSorts['records_tax'] = getMLText('species_records');
         if ($USER_SESSION['siterole'] == 'admin') { //only admins can sort datasets by regional usage
             $arrSorts['region:albertine'] = getMLText('include_albertine');
             $arrSorts['region:mountains'] = getMLText('include_mountains');
@@ -69,10 +68,6 @@ class DatasetsController {
         $arrListCols['occrecs']['linkparams'] = array('datasetid' => 'datasetid');
         $arrListCols['color_box'] = array();
         $arrListCols['color_box']['heading'] = "";
-        $arrListCols['taxrecs'] = array();
-        $arrListCols['taxrecs']['heading'] = getMLText('species_records');
-        $arrListCols['taxrecs']['link'] = 'out.listspecies.' . $this->region . '.php'; 
-        $arrListCols['taxrecs']['linkparams'] = array('datasetid' => 'datasetid');
         if ($USER_SESSION['siterole'] == 'admin') { //only admins see all datasets
             $arrListCols['region_albertine'] = array();
             $arrListCols['region_albertine']['heading'] = getMLText('include_albertine');

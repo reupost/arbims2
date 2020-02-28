@@ -25,20 +25,19 @@
                     
                 </td>
                 <td class='well'>
-                    
-                        <table border='0'>
-                            <tr>
-                                <td colspan='2'><h4><?php printMLtext('ipt') ?></h4></td>
-                            </tr>
-                            <tr>
-                                <td style='padding-right:15px'><img src='images/ipt.jpg' height='128px' width='159px' border='0' alt='pic'/></td>
-                                <td>
-                                    <p><?php printMLtext('arbmis_admin_ipt') ?></p>
-                                    <a href='ipt/' alt="<?php printMLtext('ipt_link') ?>" title="<?php printMLtext('ipt_link') ?>"><?php printMLtext('ipt_link') ?></a><br/><br/>
-                                    <a href='out.ipt_synch.php' alt="<?php printMLtext('synchronise_with_ipt') ?>" title="<?php printMLtext('synchronise_with_ipt') ?>"><?php printMLtext('synchronise_with_ipt') ?></a>
-                                </td>
-                            </tr>
-                        </table>
+
+                    <table border='0'>
+                        <tr>
+                            <td colspan='2'><h4><?php printMLtext('gbif') ?></h4></td>
+                        </tr>
+                        <tr>
+                            <td style='padding-right:15px'><img src='images/GBIF-2015.png' height='128px' width='193px' border='0' alt='pic'/></td>
+                            <td>
+                                <p><?php printMLtext('arbmis_admin_gbif') ?></p>
+                                <a href='out.gbif_synch.php' alt="<?php printMLtext('synchronise_with_gbif') ?>" title="<?php printMLtext('synchronise_with_gbif') ?>"><?php printMLtext('synchronise_with_gbif') ?></a>
+                            </td>
+                        </tr>
+                    </table>
                     
                 </td>
             </tr>
@@ -95,15 +94,16 @@
 
                 </td>
                 <td class='well'>
+
                     <table border='0'>
                         <tr>
-                            <td colspan='2'><h4><?php printMLtext('gbif') ?></h4></td>
+                            <td colspan='2'><h4><?php printMLtext('ipt') ?></h4></td>
                         </tr>
                         <tr>
-                            <td style='padding-right:15px'><img src='images/GBIF-2015.png' height='128px' width='193px' border='0' alt='pic'/></td>
+                            <td style='padding-right:15px'><img src='images/ipt.jpg' height='128px' width='159px' border='0' alt='pic'/></td>
                             <td>
-                                <p><?php printMLtext('arbmis_admin_gbif') ?></p>
-                                <a href='out.gbif_synch.php' alt="<?php printMLtext('synchronise_with_gbif') ?>" title="<?php printMLtext('synchronise_with_gbif') ?>"><?php printMLtext('synchronise_with_gbif') ?></a>
+                                <p><?php printMLtext('arbmis_admin_ipt') ?></p>
+                                <a href='ipt/' alt="<?php printMLtext('ipt_link') ?>" title="<?php printMLtext('ipt_link') ?>"><?php printMLtext('ipt_link') ?></a><br/><br/>
                             </td>
                         </tr>
                     </table>
