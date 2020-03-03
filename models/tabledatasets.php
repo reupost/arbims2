@@ -101,6 +101,19 @@ LEFT JOIN
             return $rw['title'];
         }
     }
+
+    public function GetOccurrenceLegendKingdom() {
+        $legend = "";
+        $sql = "SELECT field, fieldvalue,color, concat('<div class=\"color_show\" style=\"background-color:', color, '\"></div>') as color_box  from recordcolor where theme = 'kingdom' order by fieldvalue ASC";
+        $res = pg_query_params($sql, array());
+        if (!$res) return $legend;
+        while ($row = pg_fetch_array($res)) {
+            $legend .= $row['color_box'] . "&nbsp;";
+            $legend .= htmlspecialchars($row['fieldvalue']);
+            $legend .= "<br/>";
+        }
+        return $legend;
+    }
     
     public function GetOccurrenceLegend($include_dataset_links = true, $region='') {
         $legend = "";

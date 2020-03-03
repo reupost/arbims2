@@ -187,7 +187,7 @@ class TableSpecies extends Table_Base {
     //only needed if includeOccTaxa is specified
     //counts the number of distinct species under a particular taxon (using genus and species)
     //note: if looking at species level then can get wrong counts (multiple genera with same specific epithet)
-    function GetSpeciesTreeCount ($region, $taxon_epithet, $rank) {
+    function GetSpeciesTreeCount ($taxon_epithet, $rank) {
         if ($rank == 'species') return 1;
         
         $sql = "SELECT count(*) as numspecies FROM ( ";
@@ -239,7 +239,7 @@ class TableSpecies extends Table_Base {
             $taxonparams = "taxon=" . htmlentities($child) . "&rank=" . $siteconfig['taxonranks'][$rankpos + 1] . "&taxonparent=" . ($rank=='*root*'? '--' : htmlentities($taxon_epithet));
             $taxondatasetparam = "";
 
-            $numspecies = $this->GetSpeciesTreeCount($region, $child, $siteconfig['taxonranks'][$rankpos + 1]);
+            $numspecies = $row[0]; //$this->GetSpeciesTreeCount($child, $siteconfig['taxonranks'][$rankpos + 1]);
             if ($rank != '*root*') $accordion .= "<ul style='display:block'>"; // "<div class='inner'><ul>";
             //$accordion .= "<li><h5>" . ucfirst(getMLtext('taxon_' . $siteconfig['taxonranks'][$rankpos + 1])) . ": " . $displayname;
             $accordion .= "<li><a href='out.speciestree." . $region . ".php#" . $child_link . "' class='trigger'>" . ucfirst(getMLtext('taxon_' . $siteconfig['taxonranks'][$rankpos + 1])) . ": " . $displayname . "</a>";

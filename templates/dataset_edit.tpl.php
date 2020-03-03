@@ -19,7 +19,7 @@
                             <td><input type='submit' style='float:right' value="<?php printMLtext('save') ?>" /></td>
                         </tr>
                         <tr>
-                            <td style='vertical-align:top'><?php echo getMLtext('dataset_color') ?></td>
+                            <td style='vertical-align:top'><?php echo getMLtext('occ_record_color') ?></td>
                             <td> 
                                 <?php
                                 if ($dsdata['_has_occurrence'] == 't') {

@@ -61,7 +61,7 @@ class SingleDataset {
         //now update summaries and relevant occurrence summary grids
         //NOTE: Geoserver is configured not to cache the occurrence_* and occurrence_overview_* layers so that these changes will be visible immediately
         if ($row['_has_occurrence'] == 't') {
-            $res = pg_query_params("UPDATE vw_occ_list1 SET dataset_color = $1 WHERE _datasetid = $2", array($data['color'], $data['datasetid']));        
+            $res = pg_query_params("UPDATE vw_occ_list1 SET record_color = $1 WHERE _datasetid = $2", array($data['color'], $data['datasetid']));
             if (!$res) $save_err = 1;
             $res = pg_query_params("UPDATE vw_occ_list1 SET _regions = $1 WHERE _datasetid = $2", array($regions, $data['datasetid']));
             if (!$res) $save_err = 1;        

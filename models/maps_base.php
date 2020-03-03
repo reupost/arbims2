@@ -145,7 +145,7 @@ class MapController {
         $params['js_layer_list'] = $maplayers->GetJavascriptLayerList();
         $params['js_layer_list_identify'] = $maplayers->GetJavascriptLayerList(true);
 
-        $occ_legend = $tbldataset->GetOccurrenceLegend(null, $this->region);
+        $occ_legend = $tbldataset->GetOccurrenceLegendKingdom(); //GetOccurrenceLegend(null, $this->region);
 
         /* page template main */
         $tpl = new MasterTemplate();
