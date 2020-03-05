@@ -32,9 +32,7 @@ class TableSpecies extends Table_Base {
         'rightsholder',
         'accessrights',
         'bibliographiccitation',
-        'references',       
-        'datasetid',
-        'datasetname',
+        'references',
         'informationwithheld',
         'taxonid',
         'scientificnameid',
@@ -45,6 +43,9 @@ class TableSpecies extends Table_Base {
         'namepublishedinid',
         'taxonconceptid',
         'scientificname',
+        'acceptedscientificname',
+        'taxonkey',
+        'acceptedtaxonkey',
         'acceptednameusage',
         'parentnameusage',
         'originalnameusage',
@@ -59,8 +60,7 @@ class TableSpecies extends Table_Base {
         'family',
         'genus',
         'subgenus',
-        'specificepithet',
-        'infraspecificepithet',
+        'species',
         'taxonomicstatus',
         'verbatimtaxonrank',
         'scientificnameauthorship',
@@ -68,8 +68,7 @@ class TableSpecies extends Table_Base {
         'nomenclaturalcode',
         'taxonremarks',
         'nomenclaturalstatus',
-        'taxonrank',
-        '_datasetid'
+        'taxonrank'
     );
 
     public function AddWhere($fieldalias, $evaluate, $value) {
@@ -294,12 +293,7 @@ class TableSpecies extends Table_Base {
         //print data
         while ($row = pg_fetch_array($res)) {
             foreach($this->DwCFieldOrdering as $field) {
-                if ($field != '_datasetid') {
-                    echo $row[$field] . "\t";
-                } else {
-                    //URL to dataset
-                    echo $siteconfig['path_ipt'] . "/resource.do?r=" . $row[$field] . "\t";
-                }
+                echo $row[$field] . "\t";
             }
             echo "\r\n";
         }

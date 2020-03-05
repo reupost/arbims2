@@ -53,12 +53,15 @@ class TableOccurrence extends Table_Base {
         'stateprovince'
     );
     
-    var $sql_listing_download = "SELECT o.* FROM occurrence o JOIN (***) v ON o._id = v._id";
+    var $sql_listing_download = "SELECT o.*, d._citation, d.licence FROM occurrence o JOIN (***) v ON o._id = v._id LEFT JOIN dataset d on o.datasetkey = d.datasetkey";
     
     var $DwCFieldOrdering = array(                
         'type',
         'modified',
         'language',
+        'license',
+        'licence',
+        '_citation',
         'rights',
         'rightsholder',
         'accessrights',
@@ -70,6 +73,7 @@ class TableOccurrence extends Table_Base {
         'institutioncode',
         'collectioncode',
         'datasetname',
+        'datasetkey',
         'ownerinstitutioncode',
         'basisofrecord',
         'informationwithheld',
@@ -184,6 +188,7 @@ class TableOccurrence extends Table_Base {
         'identificationqualifier',
         'typestatus',
         'taxonid',
+        'taxonkey',
         'scientificnameid',
         'acceptednameusageid',
         'parentnameusageid',
@@ -192,6 +197,7 @@ class TableOccurrence extends Table_Base {
         'namepublishedinid',
         'taxonconceptid',
         'scientificname',
+        'acceptedtaxonkey',
         'acceptednameusage',
         'parentnameusage',
         'originalnameusage',
@@ -439,7 +445,7 @@ class TableOccurrence extends Table_Base {
                     echo $row[$field] . "\t";
                 } else {
                     //URL to dataset
-                    echo $siteconfig['path_ipt'] . "/resource.do?r=" . $row[$field] . "\t";
+                    echo $siteconfig['path_baseurl']  . "/out.dataset.php?datasetid=" . str_replace(" ", "%20", $row[$field]) . "\t";
                 }
             }
             echo "\r\n";
@@ -511,6 +517,28 @@ class TableOccurrence extends Table_Base {
             }
         }        
         return $descr;
+    }
+
+    //override base function for efficiency (avoid order by in subquery)
+    public function GetRecordsCount() {
+        $norecords = 0;
+        if ($this->use_occlist) {
+            $sql = $this->sql_listing_occlist;
+        } else {
+            $sql = $this->sql_listing;
+        }
+
+        $sql .= $this->GetWhereClause();
+
+        //echo $sql;
+        $sql = "SELECT count(*) as norecords FROM (" . $sql . ") as subquery_list"; /* since ordering etc doesn't affect number of records returned */
+        //echo $sql;
+        $result = pg_query_params($sql, array());
+        if ($result) {
+            $row = pg_fetch_array($result);
+            $norecords = $row['norecords'];
+        }
+        return $norecords;
     }
 }
 

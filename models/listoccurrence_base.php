@@ -81,12 +81,12 @@ class OccurrenceController {
             $tbloccurrence->AddWhere('filtercontent', '***', $this->params['filterlistby']);
         if ($this->params['datasetid'] > '') {
             $tbloccurrence->AddWhere('datasetid', '=', $this->params['datasetid']);
-            $this->params['dataset_title'] = getMLtext('dataset') . ': ' . $tbldataset->GetDatasetTitle($this->params['datasetid']);
+            //$this->params['dataset_title'] = getMLtext('dataset') . ': ' . $tbldataset->GetDatasetTitle($this->params['datasetid']);
         }
         if ($this->params['taxon'] > '' && $this->params['rank'] > '' && $this->params['taxonparent'] > '') { //all must be present to filter like this
             $tbloccurrence->AddWhere('taxon', '=', array($this->params['taxon'], $this->params['rank'], $this->params['taxonparent']));
             if ($this->params['rank'] == 'species') {
-                $this->params['taxon_title'] = getMLtext('taxon_species') . ': <i>' . $this->params['taxonparent'] . ' ' . $this->params['taxon'] . '</i>';
+                $this->params['taxon_title'] = getMLtext('taxon_species') . ': <i>' . $this->params['taxon'] . '</i>';
             } else {
                 $rankpos = array_search($this->params['rank'], $siteconfig['taxonranks']);
                 $this->params['taxon_title'] = getMLtext('taxon_' . strtolower($this->params['rank'])) . ': ' . $this->params['taxon'];
@@ -171,14 +171,12 @@ class OccurrenceController {
         $arrSorts['basisofrecord'] = getMLText('basis_of_record');
 
         $arrListCols = array();
-        $arrListCols['dataset_title'] = array();
-        $arrListCols['dataset_title']['heading'] = getMLText('dataset');
-        $arrListCols['dataset_title']['link'] = 'out.dataset.php';
-        $arrListCols['dataset_title']['linkparams'] = array('datasetid' => '_datasetid', 'region' => "'" . $this->region . "'");
+        $arrListCols['_datasetid'] = array();
+        $arrListCols['_datasetid']['heading'] = getMLText('dataset');
+        $arrListCols['_datasetid']['link'] = 'out.dataset.php';
+        $arrListCols['_datasetid']['linkparams'] = array('datasetid' => '_datasetid', 'region' => "'" . $this->region . "'");
         $arrListCols['institutioncode'] = array();
         $arrListCols['institutioncode']['heading'] = getMLText('institution');
-        $arrListCols['collectioncode'] = array();
-        $arrListCols['collectioncode']['heading'] = getMLText('collection');
         $arrListCols['catalognumber'] = array();
         $arrListCols['catalognumber']['heading'] = getMLText('catalog_number');
         $arrListCols['recordedby'] = array();
