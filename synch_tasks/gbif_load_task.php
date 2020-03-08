@@ -311,8 +311,10 @@ class GBIF_load {
         $res = pg_query_params($sql, array());
         if ($res === false) {
             $this->log("Error populating dataset names in occurrence table");
+            return false;
         } else {
             $this->log("Leaving PopulateDatasetName");
+            return true;
         }
     }
 
@@ -323,8 +325,8 @@ class GBIF_load {
         global $siteconfig;
         $this->log("ImportDwCData - Enter [" . $filename . "]");
 
-        $idx_fields = array("_id", "scientificname", "taxonrank", "taxonkey", "acceptedtaxonkey", "datasetkey" /*, "_datasetid",
-            "institutioncode", "collectioncode", "basisofrecord", "recordedby", "year", "month", "countrycode", "stateprovince" */);
+        $idx_fields = array("_id", "scientificname", "taxonrank", "taxonkey", "acceptedtaxonkey", "datasetkey" /*, "countrycode",
+            "institutioncode", "collectioncode", "basisofrecord", "recordedby", "year", "month", "stateprovince" */);
         $overallres = -1;
         $datasetid = $this->GetFileWithoutExtFromPath($filename);
 
