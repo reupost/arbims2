@@ -51,7 +51,7 @@ class DatasetsController {
         $arrListCols['title'] = array();
         $arrListCols['title']['heading'] = getMLText('title');
         $arrListCols['title']['link'] = 'out.dataset.php'; 
-        $arrListCols['title']['linkparams'] = array('datasetid' => 'datasetid', 'region' => "'" . $this->region . "'");
+        $arrListCols['title']['linkparams'] = array('datasetkey' => 'datasetkey', 'region' => "'" . $this->region . "'");
         $arrListCols['pubdisplaydate'] = array();
         $arrListCols['pubdisplaydate']['heading'] = getMLText('published');
         $arrListCols['_creator'] = array();
@@ -65,7 +65,7 @@ class DatasetsController {
         $arrListCols['occrecs'] = array();
         $arrListCols['occrecs']['heading'] = getMLText('occurrence_records');
         $arrListCols['occrecs']['link'] = 'out.listoccurrence.' . $this->region . '.php'; 
-        $arrListCols['occrecs']['linkparams'] = array('datasetid' => 'datasetid');
+        $arrListCols['occrecs']['linkparams'] = array('datasetkey' => 'datasetkey');
         $arrListCols['color_box'] = array();
         $arrListCols['color_box']['heading'] = "";
         if ($USER_SESSION['siterole'] == 'admin') { //only admins see all datasets

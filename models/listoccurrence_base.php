@@ -18,7 +18,7 @@ class OccurrenceController {
         $this->params['taxon'] = (isset($_CLEAN['taxon']) ? $_CLEAN['taxon'] : '');
         $this->params['rank'] = (isset($_CLEAN['rank']) ? $_CLEAN['rank'] : '');
         $this->params['taxonparent'] = (isset($_CLEAN['taxonparent']) ? $_CLEAN['taxonparent'] : '');
-        $this->params['datasetid'] = (isset($_CLEAN['datasetid']) ? $_CLEAN['datasetid'] : '');
+        $this->params['datasetkey'] = (isset($_CLEAN['datasetkey']) ? $_CLEAN['datasetkey'] : '');
         $this->params['occlist'] = (isset($_CLEAN['occlist']) ? $_CLEAN['occlist'] : 0);
         if ($this->params['occlist'] != 1) $this->params['occlist'] = 0; //boolean
         $this->params['polygonid'] = GetCleanInteger(isset($_CLEAN['polygonid']) ? $_CLEAN['polygonid'] : '0');
@@ -79,8 +79,8 @@ class OccurrenceController {
 
         if ($this->params['filterlistby'] > '')
             $tbloccurrence->AddWhere('filtercontent', '***', $this->params['filterlistby']);
-        if ($this->params['datasetid'] > '') {
-            $tbloccurrence->AddWhere('datasetid', '=', $this->params['datasetid']);
+        if ($this->params['datasetkey'] > '') {
+            $tbloccurrence->AddWhere('datasetkey', '=', $this->params['datasetkey']);
             //$this->params['dataset_title'] = getMLtext('dataset') . ': ' . $tbldataset->GetDatasetTitle($this->params['datasetid']);
         }
         if ($this->params['taxon'] > '' && $this->params['rank'] > '' && $this->params['taxonparent'] > '') { //all must be present to filter like this
@@ -171,10 +171,10 @@ class OccurrenceController {
         $arrSorts['basisofrecord'] = getMLText('basis_of_record');
 
         $arrListCols = array();
-        $arrListCols['_datasetid'] = array();
-        $arrListCols['_datasetid']['heading'] = getMLText('dataset');
-        $arrListCols['_datasetid']['link'] = 'out.dataset.php';
-        $arrListCols['_datasetid']['linkparams'] = array('datasetid' => '_datasetid', 'region' => "'" . $this->region . "'");
+        $arrListCols['datasetname'] = array();
+        $arrListCols['datasetname']['heading'] = getMLText('dataset');
+        $arrListCols['datasetname']['link'] = 'out.dataset.php';
+        $arrListCols['datasetname']['linkparams'] = array('datasetkey' => 'datasetkey', 'region' => "'" . $this->region . "'");
         $arrListCols['institutioncode'] = array();
         $arrListCols['institutioncode']['heading'] = getMLText('institution');
         $arrListCols['catalognumber'] = array();
@@ -210,7 +210,7 @@ class OccurrenceController {
             $setcriteria['rank'] = $this->params['rank'];
             $setcriteria['taxonparent'] = $this->params['taxonparent'];
         }
-        if ($this->params['datasetid'] > '') $setcriteria['datasetid'] = $this->params['datasetid'];
+        if ($this->params['datasetkey'] > '') $setcriteria['datasetkey'] = $this->params['datasetkey'];
         if ($this->params['occlist']) $setcriteria['occlist'] = 1;
         foreach (array('x1','x2','y1','y2') as $numeric_param) {
             if ($this->params[$numeric_param] > '' && is_numeric($this->params[$numeric_param])) $setcriteria[$numeric_param] = $this->params[$numeric_param];

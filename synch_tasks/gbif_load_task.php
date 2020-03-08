@@ -13,6 +13,12 @@ class GBIF_load {
         file_put_contents($siteconfig['path_basefolder'] . '/logs/gbif_'.date("Y-m-d").'.txt', $timestamp . ' ' . $text . PHP_EOL, FILE_APPEND);
     }
 
+    public function log_summary($text) {
+        global $siteconfig;
+        $timestamp = date("Y-m-d h:i:sa");
+        file_put_contents($siteconfig['path_basefolder'] . '/logs/gbif_summary_'.date("Y-m").'.txt', $timestamp . ' ' . $text . PHP_EOL, FILE_APPEND);
+    }
+
     private function GetFileWithoutExtFromPath($filepath) {
         $arrPath = explode("/",$filepath);
         $filenameWithExt = $arrPath[count($arrPath)-1];
@@ -299,6 +305,16 @@ class GBIF_load {
         return $overallres;
     }
 
+    private function PopulateDatasetName() {
+        $this->log("Entering PopulateDatasetName");
+        $sql = "UPDATE occurrence o SET datasetname = d.title FROM dataset d WHERE o.datasetkey = d.datasetkey AND (o.datasetname IS NULL or o.datasetname = '')";
+        $res = pg_query_params($sql, array());
+        if ($res === false) {
+            $this->log("Error populating dataset names in occurrence table");
+        } else {
+            $this->log("Leaving PopulateDatasetName");
+        }
+    }
 
     //migrate valid content from limbo dataset into main db and do post-processing
 //return -1 on success, 0 on any failures
@@ -307,7 +323,8 @@ class GBIF_load {
         global $siteconfig;
         $this->log("ImportDwCData - Enter [" . $filename . "]");
 
-        $idx_fields = array("_id", "scientificname", "taxonrank", "taxonkey", "acceptedtaxonkey", "datasetkey");
+        $idx_fields = array("_id", "scientificname", "taxonrank", "taxonkey", "acceptedtaxonkey", "datasetkey" /*, "_datasetid",
+            "institutioncode", "collectioncode", "basisofrecord", "recordedby", "year", "month", "countrycode", "stateprovince" */);
         $overallres = -1;
         $datasetid = $this->GetFileWithoutExtFromPath($filename);
 
@@ -330,13 +347,13 @@ class GBIF_load {
             foreach ($fieldnamearray as $field) {
                 $sql .= "\"" . strtolower($field) . "\", "; //my simpledwc table has lowercase field names to simplify use in postgreSQL
             }
-            $sql .= " _datasetid";
+            $sql = substr($sql,  0,strlen($sql)-2); //remove trailing comma
             if ($source_id_field != "") $sql .= ", _sourcerecordid";
             $sql .= ") SELECT ";
             foreach ($fieldnamearray as $field) {
                 $sql .= "\"" . $field . "\", "; //source table might have mixed case field names
             }
-            $sql .= "\"" . "datasetName" . "\" as _datasetid";
+            $sql = substr($sql,  0,strlen($sql)-2);
             if ($source_id_field != "") $sql .= ", \"" . $source_id_field . "\" as _sourcerecordid";
             $sql .= " FROM " . 'limbo.gbif_data_occurrence';
             $this->log("Copying across to main database using: " . $sql);
@@ -350,6 +367,10 @@ class GBIF_load {
                 //problem inserting into main occurrence table
                 $this->log("SQL copy to main database failed!");
                 $overallres = 0;
+            }
+            $res = $this->PopulateDatasetName();
+            if (!$res) {
+                $this->log("Populate dataset name in occurrences failed!");
             }
             // now create occurrence_processed records
             $res = $this->CreateOccurrenceProcessed();
@@ -365,7 +386,7 @@ class GBIF_load {
                 }
                 if (!$skip_occurrence_higher_taxonomy) {
                     //now process taxon information
-                    $res = $this->PopulateHigherTaxonomy($datasetid);
+                    $res = $this->PopulateHigherTaxonomy();
                     if (!$res) {
                         $this->log("Populate higher taxonomy failed!");
                         $overallres = 0;
@@ -714,6 +735,7 @@ class GBIF_load {
         }
         $this->SetSemaphor();
         $this->log("Starting GBIF load: gbif_data");
+        $this->log_summary("Loading GBIF occurrence data from latest download file");
         $dwcpath = 'gbif_data';
         $datasetid = 'gbif_data';
         $res = true;
@@ -723,12 +745,14 @@ class GBIF_load {
         if (!$res) {
             $this->log("Process DWC error - aborting remaining process, database will be left unchanged");
         } else {
+            $this->log_summary("Occurrence data loaded to temporary database");
             $this->PopulateDatasetCleanMetadata();
             $res = $this->ImportDwCData($dwcpath, "occurrence", $skip_occurrence_higher_taxonomy); //now parse across into main DB and fix up geometry
             if (!$res) {
                 $this->log("Failed to import data");
             } else {
                 $this->log("GBIF records transferred to main database, now updating summaries");
+                $this->log_summary("GBIF records transferred to main database, now updating summaries");
                 $this->PopulateCoordinateGrid();
                 if (!$skip_occurrence_higher_taxonomy) {
                     $this->UpdateSummaryViewTables();
@@ -739,6 +763,23 @@ class GBIF_load {
 
         $this->UnsetSemaphor();
         $this->log("LoadGBIF_data - Leave");
+        $res = pg_query_params("SELECT count(*) as totalrecs from occurrence", array());
+        $totalrecs = 'error';
+        if ($res) {
+            $row = pg_fetch_array($res);
+            $totalrecs = $row['totalrecs'];
+        }
+        $res2 = pg_query_params("SELECT count(*) as totalrecs from dataset", array());
+        $totaldatasets = 'error';
+        if ($res2) {
+            $row = pg_fetch_array($res2);
+            $totaldatasets = $row['totalrecs'];
+        }
+        $this->log("Finished loading GBIF occurrence data from latest download file: " . $totalrecs . " occurrence records from " . $totaldatasets . " datasets");
+        $this->log_summary("Finished loading GBIF occurrence data from latest download file:");
+        $this->log_summary(" = " . $totalrecs . " occurrence records");
+        $this->log_summary(" = " . $totaldatasets . " datasets");
+        $this->log_summary("");
         return 0;
     }
 
@@ -751,6 +792,7 @@ class GBIF_load {
         }
         $this->SetSemaphor();
         $this->log("Starting GBIF load: gbif_taxon");
+        $this->log_summary("Loading GBIF taxon data from latest download file");
         $dwcpath = 'gbif_taxon';
         $datasetid = 'gbif_taxon';
         $res = true;
@@ -761,11 +803,22 @@ class GBIF_load {
             $res = $this->ImportDwCData($dwcpath, "taxon", false); //now parse across into main DB and fix up geometry
             if (!$res) {
                 $this->log("Failed to import data");
+                $this->log_summary("Failed to import GBIF taxon data - please notify technical support");
             }
         }
         $this->UpdateSummaryViewTables();
         $this->UnsetSemaphor();
         $this->log("LoadGBIF_taxon - Leave");
+        $res = pg_query_params("SELECT count(*) as totalrecs from taxon", array());
+        $totalrecs = 'error';
+        if ($res) {
+            $row = pg_fetch_array($res);
+            $totalrecs = $row['totalrecs'];
+        }
+        $this->log("Finished loading GBIF taxon data from latest download file: total taxon records = " . $totalrecs);
+        $this->log_summary("Finished loading GBIF taxon data from latest download file:");
+        $this->log_summary(" = " . $totalrecs . " taxon records");
+        $this->log_summary("");
         return 0;
     }
 }
@@ -785,8 +838,11 @@ if ($load_type == 'gbif_data' || $load_type == 'both') {
 if ($load_type == 'gbif_taxon' || $load_type == 'both') {
     $gbif->LoadGBIF_taxon();
 }
+$gbif->log_summary("");
+
 //$gbif->ProcessDwC('gbif_data', 'gbif_data');
 //$gbif->ImportDwCData("gbif_data");
 //$this->PopulateCoordinateGrid();
 //$this->UpdateSummaryViewTables();
 //echo $gbif->SplitFile('gbif_data_subset.sql', 100);
+?>

@@ -26,7 +26,7 @@ class TableOccurrence extends Table_Base {
         "basisofrecord" => "basisofrecord, _genus, _species, catalognumber"
     );
     var $fieldmap_filterby = array(
-        "datasetid" => "_datasetid",
+        "datasetid" => "datasetkey", //*** hmm
         "latitude" => "_decimallatitude",
         "longitude" => "_decimallongitude",
         "region:albertine" => "_regions[1]",
@@ -73,7 +73,6 @@ class TableOccurrence extends Table_Base {
         'institutioncode',
         'collectioncode',
         'datasetname',
-        'datasetkey',
         'ownerinstitutioncode',
         'basisofrecord',
         'informationwithheld',
@@ -222,14 +221,14 @@ class TableOccurrence extends Table_Base {
         'taxonremarks',
         'nomenclaturalstatus',
         'taxonrank',
-        /* '_kingdom', //additional (calculated) fields
+        'datasetkey'
+        /*, '_kingdom', //additional (calculated) fields
         '_phylum',
         '_class',
         '_order',
         '_family',
         '_genus',
         '_species', */
-        '_datasetid'
     );
     
     //override default because of choice between occlist / normal filtering
@@ -441,11 +440,11 @@ class TableOccurrence extends Table_Base {
         while ($row = pg_fetch_array($res)) {
             $num_recs++;
             foreach($this->DwCFieldOrdering as $field) {
-                if ($field != '_datasetid') {
+                if ($field != 'datasetkey') {
                     echo $row[$field] . "\t";
                 } else {
                     //URL to dataset
-                    echo $siteconfig['path_baseurl']  . "/out.dataset.php?datasetid=" . str_replace(" ", "%20", $row[$field]) . "\t";
+                    echo $siteconfig['path_baseurl']  . "/out.dataset.php?datasetkey=" . str_replace(" ", "%20", $row[$field]) . "\t";
                 }
             }
             echo "\r\n";

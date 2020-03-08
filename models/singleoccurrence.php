@@ -181,7 +181,7 @@ class SingleOccurrence {
 
     //returns an array of field-label-value values for a single entry in the occurrence table, correctly ordered
     function GetAttributes($include_empty_fields = false) {
-        $sql = "SELECT o.*, op.*, d.datasetid, d.link FROM ";
+        $sql = "SELECT o.*, op.*, d.datasetkey, d.link FROM ";
         $sql .= "occurrence o JOIN occurrence_processed op ON o._id = op._id ";
         $sql.= "JOIN dataset d ON op.datasetkey = d.datasetkey ";
         $sql .= "WHERE o._id = $1";

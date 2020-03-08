@@ -22,7 +22,7 @@ if ($USER_SESSION['siterole'] != 'admin') {
 $_CLEANPOST = Sanitize($_POST);
 
 $data = array();
-$data['datasetid'] = (isset($_CLEANPOST['datasetid'])? $_CLEANPOST['datasetid'] : '');
+$data['datasetkey'] = (isset($_CLEANPOST['datasetkey'])? $_CLEANPOST['datasetkey'] : '');
 $data['color'] = (isset($_CLEANPOST['color'])? $_CLEANPOST['color'] : '');
 $data['region_albertine'] = (isset($_CLEANPOST['region_albertine'])? $_CLEANPOST['region_albertine'] : '');
 $data['region_mountains'] = (isset($_CLEANPOST['region_mountains'])? $_CLEANPOST['region_mountains'] : '');
@@ -31,7 +31,7 @@ $region = (isset($_CLEANPOST['region'])? $_CLEANPOST['region'] : '');
 
 if (!in_array($region, array("albertine","mountains","lakes"))) $region = "";
 
-$ds = new SingleDataset($data['datasetid']);
+$ds = new SingleDataset($data['datasetkey']);
 $save_msg = "";
 $save_ok = $ds->SetAttributes($data, $save_msg);
 
@@ -42,6 +42,6 @@ $session->SetSessionMsg($sess_data);
 if ($save_ok) {
     header("Location: out.listdatasets." . $region . ".php"); 
 } else {
-    header("Location: out.dataset_edit.php?datasetid=" . $data['datasetid'] . "&region=" . $region);
+    header("Location: out.dataset_edit.php?datasetkey=" . $data['datasetkey'] . "&region=" . $region);
 }
 ?>

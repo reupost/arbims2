@@ -133,90 +133,10 @@ class GBIF {
         file_put_contents($siteconfig['path_basefolder'] . '/logs/gbif_'.date("Y-m-d").'.txt', $timestamp . ' ' . $text . PHP_EOL, FILE_APPEND);
     }
 
-    public function InitiateGBIFDownload() {
+    public function log_summary($text) {
         global $siteconfig;
-
-        $this->UpdateDownloadQueueStatus();
-        $still_busy = false;
-        $active_downloads = $this->CountActiveDownloads();
-        if ($active_downloads > 0) $still_busy = true;
-
-        //$still_busy = true;
-        if (!$still_busy) {
-            $this->log("Starting downloads from GBIF");
-            $this->loading = true;
-            $query_json = str_replace("***POLYGON***", $siteconfig['gbif_query'], $this->query_template);
-            $query_spplist_json = str_replace('"format": "DWCA",', '"format": "SPECIES_LIST",', $query_json);
-            //$saved_query = file_put_contents('gbif/query.json', $query_json);
-            //$saved_query_spplist = file_put_contents('gbif/query_spplist.json', $query_spplist_json);
-            //if ($saved_query === false) {
-            //    return "Error: could not save query json to gbif directory";
-            //}
-
-            $curl_handle=curl_init();
-            curl_setopt($curl_handle, CURLOPT_URL,"http://api.gbif.org/v1/occurrence/download/request");
-            curl_setopt($curl_handle, CURLOPT_CONNECTTIMEOUT, 2);
-            curl_setopt($curl_handle, CURLOPT_RETURNTRANSFER, 1);
-            curl_setopt($curl_handle, CURLOPT_USERAGENT, 'ARBIMS');
-            curl_setopt($curl_handle, CURLOPT_USERPWD, $siteconfig['gbif_username'] . ":" . $siteconfig['gbif_password']);
-            curl_setopt($curl_handle, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
-            curl_setopt($curl_handle, CURLOPT_CUSTOMREQUEST, "POST");
-
-            curl_setopt($curl_handle, CURLOPT_HTTPHEADER, array(
-                'Content-Type: application/json',
-                'Content-Length: ' . strlen($query_json)));
-            curl_setopt($curl_handle, CURLOPT_POSTFIELDS, $query_json);
-            $gbif_download_id = curl_exec($curl_handle);
-
-            curl_setopt($curl_handle, CURLOPT_HTTPHEADER, array(
-                'Content-Type: application/json',
-                'Content-Length: ' . strlen($query_spplist_json)));
-            curl_setopt($curl_handle, CURLOPT_POSTFIELDS, $query_spplist_json);
-            $gbif_download_spplist_id = curl_exec($curl_handle);
-
-            curl_close($curl_handle);
-
-            $curl_handle=curl_init();
-
-            curl_setopt($curl_handle, CURLOPT_CONNECTTIMEOUT, 2);
-            curl_setopt($curl_handle, CURLOPT_RETURNTRANSFER, 1);
-            curl_setopt($curl_handle, CURLOPT_USERAGENT, 'ARBIMS');
-            curl_setopt($curl_handle, CURLOPT_URL,"http://api.gbif.org/v1/occurrence/download/" . $gbif_download_id);
-            $gbif_metadata = curl_exec($curl_handle);
-            curl_setopt($curl_handle, CURLOPT_URL,"http://api.gbif.org/v1/occurrence/download/" . $gbif_download_spplist_id);
-            $gbif_spplist_metadata = curl_exec($curl_handle);
-            //$this->log("GBIF species list metadata # " . $gbif_download_spplist_id . " : " . $gbif_spplist_metadata);
-            curl_close($curl_handle);
-            $db_res = $this->AddGBIFDownloadToQueue($gbif_download_id, $gbif_metadata, 'occurrences');
-            $db_spplist_res = $this->AddGBIFDownloadToQueue($gbif_download_spplist_id, $gbif_spplist_metadata, 'species list');
-            $this->log("Occurrence download added to queue: result " . $db_res);
-            $this->log("Species list download added to queue: result " . $db_spplist_res);
-        }
-        $download_id = -1;
-        $download_spplist_id = -1;
-        try {
-            //$this->UpdateDownloadQueueStatus();
-            $download_id = $this->RetrieveCompleteDownloads('occurrences');
-            $download_spplist_id = $this->RetrieveCompleteDownloads('species list');
-        } catch (Exception $e) {
-            $this->log('Error retrieving download: ', $e->getMessage(), "\n");
-        }
-
-        if ($download_id > 0) {
-            $this->log('Download #' . $download_id . ' (' . 'occurrence' . ') successfully retrieved');
-        } elseif ($download_id == 0) {
-            $this->log('No (' . 'occurrence' . ') to download right now');
-        } else {
-            $this->log('Active (' . 'occurrence' . ') downloads in the queue already');
-        }
-        if ($download_spplist_id > 0) {
-            $this->log('Download #' . $download_spplist_id . ' (' . 'species list' . ') successfully retrieved');
-        } elseif ($download_spplist_id == 0) {
-            $this->log('No (' . 'species list' . ') to download right now');
-        } else {
-            $this->log('Active (' . 'species list' . ') downloads in the queue already');
-        }
-
+        $timestamp = date("Y-m-d h:i:sa");
+        file_put_contents($siteconfig['path_basefolder'] . '/logs/gbif_summary_'.date("Y-m").'.txt', $timestamp . ' ' . $text . PHP_EOL, FILE_APPEND);
     }
 
     public function RetrieveCompleteDownloads($downloadtype) {
@@ -294,8 +214,103 @@ class GBIF {
         return $download_id;
     }
 
+    public function InitiateGBIFDownload() {
+        global $siteconfig;
+
+        $this->UpdateDownloadQueueStatus();
+        $still_busy = false;
+        $active_downloads = $this->CountActiveDownloads();
+        if ($active_downloads > 0) $still_busy = true;
+
+        //$still_busy = true;
+        if (!$still_busy) {
+            $this->log("Starting downloads from GBIF");
+            $this->log_summary("Starting downloads from GBIF for spatial footprint: " . $siteconfig['gbif_query']);
+            $this->loading = true;
+            $query_json = str_replace("***POLYGON***", $siteconfig['gbif_query'], $this->query_template);
+            $query_spplist_json = str_replace('"format": "DWCA",', '"format": "SPECIES_LIST",', $query_json);
+            //$saved_query = file_put_contents('gbif/query.json', $query_json);
+            //$saved_query_spplist = file_put_contents('gbif/query_spplist.json', $query_spplist_json);
+            //if ($saved_query === false) {
+            //    return "Error: could not save query json to gbif directory";
+            //}
+
+            $curl_handle=curl_init();
+            curl_setopt($curl_handle, CURLOPT_URL,"http://api.gbif.org/v1/occurrence/download/request");
+            curl_setopt($curl_handle, CURLOPT_CONNECTTIMEOUT, 2);
+            curl_setopt($curl_handle, CURLOPT_RETURNTRANSFER, 1);
+            curl_setopt($curl_handle, CURLOPT_USERAGENT, 'ARBIMS');
+            curl_setopt($curl_handle, CURLOPT_USERPWD, $siteconfig['gbif_username'] . ":" . $siteconfig['gbif_password']);
+            curl_setopt($curl_handle, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
+            curl_setopt($curl_handle, CURLOPT_CUSTOMREQUEST, "POST");
+
+            curl_setopt($curl_handle, CURLOPT_HTTPHEADER, array(
+                'Content-Type: application/json',
+                'Content-Length: ' . strlen($query_json)));
+            curl_setopt($curl_handle, CURLOPT_POSTFIELDS, $query_json);
+            $gbif_download_id = curl_exec($curl_handle);
+
+            curl_setopt($curl_handle, CURLOPT_HTTPHEADER, array(
+                'Content-Type: application/json',
+                'Content-Length: ' . strlen($query_spplist_json)));
+            curl_setopt($curl_handle, CURLOPT_POSTFIELDS, $query_spplist_json);
+            $gbif_download_spplist_id = curl_exec($curl_handle);
+
+            curl_close($curl_handle);
+
+            $curl_handle=curl_init();
+
+            curl_setopt($curl_handle, CURLOPT_CONNECTTIMEOUT, 2);
+            curl_setopt($curl_handle, CURLOPT_RETURNTRANSFER, 1);
+            curl_setopt($curl_handle, CURLOPT_USERAGENT, 'ARBIMS');
+            curl_setopt($curl_handle, CURLOPT_URL,"http://api.gbif.org/v1/occurrence/download/" . $gbif_download_id);
+            $gbif_metadata = curl_exec($curl_handle);
+            curl_setopt($curl_handle, CURLOPT_URL,"http://api.gbif.org/v1/occurrence/download/" . $gbif_download_spplist_id);
+            $gbif_spplist_metadata = curl_exec($curl_handle);
+            //$this->log("GBIF species list metadata # " . $gbif_download_spplist_id . " : " . $gbif_spplist_metadata);
+            curl_close($curl_handle);
+            $db_res = $this->AddGBIFDownloadToQueue($gbif_download_id, $gbif_metadata, 'occurrences');
+            $db_spplist_res = $this->AddGBIFDownloadToQueue($gbif_download_spplist_id, $gbif_spplist_metadata, 'species list');
+            $this->log("Occurrence download added to queue: result " . $db_res);
+            $this->log("Species list download added to queue: result " . $db_spplist_res);
+            $this->log_summary("Add occurrence download to queue: " . ($db_res == -1? "ok" : "problem"));
+            $this->log_summary("Add species list download to queue: " . ($db_spplist_res == -1? "ok" : "problem"));
+        }
+        $download_id = -1;
+        $download_spplist_id = -1;
+        try {
+            //$this->UpdateDownloadQueueStatus();
+            $download_id = $this->RetrieveCompleteDownloads('occurrences');
+            $download_spplist_id = $this->RetrieveCompleteDownloads('species list');
+        } catch (Exception $e) {
+            $this->log('Error retrieving download: ', $e->getMessage(), "\n");
+        }
+
+        if ($download_id > 0) {
+            $this->log('Download #' . $download_id . ' (' . 'occurrence' . ') successfully retrieved');
+            $this->log_summary('Download #' . $download_id . ' (' . 'occurrence' . ') successfully retrieved');
+        } elseif ($download_id == 0) {
+            $this->log('No (' . 'occurrence' . ') to download right now');
+            $this->log_summary('No occurrence downloads to retrieve right now');
+        } else {
+            $this->log('Active (' . 'occurrence' . ') downloads in the queue already');
+            $this->log_summary('Active occurrence downloads still in the queue');
+        }
+        if ($download_spplist_id > 0) {
+            $this->log('Download #' . $download_spplist_id . ' (' . 'species list' . ') successfully retrieved');
+            $this->log_summary('Download #' . $download_spplist_id . ' (' . 'species list' . ') successfully retrieved');
+        } elseif ($download_spplist_id == 0) {
+            $this->log('No (' . 'species list' . ') to download right now');
+            $this->log_summary('No species list downloads to retrieve right now');
+        } else {
+            $this->log('Active (' . 'species list' . ') downloads in the queue already');
+            $this->log_summary('Active species list downloads still in the queue');
+        }
+        $this->log_summary("");
+    }
 }
 
 $gbif = new GBIF();
 $gbif->InitiateGBIFDownload();
+
 ?>

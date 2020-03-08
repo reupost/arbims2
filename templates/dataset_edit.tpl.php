@@ -10,7 +10,7 @@
             ?>            
             <br/>
             <form action='op.dataset_save.php' method='POST'>
-                <input type='hidden' id='datasetid' name='datasetid' value='<?php echo $dsdata['datasetid'] ?>' />
+                <input type='hidden' id='datasetkey' name='datasetkey' value='<?php echo $dsdata['datasetkey'] ?>' />
                 <input type='hidden' id='region' name='region' value='<?php echo $region ?>' />
                 <table id="dataset">                                        
                     <tbody>
@@ -18,20 +18,7 @@
                             <td></td>
                             <td><input type='submit' style='float:right' value="<?php printMLtext('save') ?>" /></td>
                         </tr>
-                        <tr>
-                            <td style='vertical-align:top'><?php echo getMLtext('occ_record_color') ?></td>
-                            <td> 
-                                <?php
-                                if ($dsdata['_has_occurrence'] == 't') {
-                                    echo "<input name='color' id='color' class='color {hash:true}' style='width:6em' maxlength=7 value='" . $dsdata['color'] . "'>";                                    
-                                    echo "<br/>(" . getMLtext('click_to_edit') . ")";
-                                } else {
-                                    printMLtext('color_only_for_occurrence_datasets');
-                                }
-                                ?>
-                            </td>
-                        </tr>   
-                        <tr><td colspan='2'>&nbsp;</td></tr>
+
                         <tr>
                             <td colspan='2'><b><?php printMLtext('regional_specificity') ?>:</b></td>
                         </tr>                            

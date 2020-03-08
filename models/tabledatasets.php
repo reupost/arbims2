@@ -83,12 +83,12 @@ LEFT JOIN
         $this->region = $reg;
     }
     //get dataset title based on datasetid (text) or database id (serial)
-    public function GetDatasetTitle($datasetid = '', $id = 0) {
-        if ($datasetid == '' && !$id) return 'Error: missing parameter in GetDatastTitle';
+    public function GetDatasetTitle($datasetkey = '', $id = 0) {
+        if ($datasetkey == '' && !$id) return 'Error: missing parameter in GetDatastTitle';
         $sql = "SELECT \"title\" from dataset WHERE ";
-        if ($datasetid > '') {
-            $sql .= " datasetid = $1";
-            $res = pg_query_params($sql, array($datasetid));
+        if ($datasetkey > '') {
+            $sql .= " datasetkey = $1";
+            $res = pg_query_params($sql, array($datasetkey));
         }
         if ($id) {
             $sql .= " id = $1";
@@ -117,7 +117,7 @@ LEFT JOIN
     
     public function GetOccurrenceLegend($include_dataset_links = true, $region='') {
         $legend = "";
-        $sql = "SELECT datasetid, title, concat('<div class=\"color_show\" style=\"background-color:', color, '\"></div>') as color_box FROM dataset WHERE _has_occurrence ";
+        $sql = "SELECT datasetkey, title, concat('<div class=\"color_show\" style=\"background-color:', color, '\"></div>') as color_box FROM dataset WHERE _has_occurrence ";
         switch ($region) {
             case "albertine"    : $sql .= " AND _regions[1] = true "; break;
             case "mountains"    : $sql .= " AND _regions[2] = true "; break;
@@ -130,7 +130,7 @@ LEFT JOIN
         while ($row = pg_fetch_array($res)) {
             $legend .= $row['color_box'] . "&nbsp;";
             if ($include_dataset_links) {
-                $legend .= "<a href='out.dataset.php?datasetid=" . $row['datasetid'] . "' alt='" . htmlspecialchars(getMLtext('dataset')) . "' title='" . htmlspecialchars(getMLtext('dataset')) . "'>" . htmlspecialchars($row['title']) . "</a>";
+                $legend .= "<a href='out.dataset.php?datasetkey=" . $row['datasetkey'] . "' alt='" . htmlspecialchars(getMLtext('dataset')) . "' title='" . htmlspecialchars(getMLtext('dataset')) . "'>" . htmlspecialchars($row['title']) . "</a>";
             } else {
                 $legend .= htmlspecialchars($row['title']);
             }

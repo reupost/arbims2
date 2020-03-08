@@ -10,12 +10,12 @@ global $siteconfig;
 global $USER_SESSION;
 
 $params = array();
-$params['datasetid'] = (isset($_CLEAN['datasetid'])? $_CLEAN['datasetid'] : '');
+$params['datasetkey'] = (isset($_CLEAN['datasetkey'])? $_CLEAN['datasetkey'] : '');
 $params['region'] = (isset($_CLEAN['region'])? $_CLEAN['region'] : '');
 
 if (!in_array($params['region'], array("albertine","mountains","lakes"))) $params['region'] = "";
     
-$ds = new SingleDataset($params['datasetid']);
+$ds = new SingleDataset($params['datasetkey']);
 $dsdata = $ds->GetAttributes();
 if (count($dsdata) == 0) { //invalid id
     if ($params['region'] > "") {

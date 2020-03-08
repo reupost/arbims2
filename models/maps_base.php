@@ -18,7 +18,7 @@ class MapController {
         $params['taxon'] = (isset($_CLEAN['taxon']) ? $_CLEAN['taxon'] : '');
         $params['rank'] = (isset($_CLEAN['rank']) ? $_CLEAN['rank'] : '');
         $params['taxonparent'] = (isset($_CLEAN['taxonparent']) ? $_CLEAN['taxonparent'] : '');
-        $params['datasetid'] = (isset($_CLEAN['datasetid']) ? $_CLEAN['datasetid'] : '');
+        $params['datasetkey'] = (isset($_CLEAN['datasetkey']) ? $_CLEAN['datasetkey'] : '');
         $params['mapocc'] = (isset($_CLEAN['mapocc']) ? $_CLEAN['mapocc'] : '');
         foreach (array('x1','x2','y1','y2') as $numeric_param) {
             $params[$numeric_param] = (isset($_CLEAN[$numeric_param])? $_CLEAN[$numeric_param] : '');
@@ -61,10 +61,10 @@ class MapController {
             $showing_some_occs = true;
             $tbloccurrence->AddWhere('filtercontent', '***', $params['filterlistby']);
         }
-        if ($params['datasetid'] > '') {
+        if ($params['datasetkey'] > '') {
             $showing_some_occs = true;
-            $tbloccurrence->AddWhere('datasetid', '=', $params['datasetid']);
-            $params['dataset_title'] = getMLtext('dataset') . ': ' . $tbldataset->GetDatasetTitle($params['datasetid']);
+            $tbloccurrence->AddWhere('datasetkey', '=', $params['datasetkey']);
+            $params['dataset_title'] = getMLtext('dataset') . ': ' . $tbldataset->GetDatasetTitle($params['datasetkey']);
         }
         if ($params['taxon'] > '' && $params['rank'] > '' && $params['taxonparent'] > '') { //all must be present to filter like this
             $showing_some_occs = true;

@@ -10,7 +10,7 @@
                     <?php                    
                     if ($user['siterole'] == 'admin') {
                         echo "<tr><td></td><td>";
-                        echo "<input type='button' value=\"" . getMLtext('edit') . "\" onclick=\"javascript:window.location='out.dataset_edit.php?datasetid=" . $dsdata['datasetid'] . "&region=" . $region . "'\"/>";
+                        echo "<input type='button' value=\"" . getMLtext('edit') . "\" onclick=\"javascript:window.location='out.dataset_edit.php?datasetkey=" . $dsdata['datasetkey'] . "&region=" . $region . "'\"/>";
                         echo "</td></tr>";                        
                     }
                     $firstregion = 1;
