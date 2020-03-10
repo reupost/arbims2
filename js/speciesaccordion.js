@@ -55,7 +55,6 @@ $(function() {
         var selector = "a[href$='#" + node + "']";
         var link = $(selector);
         if (link) {
-            console.log('loading ' + link[0].text);
             $(link[0]).addClass('open');
             var treeContextTxt = link[0].text.toString();
             var treeContext = treeContextTxt.split(" ");
@@ -70,9 +69,9 @@ $(function() {
                 in_node: node,
                 in_remainingNodes: remainingNodes,
                 success: function(data) {
-                    console.log(this.in_link[0]);
                     $(this.in_link[0]).next().after(data);
-                    already_loaded[this.in_link] = 1; // keep track of the loaded accordions
+                    already_loaded[$(this.in_link[0]).attr('href')] = 1; // keep track of the loaded accordions
+                    expanded[$(this.in_link[0]).attr('href')] = 1;
                     if (this.in_remainingNodes.length > 1) {
                         this.in_remainingNodes.shift();
                         loadSubtree(this.in_node, this.in_remainingNodes);
