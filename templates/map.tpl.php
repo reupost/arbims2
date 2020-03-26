@@ -969,6 +969,7 @@
         } else {
             $('#map-load-area-controls').show();
             $('#map-load-area-controls-show').click();
+            $('#map-load-area-shp-success').html("");
         }
     }
     

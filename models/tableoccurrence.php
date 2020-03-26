@@ -26,7 +26,7 @@ class TableOccurrence extends Table_Base {
         "basisofrecord" => "basisofrecord, _genus, _species, catalognumber"
     );
     var $fieldmap_filterby = array(
-        "datasetid" => "datasetkey", //*** hmm
+        "datasetkey" => "datasetkey", //*** hmm
         "latitude" => "_decimallatitude",
         "longitude" => "_decimallongitude",
         "region:albertine" => "_regions[1]",
