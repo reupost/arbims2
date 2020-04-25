@@ -51,9 +51,9 @@ class MapLayers extends Table_Base {
                 } else {
                     $jstring .= ", ";
                 }
-                $jstring .= $key . ":\"" . $layer[$key] . "\"";
+                $jstring .= $key . ":\"" . str_replace(array("\r\n", "\r", "\n", '"'), array("<br />", "<br />", "<br />", "&quot;"), $layer[$key]) . "\"";
             }
-            $jstring .= ", ml_name:\"" . getMLtext($layer['displayname']) . "\"";
+            $jstring .= ", ml_name:\"" . str_replace(array("\r\n", "\r", "\n", '"'), array("<br />", "<br />", "<br />", "&quot;"),getMLtext($layer['displayname'])) . "\"";
             $jstring .= "}";
         }    
         $jstring .= "];";

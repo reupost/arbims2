@@ -11,9 +11,14 @@
             <br/>
             <form action='op.gislayer_save.php' method='POST'>
                 <input type='hidden' id='id' name='id' value='<?php echo $layerdata['gislayer']['id'] ?>' />
-                <table id="gislayer_edit">
+                <table id="gislayer">
+                    <thead>
+                    <th class='td_left'></th>
+                    <th class='td_middle'></th>
+                    <th class='td_right'></th>
+                    </thead>
                     <tr>
-                        <td><h5><?php 
+                        <td><h5><?php
                         if ($layerdata['gislayer']['displayname'] != '') {
                             printMLtext($layerdata['gislayer']['displayname']);
                         } else { //no display name set
@@ -21,14 +26,14 @@
                         }
                         ?></h5></td>                        
                         <td colspan='2' style='text-align:right'>
-                            <input type='submit' value="<?php printMLtext('save') ?>" />
+                            <input type='submit' value="<?php printMLtext('save') ?>" style="width:8em !important" />
                         </td>
                     </tr>
                     <tr>
-                        <td rowspan="11"><?php echo $layerdata['preview_img'] ?></td>
-                        <td><?php echo getMLtext('layer_name') . "<br/>(" . getMLtext('dictionary_key') . ")" ?></td>
+                        <td rowspan="5"><?php echo $layerdata['preview_img'] ?></td>
+                        <td style="vertical-align:top"><?php echo getMLtext('layer_name') . "<br/>(" . getMLtext('dictionary_key') . ")" ?></td>
                         <td>
-                            <select name='displayname' style='width:440px'>
+                            <select name='displayname'>
                                 <?php foreach ($layernamekeys as $key => $value) 
                                     echo "<option value=\"" . $key . "\" " . ($layerdata['gislayer']['displayname'] == $key? "selected='selected'" : "") . ">" . htmlentities($value) . " &nbsp; [" . htmlentities($key) . "]" . "</option>";
                                 ?>                            
@@ -37,10 +42,41 @@
                                 <?php printMLtext('map_layer_pick_help') ?>
                             </div>
                         </td>                        
-                    </tr>                    
+                    </tr>
+                    <tr>
+                        <td style="vertical-align:top"><?php printMLtext('layer_meta_description') ?></td>
+                        <td><textarea name="meta_description" id="meta_description"><?php echo $layerdata['gislayer']['meta_description'] ?></textarea></td>
+                    </tr>
+                    <tr>
+                        <td colspan='2'><h5><?php printMLtext('layer_meta_source_title') ?>:</h5></td>
+                    </tr>
+                    <tr>
+                        <td><?php printMLtext('layer_meta_source') ?></td>
+                        <td><input type="text" name='meta_source' id="meta_source" value="<?php echo $layerdata['meta_source'] ?>"/></td>
+                    </tr>
+                    <tr>
+                        <td><?php printMLtext('layer_meta_sourcelink') ?></td>
+                        <td><input type="text" name='meta_sourcelink' id="meta_sourcelink" value="<?php echo $layerdata['meta_sourcelink'] ?>"/></td>
+                    </tr>
+                    <tr>
+                        <td rowspan="18" style='vertical-align:top'>
+                            <?php echo "<b>" . getMLtext('legend') . ":</b><br/>" . $layerdata['legend_img'] ?>
+                        </td>
+                        <td><?php printMLtext('layer_meta_sourcedate') ?></td>
+                        <td><input type="text" name='meta_sourcedate' id="meta_sourcedate" value="<?php echo $layerdata['meta_sourcedate'] ?>"/></td>
+                    </tr>
+                    <tr>
+                        <td><?php printMLtext('layer_meta_citation') ?></td>
+                        <td><input type="text" name='meta_citation' id="meta_citation" value="<?php echo $layerdata['meta_citation'] ?>"/></td>
+                    </tr>
+                    <tr>
+                        <td><?php printMLtext('layer_meta_licence') ?></td>
+                        <td><input type="text" name='meta_licence' id="meta_licence" value="<?php echo $layerdata['meta_licence'] ?>"/></td>
+                    </tr>
+
                     <tr>
                         <td><?php printMLtext('when_added') ?></td>
-                        <td> <?php echo $layerdata['gislayer']['dateadded'] ?></td>
+                        <td><?php echo $layerdata['gislayer']['dateadded'] ?></td>
                     </tr>
                     <tr>
                         <td><?php printMLtext('layer_type') ?></td>
@@ -56,11 +92,19 @@
                             </select>
                         </td>
                     </tr>
+                    <tr>
+                        <td><?php printMLtext('layer_meta_classification_1') ?></td>
+                        <td><input type="text" name='meta_classification_1' id="meta_classification_1" value="<?php echo $layerdata['meta_classification_1'] ?>"/></td>
+                    </tr>
+                    <tr>
+                        <td><?php printMLtext('layer_meta_classification_2') ?></td>
+                        <td><input type="text" name='meta_classification_2' id="meta_classification_2" value="<?php echo $layerdata['meta_classification_2'] ?>"/></td>
+                    </tr>
                     <?php if ($layerdata['gislayer']['layer_type'] == 'raster'): ?>
                     <tr>
                         <td><?php printMLtext('datafile_path') ?></td>
                         <td>
-                            <input type="text" name='datafile_path' id="datafile_path" style='width:440px' value="<?php echo $layerdata['datafile_path'] ?>"/>
+                            <input type="text" name='datafile_path' id="datafile_path" value="<?php echo $layerdata['datafile_path'] ?>"/>
                         </td>
                     </tr>
                     <tr>
@@ -117,11 +161,7 @@
                         <td><?php echo getMLtext('projection') ?></td>
                         <td><?php echo $layerdata['gislayer']['projection'] ?></td>
                     </tr>
-                    <tr>
-                        <td colspan='2' style='vertical-align:top'>
-                            <?php echo "<b>" . getMLtext('legend') . ":</b><br/>" . $layerdata['legend_img'] ?>
-                        </td>
-                    </tr>            
+
                 </table>
             </form>
         </div>

@@ -13,7 +13,7 @@ class SingleMapLayer {
     public function GetAttributes() {
         global $siteconfig;
         
-        $thumbnail_maxx = 200;
+        $thumbnail_maxx = 250;
         
         $attribs = array();
         $res = pg_query_params("SELECT *, whenadded::date as dateadded FROM gislayer WHERE id = $1", array($this->id));
@@ -101,7 +101,10 @@ class SingleMapLayer {
         $data['db_table_name'] = $this->GetValidTableOrColumnName('raster_' . $geoserver_name_no_workspace);
 
         $save_msg = getMLtext('sql_error');
-        $res = pg_query_params("UPDATE gislayer SET (displayname, allow_display_albertine, allow_display_mountains, allow_display_lakes, allow_identify, allow_download, disabled, layer_order, datafile_path, db_table_name) = ($1, $2::bool, $3::bool, $4::bool, $5::bool, $6::bool, $7::bool, $8, $9, $10) WHERE id = $11", array($data['displayname'], $data['allow_display_albertine'], $data['allow_display_mountains'], $data['allow_display_lakes'], $data['allow_identify'], $data['allow_download'], $data['disabled'], $data['layer_order'], $data['datafile_path'], $data['db_table_name'], $data['id']));
+        $res = pg_query_params("UPDATE gislayer SET (displayname, allow_display_albertine, allow_display_mountains, allow_display_lakes, allow_identify, allow_download, disabled, layer_order, datafile_path, db_table_name, meta_source, meta_sourcelink, meta_citation, meta_licence, meta_sourcedate, meta_description, meta_classification_1, meta_classification_2) = ($1, $2::bool, $3::bool, $4::bool, $5::bool, $6::bool, $7::bool, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18) WHERE id = $19",
+            array($data['displayname'], $data['allow_display_albertine'], $data['allow_display_mountains'], $data['allow_display_lakes'], $data['allow_identify'], $data['allow_download'], $data['disabled'], $data['layer_order'], $data['datafile_path'], $data['db_table_name'],
+                $data['meta_source'], $data['meta_sourcelink'], $data['meta_citation'], $data['meta_licence'], $data['meta_sourcedate'], $data['meta_description'], $data['meta_classification_1'], $data['meta_classification_2'],
+                $data['id']));
         if (!$res) return 0;
         $save_msg = getMLtext('save_layer_saved');
         return -1;

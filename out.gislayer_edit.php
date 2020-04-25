@@ -33,7 +33,7 @@ $layernamekeys = getMLArrayStartingWith("maplayer_");
 $tpl = new MasterTemplate();
 $tpl->set('site_head_title', getMLText('map_layer_edit'));
 $tpl->set('page_specific_head_content', 
-	"<link rel='stylesheet' type='text/css' media='screen' href='css/gislayer.css' />
+	"<link rel='stylesheet' type='text/css' media='screen' href='css/gislayer.css?random=" . filemtime($_SERVER["DOCUMENT_ROOT"].'/css/gislayer.css') . "' />
 	<script type='text/javascript' src='js/pageload.js'></script>");
 $tpl->set('site_user', $USER_SESSION);
 $tpl->set('session_msg', $session_msg);

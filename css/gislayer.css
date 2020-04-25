@@ -1,7 +1,28 @@
+#gislayer {
+    width: 75%;
+    table-layout: fixed;
+}
+
 #gislayer td {
     padding-right:10px;
-}
-#gislayer_edit td {
-    padding-right:10px;
     padding-top:10px;
+}
+
+#gislayer .td_left {
+    width: 250px;
+}
+#gislayer .td_middle {
+    width: 20em;
+}
+#gislayer .td_right {
+
+}
+
+#gislayer td input:not([type=checkbox]):not([type=radio])  {
+    width: 100%;
+}
+
+#meta_description {
+    height: 7em;
+    width: 100%;
 }

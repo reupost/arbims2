@@ -5,6 +5,11 @@
         <div class='help_prompt'><?php printMLtext('arbmis_gislayer') ?></div>
         <div id="gislayerfieldlist">
             <table id="gislayer">
+                <thead>
+                <th class='td_left'></th>
+                <th class='td_middle'></th>
+                <th class='td_right'></th>
+                </thead>
                 <tr>
                     <td><h5><?php 
                         if ($layerdata['gislayer']['displayname'] != '') {
@@ -20,44 +25,83 @@
                     </td>
                 </tr>
                 <tr>
-                    <td rowspan="11"><?php echo $layerdata['preview_img'] ?></td>
-                    <td><?php echo "<b>" . getMLtext('when_added') . "</b> " ?></td>
+                    <td rowspan="5"><?php echo $layerdata['preview_img'] ?></td>
+                    <td><b><?php printMLtext('when_added') ?></b></td>
                     <td><?php echo $layerdata['gislayer']['dateadded'] ?></td>
                 </tr>
                 <tr>
-                    <td><?php echo "<b>" . getMLtext('layer_type') . "</b>" ?></td>
+                    <td style="vertical-align:top"><b><?php printMLtext('layer_meta_description') ?></b></td>
+                    <td><?php echo nl2br($layerdata['gislayer']['meta_description']) ?></td>
+                </tr>
+                <tr>
+                    <td colspan='2'><h5><?php printMLtext('layer_meta_source_title') ?>:</h5></td>
+                </tr>
+                <tr>
+                    <td><b><?php printMLtext('layer_meta_source') ?></b></td>
+                    <td><?php echo $layerdata['gislayer']['meta_source'] ?></td>
+                </tr>
+                <tr>
+                    <td><b><?php printMLtext('layer_meta_sourcelink') ?></b></td>
+                    <td><?php echo $layerdata['gislayer']['meta_sourcelink'] ?></td>
+                </tr>
+                <tr>
+                    <td rowspan="18" style='vertical-align:top'>
+                        <?php echo "<b>" . getMLtext('legend') . ":</b><br/>" . $layerdata['legend_img'] ?>
+                    </td>
+                    <td><b><?php printMLtext('layer_meta_sourcedate') ?></b></td>
+                    <td><?php echo $layerdata['gislayer']['meta_sourcedate'] ?></td>
+                </tr>
+                <tr>
+                    <td><b><?php printMLtext('layer_meta_citation') ?></b></td>
+                    <td><?php echo $layerdata['gislayer']['meta_citation'] ?></td>
+                </tr>
+                <tr>
+                    <td><b><?php printMLtext('layer_meta_licence') ?></b></td>
+                    <td><?php echo $layerdata['gislayer']['meta_licence'] ?></td>
+                </tr>
+
+                <tr>
+                    <td><b><?php printMLtext('layer_type') ?></b></td>
                     <td><?php echo $layerdata['gislayer']['layer_type'] ?></td>
                 </tr>
                 <tr>
-                    <td><?php echo "<b>" . getMLtext('datafile_path') . "</b>" ?></td>
+                    <td><b><?php printMLtext('datafile_path') ?></b></td>
                     <td><?php echo $layerdata['gislayer']['datafile_path'] ?></td>
                 </tr>
                 <tr>
-                    <td><?php echo "<b>" . getMLtext('layer_order') . "</b>" ?></td>
+                    <td><b><?php printMLtext('layer_order') ?></b></td>
                     <td><?php echo $layerdata['gislayer']['layer_order'] ?></td>
-                </tr>                
+                </tr>
                 <tr>
-                    <td><?php echo "<b>" . getMLtext('display_albertine') . "</b> " ?></td>
+                    <td><b><?php printMLtext('layer_meta_classification_1') ?></b></td>
+                    <td><?php echo $layerdata['gislayer']['meta_classification_1'] ?></td>
+                </tr>
+                <tr>
+                    <td><b><?php printMLtext('layer_meta_classification_2') ?></b></td>
+                    <td><?php echo $layerdata['gislayer']['meta_classification_2'] ?></td>
+                </tr>
+                <tr>
+                    <td><b><?php printMLtext('display_albertine') ?></b></td>
                     <td><?php echo ($layerdata['gislayer']['allow_display_albertine'] == 't'? getMLtext('yes') : getMLtext('no') ) ?></td>
                 </tr>
                 <tr>
-                    <td><?php echo "<b>" . getMLtext('display_mountains') . "</b> " ?></td>
+                    <td><b><?php printMLtext('display_mountains') ?></b></td>
                     <td><?php echo ($layerdata['gislayer']['allow_display_mountains'] == 't'? getMLtext('yes') : getMLtext('no') ) ?></td>
                 </tr>
                 <tr>
-                    <td><?php echo "<b>" . getMLtext('display_lakes') . "</b> " ?></td>
+                    <td><b><?php printMLtext('display_lakes') ?></b></td>
                     <td><?php echo ($layerdata['gislayer']['allow_display_lakes'] == 't'? getMLtext('yes') : getMLtext('no') ) ?></td>
                 </tr>
                 <tr>
-                    <td><?php echo "<b>" . getMLtext('can_be_queried') . "</b> " ?></td>
+                    <td><b><?php printMLtext('can_be_queried') ?></b></td>
                     <td><?php echo ($layerdata['gislayer']['allow_identify'] == 't'? getMLtext('yes') : getMLtext('no') ) ?></td>
                 </tr>
                 <tr>
-                    <td><?php echo "<b>" . getMLtext('is_disabled') . "</b> " ?></td>
+                    <td><b><?php printMLtext('is_disabled') ?></b></td>
                     <td><?php echo ($layerdata['gislayer']['disabled'] == 't'? getMLtext('yes') : getMLtext('no') ) ?></td>
                 </tr>
                 <tr>
-                    <td><?php echo "<b>" . getMLtext('download') . ":</b> " ?></td>
+                    <td><b><?php printMLtext('download')  ?></b></td>
                     <td><?php
                         if ($layerdata['gislayer']['allow_download'] == 't') {
                             if ($user['id'] != 0) { //logged in
@@ -66,21 +110,17 @@
                                 printMLtext('logged_in_users_only');
                             }
                         } else {
-                            echo getMLtext('not_available');
+                            printMLtext('not_available');
                         }
                         ?>
                     </td>
                 </tr>
                 <tr>
-                    <td><?php echo "<b>" . getMLtext('projection') . "</b> " ?></td>
+                    <td><b><?php printMLtext('projection') ?></b></td>
                     <td><?php echo $layerdata['gislayer']['projection'] ?></td>
                 </tr>
-                <tr>
-                    <td colspan="3">&nbsp;</td>
-                </tr>
-                <tr>
-                    <td colspan="3" style='vertical-align:top'><?php echo "<b><u>" . getMLtext('legend') . "</u>:</b><br/>" . $layerdata['legend_img'] ?></td>
-                </tr>            
+
+
             </table>
         </div>
         <br/>

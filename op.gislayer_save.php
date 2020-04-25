@@ -32,6 +32,14 @@ $data['allow_display_lakes'] = (isset($_CLEANPOST['allow_display_lakes'])? $_CLE
 $data['allow_identify'] = (isset($_CLEANPOST['allow_identify'])? $_CLEANPOST['allow_identify'] : '');
 $data['allow_download'] = (isset($_CLEANPOST['allow_download'])? $_CLEANPOST['allow_download'] : '');
 $data['disabled'] = (isset($_CLEANPOST['disabled'])? $_CLEANPOST['disabled'] : '');
+$data['meta_source'] = (isset($_CLEANPOST['meta_source'])? $_CLEANPOST['meta_source'] : '');
+$data['meta_sourcelink'] = (isset($_CLEANPOST['meta_sourcelink'])? $_CLEANPOST['meta_sourcelink'] : '');
+$data['meta_citation'] = (isset($_CLEANPOST['meta_citation'])? $_CLEANPOST['meta_citation'] : '');
+$data['meta_licence'] = (isset($_CLEANPOST['meta_licence'])? $_CLEANPOST['meta_licence'] : '');
+$data['meta_sourcedate'] = (isset($_CLEANPOST['meta_sourcedate'])? $_CLEANPOST['meta_sourcedate'] : '');
+$data['meta_description'] = (isset($_CLEANPOST['meta_description'])? $_CLEANPOST['meta_description'] : '');
+$data['meta_classification_1'] = (isset($_CLEANPOST['meta_classification_1'])? $_CLEANPOST['meta_classification_1'] : '');
+$data['meta_classification_2'] =  (isset($_CLEANPOST['meta_classification_2'])? $_CLEANPOST['meta_classification_2'] : '');
 
 $layer = new SingleMapLayer($data['id']);
 $save_msg = "";
