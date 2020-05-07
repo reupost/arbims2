@@ -100,6 +100,7 @@
                     <td><b><?php printMLtext('is_disabled') ?></b></td>
                     <td><?php echo ($layerdata['gislayer']['disabled'] == 't'? getMLtext('yes') : getMLtext('no') ) ?></td>
                 </tr>
+                <?php if ($layerdata['gislayer']['layer_type'] == 'vector'): ?>
                 <tr>
                     <td><b><?php printMLtext('download')  ?></b></td>
                     <td><?php
@@ -115,6 +116,7 @@
                         ?>
                     </td>
                 </tr>
+                <?php endif; ?>
                 <tr>
                     <td><b><?php printMLtext('projection') ?></b></td>
                     <td><?php echo $layerdata['gislayer']['projection'] ?></td>

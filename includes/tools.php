@@ -15,13 +15,13 @@ function url_for($item, $params = '') {
     }
 }
 
-//returns the value, or 1 if non-numeric or not an integer
+//returns the value, or 0 if non-numeric or not an integer
 function GetCleanInteger($from) {
     if (is_numeric($from)) {
         if (is_int($from + 0))
             return $from + 0;
     }
-    return 1;
+    return 0;
 }
 
 //function GetCleanNumber($from) {
@@ -201,7 +201,10 @@ function GetMessagePopupJS($session_msg, $type = 'success') {
         $js .= "  dismissQueue: true,";
         $js .= "	layout: 'topRight',";
         $js .= "	theme: 'defaultTheme',";
-        $js .= "	timeout: 1500,";
+        $js .= "	timeout: 2500,";
+        if ($type != 'success') {
+            $js .= "    closeWith: ['click'],"; //not working
+        }
         $js .= "	_template: '<div class=\"noty_message alert alert-block alert-error\"><span class=\"noty_text\"></span><div class=\"noty_close\"></div></div>'";
         $js .= "});";
         $js .= "</script>";

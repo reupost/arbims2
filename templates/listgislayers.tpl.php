@@ -6,6 +6,7 @@
         <div class="page_other_functionality">
             <?php if ($user['siterole'] == 'admin'): ?>
                 <form action="op.refresh_from_geoserver.php" >
+                    <input type='button' value="<?php printMLtext('layer_new') ?>" onclick="javascript:window.location='out.gislayer_edit.php'"/>&nbsp;&nbsp;
                     <input type='submit' value="<?php printMLtext('synchronise_with_geoserver') ?>" />
                 </form>
             <?php endif; ?>

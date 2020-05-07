@@ -476,6 +476,9 @@
         var legendHTML = "<br/>";
         $.each(user_layers, function( index, value ) {
             legendHTML += "<b>" + value.ml_name + ":</b><br/>";
+            if (value.meta_citation) {
+                legendHTML += "<i>" + value.meta_citation + "</i><br/>";
+            }
             legendHTML += "<img src = \"<?php echo $params['geoserver'] ?>/ows?service=wms&REQUEST=GetLegendGraphic&VERSION=1.0.0&FORMAT=image/png&WIDTH=20&HEIGHT=20&LAYER=" + value.geoserver_name + "\">";
             legendHTML += "<br/><br/>";
         });

@@ -18,10 +18,14 @@ if ($USER_SESSION['siterole'] != 'admin') {
 }
 
 $layer = new SingleMapLayer($params['id']);
-$layerdata = $layer->GetAttributes();
-if (count($layerdata) == 0) { //invalid id
-    header("Location: out.listgislayers.php");
-    exit;
+if ($params['id']) {
+    $layerdata = $layer->GetAttributes();
+    if (count($layerdata) == 0) { //invalid id
+        header("Location: out.listgislayers.php");
+        exit;
+    }
+} else {
+    //new layer
 }
 
 $session = new SessionMsgHandler();

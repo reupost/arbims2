@@ -140,11 +140,12 @@ class MapLayers extends Table_Base {
         $cleanattriblist = "";        
         foreach ($attribarray as $key => $attrib) {           
             if (strtolower($attrib) == '_geom' || strtolower($attrib) == '_geom' || strtolower($attrib) == 'the_geom') continue;
-            $cleanattriblist .= ($cleanattriblist > ''? ',':'') . $attrib;
+            $cleanattriblist .= ($cleanattriblist > ''? ',':'') . '"' . str_replace(' ','%20',$attrib) . '"';
         }
                 
         $wfs_server                     = $siteconfig['path_geoserver'] . '/wfs?';
         $wfs_server_getlayerfeatures    = $wfs_server."SERVICE=wfs&version=1.1.0&request=GetFeature&typeName=" . $layername . "&propertyname=" . $cleanattriblist;
+        echo $wfs_server_getlayerfeatures;
         $geoserver      = fopen($wfs_server_getlayerfeatures, "r");
         $content        = stream_get_contents($geoserver);
         fclose($geoserver);
@@ -156,23 +157,28 @@ class MapLayers extends Table_Base {
         
         return $caps->GetFeatureList(); 
     }
-    
-   
-    public function WriteNonGeomLayerFeaturesToDB($layername) {
+
+    public function WriteNonGeomLayerFeaturesToDB($gislayerid, &$errormsg = NULL) {
         global $siteconfig;
         global $DEBUGGING;
 
-        if ($DEBUGGING) {
-            echo date("h:i:sa") . ": WriteNonGeomLayerFeaturesToDB - " . $layername . "<br/>";
+        if ($DEBUGGING && $errormsg === NULL) {
+            echo date("h:i:sa") . ": WriteNonGeomLayerFeaturesToDB - " . $gislayerid . "<br/>";
             myFlush();
         }
-        $res = pg_query_params("SELECT id, layer_type, datafile_path, db_table_name FROM gislayer WHERE geoserver_name = $1", array($layername));
-        if (!$res) return 0; //sql error
-        if (!($row = pg_fetch_array($res))) return 0; //layer not found
+        $res = pg_query_params("SELECT id, layer_type, geoserver_name, datafile_path, db_table_name FROM gislayer WHERE id = $1", array($gislayerid));
+        if (!$res) {
+            if ($errormsg !== NULL) $errormsg = "Invalid layer id";
+            return 0;
+        } //sql error
+        if (!($row = pg_fetch_array($res))) {
+            if ($errormsg !== NULL) $errormsg = "Layer not found";
+            return 0;
+        } //layer not found
         
-        $feats = $this->GetLayerFeaturesNonGeom($layername);
+        $feats = $this->GetLayerFeaturesNonGeom($row['geoserver_name']);
         
-        pg_query_params("DELETE FROM gislayer_feature WHERE gislayer_id = $1", array($row['id']));
+        pg_query_params("DELETE FROM gislayer_feature WHERE gislayer_id = $1", array($gislayerid));
         foreach ($feats as $feat) {
             $concat_attribs = '';
             $descr = '';
@@ -181,37 +187,37 @@ class MapLayers extends Table_Base {
                 if (strtolower($attrib) == 'descriptio') $descr = $value;
                 $concat_attribs .= ($concat_attribs > ''? "; " : "") . $attrib . ": " . $value;                
             }
-            pg_query_params("INSERT INTO gislayer_feature (fid, gislayer_id, attributes_concat, description_text) VALUES ($1, $2, $3, $4)", array($feat['fid'], $row['id'], $concat_attribs, $descr));
+            pg_query_params("INSERT INTO gislayer_feature (fid, gislayer_id, attributes_concat, description_text) VALUES ($1, $2, $3, $4)", array($feat['fid'], $gislayerid, $concat_attribs, $descr));
         }
 
         if ($row['layer_type'] == 'raster') {
-            if ($DEBUGGING) {
-                echo date("h:i:sa") . ": WriteNonGeomLayerFeaturesToDB: processing raster - " . $layername . "<br/>";
+            if ($DEBUGGING && $errormsg === NULL) {
+                echo date("h:i:sa") . ": WriteNonGeomLayerFeaturesToDB: processing raster - " . $gislayerid . "<br/>";
                 myFlush();
             }
             if ($row['datafile_path'] > '') {
                 $output = array();
-                if ($DEBUGGING) {
+                if ($DEBUGGING && $errormsg === NULL) {
                     echo "\"" . $siteconfig['path_raster2pgsql_exe'] . "\" -d -s 4326 -I -C -M -t 100x100 " . "\"" . $row['datafile_path'] . "\" public." . $row['db_table_name'] . " > " . $siteconfig['path_tmp'] . "/rast.sql" . "<br/>";
                     myFlush();
                 }
                 $outputlastline = exec("\"" . $siteconfig['path_raster2pgsql_exe'] . "\" -d -s 4326 -I -C -M -t 100x100 " . "\"" . $row['datafile_path'] . "\" public." . $row['db_table_name'] . " > " . $siteconfig['path_tmp'] . "/rast.sql", $output);
                 //TODO: check for errors
                 $output = array();
-                if ($DEBUGGING) {
+                if ($DEBUGGING && $errormsg === NULL) {
                     echo "\"" . $siteconfig['path_psql_exe'] . "\" -d arbims -f " . $siteconfig['path_tmp'] . "/rast.sql -U root" . "<br/>";
                     myFlush();
                 }
                 $outputlastline = exec("\"" . $siteconfig['path_psql_exe'] . "\" -d arbims -f " . $siteconfig['path_tmp'] . "/rast.sql -U root", $output);
                 //TODO: check for errors
             } else {
-                if ($DEBUGGING) {
-                    echo date("h:i:sa") . ": WriteNonGeomLayerFeaturesToDB: processing raster - " . $layername . " - no datafile specified!<br/>";
+                if ($DEBUGGING && $errormsg === NULL) {
+                    echo date("h:i:sa") . ": WriteNonGeomLayerFeaturesToDB: processing raster - " . $gislayerid . " - no datafile specified!<br/>";
                     myFlush();
                 }
             }
-            if ($DEBUGGING) {
-                echo date("h:i:sa") . ": WriteNonGeomLayerFeaturesToDB: processing raster - " . $layername . " - finished<br/>";
+            if ($DEBUGGING && $errormsg === NULL) {
+                echo date("h:i:sa") . ": WriteNonGeomLayerFeaturesToDB: processing raster - " . $gislayerid . " - finished<br/>";
                 myFlush();
             }
         }
@@ -368,12 +374,24 @@ class MapLayers extends Table_Base {
                     $res = pg_query_params("SELECT id FROM gislayer WHERE geoserver_name = $1", array($d['Name']));
                     if (!$res) { echo "Error in UpdateLayersFromGeoserver - selecting layer"; exit; }
                     if (!($row = pg_fetch_array($res))) { //need to add to DB
-                        $res = pg_query_params("INSERT INTO gislayer (geoserver_name, layer_type) SELECT $1, $2", array($d['Name'], $layer_type));
-                        if (!$res) { echo "Error in UpdateLayersFromGeoserver - adding layer"; exit; }
+                        $res2 = pg_query_params("INSERT INTO gislayer (geoserver_name, layer_type) SELECT $1, $2", array($d['Name'], $layer_type));
+                        if (!$res2) { echo "Error in UpdateLayersFromGeoserver - adding layer"; exit; }
                         $new_layers = true;
                     }
-                    $res = $this->WriteNonGeomLayerFeaturesToDB($d['Name']);
-                    if (!$res) { echo "Error in UpdateLayersFromGeoserver - writing features to DB"; exit; }
+                    if ($layer_type != 'raster') {
+                        $res = pg_query_params("SELECT id FROM gislayer WHERE geoserver_name = $1", array($d['Name']));
+                        if (!$res) {
+                            echo "Error in UpdateLayersFromGeoserver - selecting layer";
+                            exit;
+                        }
+                        while ($row = pg_fetch_array($res)) {
+                            $res2 = $this->WriteNonGeomLayerFeaturesToDB($row['id']);
+                            if (!$res2) {
+                                echo "Error in UpdateLayersFromGeoserver - writing features to DB";
+                                exit;
+                            }
+                        }
+                    }
                 }
             }
         }

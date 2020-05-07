@@ -10,6 +10,7 @@ require_once("includes/template.php");
 require_once("models/singlemaplayer.php");
 require_once("includes/inc.language.php");
 require_once("includes/sessionmsghandler.php");
+require_once("data.load_shapefile.php");
 
 global $siteconfig;
 global $USER_SESSION;
@@ -41,12 +42,33 @@ $data['meta_description'] = (isset($_CLEANPOST['meta_description'])? $_CLEANPOST
 $data['meta_classification_1'] = (isset($_CLEANPOST['meta_classification_1'])? $_CLEANPOST['meta_classification_1'] : '');
 $data['meta_classification_2'] =  (isset($_CLEANPOST['meta_classification_2'])? $_CLEANPOST['meta_classification_2'] : '');
 
+$data['has_new_gislayer'] = false;
+$addToGeoserverResult = array(false,'');
+if (isset($_FILES['layer-load-shp']) && $_FILES['layer-load-shp']['size'] > 0) {
+    $addToGeoserverResult = AddLayerToGeoserver($_FILES['layer-load-shp'], $data['displayname']);
+    if ($addToGeoserverResult[0] == true) {
+        $data['in_geoserver'] = 't';
+        $data['geoserver_name'] = $addToGeoserverResult[1];
+        $data['layer_type'] = 'vector'; //TODO: sort out raster loading
+        $data['has_new_gislayer'] = true; //use this flag to refresh database content for gislayer_feature
+    } else {
+        //leave existing geoserver details for layer - will fail to save if its a new layer and hence without geoserver details
+    }
+}
+
+//TODO: add choice of styles when editing layer?
+//TODO: test on raster layer - additional processing to populate raster_* table in postgres
+
 $layer = new SingleMapLayer($data['id']);
 $save_msg = "";
+$save_state = "success";
 $save_ok = $layer->SetAttributes($data, $save_msg);
-
+if (!$addToGeoserverResult[0] && $addToGeoserverResult[1] != '') {
+    $save_msg .= ' ' . $addToGeoserverResult[1];
+    $save_state = "error";
+}
 $session = new SessionMsgHandler();
-$sess_data = array("session_id" => $USER_SESSION['id'], "data_type" => "message", "data_value" => $save_msg);
+$sess_data = array("session_id" => $USER_SESSION['id'], "data_type" => "message", "data_value" => $save_msg, "state" => $save_state);
 $session->SetSessionMsg($sess_data);
 
 if ($save_ok) {
