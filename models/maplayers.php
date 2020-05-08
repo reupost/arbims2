@@ -137,18 +137,34 @@ class MapLayers extends Table_Base {
         $attribarray = $this->GetLayerAttributes($layername);
         
         //remove geom, _geom or the_geom attributes from array
+        //attribs with spaces in them cannot be queried apparently, TODO: figure this out
         $cleanattriblist = "";        
         foreach ($attribarray as $key => $attrib) {           
-            if (strtolower($attrib) == '_geom' || strtolower($attrib) == '_geom' || strtolower($attrib) == 'the_geom') continue;
-            $cleanattriblist .= ($cleanattriblist > ''? ',':'') . '"' . str_replace(' ','%20',$attrib) . '"';
+            if (strtolower($attrib) == '_geom' || strtolower($attrib) == 'geom' || strtolower($attrib) == 'the_geom' || stripos($attrib,' ') !== false) continue;
+            $cleanattriblist .= ($cleanattriblist > ''? ',':'') . $attrib ;
+            //$cleanattriblist .= ($cleanattriblist > ''? ',':'') . str_replace(' ','%20',$attrib) ;
         }
                 
         $wfs_server                     = $siteconfig['path_geoserver'] . '/wfs?';
-        $wfs_server_getlayerfeatures    = $wfs_server."SERVICE=wfs&version=1.1.0&request=GetFeature&typeName=" . $layername . "&propertyname=" . $cleanattriblist;
-        echo $wfs_server_getlayerfeatures;
+        //$wfs_server_getlayerfeatures    = $wfs_server."SERVICE=wfs&version=1.1.0&request=GetFeature&typeName=" . $layername . "&propertyname=" . $cleanattriblist;
+        $wfs_server_getlayerfeatures    = $wfs_server."SERVICE=wfs&version=1.1.0&request=GetFeature&typeName=" . $layername . "&propertyname=*" ; //this works but generates invalid XML
+        //echo $wfs_server_getlayerfeatures;
         $geoserver      = fopen($wfs_server_getlayerfeatures, "r");
         $content        = stream_get_contents($geoserver);
         fclose($geoserver);
+        //fix up any invalid XML with spaces or brackets or anything else XML might not like in attribute names:
+        $layerws = explode(':', $layername);
+
+        $fixed = 0;
+        $aValid = array('_');
+
+        foreach ($attribarray as $key => $attrib) {
+            if(!ctype_alnum(str_replace($aValid, '', $attrib))) {
+                $attrib_clean = preg_replace( '/[^a-z0-9]/i', '_', $attrib);
+                $fixed = 1;
+                $content = str_replace( $layerws[0] . ':' . $attrib . '>', $layerws[0] . ':' . $attrib_clean . '>', $content);
+            }
+        }
         
         $caps = new WFSParser();
         $caps->SetWFSParserFeatures($layername);
@@ -183,7 +199,7 @@ class MapLayers extends Table_Base {
             $concat_attribs = '';
             $descr = '';
             foreach ($feat as $attrib => $value) {
-                if ($attrib == 'fid') continue;
+                if (strtolower($attrib) == '_geom' || strtolower($attrib) == 'geom' || strtolower($attrib) == 'the_geom' || strtolower($attrib) == 'fid' ||strtolower($attrib) == 'poslist') continue;
                 if (strtolower($attrib) == 'descriptio') $descr = $value;
                 $concat_attribs .= ($concat_attribs > ''? "; " : "") . $attrib . ": " . $value;                
             }
