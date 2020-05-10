@@ -252,40 +252,51 @@ class MapLayers extends Table_Base {
 			die("Connection failed: " . $conn->connect_error);
 		}
         //mysql_connect($siteconfig['media_server'], $siteconfig['media_user'], $siteconfig['media_password']) OR DIE("<p><b>DATABASE ERROR: </b>Unable to connect to database server</p>");
-        foreach ($siteconfig['media_dbs'] as $theme => $dbname) {            
-            @mysqli_select_db($conn, $dbname) or die( "<p><b>DATABASE ERROR: </b>Unable to open database $dbname</p>");
-            mysqli_query($conn,"DELETE FROM tblgislayer");
-            $from = pg_query_params("SELECT * FROM gislayer WHERE disabled = false AND allow_identify = true", array());
+        $first_one = '';
+        foreach ($siteconfig['media_dbs'] as $theme => $dbname) {
             if ($DEBUGGING) {
                 echo date("h:i:sa") . ": SynchGISLayerDataToLibraries - " . $dbname . "<br/>";
                 myFlush();
             }
-            while ($fromrow = pg_fetch_array($from)) {
-                $sql = "INSERT INTO tblgislayer (id, layer_order, displayname, geoserver_name, ";
-                $sql .= "allow_display_albertine, allow_display_mountains, allow_display_lakes, disabled) ";
-                $sql .= "VALUES (";
-                $sql .= $fromrow['id'] . ",";
-                $sql .= $fromrow['layer_order'] . ",";
-                $sql .= "'" . mysqli_real_escape_string($conn,$fromrow['displayname']) . "',";
-                $sql .= "'" . mysqli_real_escape_string($conn,$fromrow['geoserver_name']) . "',";
-                $sql .= ($fromrow['allow_display_albertine'] == 't'? 'true' : 'false') . ",";
-                $sql .= ($fromrow['allow_display_mountains'] == 't'? 'true' : 'false') . ",";
-                $sql .= ($fromrow['allow_display_lakes'] == 't'? 'true' : 'false') . ",";
-                $sql .= ($fromrow['disabled'] == 't'? 'true' : 'false') . ")";
-                //echo $sql;
-                $res = mysqli_query($conn,$sql); //TODO: error-checks
-            }
-            mysqli_query($conn,"DELETE FROM tblgislayer_feature");
-            $from = pg_query_params("SELECT * FROM gislayer_feature", array());
-            while ($fromrow = pg_fetch_array($from)) {
-                $sql = "INSERT INTO tblgislayer_feature (fid, gislayer_id, attributes_concat, description_text) ";
-                $sql .= "VALUES (";
-                $sql .= "'" . $fromrow['fid'] . "',";
-                $sql .= $fromrow['gislayer_id'] . ",";
-                $sql .= "'" . mysqli_real_escape_string($conn,$fromrow['attributes_concat']) . "',";
-                $sql .= "'" . mysqli_real_escape_string($conn,$fromrow['description_text']) . "')"; 
-                //echo $sql;
-                $res = mysqli_query($conn,$sql); //TODO: error-checks
+            if ($first_one == '') {
+                $first_one = $dbname;
+                @mysqli_select_db($conn, $dbname) or die("<p><b>DATABASE ERROR: </b>Unable to open database $dbname</p>");
+                mysqli_query($conn, "DELETE FROM tblgislayer");
+                $from = pg_query_params("SELECT * FROM gislayer WHERE disabled = false AND allow_identify = true", array());
+
+                while ($fromrow = pg_fetch_array($from)) {
+                    $sql = "INSERT INTO tblgislayer (id, layer_order, displayname, geoserver_name, ";
+                    $sql .= "allow_display_albertine, allow_display_mountains, allow_display_lakes, disabled) ";
+                    $sql .= "VALUES (";
+                    $sql .= $fromrow['id'] . ",";
+                    $sql .= $fromrow['layer_order'] . ",";
+                    $sql .= "'" . mysqli_real_escape_string($conn, $fromrow['displayname']) . "',";
+                    $sql .= "'" . mysqli_real_escape_string($conn, $fromrow['geoserver_name']) . "',";
+                    $sql .= ($fromrow['allow_display_albertine'] == 't' ? 'true' : 'false') . ",";
+                    $sql .= ($fromrow['allow_display_mountains'] == 't' ? 'true' : 'false') . ",";
+                    $sql .= ($fromrow['allow_display_lakes'] == 't' ? 'true' : 'false') . ",";
+                    $sql .= ($fromrow['disabled'] == 't' ? 'true' : 'false') . ")";
+                    //echo $sql;
+                    $res = mysqli_query($conn, $sql); //TODO: error-checks
+                }
+                mysqli_query($conn, "DELETE FROM tblgislayer_feature");
+                $from = pg_query_params("SELECT * FROM gislayer_feature", array());
+                while ($fromrow = pg_fetch_array($from)) {
+                    $sql = "INSERT INTO tblgislayer_feature (fid, gislayer_id, attributes_concat, description_text) ";
+                    $sql .= "VALUES (";
+                    $sql .= "'" . $fromrow['fid'] . "',";
+                    $sql .= $fromrow['gislayer_id'] . ",";
+                    $sql .= "'" . mysqli_real_escape_string($conn, $fromrow['attributes_concat']) . "',";
+                    $sql .= "'" . mysqli_real_escape_string($conn, $fromrow['description_text']) . "')";
+                    //echo $sql;
+                    $res = mysqli_query($conn, $sql); //TODO: error-checks
+                }
+            } else {
+                //simply copy from first db
+                mysqli_query($conn, "DELETE FROM " . $dbname . ".tblgislayer");
+                mysqli_query($conn, "DELETE FROM " . $dbname . ".tblgislayer_feature");
+                mysqli_query($conn, "INSERT INTO " . $dbname . ".tblgislayer SELECT * from " . $first_one . ".tblgislayer");
+                mysqli_query($conn, "INSERT INTO " . $dbname . ".tblgislayer_feature SELECT * from " . $first_one . ".tblgislayer_feature");
             }
         }
     }

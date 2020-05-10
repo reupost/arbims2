@@ -64,7 +64,7 @@ function GetLibraryDocsForMapFeature ($arrlibraries, $fid) {
     
         $libraryURL = str_replace("_","-",$librarydb); //note: this relies on the DB and the URL being simply related
     
-        if ($layerid == 0) { //haven't found layer id - should be same in all dbs so jsut use first
+        if ($layerid == 0) { //haven't found layer id - should be same in all dbs so just use first
             $fidbits = explode('.',$fid);
             $sql = "SELECT id FROM tblgislayer WHERE geoserver_name = CONCAT('cite:','" . $fidbits[0] . "')";    
             $res = mysqli_query($conn,$sql);
@@ -87,16 +87,18 @@ function GetLibraryDocsForMapFeature ($arrlibraries, $fid) {
         }
     
         //linked to parent layer
-        $sql = "SELECT * FROM tbldocuments WHERE ((IFNULL(linkedgisfeature,'')='' OR linkedgisfeature='0') AND linkedgislayer = " . $layerid . ") ORDER BY `name` ASC";    
-        $res = mysqli_query($conn,$sql);
-        if (!$res) return "SQL error";
-        while ($row = mysqli_fetch_array($res)) {
-            $doclink = array();
-            $doclink['library'] = $librarydb;
-            $doclink['type'] = getMLtext('map_layer');
-            $doclink['url'] = $libraryURL . "/out/out.ViewDocument.php?documentid=" . $row['id'] . "&showtree=1'";
-            $doclink['name'] = $row['name'];
-            $doclinks[] = $doclink;
+        if ($layerid != 0) {
+            $sql = "SELECT * FROM tbldocuments WHERE ((IFNULL(linkedgisfeature,'')='' OR linkedgisfeature='0') AND linkedgislayer = " . $layerid . ") ORDER BY `name` ASC";
+            $res = mysqli_query($conn, $sql);
+            if (!$res) return "SQL error";
+            while ($row = mysqli_fetch_array($res)) {
+                $doclink = array();
+                $doclink['library'] = $librarydb;
+                $doclink['type'] = getMLtext('map_layer');
+                $doclink['url'] = $libraryURL . "/out/out.ViewDocument.php?documentid=" . $row['id'] . "&showtree=1'";
+                $doclink['name'] = $row['name'];
+                $doclinks[] = $doclink;
+            }
         }
     }
     //sort?
