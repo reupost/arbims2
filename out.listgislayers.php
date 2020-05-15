@@ -90,7 +90,9 @@ $pager->SetEntryBoolean('allow_display_albertine');
 $pager->SetEntryBoolean('allow_display_mountains');
 $pager->SetEntryBoolean('allow_display_lakes');
 $pager->SetEntryBoolean('disabled');
-$pager->SetBoldRowCondition('layer_is_new','!=','no'); //only for admin
+//$pager->SetBoldRowCondition('layer_is_new','!=','no'); //only for admin
+$pager->SetRowClassCondition('layer_is_new','!=','no', 'new_layer'); //only for admin
+$pager->SetRowClassCondition('disabled', '==', 't', 'disabled_layer');
 $setcriteria = array();
 
 $pageform = $pager->ShowControlForm(url_for('out.listgislayers.php'), '', $params['page'], '', 'listanchor', $setcriteria);
@@ -103,7 +105,7 @@ $session_msg = $session->GetSessionMsgMerged($USER_SESSION['id'], "message", tru
 $tpl = new MasterTemplate();
 $tpl->set('site_head_title', getMLText('map_layers')); 
 $tpl->set('page_specific_head_content', 
-    "<link rel='stylesheet' type='text/css' media='screen' href='css/listgislayers.css' />
+    "<link rel='stylesheet' type='text/css' media='screen' href='css/listgislayers.css?random=" . filemtime($_SERVER["DOCUMENT_ROOT"].'/css/listgislayers.css') . "' />
 	<script type='text/javascript' src='js/pageload.js'></script>");
 $tpl->set('site_user', $USER_SESSION);
 $tpl->set('session_msg', $session_msg);

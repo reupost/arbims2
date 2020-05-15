@@ -15,6 +15,7 @@ class Pager {
     var $entries_boolean = array();
     /* var $entries_showhide = array(); //for collapsible columns */
     var $bold_row = array(); //criteria for bolding a row
+    var $class_row = array(); //criteria for adding a class to a row
 
     public function Pager($tot = 0, $perpg = 1, $cur = 1) {
         $this->entries_tot = $tot;
@@ -67,23 +68,23 @@ class Pager {
         $this->entries_showhide[$field] = $initialshow;
     }
     */
-    public function SetBoldRowCondition($field, $condition, $value) {
-        $this->bold_row[] = array('field' => $field, 'condition' => $condition, 'value' => $value);
+
+    public function SetRowClassCondition($field, $condition, $value, $class) {
+        $this->class_row[] = array('field' => $field, 'condition' => $condition, 'value' => $value, 'class' => $class);
     }
 
-    private function IsBoldRow($row) {       
-        if (!count($this->bold_row)) return 0; //no bold criteria
-        foreach ($this->bold_row as $bold_rule) {
-            $val = $row[$bold_rule['field']];
-            if (is_numeric($val) && is_numeric($bold_rule['value'])) {
-                $test = "return(" . $row[$bold_rule['field']] . "" . $bold_rule['condition'] . $bold_rule['value'] . ");";            
+    private function GetRowClass($row) {
+        if (!count($this->class_row)) return ''; //no criteria
+        foreach ($this->class_row as $class_rule) {
+            $val = $row[$class_rule['field']];
+            if (is_numeric($val) && is_numeric($class_rule['value'])) {
+                $test = "return(" . $row[$class_rule['field']] . "" . $class_rule['condition'] . $class_rule['value'] . ");";
             } else {
-                $test = "return('" . $row[$bold_rule['field']] . "'" . $bold_rule['condition'] . "'" . $bold_rule['value'] . "');";            
+                $test = "return('" . $row[$class_rule['field']] . "'" . $class_rule['condition'] . "'" . $class_rule['value'] . "');";
             }
-            //echo $test;
-            if (eval($test)) return 1; //should be bolded
+            if (eval($test)) return $class_rule['class']; //should have class assigned
         }
-        return 0;
+        return '';
     }
     
     public function SetEntries($res) {
@@ -316,9 +317,9 @@ class Pager {
         $html .= "</thead>";
         $html .= "<tbody>";
         foreach ($this->GetEntries() as $i => $row) {
-            $html .= "<tr class='" . (fmod($i, 2) ? 'even' : 'odd') . "'>";
+            $class_row = $this->GetRowClass($row);
+            $html .= "<tr class='" . (fmod($i, 2) ? 'even' : 'odd') . ($class_row != ''? ' ' : '') . $class_row . "'>";
             $col = 1;
-            $bold_row = $this->IsBoldRow($row);
             foreach ($this->entries_display as $field => $opts) {
                 $html .= "<td class='col" . $col . "'>";
                 if ($opts['link'] > '') {
@@ -346,9 +347,7 @@ class Pager {
                         $row[$field] = getMLtext('no');
                     }
                 }
-                if ($bold_row) $html .= "<b>";
                 $html .= $row[$field];
-                if ($bold_row) $html .= "</b>";
                 if ($opts['link'] > '') $html .= "</a>";
                 $html .= "</td>";
                 $col++;
