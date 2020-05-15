@@ -101,8 +101,12 @@ class SingleMapLayer {
         }
         $geoserver_name_arr = explode(':', $data['geoserver_name']);
         $geoserver_name_no_workspace = end($geoserver_name_arr);
-        if ($row['layer_type'] == 'raster' && $data['datafile_path'] ==  NULL && $row['datafile_path'] ==  NULL) { //TODO: sort out path here with data or not
-            $data['datafile_path'] = $siteconfig['path_geoserver_data_dir'] . '/' . $geoserver_name_no_workspace  . '/' . $geoserver_name_no_workspace  . '.tif'; //default - TODO: need to verify that this is intuitive
+        if ($data['layer_type'] == 'raster') {
+            if ($data['has_new_gislayer']) {
+                $data['datafile_path'] = $siteconfig['path_layer_shapefile_dir'] . '/' . $geoserver_name_no_workspace . '.tif'; //default - TODO: need to verify that this is intuitive
+            }
+        } else {
+            $data['datafile_path'] = '';
         }
         $data['db_table_name'] = $this->GetValidTableOrColumnName('raster_' . $geoserver_name_no_workspace);
 
@@ -111,21 +115,27 @@ class SingleMapLayer {
         $res2 = 1;
         $gislayerid = $data['id'];
         if ($data['id']) {
-            $res = pg_query_params( "UPDATE gislayer SET (displayname, in_geoserver, geoserver_name, allow_display_albertine, allow_display_mountains, allow_display_lakes, allow_identify, allow_download, disabled, layer_order, datafile_path, db_table_name, meta_source, meta_sourcelink, meta_citation, meta_licence, meta_sourcedate, meta_description, meta_classification_1, meta_classification_2) = ($1, $2::bool, $3, $4::bool, $5::bool, $6::bool, $7::bool, $8::bool, $9::bool, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20) WHERE id = $21",
+            $res = pg_query_params( "UPDATE gislayer SET (displayname, in_geoserver, geoserver_name, allow_display_albertine, allow_display_mountains, allow_display_lakes, allow_identify, allow_download, disabled, layer_order, datafile_path, db_table_name, meta_source, meta_sourcelink, meta_citation, meta_licence, meta_sourcedate, meta_description, meta_classification_1, meta_classification_2, layer_type) = ($1, $2::bool, $3, $4::bool, $5::bool, $6::bool, $7::bool, $8::bool, $9::bool, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21) WHERE id = $22",
                 array($data['displayname'], $data['in_geoserver'], $data['geoserver_name'], $data['allow_display_albertine'], $data['allow_display_mountains'], $data['allow_display_lakes'], $data['allow_identify'], $data['allow_download'], $data['disabled'], $data['layer_order'], $data['datafile_path'], $data['db_table_name'],
-                    $data['meta_source'], $data['meta_sourcelink'], $data['meta_citation'], $data['meta_licence'], $data['meta_sourcedate'], $data['meta_description'], $data['meta_classification_1'], $data['meta_classification_2'],
+                    $data['meta_source'], $data['meta_sourcelink'], $data['meta_citation'], $data['meta_licence'], $data['meta_sourcedate'], $data['meta_description'], $data['meta_classification_1'], $data['meta_classification_2'], $data['layer_type'],
                     $data['id']));
         } else {
             //new layer
-            $res = pg_query_params("INSERT INTO gislayer (displayname, in_geoserver, geoserver_name, allow_display_albertine, allow_display_mountains, allow_display_lakes, allow_identify, allow_download, disabled, layer_order, datafile_path, db_table_name, meta_source, meta_sourcelink, meta_citation, meta_licence, meta_sourcedate, meta_description, meta_classification_1, meta_classification_2) VALUES ($1, $2::bool, $3, $4::bool, $5::bool, $6::bool, $7::bool, $8::bool, $9::bool, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20) returning id",
+            $res = pg_query_params("INSERT INTO gislayer (displayname, in_geoserver, geoserver_name, allow_display_albertine, allow_display_mountains, allow_display_lakes, allow_identify, allow_download, disabled, layer_order, datafile_path, db_table_name, meta_source, meta_sourcelink, meta_citation, meta_licence, meta_sourcedate, meta_description, meta_classification_1, meta_classification_2, layer_type) VALUES ($1, $2::bool, $3, $4::bool, $5::bool, $6::bool, $7::bool, $8::bool, $9::bool, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21) RETURNING id",
                 array($data['displayname'], $data['in_geoserver'], $data['geoserver_name'], $data['allow_display_albertine'], $data['allow_display_mountains'], $data['allow_display_lakes'], $data['allow_identify'], $data['allow_download'], $data['disabled'], $data['layer_order'], $data['datafile_path'], $data['db_table_name'],
-                    $data['meta_source'], $data['meta_sourcelink'], $data['meta_citation'], $data['meta_licence'], $data['meta_sourcedate'], $data['meta_description'], $data['meta_classification_1'], $data['meta_classification_2']));
-            $gislayerid = $res;
+                    $data['meta_source'], $data['meta_sourcelink'], $data['meta_citation'], $data['meta_licence'], $data['meta_sourcedate'], $data['meta_description'], $data['meta_classification_1'], $data['meta_classification_2'], $data['layer_type']));
+            if ($res) {
+                $row = pg_fetch_array($res);
+                $gislayerid = $row['0'];
+            } //otherwise error
         }
         if ($data['has_new_gislayer'] == true || !$data['id']) {
             //populate gislayer_feature
             $maplayers = new MapLayers();
             $res = $maplayers->WriteNonGeomLayerFeaturesToDB($gislayerid, $save_msg);
+            $map = new MapLayers();
+            $errormsg = '';
+            $map->SynchGISLayerDataToLibraries($gislayerid, $errormsg); //doesn't actually return any useful error information
         }
         if (!$res) return 0;
         $save_msg = getMLtext('save_layer_saved');

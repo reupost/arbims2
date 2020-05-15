@@ -11,7 +11,7 @@ require_once("includes/sessionmsghandler.php");
 
 /* page options */
 $params = array();
-$params['sortlistby'] = (isset($_CLEAN['sortlistby']) ? $_CLEAN['sortlistby'] : 'layer_order');
+$params['sortlistby'] = (isset($_CLEAN['sortlistby']) ? $_CLEAN['sortlistby'] : 'disabled_layer_order');
 $params['filterlistby'] = (isset($_CLEAN['filterlistby']) ? $_CLEAN['filterlistby'] : '');
 $params['changedlayers'] = (isset($_CLEAN['changedlayers']) ? $_CLEAN['changedlayers'] : '');
 
@@ -46,6 +46,7 @@ $arrSorts['allow_display_mountains'] = getMLText('display_mountains');
 $arrSorts['allow_display_lakes'] = getMLText('display_lakes');
 $arrSorts['layer_is_new'] = getMLText('new_layer');
 $arrSorts['disabled'] = getMLText('is_disabled');
+$arrSorts['disabled_layer_order'] = getMLtext('layer_order_default');
 
 $arrListCols = array();
 $arrListCols['geoserver_name'] = array();

@@ -45,12 +45,13 @@ $data['meta_classification_2'] =  (isset($_CLEANPOST['meta_classification_2'])? 
 $data['has_new_gislayer'] = false;
 $addToGeoserverResult = array(false,'');
 if (isset($_FILES['layer-load-shp']) && $_FILES['layer-load-shp']['size'] > 0) {
-    $addToGeoserverResult = AddLayerToGeoserver($_FILES['layer-load-shp'], $data['displayname']);
+    $layer_type = '';
+    $addToGeoserverResult = AddShapeOrRasterToGeoserver($_FILES['layer-load-shp'], $data['displayname'], $layer_type);
     if ($addToGeoserverResult[0] == true) {
         $data['in_geoserver'] = 't';
         $data['geoserver_name'] = $addToGeoserverResult[1];
-        $data['layer_type'] = 'vector'; //TODO: sort out raster loading
         $data['has_new_gislayer'] = true; //use this flag to refresh database content for gislayer_feature
+        $data['layer_type'] = $layer_type;
     } else {
         //leave existing geoserver details for layer - will fail to save if its a new layer and hence without geoserver details
     }

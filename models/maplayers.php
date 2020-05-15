@@ -19,7 +19,8 @@ class MapLayers extends Table_Base {
         "allow_display_albertine" => "allow_display_albertine",
         "allow_display_mountains" => "allow_display_mountains",
         "allow_display_lakes" => "allow_display_lakes",
-        "layer_is_new" => "layer_is_new"
+        "layer_is_new" => "layer_is_new",
+        "disabled_layer_order" => "disabled, layer_order, displayname, geoserver_name"
     );
     var $fieldmap_filterby = array(
         "allow_download" => "allow_download", 
@@ -184,7 +185,7 @@ class MapLayers extends Table_Base {
         }
         $res = pg_query_params("SELECT id, layer_type, geoserver_name, datafile_path, db_table_name FROM gislayer WHERE id = $1", array($gislayerid));
         if (!$res) {
-            if ($errormsg !== NULL) $errormsg = "Invalid layer id";
+            if ($errormsg !== NULL) $errormsg = "Invalid layer id: " . $gislayerid;
             return 0;
         } //sql error
         if (!($row = pg_fetch_array($res))) {
@@ -241,7 +242,7 @@ class MapLayers extends Table_Base {
     }
     
     //push revised gislayer and gislayer_feature tables to libraries
-    public function SynchGISLayerDataToLibraries() {
+    public function SynchGISLayerDataToLibraries($just_one_layer_id = 0, &$errormsg = NULL) {
         global $siteconfig;
         global $DEBUGGING;
 		// Create connection
@@ -254,16 +255,21 @@ class MapLayers extends Table_Base {
         //mysql_connect($siteconfig['media_server'], $siteconfig['media_user'], $siteconfig['media_password']) OR DIE("<p><b>DATABASE ERROR: </b>Unable to connect to database server</p>");
         $first_one = '';
         foreach ($siteconfig['media_dbs'] as $theme => $dbname) {
-            if ($DEBUGGING) {
+            if ($DEBUGGING && $errormsg === NULL) {
                 echo date("h:i:sa") . ": SynchGISLayerDataToLibraries - " . $dbname . "<br/>";
                 myFlush();
             }
             if ($first_one == '') {
                 $first_one = $dbname;
                 @mysqli_select_db($conn, $dbname) or die("<p><b>DATABASE ERROR: </b>Unable to open database $dbname</p>");
-                mysqli_query($conn, "DELETE FROM tblgislayer");
-                $from = pg_query_params("SELECT * FROM gislayer WHERE disabled = false AND allow_identify = true", array());
 
+                if ($just_one_layer_id != 0) {
+                    mysqli_query($conn, "DELETE FROM tblgislayer WHERE id = $1", array($just_one_layer_id));
+                    $from = pg_query_params("SELECT * FROM gislayer WHERE disabled = false AND allow_identify = true AND id = $1", array($just_one_layer_id));
+                } else {
+                    mysqli_query($conn, "DELETE FROM tblgislayer");
+                    $from = pg_query_params("SELECT * FROM gislayer WHERE disabled = false AND allow_identify = true", array());
+                }
                 while ($fromrow = pg_fetch_array($from)) {
                     $sql = "INSERT INTO tblgislayer (id, layer_order, displayname, geoserver_name, ";
                     $sql .= "allow_display_albertine, allow_display_mountains, allow_display_lakes, disabled) ";
@@ -279,7 +285,11 @@ class MapLayers extends Table_Base {
                     //echo $sql;
                     $res = mysqli_query($conn, $sql); //TODO: error-checks
                 }
-                mysqli_query($conn, "DELETE FROM tblgislayer_feature");
+                if ($just_one_layer_id != 0) {
+                    mysqli_query($conn, "DELETE FROM tblgislayer_feature WHERE gislayer_id = $1", array($just_one_layer_id));
+                } else {
+                    mysqli_query($conn, "DELETE FROM tblgislayer_feature");
+                }
                 $from = pg_query_params("SELECT * FROM gislayer_feature", array());
                 while ($fromrow = pg_fetch_array($from)) {
                     $sql = "INSERT INTO tblgislayer_feature (fid, gislayer_id, attributes_concat, description_text) ";

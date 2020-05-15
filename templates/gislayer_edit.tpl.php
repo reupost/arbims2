@@ -25,9 +25,9 @@
                             echo "[" . $layerdata['gislayer']['geoserver_name'] . "]";
                         }
                         if (!isset($layerdata['gislayer']['geoserver_name']) || $layerdata['gislayer']['geoserver_name'] == NULL || $layerdata['gislayer']['geoserver_name'] == '') {
-                            echo "Click 'Choose file' to load a zipped shapefile:<br/>";
+                            echo "Click 'Choose file' to load a zipped shapefile or GeoTIFF:<br/>";
                         } else {
-                            echo "<br/><br/>Click 'Choose file' to update the layer from a zipped shapefile:<br/>";
+                            echo "<br/><br/>Click 'Choose file' to update the layer from a zipped shapefile or GeoTIFF:<br/>";
                         }
                         ?><input type="file" id="layer-load-shp" style="margin-top:5px" name="layer-load-shp" accept="application/zip"></h5></td>
                         <td colspan='2' style='text-align:right'>
