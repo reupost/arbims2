@@ -90,7 +90,6 @@ $pager->SetEntryBoolean('allow_display_albertine');
 $pager->SetEntryBoolean('allow_display_mountains');
 $pager->SetEntryBoolean('allow_display_lakes');
 $pager->SetEntryBoolean('disabled');
-//$pager->SetBoldRowCondition('layer_is_new','!=','no'); //only for admin
 $pager->SetRowClassCondition('layer_is_new','!=','no', 'new_layer'); //only for admin
 $pager->SetRowClassCondition('disabled', '==', 't', 'disabled_layer');
 $setcriteria = array();

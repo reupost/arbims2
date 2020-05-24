@@ -203,6 +203,7 @@ $text = array(
 "load_map_shape_load_shp_error_bad_wkt" => "Error: invalid WKT (not a polygon)",
 "load_map_shape_load_shp_success" => "Shapefile loaded",
 "load_map_shape_load_tif_error_not_tif" => "Error: raster GeoTIFF must be uploaded as .tif file",
+"load_map_shape_load_tif_error_bad_prj" => "Error: could not reproject raster to WGS84",
 "load_map_shape_load_tif_success" => "Raster loaded",
 "load_map_shape_paste_wkt" => "Paste WKT here",
 "load_map_shape_process_wkt" => "Load WKT to map",

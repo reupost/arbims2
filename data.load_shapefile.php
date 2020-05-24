@@ -130,6 +130,31 @@ function AddRasterToGeoserver($file_path, $layer_title) {
     $files_tif = array();
     foreach (glob($file_path . '/*.tif') as $file_tif) {
         $files_tif[] = $file_tif;
+    }
+    if (count($files_tif) == 0) {
+        return array(false, getMLtext("load_map_shape_load_tif_error_not_tif"));
+    }
+
+    //reproject to WGS 84
+    $wgs84_folder = $file_path . '/wgs84';
+    mkdir($wgs84_folder);
+    $tif_name = pathinfo($files_tif[0], PATHINFO_FILENAME);
+    $gdalwarp_processing = "\"" . $siteconfig['path_gdalwarp_exe'] . "\" -t_srs EPSG:4326 \"" . $files_tif[0] . "\" \"" . $wgs84_folder . "\\" . $tif_name . ".tif\"";
+
+    exec($gdalwarp_processing, $output);
+//check for errors by simply trying to open the new tif
+    $files_tif_wgs84 = array();
+    foreach (glob($wgs84_folder . '/*.tif') as $file_tif) {
+        $files_tif_wgs84[] = $file_tif;
+    }
+    if (count($files_tif_wgs84) == 0) {
+        return array(false, getMLtext("load_map_shape_load_tif_error_bad_prj"));
+    }
+
+
+    $files_tif = array();
+    foreach (glob($wgs84_folder . '/*.tif') as $file_tif) {
+        $files_tif[] = $file_tif;
         $file_name = pathinfo($file_tif, PATHINFO_FILENAME);
         if (!copy($file_tif, $siteconfig['path_layer_shapefile_dir'] . '/' . $file_name . '.tif')) {
             echo getMLtext("load_map_shape_load_tif_error_copy") . ': ' . $file_tif . ' to ' . $siteconfig['path_layer_shapefile_dir'] . '/' . $file_name . '.tif';

@@ -101,12 +101,16 @@ class SingleMapLayer {
         }
         $geoserver_name_arr = explode(':', $data['geoserver_name']);
         $geoserver_name_no_workspace = end($geoserver_name_arr);
-        if ($data['layer_type'] == 'raster') {
-            if ($data['has_new_gislayer']) {
-                $data['datafile_path'] = $siteconfig['path_layer_shapefile_dir'] . '/' . $geoserver_name_no_workspace . '.tif'; //default - TODO: need to verify that this is intuitive
+        if ($data['has_new_gislayer'] == true || !$data['id']) { //datafile added/updated
+            if ($data['layer_type'] == 'raster') {
+                if ($data['has_new_gislayer']) {
+                    $data['datafile_path'] = $siteconfig['path_layer_shapefile_dir'] . '/' . $geoserver_name_no_workspace . '.tif'; //default - TODO: need to verify that this is intuitive
+                }
+            } else {
+                $data['datafile_path'] = '';
             }
         } else {
-            $data['datafile_path'] = '';
+            $data['layer_type'] = $row['layer_type']; //leave as-is
         }
         $data['db_table_name'] = $this->GetValidTableOrColumnName('raster_' . $geoserver_name_no_workspace);
 

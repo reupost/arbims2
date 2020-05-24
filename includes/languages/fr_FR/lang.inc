@@ -202,6 +202,7 @@ $text = array(
 "load_map_shape_load_shp_error_bad_wkt" => "Erreur: WKT non valide (pas un polygone)",
 "load_map_shape_load_shp_success" => "Shapefile chargé",
 "load_map_shape_load_tif_error_not_tif" => "Erreur: le raster GeoTIFF doit être téléchargé en tant que fichier .tif",
+"load_map_shape_load_tif_error_bad_prj" => "Erreur: impossible de reprojeter le raster vers WGS84",
 "load_map_shape_load_tif_success" => "Raster chargé",
 "load_map_shape_paste_wkt" => "Collez WKT ici",
 "load_map_shape_process_wkt" => "Charger WKT sur la carte",

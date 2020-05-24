@@ -20,7 +20,7 @@
                         ?></h5></td>
                     <td colspan="2" style='text-align:right'>
                         <?php if ($user['siterole'] == 'admin'): ?>
-                            <input type='button' value="<?php printMLtext('edit') ?>" onclick="javascript:window.location='out.gislayer_edit.php?id=<?php echo $layerdata['gislayer']['id'] ?>'"/>
+                            <input type='button' value="<?php printMLtext('edit') ?>" onclick="javascript:window.location='out.gislayer_edit.php?id=<?php echo $layerdata['gislayer']['id'] ?>'" style="width:8em !important"/>
                         <?php endif; ?>
                     </td>
                 </tr>
