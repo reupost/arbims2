@@ -41,8 +41,11 @@ $data['meta_sourcedate'] = (isset($_CLEANPOST['meta_sourcedate'])? $_CLEANPOST['
 $data['meta_description'] = (isset($_CLEANPOST['meta_description'])? $_CLEANPOST['meta_description'] : '');
 $data['meta_classification_1'] = (isset($_CLEANPOST['meta_classification_1'])? $_CLEANPOST['meta_classification_1'] : '');
 $data['meta_classification_2'] =  (isset($_CLEANPOST['meta_classification_2'])? $_CLEANPOST['meta_classification_2'] : '');
+$data['layer_style'] = (isset($_CLEANPOST['layer_style'])? $_CLEANPOST['layer_style'] : '');
+$data['geoserver_name'] = (isset($_CLEANPOST['geoserver_name'])? $_CLEANPOST['geoserver_name'] : '');
 
 $data['has_new_gislayer'] = false;
+$data['in_geoserver'] = 't';
 $addToGeoserverResult = array(false,'');
 if (isset($_FILES['layer-load-shp']) && $_FILES['layer-load-shp']['size'] > 0) {
     $layer_type = '';
@@ -54,11 +57,10 @@ if (isset($_FILES['layer-load-shp']) && $_FILES['layer-load-shp']['size'] > 0) {
         $data['layer_type'] = $layer_type;
     } else {
         //leave existing geoserver details for layer - will fail to save if its a new layer and hence without geoserver details
+        $data['in_geoserver'] = 'f';
     }
 }
 
-//TODO: add choice of styles when editing layer?
-//TODO: test on raster layer - additional processing to populate raster_* table in postgres
 
 $layer = new SingleMapLayer($data['id']);
 $save_msg = "";
@@ -68,6 +70,7 @@ if (!$addToGeoserverResult[0] && $addToGeoserverResult[1] != '') {
     $save_msg .= ' ' . $addToGeoserverResult[1];
     $save_state = "error";
 }
+$resp = $layer->SetStyle($data);
 $session = new SessionMsgHandler();
 $sess_data = array("session_id" => $USER_SESSION['id'], "data_type" => "message", "data_value" => $save_msg, "state" => $save_state);
 $session->SetSessionMsg($sess_data);

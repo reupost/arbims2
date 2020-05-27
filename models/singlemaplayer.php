@@ -65,8 +65,12 @@ class SingleMapLayer {
         $attribs['preview_img'] = "<img src=\"" . $siteconfig['path_geoserver'] . "/cite/wms?service=WMS&version=1.1.1&request=GetMap&layers=" . $l['Name'] . "&styles=&bbox=" . $boundingbox_native . "&width=" . $thumbnail_maxx . "&height=" . $thumbnail_maxy . "&srs=" . $srs_native[0]. "&format=image/png\">";
         $attribs['download_link'] = "<a href=\"" .  $siteconfig['path_geoserver'] . "/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=" . $l['Name'] . "&outputFormat=SHAPE-ZIP\" target=\"_blank\">"; //note: does not include closing </a> tag
         $attribs['legend_img'] = "<img src = \"" . $siteconfig['path_geoserver'] . "/ows?service=wms&REQUEST=GetLegendGraphic&VERSION=1.0.0&FORMAT=image/png&WIDTH=20&HEIGHT=20&LAYER=" . $l['Name']. "\">";
-        
-        
+
+        $attribs['style'] = '';
+        foreach($l['Style'] as $style => $url) {
+            $attribs['style'] = substr($style,1);
+            break;
+        }
         return $attribs;
     }
     
@@ -76,7 +80,7 @@ class SingleMapLayer {
         //nothing can really be checked: booleans should be valid, and displayname must be checked server-side
         return $js;
     }
-    
+
     //assumes all allow_display values will be submitted
     public function SetAttributes($data, &$save_msg) {
         global $siteconfig;
@@ -146,9 +150,37 @@ class SingleMapLayer {
         return -1;
     }
 
+    public function GetAvailableStyles() {
+        $map_layers = new MapLayers();
+        return $map_layers->GetAvailableStyles();
+    }
+
+    public function SetStyle($data) {
+        global $siteconfig;
+        $wms_server = $siteconfig['path_geoserver'];
+        $auth = $siteconfig['geoserver_login'] . ':' . $siteconfig['geoserver_password'];
+        $curl_url = $wms_server . '/rest/layers/' . $data['geoserver_name'];
+        $params = '<layer><defaultStyle><name>' . $data['layer_style'] . '</name></defaultStyle><enabled>true</enabled></layer>';
+
+        $curl_handle=curl_init();
+        curl_setopt($curl_handle, CURLOPT_URL,$curl_url);
+        curl_setopt($curl_handle, CURLOPT_USERPWD, $auth);
+        curl_setopt($curl_handle, CURLOPT_HTTPHEADER, Array("Content-Type: text/xml"));
+        curl_setopt($curl_handle, CURLOPT_CUSTOMREQUEST, "PUT");
+        curl_setopt($curl_handle, CURLOPT_POSTFIELDS, $params);
+        curl_setopt($curl_handle, CURLOPT_CONNECTTIMEOUT, 2);
+        curl_setopt($curl_handle, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($curl_handle, CURLOPT_USERAGENT, 'ARBIMS');
+        curl_setopt($curl_handle, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
+
+        $response = curl_exec($curl_handle);
+        curl_close($curl_handle);
+        return $response;
+    }
+
     public function GetValidTableOrColumnName($str) {
         $cleanstr = trim($str);
-        $cleanstr = preg_replace('/[^a-zA-Z0-9_]/i', '_', $str);
+        $cleanstr = preg_replace('/[^a-zA-Z0-9_]/i', '_', $cleanstr);
         $firstchar = substr($cleanstr, 0, 1);
         if ($firstchar >= '0' && $firstchar <= '9') $cleanstr = "_" . substr($cleanstr,1); //cannot start with number
         $cleanstr = strtolower(substr($cleanstr, 0, 31));

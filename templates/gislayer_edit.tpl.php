@@ -11,6 +11,7 @@
             <br/>
             <form action='op.gislayer_save.php' method='POST' enctype='multipart/form-data'>
                 <input type='hidden' id='id' name='id' value='<?php echo $layerdata['gislayer']['id'] ?>' />
+                <input type='hidden' id='geoserver_name' name='geoserver_name' value='<?php echo $layerdata['gislayer']['geoserver_name'] ?>' />
                 <table id="gislayer">
                     <thead>
                     <th class='td_left'></th>
@@ -93,6 +94,16 @@
                             <select name='layer_order' style='width:110px'>
                                 <?php for ($i = 1; $i < 100; $i++) { 
                                     echo "<option value='" . $i . "' " . ($i == $layerdata['gislayer']['layer_order']? "selected='selected'" : '') . ">" . $i . "</option>";
+                                } ?>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><?php printMLtext('layer_style') ?></td>
+                        <td>
+                            <select name='layer_style' style='width:330px'>
+                                <?php for ($i = 1; $i < sizeof($styles); $i++) {
+                                    echo "<option value='" . $styles[$i]['name'] . "' " . ($styles[$i]['name'] == $layerdata['style']? "selected='selected'" : '') . ">" . $styles[$i]['name'] . "</option>";
                                 } ?>
                             </select>
                         </td>

@@ -362,6 +362,34 @@ class MapLayers extends Table_Base {
         return $contenido;
     }
 
+    public function GetAvailableStyles() {
+        global $siteconfig;
+        $wms_server                 = $siteconfig['path_geoserver'];
+        $auth = $siteconfig['geoserver_login'] . ':' . $siteconfig['geoserver_password'];
+        $curl_url = $wms_server . '/rest/styles.json';
+        $curl_handle=curl_init();
+        curl_setopt($curl_handle, CURLOPT_URL,$curl_url);
+        curl_setopt($curl_handle, CURLOPT_CONNECTTIMEOUT, 2);
+        curl_setopt($curl_handle, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($curl_handle, CURLOPT_USERAGENT, 'ARBIMS');
+        curl_setopt($curl_handle, CURLOPT_USERPWD, $auth);
+        curl_setopt($curl_handle, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
+        $styles_json = curl_exec($curl_handle);
+        curl_close($curl_handle);
+        $style_array = array();
+        $styles = json_decode($styles_json);
+        if (!is_null($styles) && !empty($styles)) {
+            $max = sizeof($styles->styles->style);
+            for ($i = 0; $i < $max; $i++) {
+                $style_array_entry = array();
+                $style_array_entry['name'] = $styles->styles->style[$i]->name;
+                $style_array_entry['url'] = $styles->styles->style[$i]->href;
+                $style_array[] = $style_array_entry;
+            }
+        }
+        return $style_array;
+    }
+
     //returns 'raster' (if found in WCS XML) or otherwise 'vector'
     private function GetLayerType($wcsXML, $layer) {
         $inXML = stripos($wcsXML, "<wcs:Identifier>" . $layer . "</wcs:Identifier>");

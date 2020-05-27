@@ -27,6 +27,7 @@ if ($params['id']) {
 } else {
     //new layer
 }
+$styles = $layer->GetAvailableStyles();
 
 $session = new SessionMsgHandler();
 $session_msg = $session->GetSessionMsgMerged($USER_SESSION['id'], "message", true);
@@ -45,6 +46,7 @@ $tpl->set('session_msg', $session_msg);
 /* page template body - pass page options to this as well */
 $bdy = new MasterTemplate('templates/gislayer_edit.tpl.php');
 $bdy->set('layerdata',$layerdata);
+$bdy->set('styles',$styles);
 $bdy->set('layernamekeys',$layernamekeys);
 $bdy->set('session_msg', $session_msg);
 
