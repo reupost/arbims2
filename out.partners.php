@@ -9,11 +9,6 @@ require_once("models/usertext.php");
 global $siteconfig;
 global $USER_SESSION;
 
-if ($USER_SESSION['siterole'] != 'admin') {
-    header("Location: out.index.php"); //user does not have permission to do this
-    exit;
-}
-
 $session = new SessionMsgHandler();
 $session_msg = $session->GetSessionMsgMerged($USER_SESSION['id'], "message", true);
 

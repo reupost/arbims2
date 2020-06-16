@@ -62,14 +62,14 @@
                     
                         <table border='0'>
                             <tr>
-                                <td colspan='2'><h4><?php printMLtext('geoserver') ?></h4></td>
+                                <td colspan='2'><h4><?php printMLtext('spatial_layers') ?></h4></td>
                             </tr>
                             <tr>
                                 <td style='padding-right:15px'><img src='images/geoserver-128.png' height='128px' width='128px' border='0' alt='pic'/></td>
                                 <td>
                                     <p><?php printMLtext('arbmis_admin_geoserver') ?></p>
                                     <a href='geoserver/' alt="<?php printMLtext('geoserver') ?>" title="<?php printMLtext('geoserver') ?>"><?php printMLtext('geoserver') ?></a><br/><br/>
-                                    <a href='out.listgislayers.php' alt="<?php printMLtext('synchronise_with_geoserver') ?>" title="<?php printMLtext('synchronise_with_geoserver') ?>"><?php printMLtext('synchronise_with_geoserver') ?></a>
+                                    <a href='out.listgislayers.php' alt="<?php printMLtext('list_spatial_layers') ?>" title="<?php printMLtext('list_spatial_layers') ?>"><?php printMLtext('list_spatial_layers') ?></a>
                                 </td>
                             </tr>
                         </table>
