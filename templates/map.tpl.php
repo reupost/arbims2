@@ -1046,7 +1046,7 @@
 "\"dpi\":\"300\"," +
 "\"mapTitle\":\"ARBIMS <?php printMLtext('map') ?>\"," +
 "\"comment\":\"<?php printMLtext('map_printing_google') ?>\"," +
-"\"resourcesUrl\":\"<?php echo $params['base_url'] ?>/img\"," +
+"\"resourcesUrl\":\"<?php echo $params['base_url'] ?>/images/\"," +
 "\"layers\":[" +
 "{" +
 "\"baseURL\":\"<?php echo $params['geoserver'] ?>/wms\"," +
