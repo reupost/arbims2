@@ -63,7 +63,7 @@ function getMLText($key, $replace = array(), $defaulttext = "", $lang = "") { /*
     } else
         $tmpText = $LANG[$lang][$key];
 
-    if (count($replace) == 0)
+    if (is_null($replace) || count($replace) == 0)
         return $tmpText;
 
     $keys = array_keys($replace);
